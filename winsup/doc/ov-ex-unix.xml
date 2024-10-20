@@ -31,7 +31,7 @@ package updates.
 By default, <command>setup.exe</command> only installs a minimal subset of
 packages.  Add any other packages by clicking on the <literal>+</literal>
 next to the Category name and selecting the package from the displayed
-list.  You may search for specfic tools by using the
+list.  You may search for specific tools by using the
 <ulink url="https://cygwin.com/packages/">Setup Package Search</ulink>
 at the Cygwin web site.
 </para>

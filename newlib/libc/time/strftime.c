@@ -1806,7 +1806,7 @@ const struct test  Vecyrzp[] = {
 #undef Year
 /* Checks for years just under zero.
  * Negative years are not handled by the standard, so the vectors here are
- * verifying the chosen implemtation.  */
+ * verifying the chosen implementation.  */
 const struct tm  tmyrzn = {
 	/* Wed Jul  2 23:01:00 EDT -004 */
 	.tm_sec 	= 00,

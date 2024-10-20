@@ -93,7 +93,7 @@ for other formats.
 -=-=-= DEPENDENCY =-=-=-
 
 DEPENDENCY filed consists of 5 digits. This represents which register is used as source and which register is used as target.
-The first(most significant) digit is always 0. Then it is followd by RC, RB, RA and RT digits.
+The first(most significant) digit is always 0. Then it is followed by RC, RB, RA and RT digits.
 If the digit is 0, this means the corresponding register is not used in the instruction.
 If the digit is 1, this means the corresponding register is used as a source in the instruction.
 If the digit is 2, this means the corresponding register is used as a target in the instruction.

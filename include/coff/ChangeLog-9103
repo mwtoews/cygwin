@@ -69,7 +69,7 @@
 
 2003-04-15  Rohit Kumar Srivastava <rohits@kpitcummins.com>
 
-	* sh.h: Replace occurrances of 'Hitachi' with 'Renesas'.
+	* sh.h: Replace occurrences of 'Hitachi' with 'Renesas'.
 	* h8300.h: Likewise.
 	* h8500.h: Likewise.
 

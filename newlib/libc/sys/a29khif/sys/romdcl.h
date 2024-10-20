@@ -303,7 +303,7 @@
  ;double word alignment of the stack frame as a whole as required
  ;for correct linkage.
  ;
- ; Paramters:	NAME	the function name
+ ; Parameters:	NAME	the function name
  ;		INCNT	input parameter count
  ;		LOCCNT	local register count
  ;		OUTCNT	output parameter count
@@ -339,7 +339,7 @@ NAME:
  ;This macro defines the standard tag word before the function,
  ;then establishes the statement label with the function's name.
  ;
- ; Paramters:	NAME	the function name
+ ; Parameters:	NAME	the function name
  ;		INCNT	input parameter count
 
    .if	(INCNT)

@@ -408,7 +408,7 @@ static __inline__ int __eisnan(const short unsigned int *x)
 ; value that is an ordinary, legal number.  A special value
 ; "infinity" may also be implemented; this would require tests
 ; for that value and implementation of special rules for arithmetic
-; operations involving inifinity.
+; operations involving infinity.
 */
 
 static __inline__ void __einfin(register short unsigned int *x)

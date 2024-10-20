@@ -98,7 +98,7 @@
 	* environ.cc (env_compare): New static bsearch comparison function.
 	(build_env): Add parameter taking a user token.  If token is non-NULL,
 	fetch user's default Windows environment and merge it into the resulting
-	environment.  Explain what we do in preceeding comment.
+	environment.  Explain what we do in preceding comment.
 	* environ,h (build_env): Align prototype to above change.
 	* external.cc (create_winenv): Call build_env with NULL token.
 	* spawn.cc (child_info_spawn::worker): When spawning new process under
@@ -330,7 +330,7 @@
 
 2014-11-06  Corinna Vinschen  <corinna@vinschen.de>
 
-	* dcrt0.cc (cygwin_atexit): Change preceeding comment to reflect
+	* dcrt0.cc (cygwin_atexit): Change preceding comment to reflect
 	API version numbers.
 	* external.cc (cygwin_internal): disable setting cxx_malloc on 64 bit.
 	Add CW_FIXED_ATEXIT case.
@@ -835,7 +835,7 @@
 	(exception::install_myfault_handler): Remove.
 	* exceptions.cc (exception::myfault_handle): Remove.
 	(exception::myfault): New SEH handler for 64 bit.
-	* gendef (_sigbe): Set tls_pathbuf counters to 0 explicitely when
+	* gendef (_sigbe): Set tls_pathbuf counters to 0 explicitly when
 	returning to the caller.
 	* ntdll.h: Move a comment to a better place.
 	(struct _SCOPE_TABLE): Define on 64 bit.
@@ -873,7 +873,7 @@
 	* dir.cc (dirfd): Per POSIX, return EINVAL on invalid directory stream.
 	(telldir): Per POSIX, return -1 and set errno to EBADF, rather than
 	just returning 0, on invalid directory stream.
-	* signal.cc (sigwaitinfo): Return -1, not EFAULT, when SEGV was catched.
+	* signal.cc (sigwaitinfo): Return -1, not EFAULT, when SEGV was caught.
 
 2014-08-19  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -917,9 +917,9 @@
 	(fhandler_serial::is_tty): Remove.
 	* fhandler_socket.cc (fhandler_socket::listen): Set connect_state to
 	listener.  Add comment.
-	(fhandler_socket::accept4): Explicitely check if the socket is listening
+	(fhandler_socket::accept4): Explicitly check if the socket is listening
 	and fail with EINVAL, if not.  Explain why we have to do that.
-	(fhandler_socket::recv_internal): Explicitely check if the socket is
+	(fhandler_socket::recv_internal): Explicitly check if the socket is
 	connected if it's a stream socket.  Explain why we have to do that.
 	(fhandler_socket::getpeereid): Drop now redundant test.
 
@@ -997,7 +997,7 @@
 	* uinfo.cc (pwdgrp::fetch_account_from_windows): Drop "plus_prepended"
 	as naming style.  Drop enum name_style_t, use a boolean
 	"fully_qualified_name" value instead.  Rework function to drop
-	"plus_prepended" handling througout and default to "name only" style
+	"plus_prepended" handling throughout and default to "name only" style
 	as replacement.
 
 2014-07-31  Eric Blake  <eblake@redhat.com>
@@ -1167,7 +1167,7 @@
 
 2014-06-25  Corinna Vinschen  <corinna@vinschen.de>
 
-	* ldap.cc (cyg_ldap::map_ldaperr_to_errno): Explicitely map LDAP_TIMEOUT
+	* ldap.cc (cyg_ldap::map_ldaperr_to_errno): Explicitly map LDAP_TIMEOUT
 	to EIO.
 
 2014-06-25  Corinna Vinschen  <corinna@vinschen.de>
@@ -1320,7 +1320,7 @@
 	(ldap_msgfree): Import.
 	* ldap.cc: Throughout, use ldap_msgfree to free LDAPMessage memory,
 	rather than ldap_memfreeW.
-	(cyg_ldap::next_account): Immediately abandon search when quiting from
+	(cyg_ldap::next_account): Immediately abandon search when quitting from
 	search.
 
 2014-05-22  Corinna Vinschen  <corinna@vinschen.de>
@@ -1553,11 +1553,11 @@
 	Microsoft Accounts.
 	(MAX_SID_LEN): Define in terms of SID member sizes and MAX_SUBAUTH_CNT.
 	(DBGSID): Use MAX_SUBAUTH_CNT to define size of SubAuthority array.
-	* uinfo.cc (pwdgrp::fetch_account_from_windows): Handle Micosoft
+	* uinfo.cc (pwdgrp::fetch_account_from_windows): Handle Microsoft
 	Accounts.  Handle them as well known group.  Compare domain names
 	case-insensitive.
 	* winlean.h (PIPE_REJECT_REMOTE_CLIENTS): Drop temporary definition
-	since Mingw64 catched up.
+	since Mingw64 caught up.
 	(DNLEN): Redefine as 16.  Explain why.
 
 2014-05-05  Corinna Vinschen  <corinna@vinschen.de>
@@ -2105,7 +2105,7 @@
 
 2014-02-27  Corinna Vinschen  <corinna@vinschen.de>
 
-	* path.cc (find_fast_cwd_pointer): Fix preceeding comment.
+	* path.cc (find_fast_cwd_pointer): Fix preceding comment.
 
 2014-02-25  Christopher Faylor  <me.cygwin2014@cgf.cx>
 
@@ -2194,7 +2194,7 @@
 	* grp.cc (setgrent_filtered): New function, called from cygwin_internal.
 	(getgrent_filtered): Ditto.
 	(endgrent_filtered): Ditto.
-	* passwd.cc (pg_ent::setent): Set state explicitely to from_cache.
+	* passwd.cc (pg_ent::setent): Set state explicitly to from_cache.
 	(pg_ent::getent): Handle the fact that a DC has no SAM and enumerating
 	local accounts is equivalent to enumerating domain accounts.
 	(setpwent_filtered): New function, called from cygwin_internal.
@@ -2272,7 +2272,7 @@
 	* tlsoffsets.h: Regenerate.
 	* tlsoffsets64.h: Ditto.
 	* uinfo.cc (cygheap_pwdgrp::init): Initialize enums and enum_tdoms.
-	(cygheap_pwdgrp::nss_init_line): Fix typo in preceeding comment.
+	(cygheap_pwdgrp::nss_init_line): Fix typo in preceding comment.
 	Handle new "db_enum" keyword.
 	(pwdgrp::add_account_post_fetch): Take additional `bool lock' parameter
 	and acquire pglock before adding element to array if lock is true.
@@ -2343,7 +2343,7 @@
 	accordingly and filter by flatName.  Add comment.
 	* uinfo.cc (cygheap_domain_info::init):  Gracefully handle NULL
 	DnsDomainName and DomainSid members in DS_DOMAIN_TRUSTSW structure.
-	Add comment.  Fix comment preceeding fetching the mapping server
+	Add comment.  Fix comment preceding fetching the mapping server
 	from registry.
 	(pwdgrp::fetch_account_from_file): Convert str to a local array.
 	(fetch_posix_offset): New static function.
@@ -2355,7 +2355,7 @@
 
 2014-02-12  Corinna Vinschen  <corinna@vinschen.de>
 
-	* uinfo.cc (cygheap_pwdgrp::nss_init_line): Explicitely ignore a colon
+	* uinfo.cc (cygheap_pwdgrp::nss_init_line): Explicitly ignore a colon
 	as separator char.
 
 2014-02-11  Christopher Faylor  <me.cygwin2014@cgf.cx>
@@ -2557,7 +2557,7 @@
 	* syscalls.cc: Drop including pwdgrp.h.
 	* tlsoffsets.h: Regenerate.
 	* tlsoffsets64.h: Ditto.
-	* uinfo.cc (internal_getlogin): Drop gratuitious internal_getpwuid
+	* uinfo.cc (internal_getlogin): Drop gratuitous internal_getpwuid
 	call.  Fix debug output.  Overwrite user gid in border case of a
 	missing passwd file while a group file exists.
 	(pwdgrp::add_line): Allocate memory on cygheap.

@@ -57,7 +57,7 @@ _setjmp:
         .globl _longjmp
 _longjmp:
         #r3, r2: .blkw # pointer save area
-        #r5, r4: .blkw # ret vlaue
+        #r5, r4: .blkw # ret value
 
 	loadw 0(r3,r2), r7
 	addd $2, (r3,r2)

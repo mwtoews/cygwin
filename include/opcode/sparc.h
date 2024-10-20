@@ -170,7 +170,7 @@ typedef struct sparc_opcode
 	B	frs2 floating point register (double/even).
 	R	frs2 floating point register (quad/multiple of 4).
 	4	frs3 floating point register.
-	5	frs3 floating point register (doube/even).
+	5	frs3 floating point register (double/even).
 	g	frsd floating point register.
 	H	frsd floating point register (double/even).
 	J	frsd floating point register (quad/multiple of 4).

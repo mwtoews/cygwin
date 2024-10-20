@@ -56,7 +56,7 @@
  * 	Compute the arc sine of the vector of double precision elements 
  * 	specified by x, returning the resulting angles in radians. The input
  *      elements are to be in the closed interval [-1, 1]. Values outside 
- *      this range result in a invalid operation execption being latched in 
+ *      this range result in a invalid operation exception being latched in
  *	the FPSCR register and a NAN is returned.
  *
  * 	The basic algorithm computes the arc sine using a rational polynomial
@@ -97,7 +97,7 @@
  *	
  *	    result = addend - (x3*pq + x)*multiplier;
  *
- *	 Where P5-P0 and Q5-Q0 are the polynomial coeficients.
+ *	 Where P5-P0 and Q5-Q0 are the polynomial coefficients.
  */
 static __inline vector double _asind2(vector double x)
 {

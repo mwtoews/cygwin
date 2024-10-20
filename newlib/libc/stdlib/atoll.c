@@ -26,7 +26,7 @@ RETURNS
 The converted value.
 
 PORTABILITY
-<<atoll>> is ISO 9899 (C99) and POSIX 1003.1-2001 compatable.
+<<atoll>> is ISO 9899 (C99) and POSIX 1003.1-2001 compatible.
 
 No supporting OS subroutines are required.
 */

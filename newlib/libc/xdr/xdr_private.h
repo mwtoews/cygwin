@@ -55,7 +55,7 @@ void xdr_warnx (const char *, ...)
 /* endian issues */
 #include <machine/endian.h>
 
-/* byteswap and ntohl stuff; platform may provide optimzed version
+/* byteswap and ntohl stuff; platform may provide optimized version
  * of this, but we don't have access to that here.*/
 _ELIDABLE_INLINE uint32_t xdr_ntohl (uint32_t x)
 {

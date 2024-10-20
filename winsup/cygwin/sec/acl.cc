@@ -511,7 +511,7 @@ set_posix_access (mode_t attr, uid_t uid, gid_t gid,
 				      well_known_admins_sid, acl_len,
 				      NO_INHERITANCE))
 	return NULL;
-      /* Create allow ACE for other.  It's preceeded by class_obj if it exists.
+      /* Create allow ACE for other.  It's preceded by class_obj if it exists.
 	 If so, skip it. */
       if (aclbufp[idx].a_type & CLASS_OBJ)
 	++idx;
@@ -728,7 +728,7 @@ get_posix_access (PSECURITY_DESCRIPTOR psd,
       __seterrno_from_nt_status (status);
       return -1;
     }
-  /* Set uidret, gidret, and initalize attributes. */
+  /* Set uidret, gidret, and initialize attributes. */
   uid = owner_sid.get_uid (&cldap);
   gid = group_sid.get_gid (&cldap);
   attr = attr_ret & S_IFMT;
@@ -759,7 +759,7 @@ get_posix_access (PSECURITY_DESCRIPTOR psd,
       goto out;
     }
 
-  /* Files and dirs are created with a NULL descriptor, so inheritence
+  /* Files and dirs are created with a NULL descriptor, so inheritance
      rules kick in.  If no inheritable entries exist in the parent object,
      Windows will create entries according to the user token's default DACL.
      These entries are not desired and we ignore them at creation time.
@@ -1666,7 +1666,7 @@ __acltotext (aclent_t *aclbufp, int aclcnt, const char *prefix, char separator,
 	  *bufp++ = separator;
 	}
       first = false;
-      /* Rememeber start position of entry to compute TEXT_SMART_INDENT tabs. */
+      /* Remember start position of entry to compute TEXT_SMART_INDENT tabs. */
       entry_start = bufp;
       /* prefix */
       if (prefix)

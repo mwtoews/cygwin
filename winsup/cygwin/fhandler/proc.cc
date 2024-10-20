@@ -117,7 +117,7 @@ virt_tab_search (const char *path, bool prefix, const virt_tab_t *table,
   return NULL;
 }
 
-/* Auxillary function that returns the fhandler associated with the given
+/* Auxiliary function that returns the fhandler associated with the given
    path. */
 fh_devices
 fhandler_proc::get_proc_fhandler (const char *path)

@@ -131,7 +131,7 @@ main(int ac, char **av)
 			tst_resm(TINFO, "Test block 2: getpgid(getpid()) "
 				 "FAILED");
 		} else {
-			tst_resm(TPASS, "Test blcok 2: getpgid(getpid()) "
+			tst_resm(TPASS, "Test block 2: getpgid(getpid()) "
 				 "PASSED");
 		}
 		tst_resm(TINFO, "Exit block 2");

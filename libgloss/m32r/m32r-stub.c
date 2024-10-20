@@ -202,7 +202,7 @@ static unsigned char *strcpy (unsigned char *, const unsigned char *);
 static int strlen (const unsigned char *);
 
 /*
- * This function does all command procesing for interfacing to gdb.
+ * This function does all command processing for interfacing to gdb.
  */
 
 void
@@ -409,7 +409,7 @@ handle_exception (int exceptionVector)
 		  hex2mem (ptr, (unsigned char *) &registers[regno], 4, 0);
 		  /*
 		   * Since we just changed a single CPU register, let's
-		   * make sure to keep the several stack pointers consistant.
+		   * make sure to keep the several stack pointers consistent.
 		   */
 		  stackmode = registers[PSW] & 0x80;
 		  if (regno == R15)	/* stack pointer changed */
@@ -542,7 +542,7 @@ handle_exception (int exceptionVector)
 
 /* qCRC support */
 
-/* Table used by the crc32 function to calcuate the checksum. */
+/* Table used by the crc32 function to calculate the checksum. */
 static unsigned long crc32_table[256] = { 0, 0 };
 
 static unsigned long
@@ -699,7 +699,7 @@ set_mem_err (void)
 
 /* Check the address for safe access ranges.  As currently defined,
    this routine will reject the "expansion bus" address range(s).
-   To make those ranges useable, someone must implement code to detect
+   To make those ranges usable, someone must implement code to detect
    whether there's anything connected to the expansion bus. */
 
 static int
@@ -1261,7 +1261,7 @@ struct PSWreg
 /* Upon entry the value for LR to save has been pushed.
    We unpush that so that the value for the stack pointer saved is correct.
    Upon entry, all other registers are assumed to have not been modified
-   since the interrupt/trap occured.  */
+   since the interrupt/trap occurred.  */
 
 asm ("\n\
 stash_registers:\n\

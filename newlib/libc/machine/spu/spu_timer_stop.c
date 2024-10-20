@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "spu_timer_internal.h"
 
 /* Stop a timer.  Moves it from either the active or handled list to the
-   stopped list. Returns 0 on sucess, timer was successfully stopped.
+   stopped list. Returns 0 on success, timer was successfully stopped.
    Returns <0 - Failure:
     * SPU_TIMER_ERR_NOT_ACTIVE - timer was not active
     * SPU_TIMER_ERR_INVALID_ID - invalid timer id

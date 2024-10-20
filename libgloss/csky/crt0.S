@@ -70,7 +70,7 @@
 .import default_exception_handler
 */
 
-/* For exporting varialbe or functions */
+/* For exporting variable or functions */
 .export	ckcpu_vsr_table	/* Vector table base address. */
 .export __start				/* The system entry. */
 
@@ -147,7 +147,7 @@ __start:
 #endif
 
 	/*
-	 * Assember start up done, C codes start here.
+	 * Assembler start up done, C codes start here.
 	 */
 __goto_c:
 	lrw     r0, __libc_fini_array   # Register global termination functions

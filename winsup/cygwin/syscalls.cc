@@ -566,7 +566,7 @@ try_to_bin (path_conv &pc, HANDLE &fh, ACCESS_MASK access, ULONG flags)
   /* The final trick.  We create a temporary file with delete-on-close
      semantic and rename that file to the file just moved to the bin.
      This typically overwrites the original file and we get rid of it,
-     even if neither setting the delete dispostion, nor setting
+     even if neither setting the delete disposition, nor setting
      delete-on-close on the original file succeeds.  There are still
      cases in which this fails, for instance, when trying to delete a
      hardlink to a DLL used by the unlinking application itself. */
@@ -775,7 +775,7 @@ unlink_nt (path_conv &pc, bool shareable)
       /* Trying to delete in-use executables and DLLs using
          FILE_DISPOSITION_POSIX_SEMANTICS returns STATUS_CANNOT_DELETE.
 	 Fall back to the default method. */
-      /* Additionaly that returns STATUS_INVALID_PARAMETER
+      /* Additionally that returns STATUS_INVALID_PARAMETER
          on a bind mounted fs in hyper-v container. Falling back too. */
       if (status != STATUS_CANNOT_DELETE
           && status != STATUS_INVALID_PARAMETER)
@@ -933,7 +933,7 @@ retry_open:
 		    pc.get_nt_native_path (), status);
       goto out;
     }
-  /* Try to move to bin if a sharing violation occured.  If that worked,
+  /* Try to move to bin if a sharing violation occurred.  If that worked,
      we're done. */
   if (bin_stat == move_to_bin
       && (bin_stat = try_to_bin (pc, fh, access, flags)) >= has_been_moved)
@@ -992,7 +992,7 @@ try_again:
 		 This gives the OS time to clean up.  5ms is enough in my
 		 testing to make sure that we don't have to try more than
 		 once in practically all cases.
-		 While this is an extrem bordercase, we don't want to hang
+		 While this is an extreme bordercase, we don't want to hang
 		 infinitely in case a file in the directory is in the "delete
 		 pending" state but an application holds an open handle to it
 		 for a longer time.  So we don't try this more than 20 times,
@@ -1611,7 +1611,7 @@ posix_getdents_lseek (cygheap_fdget &cfd, off_t pos, int dir)
       while (::readdir (cfd->getdents_dir ()))
 	;
       long eod = cfd->telldir (cfd->getdents_dir ());
-      /* Seek back so it looks like nothing happend in error case */
+      /* Seek back so it looks like nothing happened in error case */
       cfd->seekdir (cfd->getdents_dir (), cur);
       if (dir == SEEK_HOLE)
 	{
@@ -1640,7 +1640,7 @@ posix_getdents_lseek (cygheap_fdget &cfd, off_t pos, int dir)
 	  pos = cfd->telldir (cfd->getdents_dir ());
 	  if (pos < abs_pos)
 	    {
-	      /* Seek back so it looks like nothing happend */
+	      /* Seek back so it looks like nothing happened */
 	      cfd->seekdir (cfd->getdents_dir (), cur);
 	      set_errno (ENXIO);
 	      return -1;
@@ -2435,7 +2435,7 @@ rename2 (const char *oldpath, const char *newpath, unsigned int at2flags)
 		   && !nt_path_has_executable_suffix
 						(newpc.get_nt_native_path ()))
 	    /* Never append .exe suffix if oldpath had .exe suffix given
-	       explicitely, or if oldpath wasn't already a .exe file, or
+	       explicitly, or if oldpath wasn't already a .exe file, or
 	       if the destination filename has one of the blessed executable
 	       suffixes.
 	       Note: To rename an executable foo.exe to bar-without-suffix,
@@ -2468,7 +2468,7 @@ rename2 (const char *oldpath, const char *newpath, unsigned int at2flags)
 	  else if (oldpc.is_binary ())
 	    {
 	      /* Never append .exe suffix if oldpath had .exe suffix given
-		 explicitely, or if newfile is a binary (in which case the given
+		 explicitly, or if newfile is a binary (in which case the given
 		 name probably makes sense as it is), or if the destination
 		 filename has one of the blessed executable suffixes. */
 	      if (!old_explicit_suffix && oldpc.known_suffix ()

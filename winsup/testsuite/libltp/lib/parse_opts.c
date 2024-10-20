@@ -55,7 +55,7 @@
  * 
  *    DESCRIPTION
  * 	The parse_opts library routine takes that argc and argv parameters
- *	recevied by main() and an array of structures defining user options.
+ *	received by main() and an array of structures defining user options.
  *	It parses the command line setting flag and argument locations
  *      associated with the options.  It uses getopt to do the actual cmd line
  *      parsing.  uhf() is a function to print user define help
@@ -127,7 +127,7 @@ int STD_FUNCTIONAL_TEST=1,	/* flag indicating to do functional testing code */
     STD_TIMING_ON=0,		/* flag indicating to print timing stats */
     STD_PAUSE=0,		/* flag indicating to pause before actual start, */
 				/* for contention mode */
-    STD_INFINITE=0,		/* flag indciating to loop forever */
+    STD_INFINITE=0,		/* flag indicating to loop forever */
     STD_LOOP_COUNT=1,		/* number of iterations */
     STD_COPIES=1,		/* number of copies */
     STD_ERRNO_LOG=0;		/* flag indicating to do errno logging */
@@ -373,7 +373,7 @@ parse_opts(int ac, char **av, option_t *user_optarr, void (*uhf)())
 		if ( Debug )
 		   printf("Using env %s, set STD_INFINITE to 1\n",
 			USC_ITERATION_ENV);
-            } else {            /* else, set the loop count to the arguement */
+            } else {            /* else, set the loop count to the argument */
                 STD_LOOP_COUNT=k;
 		if ( Debug )
 		   printf("Using env %s, set STD_LOOP_COUNT to %d\n",
@@ -726,7 +726,7 @@ int counter;
 	}
 
 	/*
-	 * If doing delay each iteration, calcuate the number
+	 * If doing delay each iteration, calculate the number
 	 * of clocks for each delay.
 	 */
 	if ( STD_LOOP_DELAY ) {

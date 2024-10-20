@@ -361,7 +361,7 @@ inode_t::del_my_locks (long long id, HANDLE fhdl)
 	  *prev = n_lock;
 	  /* When called during fork, the POSIX lock must get deleted but
 	     *not* signalled.  The lock is still active and locked in the
-	     parent.  So in case of fork, we call close_lock_obj explicitely,
+	     parent.  So in case of fork, we call close_lock_obj explicitly,
 	     since del_lock_obj is called from the destructor. */
 	  if (!id)
 	    lock->close_lock_obj ();
@@ -1707,7 +1707,7 @@ lf_split (lockf_t *lock1, lockf_t *lock2, lockf_t **split)
   lockf_t *splitlock;
 
   /*
-   * Check to see if spliting into only two pieces.
+   * Check to see if splitting into only two pieces.
    */
   if (lock1->lf_start == lock2->lf_start)
     {

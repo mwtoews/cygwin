@@ -119,7 +119,7 @@ _start:
 	/* Zero out the bss section.
 	   Equivalence C code for follow part:
 	   if (_end == _edata) goto .L_call_main
-	   unsinged int *ptr = _edata;
+	   unsigned int *ptr = _edata;
 	   while (ptr != _end)
 	     *ptr++ = 0
 	   $r0 = ptr/_edata

@@ -10,7 +10,7 @@ What's new:
   To accommodate standard Windows ACLs, the POSIX permissions of the
   owner and all other users in the ACL are computed using the Windows
   AuthZ API.  This may slow down the computation of POSIX permissions
-  noticably in some circumstances, but is generally more correct.  The
+  noticeably in some circumstances, but is generally more correct.  The
   new code also ignores SYSTEM and Administrators group permissions when
   computing the MASK/CLASS_OBJ permission mask on old ACLs, and it
   doesn't deny access to SYSTEM and Administrators group based on the

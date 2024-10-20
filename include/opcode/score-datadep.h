@@ -58,7 +58,7 @@ static const struct insn_to_dependency insn_to_dependency_table[] =
 
 static const struct data_dependency data_dependency_table[] =
 {
-  /* Status regiser.  */
+  /* Status register.  */
   {D_mtcr, "cr0", D_all_insn, "", 5, 1, 0},
 };
 

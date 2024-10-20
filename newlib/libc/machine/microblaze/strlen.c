@@ -40,7 +40,7 @@ SYNOPSIS
 
 DESCRIPTION
 	The <<strlen>> function works out the length of the string
-	starting at <<*<[str]>>> by counting chararacters until it
+	starting at <<*<[str]>>> by counting characters until it
 	reaches a <<NULL>> character.
 
 RETURNS

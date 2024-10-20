@@ -70,7 +70,7 @@ _scanf_float (struct _reent *rptr,
   for (p = pdata->buf; pdata->width; )
     {
       c = *fp->_p;
-      /* This code mimicks the integer conversion code,
+      /* This code mimics the integer conversion code,
 	 but is much simpler.  */
       switch (c)
 	{

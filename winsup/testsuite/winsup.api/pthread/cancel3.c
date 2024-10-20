@@ -1,7 +1,7 @@
 /*
  * File: cancel3.c
  *
- * Test Synopsis: Test asynchronous cancelation.
+ * Test Synopsis: Test asynchronous cancellation.
  *
  * Test Method (Validation or Falsification):
  * - 
@@ -75,7 +75,7 @@ mythread(void * arg)
   assert(pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL) == 0);
 
   /*
-   * We wait up to 30 seconds for a cancelation to be applied to us.
+   * We wait up to 30 seconds for a cancellation to be applied to us.
    */
   for (bag->count = 0; bag->count < 30; bag->count++)
     {
@@ -154,9 +154,9 @@ main()
       void *result = 0;
 
       /*
-       * The thread does not contain any cancelation points, so
+       * The thread does not contain any cancellation points, so
        * a return value of PTHREAD_CANCELED confirms that async
-       * cancelation succeeded.
+       * cancellation succeeded.
        */
       assert(pthread_join(t[i], &result) == 0);
 

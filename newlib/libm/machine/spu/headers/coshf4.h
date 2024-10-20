@@ -62,7 +62,7 @@ static __inline vector float _coshf4(vector float x)
 
   vec_uint4 sign_mask = (vec_uint4)spu_splats(0x80000000);
 
-  // Coefficents for the Taylor series
+  // Coefficients for the Taylor series
   vec_float4 f02 = spu_splats(5.0000000000000000E-1f);  // 1/2!
   vec_float4 f04 = spu_splats(4.1666666666666667E-2f);  // 1/4!
   vec_float4 f06 = spu_splats(1.3888888888888889E-3f);  // 1/6!

@@ -275,7 +275,7 @@ struct route_in6 {
 	struct	llentry *ro_lle;
 	/*
 	 * ro_prepend and ro_plen are only used for bpf to pass in a
-	 * preformed header.  They are not cacheable.
+	 * performed header.  They are not cacheable.
 	 */
 	char		*ro_prepend;
 	uint16_t	ro_plen;
@@ -291,7 +291,7 @@ struct route_in6 {
  * First word of comment is data type; bool is stored in int.
  */
 /* no hdrincl */
-#if 0 /* the followings are relic in IPv4 and hence are disabled */
+#if 0 /* the following are relic in IPv4 and hence are disabled */
 #define IPV6_OPTIONS		1  /* buf/ip6_opts; set/get IP6 options */
 #define IPV6_RECVOPTS		5  /* bool; receive all IP6 opts w/dgram */
 #define IPV6_RECVRETOPTS	6  /* bool; receive IP6 opts for response */
@@ -348,7 +348,7 @@ struct route_in6 {
 #define IPV6_HOPLIMIT		47 /* int; send hop limit */
 #define IPV6_NEXTHOP		48 /* sockaddr; next hop addr */
 #define IPV6_HOPOPTS		49 /* ip6_hbh; send hop-by-hop option */
-#define IPV6_DSTOPTS		50 /* ip6_dest; send dst option befor rthdr */
+#define IPV6_DSTOPTS		50 /* ip6_dest; send dst option before rthdr */
 #define IPV6_RTHDR		51 /* ip6_rthdr; send routing header */
 #if 0
 #define IPV6_PKTOPTIONS		52 /* buf/cmsghdr; set/get IPv6 options */

@@ -61,7 +61,7 @@ _start:
 	mtpr    r0, intbase
 
  #----------------------------------------------------------------------------#
- # Handle global and static constructurs execution and setup                  #
+ # Handle global and static constructors execution and setup                  #
  # destructors to be called from exit.                                        #
 	bal	ra,	_init
 	movd	$_fini, r2

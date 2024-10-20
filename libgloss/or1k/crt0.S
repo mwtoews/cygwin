@@ -20,8 +20,8 @@
 /* Coding convention:
    Assembly is hard to read per se, so please follow the following coding
    conventions to keep it consistent and ease reading:
-    * internal jump labels start with L, no identation
-    * assemble lines have one tab identation
+    * internal jump labels start with L, no indentation
+    * assemble lines have one tab indentation
     * attributes (.section, .global, ..) are indented with one tab
     * code is structured using tabs, i.e., use 'l.sw\t0(r1),r1' with a single
       tab. libgloss assumes 8 space tab width, so that might look unstructured
@@ -253,7 +253,7 @@ _or1k_reset:
 	l.movhi	r0,0
 #ifdef __OR1K_MULTICORE__
 	// This is a hack that relies on the fact, that all cores start at the
-	// same time and they are similarily fast
+	// same time and they are similarly fast
 	l.sw	0x4(r0),r0
 	// Similarly, we use address 8 to signal how many cores have exit'ed
 	l.sw	0x8(r0),r0
@@ -314,7 +314,7 @@ _or1k_reset:
 	.org 0x500
 	CALL_EXCEPTION_HANDLER(5)
 
-	/* 0x600: Aligment exception */
+	/* 0x600: Alignment exception */
 	.org 0x600
 	CALL_EXCEPTION_HANDLER(6)
 
@@ -424,7 +424,7 @@ _or1k_reset:
      this should be flexible with respect to the usage of virtual memory.
 
    * Activate the caches:
-     If available the caches are initiliazed and activated.
+     If available the caches are initialized and activated.
 
    * Clear BSS:
      The BSS are essentially the uninitialized C variables. They are set to 0
@@ -656,7 +656,7 @@ _or1k_start:
 	l.mfspr	r4,r0, OR1K_SPR_SYS_NUMCORES_ADDR
 	/* Compare to number of finished tasks */
 	l.sfeq	r3,r4
-	/* Last core needs to desctruct library etc. */
+	/* Last core needs to destruct library etc. */
 	OR1K_DELAYED_NOP(OR1K_INST(l.bf .exitcorelast));
 	OR1K_DELAYED(
 		OR1K_INST(l.addi r3,r11,0),

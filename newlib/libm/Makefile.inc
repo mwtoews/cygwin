@@ -35,7 +35,7 @@ install-man: %C%_install-man
 
 ## The order of includes is important for two reasons:
 ## * The integrated documentation (chapter ordering).
-## * Object overridding -- machine dir must come last.
+## * Object overriding -- machine dir must come last.
 ## Do not change the order without considering the doc impact.
 
 if NEWLIB_HW_FP

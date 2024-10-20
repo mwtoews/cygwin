@@ -140,7 +140,7 @@
 	Throughout, change use of _reent_winsup()-> to _my_tls.locals.
 	instead.
 	Throughout, remove obsolete MT_SAFE/_CYG_THREAD_FAILSAFE considerations.
-	Througout, add cygtls.h include.
+	Throughout, add cygtls.h include.
 	* Makefile.in (DLL_OFILES): Add cygtls.o.  Add some more objects to the
 	-fomit-frame-pointer list.
 	* acconfig.h: Remove obsolete settings.
@@ -932,14 +932,14 @@
 	(IPC_W): Ditto.
 	(IPC_M): Ditto.
 	* include/cygwin/msg.h: Use appropriate guard. #ifdef _KERNEL all stuff
-	not explicitely defined by SUSv3. Use signed types in structs to match
+	not explicitly defined by SUSv3. Use signed types in structs to match
 	types used in BSD.
 	(msgqnum_t): Define unsigned.
 	(msglen_t): Ditto.
 	(struct msqid_ds): Add msg_first and msg_last.
 	(struct msginfo): Remove msgpool. Add msgssz and msgseg.
 	* include/cygwin/sem.h: Use appropriate guard. #ifdef _KERNEL all stuff
-	not explicitely defined by SUSv3. Use signed types in structs to match
+	not explicitly defined by SUSv3. Use signed types in structs to match
 	types used in BSD.
 	(SEM_UNDO): Define appropriately.
 	(struct semid_ds): Add sem_base.
@@ -949,7 +949,7 @@
 	(SEM_ALLOC): Ditto.
 	(union semun): Define.
 	* include/cygwin/shm.h: Use appropriate guard. #ifdef _KERNEL all stuff
-	not explicitely defined by SUSv3. Use signed types in structs to match
+	not explicitly defined by SUSv3. Use signed types in structs to match
 	types used in BSD.
 	(SHMLBA): Define using cygwin_internal(CW_GET_SHMLBA) call.
 	(struct shmid_ds): Add shm_internal.
@@ -977,9 +977,9 @@
 2003-11-17  Corinna Vinschen  <corinna@vinschen.de>
 
 	* bsdlib.cc (getprogname): New function.
-	(setprogname): New funtion.
+	(setprogname): New function.
 	* cygwin.din: Export getprogname and setprogname.
-	* include/cygwin/version.h: Bumb API version number.
+	* include/cygwin/version.h: Bump API version number.
 
 2003-11-15  Christopher Faylor  <cgf@redhat.com>
 
@@ -1142,7 +1142,7 @@
 
 2003-11-03  Corinna Vinschen  <corinna@vinschen.de>
 
-	* net.cc (dup_ent): Move Win 95 misalignment recogition before
+	* net.cc (dup_ent): Move Win 95 misalignment recognition before
 	trying to evaluate string length.
 
 2003-10-31  Thomas Pfaff  <tpfaff@gmx.net>
@@ -1205,7 +1205,7 @@
 	(semaphore::semaphore): New constructor for named semaphores.
 	(semaphore::~semaphore): Care for semaphore name.
 	(semaphore::_post): Accommodate failing ReleaseSemaphore. Use value
-	returned by ReleaseSemaphore vor currentvalue.
+	returned by ReleaseSemaphore for currentvalue.
 	(semaphore::_getvalue): New method.
 	(semaphore::_timedwait): Ditto.
 	(semaphore::_fixup_after_fork): Rearrange. Don't fail for process
@@ -2129,7 +2129,7 @@
 	(logwtmp): Ditto.
 	(login): Call updwtmp instead of writing to wtmp by itself.
 	(logout): Ditto.
-	* tty.cc (revoke): New funtion.
+	* tty.cc (revoke): New function.
 	* include/paths.h: Define _PATH_DEVNULL.
 	* include/pty.h: New header.
 	* include/cygwin/version.h: Bump API minor number.
@@ -2219,7 +2219,7 @@
 2003-09-07  Christopher Faylor  <cgf@redhat.com>
 
 	Throughout, remove __d_u.__d_data fields from DIR structure.
-	* include/sys/dirent.h (dirent): Remvoe old_d_ino.
+	* include/sys/dirent.h (dirent): Remove old_d_ino.
 	(DIR): Make __d_dirhash a 64 bit value.  Remove __d_data and __d_u.
 	Add __flags.
 	* dir.cc (opendir_states): New enum.
@@ -2566,7 +2566,7 @@
 
 2003-08-20  Christopher Faylor  <cgf@redhat.com>
 
-	* speclib: Reenable removal of temp files.
+	* speclib: Re-enable removal of temp files.
 
 2003-08-20  Christopher Faylor  <cgf@redhat.com>
 
@@ -2903,7 +2903,7 @@
 
 2003-07-07  Christopher Faylor  <cgf@redhat.com>
 
-	* newsym: Reenable removal of tmp directory.  Just use ar to generate
+	* newsym: Re-enable removal of tmp directory.  Just use ar to generate
 	archive index.
 	* Makefile.in: Don't send ranlib to newsym or rmsym.
 
@@ -3488,7 +3488,7 @@
 	* include/sys/utime.h: Ditto.
 	* include/sys/utmp.h: Ditto.
 	* include/sys/dirent.h: Ditto.  Expose different struct dirent,
-	dependening of the environment.
+	depending of the environment.
 
 2003-05-11  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -3669,7 +3669,7 @@
 	* thread.cc (pthread_rwlock::unlock): Use release to signal waiting
 	threads.
 	(pthread_rwlock::rdlock_cleanup): Signal waiting threads after a
-	cancelation.
+	cancellation.
 	(pthread_rwlock::wrlock_cleanup): Ditto.
 
 2003-04-13  Pierre Humblet  <pierre.humblet@ieee.org>
@@ -3918,7 +3918,7 @@
 	fixup mutexes after a fork.
 	(semaphore::FixupAfterFork): New method.
 	(semaphore::semaphores): New member.
-	(MTinterface::mutexs): Remove.
+	(MTinterface::mutexes): Remove.
 	(MTinterface::conds): Ditto.
 	(MTinterface::rwlocks): Ditto.
 	(MTinterface::semaphores): Ditto.
@@ -4216,7 +4216,7 @@
 	pthread_rwlock_unlock, pthread_rwlockattr_init,
 	pthread_rwlockattr_getpshared, pthread_rwlockattr_setpshared,
 	and pthread_rwlockattr_destroy.
-	* thread.h (PTHREAD_ONCE_MAGIC): Remove superflous semicolon.
+	* thread.h (PTHREAD_ONCE_MAGIC): Remove superfluous semicolon.
 	(PTHREAD_RWLOCK_MAGIC): New define.
 	(PTHREAD_RWLOCKATTR_MAGIC): Ditto.
 	(pthread_rwlockattr): New class.
@@ -4403,7 +4403,7 @@
 
 	* fhandler_socket.cc (fhandler_socket::dup): Don't call
 	fhandler_base::dup() but call DuplicateHandle directly instead to have
-	control over socket inheritence.
+	control over socket inheritance.
 
 2003-03-11  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -4661,7 +4661,7 @@
 2003-03-27  Thomas Pfaff  <tpfaff@gmx.net>
 
 	* fhandler_socket.cc (fhandler_socket::connect): Add support for
-	an interruptable connect.
+	an interruptible connect.
 
 2003-02-27  Pierre Humblet  <pierre.humblet@ieee.org>
 
@@ -5358,7 +5358,7 @@
 2003-01-17  Christopher Faylor  <cgf@redhat.com>
 
 	* dcrt0.cc (initialize_env): Use colon for CYGWIN_DEBUG separator.
-	* grp.cc: Change most statics to NO_COPY throughout.
+	* grp.cc: Change most statistics to NO_COPY throughout.
 	* passwd.cc: Ditto.
 
 2003-01-17  Christopher Faylor  <cgf@redhat.com>

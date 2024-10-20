@@ -530,7 +530,7 @@ return (0);
 ; value that is an ordinary, legal number.  A special value
 ; "infinity" may also be implemented; this would require tests
 ; for that value and implementation of special rules for arithmetic
-; operations involving inifinity.
+; operations involving infinity.
 */
 
 static void einfin(register short unsigned int *x, register LDPARMS *ldp)

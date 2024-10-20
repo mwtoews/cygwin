@@ -639,7 +639,7 @@ pipe_data_available (int fd, fhandler_base *fh, HANDLE h, int flags)
         on the writer side assumes that no space is available in the read
         side inbound buffer.
 
-        Consequentially, the only reliable information is available on the
+        Consequently, the only reliable information is available on the
         read side, so fetch info from the read side via the pipe-specific
         query handle.  Use fpli.WriteQuotaAvailable as storage for the actual
         interesting value, which is the InboundQuote on the write side,

@@ -73,7 +73,7 @@ G =  3.5714286566e-01; /* 5/14      = 0x3eb6db6e */
 	s=C+r*t;
 	t*=G+F/(s+E+D/s);	
 
-    /* retore the sign bit */
+    /* restore the sign bit */
 	GET_FLOAT_WORD(high,t);
 	SET_FLOAT_WORD(t,high|sign);
 	return(t);

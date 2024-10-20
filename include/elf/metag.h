@@ -33,7 +33,7 @@ START_RELOC_NUMBERS (elf_metag_reloc_type)
      RELOC_NUMBER (R_METAG_RELBRANCH,     4)
      RELOC_NUMBER (R_METAG_GETSETOFF,     5)
 
-     /* Backward compatability */
+     /* Backward compatibility */
      RELOC_NUMBER (R_METAG_REG32OP1,      6)
      RELOC_NUMBER (R_METAG_REG32OP2,      7)
      RELOC_NUMBER (R_METAG_REG32OP3,      8)

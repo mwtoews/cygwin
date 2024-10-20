@@ -204,7 +204,7 @@
 	ldmdb	r3, {sp}^
 # endif
 
-	/* Back to original mode, presumably SVC, with diabled FIQ/IRQ.  */
+	/* Back to original mode, presumably SVC, with disabled FIQ/IRQ.  */
 	orr	r4, r4, #(CPSR_I_MASK|CPSR_F_MASK)
 	msr	CPSR_c, r4
 
@@ -326,7 +326,7 @@
 	/*  Set up the stack pointer to a fixed value. */
 	/*  Changes by toralf:
 	    - Allow linker script to provide stack via __stack symbol - see
-	      defintion of .Lstack
+	      definition of .Lstack
 	    - Provide "hooks" that may be used by the application to add
 	      custom init code - see .Lhwinit and .Lswinit.  */
 

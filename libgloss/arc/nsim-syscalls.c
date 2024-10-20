@@ -181,7 +181,7 @@ translate_stat (struct nsim_stat *nsim, struct stat *buf)
   #undef TR
 }
 
-/* stat/fstat implementation.  Situation is similiar to open and its flags -
+/* stat/fstat implementation.  Situation is similar to open and its flags -
    structure is defined in libc, hence cannot be customized in libgloss, yet we
    have a case where nSIM uses some definition which is not compatible with
    neither old ARC-custom definition of "struct stat" in newlib, nor with

@@ -144,7 +144,7 @@ process::remove (const cleanup_routine *const entry)
 }
 
 /* This is single threaded. It's called after the process is removed
- * from the cache, but inserts may be attemped by worker threads that
+ * from the cache, but inserts may be attempted by worker threads that
  * have a pointer to it.
  */
 void

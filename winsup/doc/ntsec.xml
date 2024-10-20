@@ -134,7 +134,7 @@ versions of Cygwin, but you should switch to the aforementioned
 automatic translation, unless you have very specific needs. Again,
 see <xref linkend="ntsec-mapping"></xref> for the details.</para>
 
-<para>Do you still remember the SIDs with special meaning?  In offical
+<para>Do you still remember the SIDs with special meaning?  In official
 notation they are called "well-known SIDs".  For example, POSIX has no GID
 for the group of "all users" or "world" or "others".  The last three rwx
 bits in a unix-style permission value just represent the permissions for
@@ -154,7 +154,7 @@ Interactive			S-1-5-4    Only processes of users which are
 Authenticated Users             S-1-5-11   Users which have gone through
                                            the authentication process and
 					   survived.  Anonymously accessing
-					   users are not incuded here.
+					   users are not included here.
 SYSTEM                          S-1-5-18   A special account which has all
 					   kinds of dangerous rights, sort of
 					   an uber-root account.
@@ -534,7 +534,7 @@ the additional problem that the
 <ulink url="http://msdn.microsoft.com/en-us/library/windows/desktop/aa379166%28v=vs.85%29.aspx">LookupAccountSid</ulink>
 and
 <ulink url="http://msdn.microsoft.com/en-us/library/windows/desktop/aa379159%28v=vs.85%29.aspx">LookupAccountName</ulink>
-functions cannnot resolve the SIDs, unless they know the name of the machine
+functions cannot resolve the SIDs, unless they know the name of the machine
 this SID comes from.  And even then it will probably suffer a
 <literal>Permission denied</literal> error when trying to ask the machine
 for its local account.
@@ -1000,7 +1000,7 @@ entries will be enumerated when calling them in a loop, nor do they
 allow to add some filter criteria.  They were designed back in the days,
 when only <filename>/etc/passwd</filename> and <filename>/etc/group</filename>
 files existed and the number of user accounts on a typical UNIX system was
-seldomly a three-digit number.
+seldom a three-digit number.
 </para>
 
 <para>
@@ -1255,7 +1255,7 @@ definition.
 		  <term><literal>%H</literal></term>
 		  <listitem>Windows home directory in POSIX style.  Note that,
 			    for the <literal>db_home:</literal> setting, this
-			    only makes sense right after the preceeding slash,
+			    only makes sense right after the preceding slash,
 			    as in
 <screen>
 db_home:  /%H/cygwin
@@ -1377,7 +1377,7 @@ of each schema when used with <literal>db_home:</literal>
 <literal>db_home:</literal> defines no default schemata.  If this setting is not
 present in <filename>/etc/nsswitch.conf</filename>, the aforementioned fallback
 takes over, which is equivalent to a <filename>/etc/nsswitch.conf</filename>
-settting of
+setting of
 </para>
 
 <screen>
@@ -1457,7 +1457,7 @@ when used with <literal>db_shell:</literal>
 <literal>db_shell:</literal> defines no default schemata.  If this setting is
 not present in <filename>/etc/nsswitch.conf</filename>, the aforementioned
 fallback takes over, which is equivalent to a
-<filename>/etc/nsswitch.conf</filename> settting of
+<filename>/etc/nsswitch.conf</filename> setting of
 </para>
 
 <screen>
@@ -2265,7 +2265,7 @@ DOMAIN\my_user using a token created directly by calling the
 this new access token might want to know under which user account it's
 running.  The corresponding SID is returned correctly, for instance
 S-1-5-21-1234-5678-9012-77777.  However, if the same process asks the OS
-for the user name of this SID something wierd happens.  For instance,
+for the user name of this SID something weird happens.  For instance,
 the <command>LookupAccountSid</command> function will not return
 "DOMAIN\my_user", but "NT AUTHORITY\SYSTEM" as the user name.</para>
 

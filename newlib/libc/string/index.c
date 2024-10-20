@@ -10,7 +10,7 @@ SYNOPSIS
 	char * index(const char *<[string]>, int <[c]>);
 
 DESCRIPTION
-	This function finds the first occurence of <[c]> (converted to
+	This function finds the first occurrence of <[c]> (converted to
 	a char) in the string pointed to by <[string]> (including the
 	terminating null character).
 

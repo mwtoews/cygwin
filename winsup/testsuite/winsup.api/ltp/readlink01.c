@@ -144,7 +144,7 @@ main(int ac, char **av)
 				}
 			} else {
 				tst_resm(TFAIL, "readlink() return value %d "
-					 "does't match, Expected %d",
+					 "doesn't match, Expected %d",
 					 TEST_RETURN, exp_val);
 			}
 		} else {

@@ -115,7 +115,7 @@ r23_zero:
 	add	r23,r63,r5
 zero_now:
 al_found_zero:
-/* We konw that one of the values has at lest one zero, and r8 holds
+/* We know that one of the values has at lest one zero, and r8 holds
    an 0x01 or 0xff mask for every zero found in one of the operands.
    If both operands have the first zero in the same place, this mask
    allows us to truncate the comparison to the valid bytes in the

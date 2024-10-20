@@ -823,7 +823,7 @@ SECTIONS
 @end smallexample
 
 Set up the @code{.text} section. In a @code{COFF} file, .text is where
-all the actual instructions are. This also sets up the @emph{CONTRUCTOR}
+all the actual instructions are. This also sets up the @emph{CONSTRUCTOR}
 and the @emph{DESTRUCTOR} tables for @code{G++}. Notice that the section
 description redirects itself to the @emph{ram} variable setup earlier.
 
@@ -864,7 +864,7 @@ by @code{ld}.
 @end smallexample
 
 Setup the @code{.bss} section. In a @code{COFF} file, this is where
-unitialized data goes. The symbols @code{_bss_start} and @code{_end}
+uninitialized data goes. The symbols @code{_bss_start} and @code{_end}
 are setup here for use by the @code{crt0.o} when it zero's the
 @code{.bss} section. 
 
@@ -974,7 +974,7 @@ sbrk(nbytes)
 
 These are called by @code{newlib} but don't apply to the embedded
 environment. @code{isatty()} is self explanatory. @code{kill()} doesn't
-apply either in an environment withno process control, so it justs
+apply either in an environment withno process control, so it just
 exits, which is a similar enough behavior. @code{getpid()} can safely
 return any value greater than 1. The value doesn't effect anything in
 @code{newlib} because once again there is no process control.
@@ -1208,7 +1208,7 @@ each packet transmitted successfully, the target responds with a
 @code{+} (@code{ACK}). If there was a transmission error, then the target
 responds with a @code{-} (@code{NAK}). An error is determined when the
 checksum doesn't match the calculated checksum for that data record.
-Upon reciept of the @code{ACK}, @code{GDB} can then transmit the next
+Upon receipt of the @code{ACK}, @code{GDB} can then transmit the next
 packet. 
 
 Here is a list of the main functions that need to be supported. Each data
@@ -1266,7 +1266,7 @@ returned when only part of the data is written.
 
 @item	continue	@code{cAAAAAAAAA}
 @code{AAAAAAAA} is address to resume execution at. If @code{AAAAAAAA} is
-omitted, resume at the curent address of the @code{pc} register.
+omitted, resume at the current address of the @code{pc} register.
 
 returns the same replay as @code{last signal}. There is no immediate
 replay to @code{cont} until the next breakpoint is reached, and the

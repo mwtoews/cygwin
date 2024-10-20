@@ -641,12 +641,12 @@ Mon Dec 31 16:45:41 2001  Jeffrey A Law  (law@cygnus.com)
 
 2001-02-12  Jan Hubicka  <jh@suse.cz>
 
-	* i386.h (i386_optab): SSE integer converison instructions have
+	* i386.h (i386_optab): SSE integer conversion instructions have
 	64bit versions on x86-64.
 
 2001-02-10  Nick Clifton  <nickc@redhat.com>
 
-	* mips.h: Remove extraneous whitespace.  Formating change to allow
+	* mips.h: Remove extraneous whitespace.  Formatting change to allow
 	for future contribution.
 
 2001-02-09  Martin Schwidefsky  <schwidefsky@de.ibm.com>
@@ -1220,7 +1220,7 @@ Wed May 26 16:57:44 1999  Jeffrey A Law  (law@cygnus.com)
 
 1999-05-12  Alan Modra  <alan@apri.levels.unisa.edu.au>
 
-	* i386.h (ReverseModrm): Remove all occurences.
+	* i386.h (ReverseModrm): Remove all occurrences.
 	(InvMem): Add to control/debug/test mov insns, movhlps, movlhps,
 	movmskps, pextrw, pmovmskb, maskmovq.
 	Change NoSuf to FP on all MMX, XMM and AMD insns as these all
@@ -1509,7 +1509,7 @@ Sat Jun 13 11:31:35 1998  Alan Modra  <alan@spri.levels.unisa.edu.au>
 
 Tue Jun  9 12:16:01 1998  Alan Modra  <alan@spri.levels.unisa.edu.au>
 
-	* i386.h: Change occurences of Data16 to Size16, Data32 to Size32,
+	* i386.h: Change occurrences of Data16 to Size16, Data32 to Size32,
 	IgnoreDataSize to IgnoreSize.  Flag address and data size prefixes
 	with Size16|IgnoreSize or Size32|IgnoreSize.
 
@@ -1550,7 +1550,7 @@ Fri Jun  5 23:42:43 1998  Alan Modra  <alan@spri.levels.unisa.edu.au>
 	(WORD_PREFIX_OPCODE): Rename to DATA_PREFIX_OPCODE for
 	consistency.
 
-	* i386.h: Change occurence of ShortformW to W|ShortForm.  Add
+	* i386.h: Change occurrence of ShortformW to W|ShortForm.  Add
 	IgnoreDataSize where appropriate.
 
 Wed Jun  3 18:28:45 1998  Alan Modra  <alan@spri.levels.unisa.edu.au>
@@ -2426,7 +2426,7 @@ Wed Jun 21 18:49:51 1995  Ken Raeburn  <raeburn@cujo.cygnus.com>
 
 Fri Apr 14 22:15:34 1995  Ken Raeburn  <raeburn@cujo.cygnus.com>
 
-	* m68k.h: Added explcitly short-sized conditional branches, and a
+	* m68k.h: Added explicitly short-sized conditional branches, and a
 	bunch of aliases (fmov*, ftest*, tdivul) to support gcc's
 	svr4-based configurations.
 

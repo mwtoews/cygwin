@@ -1,7 +1,7 @@
 # _GCC_PICFLAG(FLAG, DISPATCH)
 # ----------------------------
 # Store PIC flag corresponding to DISPATCH triplet in FLAG.
-# Explit use of -fpic in CFLAGS corresponding to FLAG overrides default.
+# Explicit use of -fpic in CFLAGS corresponding to FLAG overrides default.
 AC_DEFUN([_GCC_PICFLAG], [
 
 case "${$2}" in

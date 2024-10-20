@@ -272,7 +272,7 @@
 			"nop	\n\t"
 #endif /* __ARC700__ */
 
-/* There are two variants of macroses here:
+/* There are two variants of macros here:
    - _syscall is a complete function definition of system call
    - _naked_syscall only invokes system call and can be inserted into other
      functions.  This macro is defined only for those syscall<N>, where it is

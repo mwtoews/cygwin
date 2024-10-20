@@ -139,7 +139,7 @@
 
 2005-10-21  Mark Mitchell  <mark@codesourcery.com>
 
-	* texi2pod.pl: Substitue for @value even when part of @include.
+	* texi2pod.pl: Substitute for @value even when part of @include.
 
 2005-10-21  Bob Wilson  <bob.wilson@acm.org>
 

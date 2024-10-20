@@ -74,7 +74,7 @@ poll (struct pollfd *fds, nfds_t nfds, int timeout)
       /* Only invalid fds?  Return. */
       if ((nfds_t) invalid_fds == nfds)
 	return invalid_fds;
-      /* POSIX doesn't explicitely define this behaviour, but on Linux,
+      /* POSIX doesn't explicitly define this behaviour, but on Linux,
 	 the timeout is set to 0 if an error occurs, and POLLNVAL is one
 	 of these errors.  So, for Linux-compatibility's sake... */
       tv.tv_sec = tv.tv_usec = 0;

@@ -34,7 +34,7 @@
 
 #ifdef _MISRA_RULES
 #pragma diag(push)
-#pragma diag(suppress:misra_rule_5_7:"ADI header will re-use identifiers")
+#pragma diag(suppress:misra_rule_5_7:"ADI header will reuse identifiers")
 #pragma diag(suppress:misra_rule_6_3:"ADI header allows use of basic types")
 #endif /* _MISRA_RULES */
 
@@ -1253,8 +1253,8 @@
 #define pREG_PVP0_THC1_TH14              ((volatile  int32_t *)REG_PVP0_THC1_TH14)               /* PVP0 THCn Threshold Value 14 */
 #define pREG_PVP0_THC0_TH15              ((volatile  int32_t *)REG_PVP0_THC0_TH15)               /* PVP0 THCn Threshold Value 15 */
 #define pREG_PVP0_THC1_TH15              ((volatile  int32_t *)REG_PVP0_THC1_TH15)               /* PVP0 THCn Threshold Value 15 */
-#define pREG_PVP0_THC0_HHPOS             ((volatile uint32_t *)REG_PVP0_THC0_HHPOS)              /* PVP0 THCn Histogram Horzontal Position */
-#define pREG_PVP0_THC1_HHPOS             ((volatile uint32_t *)REG_PVP0_THC1_HHPOS)              /* PVP0 THCn Histogram Horzontal Position */
+#define pREG_PVP0_THC0_HHPOS             ((volatile uint32_t *)REG_PVP0_THC0_HHPOS)              /* PVP0 THCn Histogram Horizontal Position */
+#define pREG_PVP0_THC1_HHPOS             ((volatile uint32_t *)REG_PVP0_THC1_HHPOS)              /* PVP0 THCn Histogram Horizontal Position */
 #define pREG_PVP0_THC0_HVPOS             ((volatile uint32_t *)REG_PVP0_THC0_HVPOS)              /* PVP0 THCn Histogram Vertical Position */
 #define pREG_PVP0_THC1_HVPOS             ((volatile uint32_t *)REG_PVP0_THC1_HVPOS)              /* PVP0 THCn Histogram Vertical Position */
 #define pREG_PVP0_THC0_HHCNT             ((volatile uint32_t *)REG_PVP0_THC0_HHCNT)              /* PVP0 THCn Histogram Horizontal Count */
@@ -1795,8 +1795,8 @@
 #define pREG_EMAC0_TM_HISEC              ((volatile uint32_t *)REG_EMAC0_TM_HISEC)               /* EMAC0 Time Stamp High Second Register */
 #define pREG_EMAC0_TM_STMPSTAT           ((volatile uint32_t *)REG_EMAC0_TM_STMPSTAT)            /* EMAC0 Time Stamp Status Register */
 #define pREG_EMAC0_TM_PPSCTL             ((volatile uint32_t *)REG_EMAC0_TM_PPSCTL)              /* EMAC0 PPS Control Register */
-#define pREG_EMAC0_TM_AUXSTMP_NSEC       ((volatile uint32_t *)REG_EMAC0_TM_AUXSTMP_NSEC)        /* EMAC0 Time Stamp Auxilary TS Nano Seconds Register */
-#define pREG_EMAC0_TM_AUXSTMP_SEC        ((volatile uint32_t *)REG_EMAC0_TM_AUXSTMP_SEC)         /* EMAC0 Time Stamp Auxilary TM Seconds Register */
+#define pREG_EMAC0_TM_AUXSTMP_NSEC       ((volatile uint32_t *)REG_EMAC0_TM_AUXSTMP_NSEC)        /* EMAC0 Time Stamp Auxiliary TS Nano Seconds Register */
+#define pREG_EMAC0_TM_AUXSTMP_SEC        ((volatile uint32_t *)REG_EMAC0_TM_AUXSTMP_SEC)         /* EMAC0 Time Stamp Auxiliary TM Seconds Register */
 #define pREG_EMAC0_TM_PPSINTVL           ((volatile uint32_t *)REG_EMAC0_TM_PPSINTVL)            /* EMAC0 Time Stamp PPS Interval Register */
 #define pREG_EMAC0_TM_PPSWIDTH           ((volatile uint32_t *)REG_EMAC0_TM_PPSWIDTH)            /* EMAC0 PPS Width Register */
 #define pREG_EMAC0_DMA_BUSMODE           ((volatile uint32_t *)REG_EMAC0_DMA_BUSMODE)            /* EMAC0 DMA Bus Mode Register */
@@ -1928,8 +1928,8 @@
 #define pREG_EMAC1_TM_HISEC              ((volatile uint32_t *)REG_EMAC1_TM_HISEC)               /* EMAC1 Time Stamp High Second Register */
 #define pREG_EMAC1_TM_STMPSTAT           ((volatile uint32_t *)REG_EMAC1_TM_STMPSTAT)            /* EMAC1 Time Stamp Status Register */
 #define pREG_EMAC1_TM_PPSCTL             ((volatile uint32_t *)REG_EMAC1_TM_PPSCTL)              /* EMAC1 PPS Control Register */
-#define pREG_EMAC1_TM_AUXSTMP_NSEC       ((volatile uint32_t *)REG_EMAC1_TM_AUXSTMP_NSEC)        /* EMAC1 Time Stamp Auxilary TS Nano Seconds Register */
-#define pREG_EMAC1_TM_AUXSTMP_SEC        ((volatile uint32_t *)REG_EMAC1_TM_AUXSTMP_SEC)         /* EMAC1 Time Stamp Auxilary TM Seconds Register */
+#define pREG_EMAC1_TM_AUXSTMP_NSEC       ((volatile uint32_t *)REG_EMAC1_TM_AUXSTMP_NSEC)        /* EMAC1 Time Stamp Auxiliary TS Nano Seconds Register */
+#define pREG_EMAC1_TM_AUXSTMP_SEC        ((volatile uint32_t *)REG_EMAC1_TM_AUXSTMP_SEC)         /* EMAC1 Time Stamp Auxiliary TM Seconds Register */
 #define pREG_EMAC1_TM_PPSINTVL           ((volatile uint32_t *)REG_EMAC1_TM_PPSINTVL)            /* EMAC1 Time Stamp PPS Interval Register */
 #define pREG_EMAC1_TM_PPSWIDTH           ((volatile uint32_t *)REG_EMAC1_TM_PPSWIDTH)            /* EMAC1 PPS Width Register */
 #define pREG_EMAC1_DMA_BUSMODE           ((volatile uint32_t *)REG_EMAC1_DMA_BUSMODE)            /* EMAC1 DMA Bus Mode Register */

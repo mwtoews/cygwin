@@ -483,7 +483,7 @@ __loadlocale (struct __locale_t *loc, int category, char *new_locale)
      one in POSIX-style, or one in the old newlib style to maintain
      backward compatibility.  If the local string is correct, the charset
      is extracted and stored in ctype_codeset or message_charset
-     dependent on the cateogry. */
+     dependent on the category. */
   char *locale = NULL;
   char charset[ENCODING_LEN + 1];
   long val = 0;
@@ -594,7 +594,7 @@ restart:
 	   for the default charset which is connected to the given locale.
 	   The function uses Windows functions in turn so it can't be easily
 	   adapted to other targets.  However, if any other target provides
-	   equivalent functionality, preferrably using the same function name
+	   equivalent functionality, preferably using the same function name
 	   it would be sufficient to change the guarding #ifdef. */
 	__set_charset_from_locale (locale, charset);
 #else

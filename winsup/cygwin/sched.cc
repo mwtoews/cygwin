@@ -281,7 +281,7 @@ sched_setparam (pid_t pid, const struct sched_param *param)
 
    Note 1:
 
-     We deliberately handle the REALTIME prority class the same as the HIGH
+     We deliberately handle the REALTIME priority class the same as the HIGH
      priority class.  Realtime has it's own range from 16 to 31 so half the
      arena is reserved for REALTIME.  The problem is that this isn't visible
      nor expected in the POSIX scenario.  Therefore we hide this here and

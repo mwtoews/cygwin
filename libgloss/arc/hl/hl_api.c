@@ -193,7 +193,7 @@ _hl_pack_int (volatile __uncached char *p, uint32_t x)
 }
 
 /*
- * Pack data (pointer and legth) to provided buffer.
+ * Pack data (pointer and length) to provided buffer.
  * Packing structure:
  *     uint16 type  (PAT_STRING = 4)
  *     uint16 size  (length)

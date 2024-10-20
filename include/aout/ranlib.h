@@ -54,7 +54,7 @@ struct symdef
     unsigned long file_offset;
   };
 
-/* Compatability with BSD code */
+/* Compatibility with BSD code */
 
 #define	ranlib	symdef
 #define	ran_un	s

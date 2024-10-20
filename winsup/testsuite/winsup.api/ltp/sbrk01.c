@@ -150,7 +150,7 @@ main(int ac, char **av)
 
 #ifdef __CYGWIN__
     /* we need to initialize output buffer before first sbrk.
-       otherwise, when memory is freed bu second sbrk, fwrite will
+       otherwise, when memory is freed by second sbrk, fwrite will
        fail */
     tst_resm(TINFO, "Entering test");
 #endif

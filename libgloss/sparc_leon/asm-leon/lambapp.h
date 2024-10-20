@@ -127,7 +127,7 @@ extern "C"
 #define OPTIONS_ALLOCATED	0x00000020
 #define OPTIONS_ALL		(OPTIONS_FREE|OPTIONS_ALLOCATED)
 
-/* Depth first search, Defualt is breth first search. */
+/* Depth first search, Default is breth first search. */
 #define OPTIONS_DEPTH_FIRST	0x00000100
 
 #define DEV_AHB_NONE 0
@@ -140,13 +140,13 @@ extern "C"
   {
     const unsigned int id;	/* VENDOR, DEVICE, VER, IRQ, */
     const unsigned int custom[3];
-    const unsigned int mbar[4];	/* MASK, ADDRESS, TYPE, CACHABLE/PREFETCHABLE */
+    const unsigned int mbar[4];	/* MASK, ADDRESS, TYPE, CACHEABLE/PREFETCHABLE */
   };
 
   struct ambapp_pnp_apb
   {
     const unsigned int id;	/* VENDOR, DEVICE, VER, IRQ, */
-    const unsigned int iobar;	/* MASK, ADDRESS, TYPE, CACHABLE/PREFETCHABLE */
+    const unsigned int iobar;	/* MASK, ADDRESS, TYPE, CACHEABLE/PREFETCHABLE */
   };
 
 #define ambapp_pnp_vendor(id) (((id) >> 24) & 0xff)

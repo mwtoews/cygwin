@@ -64,7 +64,7 @@ _start:
 
 
  #----------------------------------------------------------------------------#
- # Handle global and static constructurs execution and setup                  #
+ # Handle global and static constructors execution and setup                  #
  # destructors to be called from exit.                                        #
 
 	bal	(ra),__init
@@ -76,10 +76,10 @@ _start:
 
 #ifdef __INT32__
 	movd    $0, (r3,r2) # Number of arguments
-	movd    $0, (r5,r4) # conatins pointer to argument string.
+	movd    $0, (r5,r4) # contains pointer to argument string.
 #else
 	movw    $0, r2      # Number of arguments
-	movd    $0, (r4,r3) # conatins pointer to argument string.
+	movd    $0, (r4,r3) # contains pointer to argument string.
 #endif
 	bal		(ra), _main
 

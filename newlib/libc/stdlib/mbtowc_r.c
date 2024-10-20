@@ -53,7 +53,7 @@ typedef enum __packed { COPY_A, COPY_J1, COPY_J2, MAKE_A, NOOP, EMPTY, ERROR } J
 
 /************************************************************************************** 
  * state/action tables for processing JIS encoding
- * Where possible, switches to JIS are grouped with proceding JIS characters and switches
+ * Where possible, switches to JIS are grouped with proceeding JIS characters and switches
  * to ASCII are grouped with preceding JIS characters.  Thus, maximum returned length
  * is 2 (switch to JIS) + 2 (JIS characters) + 2 (switch back to ASCII) = 6.
  *************************************************************************************/

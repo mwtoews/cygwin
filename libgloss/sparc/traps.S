@@ -392,7 +392,7 @@ SYM(win_flush):
         sll     %l3, NUMBER_OF_REGISTER_WINDOWS - 1, %l3
         or      %l3, %g1, %g1
 	mov	%g0, %wim		! Clear wim so that subsequent save
-	nop				!  wont trap
+	nop				!  won't trap
 	nop
 	nop
 	save	%g0, %g0, %g0		! Slip into next window

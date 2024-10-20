@@ -88,7 +88,7 @@
 #define pFIO_EDGE ((volatile unsigned short *)FIO_EDGE)
 #define pFIO_BOTH ((volatile unsigned short *)FIO_BOTH)
 
-/* Aysnchronous Memory Controller - External Bus Interface Unit (0xFFC0 3C00-0xFFC0 3FFF) */
+/* Asynchronous Memory Controller - External Bus Interface Unit (0xFFC0 3C00-0xFFC0 3FFF) */
 #define pEBIU_AMGCTL ((volatile unsigned short *)EBIU_AMGCTL)
 #define pEBIU_AMBCTL0 ((volatile unsigned long *)EBIU_AMBCTL0)
 #define pEBIU_AMBCTL1 ((volatile unsigned long *)EBIU_AMBCTL1)

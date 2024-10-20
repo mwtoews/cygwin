@@ -154,7 +154,7 @@ _hl_send (volatile __uncached void *p)
    * It is responsibility of debugger to set this back to HL_NOADDRESS
    * after receiving the packet.
    * Please note that we don't wait here because some implementations
-   * use _hl_blockedPeek() function as a signal that we send a messege.
+   * use _hl_blockedPeek() function as a signal that we send a message.
    */
   hdr->target2host_addr = hdr->buf_addr;
 }

@@ -9,7 +9,7 @@
 
 #include "syscall.h"
 
-/* Some macros for writing assember syscall stubs.  */
+/* Some macros for writing assembler syscall stubs.  */
 
 #ifdef SVR4
 #define TEXT_SECTION	.section ".text"

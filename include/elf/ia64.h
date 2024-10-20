@@ -45,7 +45,7 @@
 /* Not used yet.  */
 #define EF_IA_64_ABSOLUTE	    (1 << 8) /* Load at absolute addresses.  */
 
-/* OpenVMS speficic.  */
+/* OpenVMS specific.  */
 #define EF_IA_64_VMS_COMCOD	    0x03   /* Completion code.  */
 #define EF_IA_64_VMS_COMCOD_SUCCESS 0
 #define EF_IA_64_VMS_COMCOD_WARNING 1
@@ -103,7 +103,7 @@
 /* The section contains the dwarf-3 string table.  */
 #define SHT_IA_64_VMS_DEBUG_STR         0x60000003
 /* The section contains linkage information to perform consistency checking
-   accross object modules.  */
+   across object modules.  */
 #define SHT_IA_64_VMS_LINKAGES          0x60000004
 /* The section allows the symbol vector in an image to be location through
    the section table.  */

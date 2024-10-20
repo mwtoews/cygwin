@@ -246,7 +246,7 @@ DESCRIPTION
 		width must also be specified positionally as <<*m$>>,
 		with m as a decimal integer.  Negative field widths
 		are treated as specifying the minus (<<->>) flag for
-		left justfication, along with a positive field width.
+		left justification, along with a positive field width.
 		The resulting format may be wider than the specified
 		width.
 

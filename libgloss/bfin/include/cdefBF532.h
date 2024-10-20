@@ -201,7 +201,7 @@
 
 
 /* External Bus Interface Unit */
-/* Aysnchronous Memory Controller */
+/* Asynchronous Memory Controller */
 #define pEBIU_AMGCTL 	((volatile unsigned short *)EBIU_AMGCTL)
 #define pEBIU_AMBCTL0 	((volatile unsigned long *)EBIU_AMBCTL0)
 #define pEBIU_AMBCTL1 	((volatile unsigned long *)EBIU_AMBCTL1)

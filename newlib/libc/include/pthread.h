@@ -325,7 +325,7 @@ int	pthread_key_delete (pthread_key_t __key);
 
 int	pthread_cancel (pthread_t __pthread);
 
-/* Setting Cancelability State, P1003.1c/Draft 10, p. 183 */
+/* Setting Cancellability State, P1003.1c/Draft 10, p. 183 */
 
 int	pthread_setcancelstate (int __state, int *__oldstate);
 int	pthread_setcanceltype (int __type, int *__oldtype);

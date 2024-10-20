@@ -374,7 +374,7 @@ struct bfd_link_info
 
   /* TRUE if BFD should generate a "task linked" object file,
      similar to relocatable but also with globals converted to
-     statics.  */
+     statistics.  */
   unsigned int task_link: 1;
 
   /* TRUE if ok to have multiple definition.  */
@@ -587,7 +587,7 @@ struct bfd_link_callbacks
      symbol.  WARNING is the warning to be issued.  SYMBOL is the name
      of the symbol which triggered the warning; it may be NULL if
      there is none.  ABFD, SECTION and ADDRESS identify the location
-     which trigerred the warning; either ABFD or SECTION or both may
+     which triggered the warning; either ABFD or SECTION or both may
      be NULL if the location is not known.  */
   bfd_boolean (*warning)
     (struct bfd_link_info *, const char *warning, const char *symbol,

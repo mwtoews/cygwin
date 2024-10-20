@@ -35,7 +35,7 @@
  *
  *    This code by P. McIlroy, Oct 1992;
  *
- *    The financial support of UUNET Communications Services is greatfully
+ *    The financial support of UUNET Communications Services is gratefully
  *    acknowledged.
  *
  * bsdrc/b_tgamma.c converted to long double by Steven G. Kargl.

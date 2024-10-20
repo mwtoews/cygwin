@@ -109,7 +109,7 @@ extern char *TESTDIR;         /* the directory created; defined in */
  *
  *                NOTE: This function must be called BEFORE any activity
  *                that would require CLEANUP.  If tst_tmpdir() fails, it
- *                cleans up afer itself and calls tst_exit() (i.e. does
+ *                cleans up after itself and calls tst_exit() (i.e. does
  *                not return).
  */
 #undef   FN_NAME

@@ -77,7 +77,7 @@
 2015-08-07 Stefan Wallentowitz <stefan.wallentowitz@tum.de>
 
 	* or1k/boards/optimsoc.S: Fix symbol name
-	* or1k/crt0.S: Remove paranthesis
+	* or1k/crt0.S: Remove parenthesis
 
 2015-08-07 Stefan Wallentowitz <stefan.wallentowitz@tum.de>
 
@@ -312,9 +312,9 @@
 	in SYS_geterr handler.
 	* libgloss/nds32/_isatty.S: No error for _isatty is defined in
 	SYS_geterr handler.
-	* libgloss/nds32/_kill.S: Alway fail. errno = EINVAL.
-	* libgloss/nds32/_link.S: Alway fail. errno =  EMLINK.
-	* libgloss/nds32/_times.S: Alway fail. errno = EACCES.
+	* libgloss/nds32/_kill.S: Always fail. errno = EINVAL.
+	* libgloss/nds32/_link.S: Always fail. errno =  EMLINK.
+	* libgloss/nds32/_times.S: Always fail. errno = EACCES.
 	* libgloss/nds32/_unlink.S: fix copy and paste error.
 	* libgloss/nds32/crt0.S: Add pre_c_init, post_c_init, arg_init.
 	* libgloss/nds32/crt1.S: Add pre_c_init, post_c_init, arg_init.
@@ -402,7 +402,7 @@
 
 2014-03-21  Sabrini Ni  <sabrinanitw@gmail.com>
 
-	* nds32/crt0.S: Tweak initialization sqeuence.
+	* nds32/crt0.S: Tweak initialization sequence.
 	* nds32/crt1.S: Ditto.
 
 2014-03-21  Sabrini Ni  <sabrinanitw@gmail.com>
@@ -781,7 +781,7 @@
 	Also carry out sanity check on the heap base; abort if the
 	base is larger than or equal to 4 GiB.  Use other new
 	macros in the instructions that processes the argv arrays.
-	(StackBase): New lable; replace __stack_base__.
+	(StackBase): New label; replace __stack_base__.
 	(__stack_base__): Set with StackBase or StackBase + 4.
 
 2013-05-30  Jeff Johnston  <jjohnstn@redhat.com>
@@ -1651,7 +1651,7 @@
 
 2009-04-03  Ken Werner  <ken.werner@de.ibm.com>
 
-	* spu/crt0.S (_start): Place spu_id in the first agument register.
+	* spu/crt0.S (_start): Place spu_id in the first argument register.
 
 2009-03-16  Jeff Johnston  <jjohnstn@redhat.com>
 
@@ -3912,7 +3912,7 @@
 	* arm/redboot-crt0.S: Use __get_memtop to put stack in high memory.
 
 	* arm/redboot-syscalls.c (_times): Unconditionally use SYS_times.
-	(__get_memtop): New funtion to return top of memory.
+	(__get_memtop): New function to return top of memory.
 
 2002-01-15  Mark Salter  <msalter@redhat.com>
 
@@ -4229,7 +4229,7 @@ Wed May 26 17:22:46 1999  Christopher Faylor <cgf@cygnus.com>
 
 Tue May 25 14:35:21 1999  Christopher Faylor <cgf@cygnus.com>
 
-	* configure.in: Add wince targest.
+	* configure.in: Add wince targets.
 	* configure: Regenerate.
 	* wince: New directory
 	* wince/Makefile.am: New file.
@@ -5380,7 +5380,7 @@ Tue Nov 18 17:22:18 1997  Doug Evans  <devans@seba.cygnus.com>
 
 	* sparc/Makefile.in: Reorganize file.
 
-	* sparc/Makefile.in: Rename all occurences of SIM to ERC32.
+	* sparc/Makefile.in: Rename all occurrences of SIM to ERC32.
 	(all): Don't build erc32 support any more (never installed anyway).
 	* sparc/erc32-io.c: Renamed from sim-io.c.
 	* sparc/erc32-stub.c: Renamed from sim-stub.c.
@@ -5466,7 +5466,7 @@ Tue Sep  9 23:35:04 1997  Gavin Koch  <gavin@cygnus.com>
 	* mips/Makefile.in (SCRIPTS): Now is configurable.
 	(BSP): Now is configurable.
 	(vr4300.o): Remove unnecessary command.
-	* mips/configure.in: Configure the newly configuable
+	* mips/configure.in: Configure the newly configurable
 	SCRIPTS and BSP.
 	* mips/configure: Re-autoconf.
 
@@ -5686,7 +5686,7 @@ Fri Feb 14 11:07:20 1997  J.T. Conklin  <jtc@cygnus.com>
 	* m68k/Makefile.in: Updated for above change.
 
 	* m68k/{mvme135-asm.S, mvme162lx-asm.S}: Removed all whitespace
- 	differences and changed to consistantly use the IMM macro for
+	differences and changed to consistently use the IMM macro for
 	immediate constants.  It is now possible to compare these two
 	files without having to filter out insignificant differences.
 
@@ -5710,7 +5710,7 @@ Thu Feb  6 13:31:06 1997  Bob Manson  <manson@charmed.cygnus.com>
 
 Thu Jan 16 10:34:36 1997  Jim Wilson  <wilson@cygnus.com>
 
-	* mips/{ddb.ld,idt.ld,pmon.ld}: Readd OUTPUT_FORMAT definition.
+	* mips/{ddb.ld,idt.ld,pmon.ld}: Re-add OUTPUT_FORMAT definition.
 
 Wed Jan  8 14:49:26 1997  Jim Wilson  <wilson@cygnus.com>
 
@@ -5890,7 +5890,7 @@ Fri Aug 30 15:57:37 1996  James G. Smith  <jsmith@cygnus.co.uk>
 
 	* mips/Makefile.in (SCRIPTS): Add cairo.
 	(vr4300.o:): Force build with target CFLAGS to ensure correct
- 	multilib endianness. The -Tcairo.ld target uses libpmon.a aswell
+	multilib endianness. The -Tcairo.ld target uses libpmon.a as well
  	as the -Tpmon.ld target.
 	* mips/{idt.ld,pmon.ld}: Remove explicit crt0.o include.
 	* mips/cairo.ld: Added.
@@ -5928,7 +5928,7 @@ Mon Aug  5 15:04:34 1996  Doug Evans  <dje@canuck.cygnus.com>
 
 Sun Aug  4 22:32:14 1996  Rob Savoye  <rob@chinadoll.cygnus.com>
 
-	* pa/Makefile.in: Build the test case as seperate targets.
+	* pa/Makefile.in: Build the test case as separate targets.
 	* pa/{w89k,op50n}.ld: Use GROUP rather than INPUT to get all the
 	libraries.
 
@@ -5996,7 +5996,7 @@ Sat Jun 29 23:26:39 1996  James G. Smith  <jsmith@cygnus.co.uk>
 
 	* mips/cma101.c (DOSYNC): Explicitly select -mips2 for the
  	assembly of the "sync" instruction.
-	* mips/Makefile.in: Removed special cma101.o build. Seperate
+	* mips/Makefile.in: Removed special cma101.o build. Separate
  	install.sh invocations for the BSP libraries.
 
 Sat Jun 29 08:17:52 1996  Michael Meissner  <meissner@tiktok.cygnus.com>
@@ -6063,7 +6063,7 @@ Wed Jun 19 13:57:36 1996  Rob Savoye  <rob@darkstar.cygnus.com>
 	* sparc/Makefile.in: Add multilib support. Add variable for
 	objcopy and objdump. Build the BSPs as archive libraries, not
 	object files. Add support for the SIS sparc simulator. Build the
-	test case srecords and dissasembly as seperate makefile
+	test case srecords and disassembly as separate makefile
 	targets. Also optionally build the C++ test case. Use a target
 	makefile fragment.
 	* sparc/configure.in: Add multilib support.
@@ -6077,8 +6077,8 @@ Wed Jun 19 13:57:36 1996  Rob Savoye  <rob@darkstar.cygnus.com>
 
 Tue Jun 18 20:06:16 1996  Rob Savoye  <rob@chinadoll.cygnus.com>
 
-	* pa/Makefile.in: Build the test case srecords and dissasembly
-	as seperate makefile targets. Also optionally build the C++ test
+	* pa/Makefile.in: Build the test case srecords and disassembly
+	as separate makefile targets. Also optionally build the C++ test
 	case.
 	* pa/crt0.S: If __stack and __globals have a legit address, use
 	that for %sp and %gp. Execute hardware_init_hook and
@@ -6088,38 +6088,38 @@ Tue Jun 18 20:06:16 1996  Rob Savoye  <rob@chinadoll.cygnus.com>
 	libraries. Allocate the stack and global spaces from the top of
 	memory. PROVIDE hardware_init_hook and software_init_hook.
 
-	* m68k/Makefile.in: Build the test case srecords and dissasembly
-	as seperate makefile targets. Also optionally build the C++ test
+	* m68k/Makefile.in: Build the test case srecords and disassembly
+	as separate makefile targets. Also optionally build the C++ test
 	case.
 	* m68k/asm.h: Don't define __USER_LABEL_PREFIX__ and
-	__REGISTER_PREFIX__ ourselves since suprisingly gcc sets them
+	__REGISTER_PREFIX__ ourselves since surprisingly gcc sets them
 	correctly for a change.
 	* m68k/{bcc,mvme135,mvme162,idp}.ld: Use the same crt0 rather than
-	building seperate ones. PROVIDE hardware_init_hook and
+	building separate ones. PROVIDE hardware_init_hook and
 	software_init_hook. Stick the Constructors and Destructors in
 	.data cause they don't work in .text (which is where they should
 	really be).
 	* m68k/cpu32bug: Add a few more traps to support the older ABug
 	monitor.
 	* m68k/crt0.S: If __stack is isn't set, set the stack to the top
-	of memory. Excecute hardware_init_hook and software_init_hook if
+	of memory. Execute hardware_init_hook and software_init_hook if
 	they exist with a legit address. Add __do_global_dtors() to the
 	atexit array.
 
 	* rs6000/Makefile.in: Use the linker script to build the test
 	case. Also build a C++ test case.
-	* rs6000/dtor.C: Test contructors and destructors.
+	* rs6000/dtor.C: Test constructors and destructors.
 	* rs6000/{sim,mvme}.ld: New linkers scripts for the simulator and
 	the mvme board.
 	* rs6000/evm.ld: Provide hardware_init_hook and software_init_hook
 	so we can test for them in the crt0.S.
-	* rs6000/crto.S: Excecute hardware_init_hook and
+	* rs6000/crto.S: Execute hardware_init_hook and
 	software_init_hook if they exist with a legit address.
 
 Mon Jun 17 18:39:17 1996  Rob Savoye  <rob@chinadoll.cygnus.com>
 
-	* mips/Makefile.in: Replace the "test" target with seperate
-	targets for the dissasembled file, and the srecord.
+	* mips/Makefile.in: Replace the "test" target with separate
+	targets for the disassembled file, and the srecord.
 	* mips/configure.in: Use a target makefile fragment.
 	* mips/configure: Regenerate.
 	* mips/idt.ld: Add a comment on producing srecords. Setup a space
@@ -6272,7 +6272,7 @@ Fri Feb 23 22:21:07 1996  Rob Savoye  <rob@chinadoll.cygnus.com>
 Thu Feb 22 13:32:28 1996  Michael Meissner  <meissner@tiktok.cygnus.com>
 
 	* rs6000/mvme-read.c (read): New file, if large read, do a .INLN
-	system call, instead of sucessive .INCHR system calls.  Map \r on
+	system call, instead of successive .INCHR system calls.  Map \r on
 	input to \n.
 
 	* rs6000/mvme-inbyte.S: Add stub for new input system calls.
@@ -6631,7 +6631,7 @@ Mon Jun 26 09:23:23 1995  Jeffrey A. Law  <law@rtl.cygnus.com>
 	* pa/hp-milli.s:  Make sure copyright notice gets included
 	in objects files.
 
-	* pa/crt0.S ($START$): Use "%" instead of "'" to avoid losing whe
+	* pa/crt0.S ($START$): Use "%" instead of "'" to avoid losing when
 	run through cpp.
 
 Fri Jun 16 18:40:22 1995  Jeffrey A. Law  <law@rtl.cygnus.com>
@@ -6673,7 +6673,7 @@ Tue May 23 18:12:19 1995  Rob Savoye  <rob@darkstar.cygnus.com>
 	unlink.c read.c, sbrk.c, getpid.x, kill.c: New files that used to
 	be glue.c.
 	* {m68k,pa,mips}/Makefile.in: Build using broken up glue.c.
-	* pa/Makefile.in: Make all just build BSP, add seperate test
+	* pa/Makefile.in: Make all just build BSP, add separate test
 	target.
 	* most files: add Cygnus BSD-style copyright message.
 
@@ -6821,7 +6821,7 @@ Thu Apr 13 11:51:17 1995  Torbjorn Granlund  <tege@adder.cygnus.com>
 Thu Apr 13 11:47:01 1995  J.T. Conklin  <jtc@rtl.cygnus.com>
 
 	* m68k/crt0.S: initialize stack pointer to __stack before creating
-	  inital stack frame.
+	  initial stack frame.
 
 	* m68k/{idp.ld, mvme135.ld, mvme162lx.ld}: Move __stack out of
 	  bss, and into its own segment with an address at top of RAM.
@@ -6927,7 +6927,7 @@ Thu Feb  9 21:45:33 1995  Rob Savoye  <rob@darkstar.cygnus.com>
 
 	* testsuite/libgloss.all{varargs.c,varargs2.c}: Test cases for
 	traditional and ANSI varargs. (which currently fail)
-	* Makefile.in: Build intelligently and use dependancies so we
+	* Makefile.in: Build intelligently and use dependencies so we
 	don't rebuild the world for each test run.
 	* configure.in: Make a .gdbinit file to run the tests and load via
 	gdb.
@@ -6987,7 +6987,7 @@ Fri Dec 30 15:05:03 1994  Rob Savoye  <rob@darkstar.cygnus.com>
 
 Mon Dec 19 16:05:37 1994  Kung Hsu  <kung@mexican.cygnus.com>
 
-	* ex93x/Makefile.in: Use sparcl-stub.c instaed of sparc-stub.c,
+	* ex93x/Makefile.in: Use sparcl-stub.c instead of sparc-stub.c,
 	which has hardware breakpoint support.
 	* ex93x/Makefile.in: Also generate slite930.o and slite931.o, instead
 	slite.o.
@@ -7037,7 +7037,7 @@ Mon Nov 21 20:21:48 1994  Rob Savoye  <rob@darkstar.cygnus.com>
 
 Thu Nov 17 21:07:52 1994  Rob Savoye  <rob@darkstar.cygnus.com>
 
-	* config/default.mh: Find the corrrect libgcc2.a.
+	* config/default.mh: Find the correct libgcc2.a.
 
 	* Makefile.in: Link in libgcc2.a by default. Build new millicode
 	routines.
@@ -7068,7 +7068,7 @@ Wed Nov 16 15:25:03 1994  Rob Savoye  (rob@cygnus.com)
 
 Tue Nov  8 17:12:35 1994  Rob Savoye  <rob@rtl.cygnus.com>
 
-	* m68k/glue.c: Remove errno so there's no libc dependancies.
+	* m68k/glue.c: Remove errno so there's no libc dependencies.
 
 	* m68k/mvme135-asm.S: Moved setup_vectors and exceptionHandler
 	from mvme.S so the library can link without the stub.

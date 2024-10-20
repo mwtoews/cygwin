@@ -75,7 +75,7 @@ _ISR_VECTOR:
 .size  _ISR_VECTOR, .-_ISR_VECTOR
 
 .macro IVT_ENTRY_CALL entry_v_
-	;; assuming we have valid frame poiter
+	;; assuming we have valid frame pointer
 
 	str fp, [sp],-0x10
 	str r0, [sp,+0xf]

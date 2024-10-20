@@ -1,4 +1,4 @@
-/* mtinfo.h: Defininitions for the Cygwin tape driver class.
+/* mtinfo.h: Definitions for the Cygwin tape driver class.
 
 This file is part of Cygwin.
 

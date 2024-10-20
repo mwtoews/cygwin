@@ -708,7 +708,7 @@ irintl(long double x)
 /*
  * The following are fast floor macros for 0 <= |x| < 0x1p(N-1), where
  * N is the precision of the type of x. These macros are used in the
- * half-cycle trignometric functions (e.g., sinpi(x)).
+ * half-cycle trigonometric functions (e.g., sinpi(x)).
  */
 #define	FFLOORF(x, j0, ix) do {			\
 	(j0) = (((ix) >> 23) & 0xff) - 0x7f;	\

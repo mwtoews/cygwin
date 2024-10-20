@@ -27,7 +27,7 @@
    the bare minimum required to get Cortex-A core running with a semihosting
    interface.
 
-   It sets up a basic 1:1 phsyical address to virtual address mapping;
+   It sets up a basic 1:1 physical address to virtual address mapping;
    turns the MMU on; enables branch prediction; activates any integrated
    caches; enables the Advanced SIMD and VFP co-processors; and installs
    basic exception handlers.

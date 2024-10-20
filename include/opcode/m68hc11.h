@@ -328,8 +328,8 @@
    They are only used by GAS to recognize operands.  */
 #define M6811_OP_NONE         0        /* No operand */
 #define M6811_OP_DIRECT       0x0001   /* Page 0 addressing:   *<val-8bits>  */
-#define M6811_OP_IMM8         0x0002   /*  8 bits immediat:    #<val-8bits>  */
-#define M6811_OP_IMM16        0x0004   /* 16 bits immediat:    #<val-16bits> */
+#define M6811_OP_IMM8         0x0002   /*  8 bits immediate:   #<val-8bits>  */
+#define M6811_OP_IMM16        0x0004   /* 16 bits immediate:   #<val-16bits> */
 #define M6811_OP_IND16        0x0008   /* Indirect abs:        <val-16>      */
 #define M6812_OP_IND16_P2     0x0010   /* Second parameter indirect abs.     */
 #define M6812_OP_REG          0x0020   /* Register operand 1                 */

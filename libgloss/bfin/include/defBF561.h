@@ -346,7 +346,7 @@
 
 /* DMA1 Controller registers (0xFFC0 1C00-0xFFC0 1FFF) */
 #define DMA1_0_CONFIG 0xFFC01C08 /* DMA1 Channel 0 Configuration register */
-#define DMA1_0_NEXT_DESC_PTR 0xFFC01C00 /* DMA1 Channel 0 Next Descripter Ptr Reg */
+#define DMA1_0_NEXT_DESC_PTR 0xFFC01C00 /* DMA1 Channel 0 Next Descriptor Ptr Reg */
 #define DMA1_0_START_ADDR 0xFFC01C04 /* DMA1 Channel 0 Start Address */
 #define DMA1_0_X_COUNT 0xFFC01C10 /* DMA1 Channel 0 Inner Loop Count */
 #define DMA1_0_Y_COUNT 0xFFC01C18 /* DMA1 Channel 0 Outer Loop Count */
@@ -360,7 +360,7 @@
 #define DMA1_0_PERIPHERAL_MAP 0xFFC01C2C /* DMA1 Channel 0 Peripheral Map Register */
 
 #define DMA1_1_CONFIG 0xFFC01C48 /* DMA1 Channel 1 Configuration register */
-#define DMA1_1_NEXT_DESC_PTR 0xFFC01C40 /* DMA1 Channel 1 Next Descripter Ptr Reg */
+#define DMA1_1_NEXT_DESC_PTR 0xFFC01C40 /* DMA1 Channel 1 Next Descriptor Ptr Reg */
 #define DMA1_1_START_ADDR 0xFFC01C44 /* DMA1 Channel 1 Start Address */
 #define DMA1_1_X_COUNT 0xFFC01C50 /* DMA1 Channel 1 Inner Loop Count */
 #define DMA1_1_Y_COUNT 0xFFC01C58 /* DMA1 Channel 1 Outer Loop Count */
@@ -374,7 +374,7 @@
 #define DMA1_1_PERIPHERAL_MAP 0xFFC01C6C /* DMA1 Channel 1 Peripheral Map Register */
 
 #define DMA1_2_CONFIG 0xFFC01C88 /* DMA1 Channel 2 Configuration register */
-#define DMA1_2_NEXT_DESC_PTR 0xFFC01C80 /* DMA1 Channel 2 Next Descripter Ptr Reg */
+#define DMA1_2_NEXT_DESC_PTR 0xFFC01C80 /* DMA1 Channel 2 Next Descriptor Ptr Reg */
 #define DMA1_2_START_ADDR 0xFFC01C84 /* DMA1 Channel 2 Start Address */
 #define DMA1_2_X_COUNT 0xFFC01C90 /* DMA1 Channel 2 Inner Loop Count */
 #define DMA1_2_Y_COUNT 0xFFC01C98 /* DMA1 Channel 2 Outer Loop Count */
@@ -388,7 +388,7 @@
 #define DMA1_2_PERIPHERAL_MAP 0xFFC01CAC /* DMA1 Channel 2 Peripheral Map Register */
 
 #define DMA1_3_CONFIG 0xFFC01CC8 /* DMA1 Channel 3 Configuration register */
-#define DMA1_3_NEXT_DESC_PTR 0xFFC01CC0 /* DMA1 Channel 3 Next Descripter Ptr Reg */
+#define DMA1_3_NEXT_DESC_PTR 0xFFC01CC0 /* DMA1 Channel 3 Next Descriptor Ptr Reg */
 #define DMA1_3_START_ADDR 0xFFC01CC4 /* DMA1 Channel 3 Start Address */
 #define DMA1_3_X_COUNT 0xFFC01CD0 /* DMA1 Channel 3 Inner Loop Count */
 #define DMA1_3_Y_COUNT 0xFFC01CD8 /* DMA1 Channel 3 Outer Loop Count */
@@ -402,7 +402,7 @@
 #define DMA1_3_PERIPHERAL_MAP 0xFFC01CEC /* DMA1 Channel 3 Peripheral Map Register */
 
 #define DMA1_4_CONFIG 0xFFC01D08 /* DMA1 Channel 4 Configuration register */
-#define DMA1_4_NEXT_DESC_PTR 0xFFC01D00 /* DMA1 Channel 4 Next Descripter Ptr Reg */
+#define DMA1_4_NEXT_DESC_PTR 0xFFC01D00 /* DMA1 Channel 4 Next Descriptor Ptr Reg */
 #define DMA1_4_START_ADDR 0xFFC01D04 /* DMA1 Channel 4 Start Address */
 #define DMA1_4_X_COUNT 0xFFC01D10 /* DMA1 Channel 4 Inner Loop Count */
 #define DMA1_4_Y_COUNT 0xFFC01D18 /* DMA1 Channel 4 Outer Loop Count */
@@ -416,7 +416,7 @@
 #define DMA1_4_PERIPHERAL_MAP 0xFFC01D2C /* DMA1 Channel 4 Peripheral Map Register */
 
 #define DMA1_5_CONFIG 0xFFC01D48 /* DMA1 Channel 5 Configuration register */
-#define DMA1_5_NEXT_DESC_PTR 0xFFC01D40 /* DMA1 Channel 5 Next Descripter Ptr Reg */
+#define DMA1_5_NEXT_DESC_PTR 0xFFC01D40 /* DMA1 Channel 5 Next Descriptor Ptr Reg */
 #define DMA1_5_START_ADDR 0xFFC01D44 /* DMA1 Channel 5 Start Address */
 #define DMA1_5_X_COUNT 0xFFC01D50 /* DMA1 Channel 5 Inner Loop Count */
 #define DMA1_5_Y_COUNT 0xFFC01D58 /* DMA1 Channel 5 Outer Loop Count */
@@ -430,7 +430,7 @@
 #define DMA1_5_PERIPHERAL_MAP 0xFFC01D6C /* DMA1 Channel 5 Peripheral Map Register */
 
 #define DMA1_6_CONFIG 0xFFC01D88 /* DMA1 Channel 6 Configuration register */
-#define DMA1_6_NEXT_DESC_PTR 0xFFC01D80 /* DMA1 Channel 6 Next Descripter Ptr Reg */
+#define DMA1_6_NEXT_DESC_PTR 0xFFC01D80 /* DMA1 Channel 6 Next Descriptor Ptr Reg */
 #define DMA1_6_START_ADDR 0xFFC01D84 /* DMA1 Channel 6 Start Address */
 #define DMA1_6_X_COUNT 0xFFC01D90 /* DMA1 Channel 6 Inner Loop Count */
 #define DMA1_6_Y_COUNT 0xFFC01D98 /* DMA1 Channel 6 Outer Loop Count */
@@ -444,7 +444,7 @@
 #define DMA1_6_PERIPHERAL_MAP 0xFFC01DAC /* DMA1 Channel 6 Peripheral Map Register */
 
 #define DMA1_7_CONFIG 0xFFC01DC8 /* DMA1 Channel 7 Configuration register */
-#define DMA1_7_NEXT_DESC_PTR 0xFFC01DC0 /* DMA1 Channel 7 Next Descripter Ptr Reg */
+#define DMA1_7_NEXT_DESC_PTR 0xFFC01DC0 /* DMA1 Channel 7 Next Descriptor Ptr Reg */
 #define DMA1_7_START_ADDR 0xFFC01DC4 /* DMA1 Channel 7 Start Address */
 #define DMA1_7_X_COUNT 0xFFC01DD0 /* DMA1 Channel 7 Inner Loop Count */
 #define DMA1_7_Y_COUNT 0xFFC01DD8 /* DMA1 Channel 7 Outer Loop Count */
@@ -458,7 +458,7 @@
 #define DMA1_7_PERIPHERAL_MAP 0xFFC01DEC /* DMA1 Channel 7 Peripheral Map Register */
 
 #define DMA1_8_CONFIG 0xFFC01E08 /* DMA1 Channel 8 Configuration register */
-#define DMA1_8_NEXT_DESC_PTR 0xFFC01E00 /* DMA1 Channel 8 Next Descripter Ptr Reg */
+#define DMA1_8_NEXT_DESC_PTR 0xFFC01E00 /* DMA1 Channel 8 Next Descriptor Ptr Reg */
 #define DMA1_8_START_ADDR 0xFFC01E04 /* DMA1 Channel 8 Start Address */
 #define DMA1_8_X_COUNT 0xFFC01E10 /* DMA1 Channel 8 Inner Loop Count */
 #define DMA1_8_Y_COUNT 0xFFC01E18 /* DMA1 Channel 8 Outer Loop Count */
@@ -472,7 +472,7 @@
 #define DMA1_8_PERIPHERAL_MAP 0xFFC01E2C /* DMA1 Channel 8 Peripheral Map Register */
 
 #define DMA1_9_CONFIG 0xFFC01E48 /* DMA1 Channel 9 Configuration register */
-#define DMA1_9_NEXT_DESC_PTR 0xFFC01E40 /* DMA1 Channel 9 Next Descripter Ptr Reg */
+#define DMA1_9_NEXT_DESC_PTR 0xFFC01E40 /* DMA1 Channel 9 Next Descriptor Ptr Reg */
 #define DMA1_9_START_ADDR 0xFFC01E44 /* DMA1 Channel 9 Start Address */
 #define DMA1_9_X_COUNT 0xFFC01E50 /* DMA1 Channel 9 Inner Loop Count */
 #define DMA1_9_Y_COUNT 0xFFC01E58 /* DMA1 Channel 9 Outer Loop Count */
@@ -486,7 +486,7 @@
 #define DMA1_9_PERIPHERAL_MAP 0xFFC01E6C /* DMA1 Channel 9 Peripheral Map Register */
 
 #define DMA1_10_CONFIG 0xFFC01E88 /* DMA1 Channel 10 Configuration register */
-#define DMA1_10_NEXT_DESC_PTR 0xFFC01E80 /* DMA1 Channel 10 Next Descripter Ptr Reg */
+#define DMA1_10_NEXT_DESC_PTR 0xFFC01E80 /* DMA1 Channel 10 Next Descriptor Ptr Reg */
 #define DMA1_10_START_ADDR 0xFFC01E84 /* DMA1 Channel 10 Start Address */
 #define DMA1_10_X_COUNT 0xFFC01E90 /* DMA1 Channel 10 Inner Loop Count */
 #define DMA1_10_Y_COUNT 0xFFC01E98 /* DMA1 Channel 10 Outer Loop Count */
@@ -500,7 +500,7 @@
 #define DMA1_10_PERIPHERAL_MAP 0xFFC01EAC /* DMA1 Channel 10 Peripheral Map Register */
 
 #define DMA1_11_CONFIG 0xFFC01EC8 /* DMA1 Channel 11 Configuration register */
-#define DMA1_11_NEXT_DESC_PTR 0xFFC01EC0 /* DMA1 Channel 11 Next Descripter Ptr Reg */
+#define DMA1_11_NEXT_DESC_PTR 0xFFC01EC0 /* DMA1 Channel 11 Next Descriptor Ptr Reg */
 #define DMA1_11_START_ADDR 0xFFC01EC4 /* DMA1 Channel 11 Start Address */
 #define DMA1_11_X_COUNT 0xFFC01ED0 /* DMA1 Channel 11 Inner Loop Count */
 #define DMA1_11_Y_COUNT 0xFFC01ED8 /* DMA1 Channel 11 Outer Loop Count */
@@ -573,7 +573,7 @@
 
 /* DMA2 Controller registers (0xFFC0 0C00-0xFFC0 0DFF) */
 #define DMA2_0_CONFIG 0xFFC00C08 /* DMA2 Channel 0 Configuration register */
-#define DMA2_0_NEXT_DESC_PTR 0xFFC00C00 /* DMA2 Channel 0 Next Descripter Ptr Reg */
+#define DMA2_0_NEXT_DESC_PTR 0xFFC00C00 /* DMA2 Channel 0 Next Descriptor Ptr Reg */
 #define DMA2_0_START_ADDR 0xFFC00C04 /* DMA2 Channel 0 Start Address */
 #define DMA2_0_X_COUNT 0xFFC00C10 /* DMA2 Channel 0 Inner Loop Count */
 #define DMA2_0_Y_COUNT 0xFFC00C18 /* DMA2 Channel 0 Outer Loop Count */
@@ -587,7 +587,7 @@
 #define DMA2_0_PERIPHERAL_MAP 0xFFC00C2C /* DMA2 Channel 0 Peripheral Map Register */
 
 #define DMA2_1_CONFIG 0xFFC00C48 /* DMA2 Channel 1 Configuration register */
-#define DMA2_1_NEXT_DESC_PTR 0xFFC00C40 /* DMA2 Channel 1 Next Descripter Ptr Reg */
+#define DMA2_1_NEXT_DESC_PTR 0xFFC00C40 /* DMA2 Channel 1 Next Descriptor Ptr Reg */
 #define DMA2_1_START_ADDR 0xFFC00C44 /* DMA2 Channel 1 Start Address */
 #define DMA2_1_X_COUNT 0xFFC00C50 /* DMA2 Channel 1 Inner Loop Count */
 #define DMA2_1_Y_COUNT 0xFFC00C58 /* DMA2 Channel 1 Outer Loop Count */
@@ -601,7 +601,7 @@
 #define DMA2_1_PERIPHERAL_MAP 0xFFC00C6C /* DMA2 Channel 1 Peripheral Map Register */
 
 #define DMA2_2_CONFIG 0xFFC00C88 /* DMA2 Channel 2 Configuration register */
-#define DMA2_2_NEXT_DESC_PTR 0xFFC00C80 /* DMA2 Channel 2 Next Descripter Ptr Reg */
+#define DMA2_2_NEXT_DESC_PTR 0xFFC00C80 /* DMA2 Channel 2 Next Descriptor Ptr Reg */
 #define DMA2_2_START_ADDR 0xFFC00C84 /* DMA2 Channel 2 Start Address */
 #define DMA2_2_X_COUNT 0xFFC00C90 /* DMA2 Channel 2 Inner Loop Count */
 #define DMA2_2_Y_COUNT 0xFFC00C98 /* DMA2 Channel 2 Outer Loop Count */
@@ -615,7 +615,7 @@
 #define DMA2_2_PERIPHERAL_MAP 0xFFC00CAC /* DMA2 Channel 2 Peripheral Map Register */
 
 #define DMA2_3_CONFIG 0xFFC00CC8 /* DMA2 Channel 3 Configuration register */
-#define DMA2_3_NEXT_DESC_PTR 0xFFC00CC0 /* DMA2 Channel 3 Next Descripter Ptr Reg */
+#define DMA2_3_NEXT_DESC_PTR 0xFFC00CC0 /* DMA2 Channel 3 Next Descriptor Ptr Reg */
 #define DMA2_3_START_ADDR 0xFFC00CC4 /* DMA2 Channel 3 Start Address */
 #define DMA2_3_X_COUNT 0xFFC00CD0 /* DMA2 Channel 3 Inner Loop Count */
 #define DMA2_3_Y_COUNT 0xFFC00CD8 /* DMA2 Channel 3 Outer Loop Count */
@@ -629,7 +629,7 @@
 #define DMA2_3_PERIPHERAL_MAP 0xFFC00CEC /* DMA2 Channel 3 Peripheral Map Register */
 
 #define DMA2_4_CONFIG 0xFFC00D08 /* DMA2 Channel 4 Configuration register */
-#define DMA2_4_NEXT_DESC_PTR 0xFFC00D00 /* DMA2 Channel 4 Next Descripter Ptr Reg */
+#define DMA2_4_NEXT_DESC_PTR 0xFFC00D00 /* DMA2 Channel 4 Next Descriptor Ptr Reg */
 #define DMA2_4_START_ADDR 0xFFC00D04 /* DMA2 Channel 4 Start Address */
 #define DMA2_4_X_COUNT 0xFFC00D10 /* DMA2 Channel 4 Inner Loop Count */
 #define DMA2_4_Y_COUNT 0xFFC00D18 /* DMA2 Channel 4 Outer Loop Count */
@@ -643,7 +643,7 @@
 #define DMA2_4_PERIPHERAL_MAP 0xFFC00D2C /* DMA2 Channel 4 Peripheral Map Register */
 
 #define DMA2_5_CONFIG 0xFFC00D48 /* DMA2 Channel 5 Configuration register */
-#define DMA2_5_NEXT_DESC_PTR 0xFFC00D40 /* DMA2 Channel 5 Next Descripter Ptr Reg */
+#define DMA2_5_NEXT_DESC_PTR 0xFFC00D40 /* DMA2 Channel 5 Next Descriptor Ptr Reg */
 #define DMA2_5_START_ADDR 0xFFC00D44 /* DMA2 Channel 5 Start Address */
 #define DMA2_5_X_COUNT 0xFFC00D50 /* DMA2 Channel 5 Inner Loop Count */
 #define DMA2_5_Y_COUNT 0xFFC00D58 /* DMA2 Channel 5 Outer Loop Count */
@@ -657,7 +657,7 @@
 #define DMA2_5_PERIPHERAL_MAP 0xFFC00D6C /* DMA2 Channel 5 Peripheral Map Register */
 
 #define DMA2_6_CONFIG 0xFFC00D88 /* DMA2 Channel 6 Configuration register */
-#define DMA2_6_NEXT_DESC_PTR 0xFFC00D80 /* DMA2 Channel 6 Next Descripter Ptr Reg */
+#define DMA2_6_NEXT_DESC_PTR 0xFFC00D80 /* DMA2 Channel 6 Next Descriptor Ptr Reg */
 #define DMA2_6_START_ADDR 0xFFC00D84 /* DMA2 Channel 6 Start Address */
 #define DMA2_6_X_COUNT 0xFFC00D90 /* DMA2 Channel 6 Inner Loop Count */
 #define DMA2_6_Y_COUNT 0xFFC00D98 /* DMA2 Channel 6 Outer Loop Count */
@@ -671,7 +671,7 @@
 #define DMA2_6_PERIPHERAL_MAP 0xFFC00DAC /* DMA2 Channel 6 Peripheral Map Register */
 
 #define DMA2_7_CONFIG 0xFFC00DC8 /* DMA2 Channel 7 Configuration register */
-#define DMA2_7_NEXT_DESC_PTR 0xFFC00DC0 /* DMA2 Channel 7 Next Descripter Ptr Reg */
+#define DMA2_7_NEXT_DESC_PTR 0xFFC00DC0 /* DMA2 Channel 7 Next Descriptor Ptr Reg */
 #define DMA2_7_START_ADDR 0xFFC00DC4 /* DMA2 Channel 7 Start Address */
 #define DMA2_7_X_COUNT 0xFFC00DD0 /* DMA2 Channel 7 Inner Loop Count */
 #define DMA2_7_Y_COUNT 0xFFC00DD8 /* DMA2 Channel 7 Outer Loop Count */
@@ -685,7 +685,7 @@
 #define DMA2_7_PERIPHERAL_MAP 0xFFC00DEC /* DMA2 Channel 7 Peripheral Map Register */
 
 #define DMA2_8_CONFIG 0xFFC00E08 /* DMA2 Channel 8 Configuration register */
-#define DMA2_8_NEXT_DESC_PTR 0xFFC00E00 /* DMA2 Channel 8 Next Descripter Ptr Reg */
+#define DMA2_8_NEXT_DESC_PTR 0xFFC00E00 /* DMA2 Channel 8 Next Descriptor Ptr Reg */
 #define DMA2_8_START_ADDR 0xFFC00E04 /* DMA2 Channel 8 Start Address */
 #define DMA2_8_X_COUNT 0xFFC00E10 /* DMA2 Channel 8 Inner Loop Count */
 #define DMA2_8_Y_COUNT 0xFFC00E18 /* DMA2 Channel 8 Outer Loop Count */
@@ -699,7 +699,7 @@
 #define DMA2_8_PERIPHERAL_MAP 0xFFC00E2C /* DMA2 Channel 8 Peripheral Map Register */
 
 #define DMA2_9_CONFIG 0xFFC00E48 /* DMA2 Channel 9 Configuration register */
-#define DMA2_9_NEXT_DESC_PTR 0xFFC00E40 /* DMA2 Channel 9 Next Descripter Ptr Reg */
+#define DMA2_9_NEXT_DESC_PTR 0xFFC00E40 /* DMA2 Channel 9 Next Descriptor Ptr Reg */
 #define DMA2_9_START_ADDR 0xFFC00E44 /* DMA2 Channel 9 Start Address */
 #define DMA2_9_X_COUNT 0xFFC00E50 /* DMA2 Channel 9 Inner Loop Count */
 #define DMA2_9_Y_COUNT 0xFFC00E58 /* DMA2 Channel 9 Outer Loop Count */
@@ -713,7 +713,7 @@
 #define DMA2_9_PERIPHERAL_MAP 0xFFC00E6C /* DMA2 Channel 9 Peripheral Map Register */
 
 #define DMA2_10_CONFIG 0xFFC00E88 /* DMA2 Channel 10 Configuration register */
-#define DMA2_10_NEXT_DESC_PTR 0xFFC00E80 /* DMA2 Channel 10 Next Descripter Ptr Reg */
+#define DMA2_10_NEXT_DESC_PTR 0xFFC00E80 /* DMA2 Channel 10 Next Descriptor Ptr Reg */
 #define DMA2_10_START_ADDR 0xFFC00E84 /* DMA2 Channel 10 Start Address */
 #define DMA2_10_X_COUNT 0xFFC00E90 /* DMA2 Channel 10 Inner Loop Count */
 #define DMA2_10_Y_COUNT 0xFFC00E98 /* DMA2 Channel 10 Outer Loop Count */
@@ -727,7 +727,7 @@
 #define DMA2_10_PERIPHERAL_MAP 0xFFC00EAC /* DMA2 Channel 10 Peripheral Map Register */
 
 #define DMA2_11_CONFIG 0xFFC00EC8 /* DMA2 Channel 11 Configuration register */
-#define DMA2_11_NEXT_DESC_PTR 0xFFC00EC0 /* DMA2 Channel 11 Next Descripter Ptr Reg */
+#define DMA2_11_NEXT_DESC_PTR 0xFFC00EC0 /* DMA2 Channel 11 Next Descriptor Ptr Reg */
 #define DMA2_11_START_ADDR 0xFFC00EC4 /* DMA2 Channel 11 Start Address */
 #define DMA2_11_X_COUNT 0xFFC00ED0 /* DMA2 Channel 11 Inner Loop Count */
 #define DMA2_11_Y_COUNT 0xFFC00ED8 /* DMA2 Channel 11 Outer Loop Count */
@@ -970,7 +970,7 @@
 
 
 /* SICx_IMASKw Masks */
-/* masks are 32 bit wide, so two writes reguired for "64 bit" wide registers  */
+/* masks are 32 bit wide, so two writes required for "64 bit" wide registers  */
 #define SIC_UNMASK_ALL 0x00000000         /* Unmask all peripheral interrupts */
 #define SIC_MASK_ALL   0xFFFFFFFF         /* Mask all peripheral interrupts   */
 

@@ -30,7 +30,7 @@
 # sim-pgcrtinit.s 
 #
 # Default second stage of C run-time initialization for use with software
-# intrusive profiling. Does not peform BSS initialization to zero. 
+# intrusive profiling. Does not perform BSS initialization to zero.
 # (Typical use is on a simulator)
 #    
 

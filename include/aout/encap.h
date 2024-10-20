@@ -30,7 +30,7 @@
  * A normal bsd header (struct exec) is placed after the coff headers,
  * and before the real text.  I defined a the new fields 'a_machtype'
  * and a_flags.  If a_machtype is M_386, and a_flags & A_ENCAP is
- * true, then the bsd header is preceeded by a coff header.  Macros
+ * true, then the bsd header is preceded by a coff header.  Macros
  * like N_TXTOFF and N_TXTADDR use this field to find the bsd header.
  * 
  * The only problem is to track down the bsd exec header.  The

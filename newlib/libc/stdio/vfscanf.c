@@ -1576,7 +1576,7 @@ __SVFSCANF_R (struct _reent *rptr,
 	    {
 	      c = *fp->_p;
 	      /*
-	       * This code mimicks the integer conversion
+	       * This code mimics the integer conversion
 	       * code, but is much simpler.
 	       */
 	      switch (c)

@@ -1,8 +1,8 @@
 /*
  * File: cancel4.c
  *
- * Test Synopsis: Test cancelation does not occur in deferred
- *                cancelation threads with no cancelation points.
+ * Test Synopsis: Test cancellation does not occur in deferred
+ *                cancellation threads with no cancellation points.
  *
  * Test Method (Validation or Falsification):
  * - 
@@ -81,7 +81,7 @@ mythread(void * arg)
 
   /*
    * We wait up to 10 seconds, waking every 0.1 seconds,
-   * for a cancelation to be applied to us.
+   * for a cancellation to be applied to us.
    */
   for (bag->count = 0; bag->count < 100; bag->count++)
     Sleep(100);
@@ -144,9 +144,9 @@ main()
       void* result = 0;
 
       /*
-       * The thread does not contain any cancelation points, so
+       * The thread does not contain any cancellation points, so
        * a return value of PTHREAD_CANCELED indicates that async
-       * cancelation occurred.
+       * cancellation occurred.
        */
       assert(pthread_join(t[i], &result) == 0);
 

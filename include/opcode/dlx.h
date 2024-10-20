@@ -201,7 +201,7 @@ static const struct dlx_opcode dlx_opcodes[] =
 
     /* Arithmetic and Logical Immediate I-TYPE instructions.  */
     { "addi",     ADDIOP,         "b,a,I" },  /* Add Immediate                */
-    { "addui",    ADDUIOP,        "b,a,i" },  /* Add Usigned Immediate        */
+    { "addui",    ADDUIOP,        "b,a,i" },  /* Add Unsigned Immediate       */
     { "subi",     SUBIOP,         "b,a,I" },  /* Sub Immediate                */
     { "subui",    SUBUIOP,        "b,a,i" },  /* Sub Unsigned Immedated       */
     { "andi",     ANDIOP,         "b,a,i" },  /* AND Immediate                */

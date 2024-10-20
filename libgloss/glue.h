@@ -1,4 +1,4 @@
-/* glue.h -- common definitions for "glue" fucntions.
+/* glue.h -- common definitions for "glue" functions.
  *
  * Copyright (c) 1995 Cygnus Support
  *
@@ -26,7 +26,7 @@
 
 extern char _end[];                /* _end is set in the linker command file */
 
-/* only one prcess support, as this is OS dependant */
+/* only one process support, as this is OS dependent */
 #define __MYPID 1
 
 int outbyte (char);

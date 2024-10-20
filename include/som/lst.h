@@ -23,7 +23,7 @@
 
 #include "clock.h"
 
-/* See 4.2 Libraray Symbol Table Header Record.  */
+/* See 4.2 Library Symbol Table Header Record.  */
 struct som_external_lst_header
 {
   unsigned char system_id[2];

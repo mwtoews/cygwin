@@ -1433,13 +1433,13 @@ END
   }
 
   Err "-$nosize_opt option can't be used with -$nospeed_opt option "
-    . "simultaniously.\n", 1 if $NoSpeed && $NoSize;
+    . "simultaneously.\n", 1 if $NoSpeed && $NoSize;
 
   Err "-$nobe_opt option can't be used with -$nole_opt option "
-    . "simultaniously.\n", 1 if $NoBE && $NoLE;
+    . "simultaneously.\n", 1 if $NoBE && $NoLE;
   
   Err "-$noto_opt option can't be used with -$nofrom_opt option"
-    . "simultaniously.\n", 1 if $NoTo && $NoFrom;
+    . "simultaneously.\n", 1 if $NoTo && $NoFrom;
 
   Err "-$nosize_opt, -$nospeed_opt, -$nobe_opt -$nole_opt "
     . "-$noto_opt and -$nofrom_opt "

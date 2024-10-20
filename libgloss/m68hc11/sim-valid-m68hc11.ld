@@ -264,7 +264,7 @@ SECTIONS
      Extended mode	0xffc0
      Bootstrap		0x00c0
      Test		0xbfc0
-     In general, the vectors address is 0xffc0.  This can be overriden 
+     In general, the vectors address is 0xffc0.  This can be overridden
      with the '-defsym vectors_addr=0xbfc0' ld option.
      Note: for the bootstrap mode, the interrupt vectors are at 0xbfc0 but
      they are redirected to 0x00c0 by the internal PROM.  Application's vectors

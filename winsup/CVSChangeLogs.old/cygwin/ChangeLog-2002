@@ -36,7 +36,7 @@
 	copy of current termios for passing to line_edit prior so that all
 	characters are processed consistently.
 	* fhandler_tty.cc (fhandler_pty_master::write): Ditto.
-	(process_input): Make a copy of curent termios prior to read for use in
+	(process_input): Make a copy of current termios prior to read for use in
 	subsequent line_edit.
 	* fhandler_termios.cc (fhandler_termios::line_edit): Replace third
 	parameter with passed-in termios struct and use it throughout rather
@@ -362,7 +362,7 @@
 2002-11-27  Mikael Ylikoski  <my@post.utfors.se>
 
 	* fhandler_socket.cc (fhandler_socket::sendto): Fix potential
-	unitialized value return.
+	uninitialized value return.
 
 2002-11-27  Christopher Faylor  <cgf@redhat.com>
 
@@ -663,7 +663,7 @@
 
 	* autoload.cc (GetIfEntry): Add symbol.
 	* net.cc (get_2k_ifconf): Get the interface entries with the GetIfEntry
-	call intead of the GetIfTable call. Clean-up multiple IP address naming.
+	call instead of the GetIfTable call. Clean-up multiple IP address naming.
 
 2002-11-09  Sergey Okhapkin  <sos@prospect.com.ru>
 
@@ -1321,7 +1321,7 @@
 	pthread_mutex supporting state on process initialisation.
 	(pthread_mutex::init): Initialise a single mutex.
 	(pthread_mutex::mutexInitializationLock): A win32 mutex for
-	syncronising pthread mutex initialisation.
+	synchronising pthread mutex initialisation.
 	(__pthread_mutex_init): Remove this.
 
 2002-09-28  Christopher Faylor  <cgf@redhat.com>
@@ -1371,7 +1371,7 @@
 	(_sys_errlist): Add entries for EILSEQ and EOVERFLOW.
 	(strerror): Ditto.
 	* mmap.cc (map_map): Set errno in case of error.
-	(mmap64): Remove setting errno explicitely to ENOMEM.
+	(mmap64): Remove setting errno explicitly to ENOMEM.
 
 2002-09-24  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -3223,7 +3223,7 @@
 2002-08-06  Christopher Faylor  <cgf@redhat.com>
 
 	* cygheap.cc (_csbrk): Avoid !cygheap considerations.
-	(cygheap_init): Deal with unintialized cygheap issues here.
+	(cygheap_init): Deal with uninitialized cygheap issues here.
 	(cheap_init): Move cygheap_max setting here.
 
 2002-08-06  Christopher Faylor  <cgf@redhat.com>
@@ -4137,7 +4137,7 @@
 	(__pthread_setcancelstate): Ditto.
 	(__pthread_setcanceltype): Ditto.
 	(__pthread_testcancel): Ditto.
-	* thread.cc (pthread::pthread): Inititialize cancel_event.
+	* thread.cc (pthread::pthread): Initialize cancel_event.
 	(pthread::~pthread): Close cancel_event if needed.
 	(pthread::create): Create cancel_event.
 	(pthread::exit): New method.  Replacement for __pthread_exit.
@@ -4226,7 +4226,7 @@
 	* thread.cc (pthread::pthread): Ditto.
 	(pthread::create): Fix mutex verification.
 	(pthread::push_cleanup_handler): Renam cleanup_handlers to
-	cleanup_stack.  Remvoe Mutex calls, use InterlockedExchangePointer
+	cleanup_stack.  Remove Mutex calls, use InterlockedExchangePointer
 	instead.
 	(pthread::pop_cleanup_handler): Rename cleanup_handlers to
 	cleanup_stack.
@@ -4315,7 +4315,7 @@
 	(spenv::retrieve): Eliminate length argument.  Instead, use namelen
 	throughout.
 	(build_env): Don't calculate length of initial FOO= part of
-	environment.  Accommodate spenv::retrive argument change.
+	environment.  Accommodate spenv::retrieve argument change.
 
 2002-06-16  Christopher Faylor  <cgf@redhat.com>
 
@@ -4461,7 +4461,7 @@
 	(cygheap_user::env_userprofile): New method.
 	(cygheap_user::ontherange): New method.
 	* environ.cc (envsize): Eliminate debugging argument.
-	(environ_init): Assume that envc counts number of elments not total
+	(environ_init): Assume that envc counts number of elements not total
 	size.
 	(spenv): New class.
 	(spenvs): New array, rename from forced_winenv_vars, using spenv.
@@ -4528,7 +4528,7 @@
 	2002-06-04.
 	* fhandler_socket.cc (fhandler_socket::fixup_after_fork): Ditto.
 	(fhandler_socket::dup): Ditto.
-	* net.cc (fdsock): Make sockets explicitely noninheritable on NT.
+	* net.cc (fdsock): Make sockets explicitly noninheritable on NT.
 
 2002-06-09  Christopher Faylor  <cgf@redhat.com>
 
@@ -4555,12 +4555,12 @@
 2002-06-10  Robert Collins  <rbtcollins@hotmail.com>
 
 	* cygwin.din: Add _pthread_cleanup_push and _pthread_cleanup_pop.
-	* pthread.cc: Change __pthread_self to pthread::self() thruoghout.
+	* pthread.cc: Change __pthread_self to pthread::self() throughout.
 	(_pthread_cleanup_push): New function.
 	(_pthread_cleanup_pop): Ditto.
 	* thread.cc: Thanks to Thomas Pfaff for the pthread cleanup_push,_pop
 	patch, this work is derived from that.
-	Change __pthread_self to pthread::self() thruoghout.
+	Change __pthread_self to pthread::self() throughout.
 	(__pthread_self): Rename to pthread::self.
 	(pthread::self): New method.
 	(pthread::pthread): Initialize new member.
@@ -4764,12 +4764,12 @@
 
 	* grp.cc (etc_group): Removed.
 	(parse_grp): Make line parameter nonconst.  Don't copy data into new
-	allocated memory.  Check for CR instead of LF to accomodate new
+	allocated memory.  Check for CR instead of LF to accommodate new
 	read method.
 	(add_grp_line): Make line parameter nonconst.
 	(read_etc_group): Rearrange using new pwdgrp_read class.
 	* passwd.cc (parse_pwd): Don't copy data into new allocated memory.
-	Check for CR instead of LF to accomodate new read method.
+	Check for CR instead of LF to accommodate new read method.
 	(read_etc_passwd): Rearrange using new pwdgrp_read class.
 	* pwdgrp.h (pwdgrp_check::set_last_modified):  Use different
 	parameters.
@@ -5027,7 +5027,7 @@
 
 2002-05-30  Corinna Vinschen  <corinna@vinschen.de>
 
-	* autoload.cc: Replace autoload statments for ZwXXX by NtXXX.
+	* autoload.cc: Replace autoload statements for ZwXXX by NtXXX.
 	Drop ZwQuerySystemInformation since NtQuerySystemInformation was
 	already available.
 	* fhandler_proc.cc (format_proc_uptime): Replace call to
@@ -5956,11 +5956,11 @@ Tue Oct  2  9:57:00 2001  Robert Collins <rbtcollins@hotmail.com>
 Mon Oct  1 12:38:00 2001  Robert Collins <rbtcollins@hotmail.com>
 
 	* cygserver.cc (client_request::serve): New function.
-	* cygserver_process.cc: Inlude <pthread.h> for pthread_once.
+	* cygserver_process.cc: Include <pthread.h> for pthread_once.
 	(process_cache::process_cache): Initialise a crtiical section for write access.
 	(process_cache::process): Use the critical section. Also add missing entries to
 	the cache.
-	(do_process_init): New function to initalise class process static variables.
+	(do_process_init): New function to initialise class process static variables.
 	(process::process): Ensure that the process access critical section is
 	initialised.
 	(process::handle): Close the handle of old process's when they have terminated
@@ -6068,7 +6068,7 @@ Tue Sep 25 16:22:00 2001  Robert Collins <rbtcollins@hotmail.com>
 	* fork.cc (fork_child): Fixup shm memory mapped areas.
 	* pinfo.h: Declare fixup_shms_after_fork().
 	* security.h: Declare alloc_sd().
-	* tty.cc: Additonal includes to support cygserver.
+	* tty.cc: Additional includes to support cygserver.
 	(tty::common_init): Don't allow others to open us if the cygserver is running.
 	* winsup.h: Declare cygserver_running.
 	* cygserver.cc: New file.
@@ -6619,7 +6619,7 @@ Tue Sep 25 16:22:00 2001  Robert Collins <rbtcollins@hotmail.com>
 2002-01-05  Corinna Vinschen  <corinna@vinschen.de>
 
 	* dtable.cc (dtable::init_std_file_from_handle): Don't treat NULL
-	handle as errorneous.
+	handle as erroneous.
 
 2002-01-04  Christopher Faylor  <cgf@redhat.com>
 

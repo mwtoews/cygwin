@@ -78,7 +78,7 @@ struct	hostent {
 	short	h_addrtype;	/* host address type */
 	short	h_length;	/* length of address */
 	char	**h_addr_list;	/* list of addresses from name server */
-#define	h_addr	h_addr_list[0]	/* address, for backward compatiblity */
+#define	h_addr	h_addr_list[0]	/* address, for backward compatibility */
 };
 
 /*

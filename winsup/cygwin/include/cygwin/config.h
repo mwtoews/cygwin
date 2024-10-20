@@ -20,7 +20,7 @@ extern "C" {
 #define __DYNAMIC_REENT__
 
 /* The following provides an inline version of __getreent() for newlib,
-   which will be used throughout the library whereever there is a _r
+   which will be used throughout the library wherever there is a _r
    version of a function that takes _REENT.  This saves the overhead
    of a function call for what amounts to a simple computation.
 

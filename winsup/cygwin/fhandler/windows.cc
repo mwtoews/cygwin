@@ -28,7 +28,7 @@ The following unix-style calls are supported:
 		  structure, len must be >= sizeof (MSG). If read is set to
 		  non-blocking and the queue is empty, read call returns -1
 		  immediately with errno set to EAGAIN, otherwise it blocks
-		  untill the message will be received.
+		  until the message will be received.
 
 	write (fd, buf, len)
 		- send a message pointed by buf. len argument ignored.

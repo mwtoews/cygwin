@@ -2618,7 +2618,7 @@ cygwin_inet_pton (int af, const char *src, void *dst)
  * return:
  *	`dst' (as a const)
  * notes:
- *	(1) uses no statics
+ *	(1) uses no statistics
  *	(2) takes a u_int8_t* not an in_addr as input
  * author:
  *	Paul Vixie, 1996.
@@ -3082,7 +3082,7 @@ cygwin_getaddrinfo (const char *hostname, const char *servname,
 	  memcpy (&whints, hints, sizeof whints);
 	  whints.ai_flags &= ~AI_IDN_MASK;
 	  /* ai_addrlen is socklen_t (4 bytes) in POSIX but size_t (8 bytes) in
-	     Winsock.  Sert upper 4 bytes explicitely to 0 to avoid EAI_FAIL. */
+	     Winsock.  Sert upper 4 bytes explicitly to 0 to avoid EAI_FAIL. */
 	  whints.ai_addrlen &= UINT32_MAX;
 	  /* On Windows, the default behaviour is as if AI_ADDRCONFIG is set,
 	     apparently for performance reasons.  To get the POSIX default

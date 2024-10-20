@@ -54,7 +54,7 @@
  *
  *     The purpose of this function is to avoid overflow during
  *     intermediate calculations, and therefore it is slower than 
- *     simply calcualting sqrt(x^2 + y^2).
+ *     simply calculating sqrt(x^2 + y^2).
  *  
  *     This function is performed by factoring out the larger of the 2
  *     input exponents and moving this factor outside of the sqrt calculation.

@@ -37,7 +37,7 @@
 #include "headers/vec_literal.h"
 
 /* scalbnf computes x * 2^exp. This function is computed without
- * the assistence of any floating point operations and as such does
+ * the assistance of any floating point operations and as such does
  * not set any floating point exceptions.
  */
 static __inline float _scalbnf(float x, int exp)

@@ -1514,7 +1514,7 @@
 #define                   HMDMA0_CONTROL  0xffc04500   /* Handshake MDMA0 Control Register */
 #define                    HMDMA0_ECINIT  0xffc04504   /* Handshake MDMA0 Initial Edge Count Register */
 #define                    HMDMA0_BCINIT  0xffc04508   /* Handshake MDMA0 Initial Block Count Register */
-#define                  HMDMA0_ECURGENT  0xffc0450c   /* Handshake MDMA0 Urgent Edge Count Threshhold Register */
+#define                  HMDMA0_ECURGENT  0xffc0450c   /* Handshake MDMA0 Urgent Edge Count Threshold Register */
 #define                HMDMA0_ECOVERFLOW  0xffc04510   /* Handshake MDMA0 Edge Count Overflow Interrupt Register */
 #define                    HMDMA0_ECOUNT  0xffc04514   /* Handshake MDMA0 Current Edge Count Register */
 #define                    HMDMA0_BCOUNT  0xffc04518   /* Handshake MDMA0 Current Block Count Register */
@@ -1524,7 +1524,7 @@
 #define                   HMDMA1_CONTROL  0xffc04540   /* Handshake MDMA1 Control Register */
 #define                    HMDMA1_ECINIT  0xffc04544   /* Handshake MDMA1 Initial Edge Count Register */
 #define                    HMDMA1_BCINIT  0xffc04548   /* Handshake MDMA1 Initial Block Count Register */
-#define                  HMDMA1_ECURGENT  0xffc0454c   /* Handshake MDMA1 Urgent Edge Count Threshhold Register */
+#define                  HMDMA1_ECURGENT  0xffc0454c   /* Handshake MDMA1 Urgent Edge Count Threshold Register */
 #define                HMDMA1_ECOVERFLOW  0xffc04550   /* Handshake MDMA1 Edge Count Overflow Interrupt Register */
 #define                    HMDMA1_ECOUNT  0xffc04554   /* Handshake MDMA1 Current Edge Count Register */
 #define                    HMDMA1_BCOUNT  0xffc04558   /* Handshake MDMA1 Current Block Count Register */
@@ -2066,7 +2066,7 @@
 #define                DEB0_PFLEN  0x3        /* Pre fetch length for DEB0 accesses */
 #define                DEB1_PFLEN  0xc        /* Pre fetch length for DEB1 accesses */
 #define                DEB2_PFLEN  0x30       /* Pre fetch length for DEB2 accesses */
-#define          DEB_ARB_PRIORITY  0x700      /* Arbitration between DEB busses */
+#define          DEB_ARB_PRIORITY  0x700      /* Arbitration between DEB buses */
 #define               DEB0_URGENT  0x1000     /* DEB0 Urgent */
 #define              nDEB0_URGENT  0x0
 #define               DEB1_URGENT  0x2000     /* DEB1 Urgent */
@@ -5442,7 +5442,7 @@ PORTJ_DIR_CLEAR, PORTJ_INEN, PORTJ_FER */
 /* Peripheral Masks For SIC_ISR, SIC_IWR, SIC_IMASK                                     */
 
 /* SIC_IMASKx Masks */
-/* masks are 32 bit wide, so two writes reguired for "64 bit" wide registers */
+/* masks are 32 bit wide, so two writes required for "64 bit" wide registers */
 #define SIC_UNMASK_ALL 0x00000000         /* Unmask all peripheral interrupts */
 #define SIC_MASK_ALL   0xFFFFFFFF         /* Mask all peripheral interrupts   */
 

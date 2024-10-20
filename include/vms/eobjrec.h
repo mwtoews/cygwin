@@ -23,9 +23,9 @@
 #ifndef _VMS_EOBJREC_H
 #define _VMS_EOBJREC_H
 
-#define EOBJ__C_EMH 8		/* EVAX mdule header record.  */
+#define EOBJ__C_EMH 8		/* EVAX module header record.  */
 #define EOBJ__C_EEOM 9		/* EVAX ed of module record.  */
-#define EOBJ__C_EGSD 10		/* EVAX gobal symbol definition record.  */
+#define EOBJ__C_EGSD 10		/* EVAX global symbol definition record.  */
 #define EOBJ__C_ETIR 11		/* EVAX txt information record.  */
 #define EOBJ__C_EDBG 12		/* EVAX Dbugger information record.  */
 #define EOBJ__C_ETBT 13		/* EVAX Taceback information record.  */

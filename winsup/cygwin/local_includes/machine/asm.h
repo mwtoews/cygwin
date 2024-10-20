@@ -9,7 +9,7 @@
 
 /* The NATIVE_ENTRY macro just adds the required gas macros.  It can be
    used stand-alone if the code is so short that it's better to change the
-   argument registeres rather than adding the code overhead. */
+   argument registers rather than adding the code overhead. */
 
 #define NATIVE_ENTRY(__sym)		 \
 		.text			;\

@@ -43,7 +43,7 @@
 ;    Version information :
 ;
 ; Revision 1.6  89/06/29  16:08:51  jimh
-; Fixed two bugs regarding compatiblility with the fpsymbol file.  The
+; Fixed two bugs regarding compatibility with the fpsymbol file.  The
 ; definitions of ROUND_TO_PLUS/MINUS_INFINITY were reversed.  Set_Rounding
 ; _Mode was fixed to set the local copy (29000 resident) of rounding mode
 ; in 29027 mode.

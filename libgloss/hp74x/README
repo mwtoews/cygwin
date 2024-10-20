@@ -72,8 +72,8 @@ HPFORTH    ASCII  2472    420      0          94/04/20 10:26:38
 BOOTROM    ASCII  2896    3849     0          94/04/20 10:26:40
 PAD1       -12290 6752    1172     0          94/04/20 10:26:40
 
-*** The ISL is only needed when booting the raw hardware. As we're runing
-on a monitor (barely) all we need is a crt0 that initiallizes the GR27
+*** The ISL is only needed when booting the raw hardware. As we're running
+on a monitor (barely) all we need is a crt0 that initializes the GR27
 Global Data Pointer and zero's bss.
 
 *** Initial Program Load
@@ -92,7 +92,7 @@ From page 11-56, architecture book.
 0x000000FC +------------------------------------+ 252
 	   |					|
 IPL_ADDR   +------------------------------------+ IPL_ADDR
-	   |	    Position Independant	|
+	   |	    Position Independent	|
 	   |		IPL Code		|
 	   |	(including IPL_CHECKSUM)	|
 	   +------------------------------------+ IPL_ADDR + IPL_SIZE
@@ -125,8 +125,8 @@ Here's a dump of the LIF volume header using "xd" (od with hex output)
 	     ^^^^
 	This is the ipl size
 
-Interupts
----------
+Interrupts
+----------
 The vector table is access by %iva (%cr14). The address here must be a
 multiple of 2048. The indexes are:
 1	high-priority
@@ -138,8 +138,8 @@ multiple of 2048. The indexes are:
 7	instruction memory protection
 8	illegal instruction
 9	break instruction
-10	priviledged operation
-11	priviledged register
+10	privileged operation
+11	privileged register
 12	overflow
 13	conditional
 14	assist exception

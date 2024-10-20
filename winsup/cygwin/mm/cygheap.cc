@@ -668,7 +668,7 @@ init_cygheap::add_tls (_cygtls *t)
      - The thread mutex is generally only locked under tls_sentry locking.
      - remove_tls, called from _cygtls::remove, locks the mutex before
        removing the threadlist entry and _cygtls::remove then unlocks and
-       destroyes the mutex.
+       destroys the mutex.
      - find_tls, called from several places but especially from the signal
        thread, will lock the mutex on exit and the caller can access the
        _cygtls area locked.  Always make sure to unlock the mutex when the

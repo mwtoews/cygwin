@@ -440,7 +440,7 @@ fhandler_console::cons_master_thread (handle_set_t *p, tty *ttyp)
 	}
 
       WaitForSingleObject (p->input_mutex, mutex_timeout);
-      /* Ensure accessing input recored is not disabled. */
+      /* Ensure accessing input recorded is not disabled. */
       if (con.disable_master_thread)
 	{
 	  ReleaseMutex (p->input_mutex);
@@ -580,7 +580,7 @@ remove_record:
 		    inrec_size = new_inrec_size;
 		}
 
-	      /* Check if writeback was successfull. */
+	      /* Check if writeback was successful. */
 	      acquire_attach_mutex (mutex_timeout);
 	      PeekConsoleInputW (p->input_handle, input_tmp, inrec_size, &n);
 	      release_attach_mutex ();
@@ -1637,7 +1637,7 @@ fhandler_console::process_input_message (void)
 	}
     }
 out:
-  /* Discard processed recored. */
+  /* Discard processed recorded. */
   DWORD discard_len = min (total_read, i + 1);
   /* If input is signalled, do not discard input here because
      tcflush() is already called from line_edit(). */
@@ -2319,7 +2319,7 @@ dev_console::scroll_window (HANDLE h, int x1, int y1, int x2, int y2)
          the console window.  We have to set the cursor first, otherwise
 	 the scroll bars will not be corrected.  */
       SetConsoleCursorPosition (h, dwEnd);
-      /* If the user scolled manually, setting the cursor position might scroll
+      /* If the user scrolled manually, setting the cursor position might scroll
          the console window so that the cursor is not at the top.  Correct
 	 the action by moving the window down again so the cursor is one line
 	 above the new window position. */
@@ -2408,7 +2408,7 @@ fhandler_console::cursor_set (bool rel_to_top, int x, int y)
 #if 0
   /* Setting y to the current b.srWindow.Bottom here is the reason that the window
      isn't scrolled back to the current cursor position like it's done in
-     any other terminal.  Rather, the curser is forced to the bottom of the
+     any other terminal.  Rather, the cursor is forced to the bottom of the
      currently scrolled region.  This breaks the console buffer content if
      output is generated while the user had the window scrolled back.  This
      behaviour is very old, it has no matching ChangeLog entry.
@@ -2665,7 +2665,7 @@ dev_console::save_restore (HANDLE h, char c)
 #endif
 #define DWN 6
 #define BEL 7
-#define TAB 8 /* We should't let the console deal with these */
+#define TAB 8 /* We shouldn't let the console deal with these */
 #define CR 13
 #define LF 10
 #define SO 14

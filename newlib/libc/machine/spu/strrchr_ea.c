@@ -65,7 +65,7 @@ strrchr_ea (__ea const char *s, int c)
 
   while (1)
     {
-      /*search backwards through this cachline */
+      /*search backwards through this cacheline */
       while (curr_ptr >= start_of_cachline_local)
 	{
 	  if (*curr_ptr == (char) c)

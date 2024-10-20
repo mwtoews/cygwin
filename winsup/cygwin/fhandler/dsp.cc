@@ -530,7 +530,7 @@ void fhandler_dev_dsp::Audio_out::default_buf_info (audio_buf_info *p,
   p->bytes = p->fragsize * p->fragments;
 }
 
-/* This is called on an interupt so use locking.. Note Qisr2app_
+/* This is called on an interrupt so use locking.. Note Qisr2app_
    is used so we should wrap all references to it in locks. */
 inline void
 fhandler_dev_dsp::Audio_out::callback_sampledone (WAVEHDR *pHdr)
@@ -573,7 +573,7 @@ fhandler_dev_dsp::Audio_out::waitforspace ()
     }
   if (pHdr->dwFlags)
     {
-      /* Errors are ignored here. They will probbaly cause a failure
+      /* Errors are ignored here. They will probably cause a failure
 	 in the subsequent PrepareHeader */
       rc = waveOutUnprepareHeader (dev_, pHdr, sizeof (WAVEHDR));
       debug_printf ("%u = waveOutUnprepareHeader(%p)", rc, pHdr);
@@ -951,7 +951,7 @@ fhandler_dev_dsp::Audio_in::waitfordata ()
     }
   if (pHdr->dwFlags) /* Zero if queued following error in queueblock */
     {
-      /* Errors are ignored here. They will probbaly cause a failure
+      /* Errors are ignored here. They will probably cause a failure
 	 in the subsequent PrepareHeader */
       rc = waveInUnprepareHeader (dev_, pHdr, sizeof (WAVEHDR));
       debug_printf ("%u = waveInUnprepareHeader(%p)", rc, pHdr);

@@ -736,7 +736,7 @@ gdb_hex(char *str, int nbytes)
 }
 
 /*
- * A - tread alive request.
+ * A - thread alive request.
  *	param is the thread ID.
  *	returns an OK or an error number.
  */

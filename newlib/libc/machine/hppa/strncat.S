@@ -14,7 +14,7 @@
  */
 
 /*HPUX_ID:	@(#) $Revision$	*/
-/* strncat(s1,s2,n) : concatonate at most n characters from s2 onto s1 */
+/* strncat(s1,s2,n) : concatenate at most n characters from s2 onto s1 */
 
 #include "DEFS.h"
 
@@ -169,7 +169,7 @@ skip_mask3:
 	uxor,nbz	tmp3,r0,save
 	b,n		null3
 	copy		r0,tmp5   /* zero out tmp5 so null3 does correct alignment */
-	copy		r0,tmp7	  /* zero out tmp7 so we don't use orignal s_addr since no longer valid */
+	copy		r0,tmp7	  /* zero out tmp7 so we don't use original s_addr since no longer valid */
 	b		bp_1 /* we now have less than 4 bytes to move*/
         stbys,b,m   tmp3,4(0,d_addr)    /* store !*/
 

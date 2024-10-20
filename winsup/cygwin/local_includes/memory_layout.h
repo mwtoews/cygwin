@@ -41,7 +41,7 @@ details. */
 #define CYGHEAP_STORAGE_HIGH		0xa00000000UL
 
 /* This is where the user heap starts.  There's no defined end address.
-   The user heap pontentially grows into the mmap arena.  However,
+   The user heap potentially grows into the mmap arena.  However,
    the user heap grows upwards and the mmap arena grows downwards,
    so there's not much chance to meet unluckily. */
 #define USERHEAP_START			0xa00000000UL

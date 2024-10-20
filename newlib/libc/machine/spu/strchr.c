@@ -34,7 +34,7 @@
 #include <stddef.h>
 
 /* Scans the string pointed to by s for the character c and
- * returns a pointer to the first occurance of c. If
+ * returns a pointer to the first occurrence of c. If
  * c is not found, then NULL is returned.
  */
 char *strchr(const char *s, int c)

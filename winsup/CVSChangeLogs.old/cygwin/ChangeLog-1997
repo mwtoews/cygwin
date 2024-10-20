@@ -201,7 +201,7 @@ Wed Dec 10 00:05:23 1997  Geoffrey Noer  <noer@cygnus.com>
 	child stopsig status or suffer a race.
 	(wait_subproc): Save sig_proc thread handle away for
 	synchronization when exiting.  Set up 'i_am_alive' mutex inherited
-	by childen.  Child's inability to lock this mutex means that the
+	by children.  Child's inability to lock this mutex means that the
 	parent is still alive and processing children.  Use proc_loop_wait
 	to control WFMO.  Clean up events queue on thread exit.
 	(zap_subproc): Clear out pinfo structure for a child.
@@ -349,11 +349,11 @@ Thu Nov 20 00:52:58 1997  Geoffrey Noer  <noer@cygnus.com>
 	patch from sos@prospect.com.ru (Sergey Okhapkin):
 	* exec.cc (file_exists): Removed
 	* spawn.cc (spawn_guts): call perhaps_suffix to convert filename
-	to win32 form and to check file existance; prog variable
+	to win32 form and to check file existence; prog variable
 	removed, all references changed to real_path variable.
 	Do not inherit parent's window station/desktop on sexecXX calls.
 	They are no longer needed with the new signal handling.
-	(_spawnve): extra file existance check removed
+	(_spawnve): extra file existence check removed
 	* winsup.h: file_exists prototype removed
 
 Wed Nov 19 16:23:47 1997  Geoffrey Noer  <noer@cygnus.com>
@@ -480,7 +480,7 @@ Sun Nov 16 15:54:27 1997  Geoffrey Noer  <noer@cygnus.com>
 Sun Nov 16 15:54:27 1997  Geoffrey Noer  <noer@cygnus.com>
 
         patch from sos@prospect.com.ru (Sergey Okhapkin):
-        * dcrt0.cc (dll_crt0_1): call winsock_init if neccesary.
+        * dcrt0.cc (dll_crt0_1): call winsock_init if necessary.
         * fhandler.cc ((fhandler_socket::fhandler_socket): moved to net.cc
         * fhandler.h (class fhandler_socket): destructor prototype added.
         * fork.cc (cygwin_fork_helper1): set PID_SOCKETS_USED in the
@@ -854,7 +854,7 @@ Tue Oct 21 22:52:29 1997  Geoffrey Noer  <noer@cygnus.com>
         process receiving the signal is terminating.
         (wait_subproc): Report on errors when opening the
 	sync_proc_subproc mutex.  Move initialization of events[0]
-	"wakeup" signal prior to wait_subproc_inited or risk a (miniscule)
+	"wakeup" signal prior to wait_subproc_inited or risk a (minuscule)
 	chance for a reference to a NULL handle.
         * strace.cc (ta[]): Change WM_ASYNCIO entry to reflect previous
         changes to WM_ASYNCIO constant.
@@ -1116,7 +1116,7 @@ Mon Oct  6 13:01:51 1997  Geoffrey Noer  <noer@cygnus.com>
         Work around Windows 95 bug where a WaitForSingleObjects will
         sometimes return ERROR_INVALID_HANDLE when it is resumed after
         a suspend.
-        * pinfo.cc: Remove references to hThread field whereever it occurs.
+        * pinfo.cc: Remove references to hThread field wherever it occurs.
         * strace.cc: Use standard cygname function to create name for
         strace_mutex.  Prevents confusion between different .dll versions.
         * wait.cc (wait_found): Remove reference to hThread.
@@ -1398,7 +1398,7 @@ Fri Aug 15 18:23:43 1997  Rob Savoye  <rob@cygnus.com>
 	* configure.in: Add mingw to AC_CONFIG_SUBDIR.
 	* configure: Regenerated from autoconf 2.12 with Cygnus	patches.
 	* Makefile.in: Use subdir_do which uses the value of $SUBDIRS
-	rather than having seperate target for each directory.
+	rather than having separate target for each directory.
 	* glob/Makefile.in: Add a phony target for install.
 	* configure.in: Add mingw to AC_CONFIG_SUBDIR.
 
@@ -1414,7 +1414,7 @@ Thu Aug 14 17:00:32 1997  Geoffrey Noer  <noer@cygnus.com>
 	(FakeReadFile): do not interrupt read when tty support enabled.
 	Do not reset signal_arrived event.
 	* cygwin.din: add exports - cf(g)set(i)ospeed, login, logout, ttyslot
-	* dcrt0.cc (_exit): kill orphaned childs with SIGHUP and SIGCONT
+	* dcrt0.cc (_exit): kill orphaned children with SIGHUP and SIGCONT
 	on group leader exit, kill foreground process group on session
 	leader exit.
 	* dirsearch.cc (closedir): check for FindFirst() was called
@@ -1447,18 +1447,18 @@ Thu Aug 14 17:00:32 1997  Geoffrey Noer  <noer@cygnus.com>
 	default.
 	* spawn.cc (spawn_guts): ResetEvent removed
 	(cwait): do not interrupt the call
-	* strerror.cc: include stdio.h, reenable disabled cases, remove
+	* strerror.cc: include stdio.h, re-enable disabled cases, remove
 	duplicated cases, return decimal error value in the default case.
 	* syscalls.cc (setsid): set process group id to process id when setsid
 	called.
 	(setpgid): check for negative pgid
 	* syslog.cc (syslog): %m macro support added
-	* termios.cc (cfg(s)eti(o)speed): new fuctions needed to support
+	* termios.cc (cfg(s)eti(o)speed): new functions needed to support
 	NIST PCTS requirements.
 	* tty.cc: include utmp.h.
 	(ttyslot): new
 	(tty_list::terminate): fill in utmp on tty master exit
-	(tty_list::allocate_tty): check for tty master pocess alive
+	(tty_list::allocate_tty): check for tty master process alive
 	(create_tty_master): fill in utmp
 	(do_input): restart tty output on interrupt
 	(fhandler_tty_slave::fhndler_tty_slave): ttynum logic moved to
@@ -1570,7 +1570,7 @@ Thu Jul 24 02:14:24 1997  Geoffrey Noer  <noer@cygnus.com>
 	* tty.cc (fhandler_tty_slave::ioctl): TCGETA/TCSETA support added
 	* wait.cc (_wait): wait() syscall should do not terminate if
 	a child is stopped.
-	(wait4): wait calls should wait childs only; fixed a bug with
+	(wait4): wait calls should wait children only; fixed a bug with
 	nprocinfo count; fixed signal handling.
 
 Thu Jul 24 02:10:25 1997  Geoffrey Noer  <noer@cygnus.com>
@@ -1760,7 +1760,7 @@ Thu Jul 24 02:10:25 1997  Geoffrey Noer  <noer@cygnus.com>
 	(pipethread): new
 	(cygwin32_select): comment out socket only case since generic
 	code (select on different types of handles) works for sockets too
-	but is interruptable.  The case for always_ready_used is used now
+	but is interruptible.  The case for always_ready_used is used now
 	and for polling select (zero timevalue).  Changes to support
 	select on pipes.
 	* shared.cc (shared_info::initialize): initialize tty table.
@@ -1775,7 +1775,7 @@ Thu Jul 24 02:10:25 1997  Geoffrey Noer  <noer@cygnus.com>
 	before process exit.  Some changes due to moving signal_arrived to
 	dll's address space.
 	(_spawnve): inherit control tty number on spawn.
-	* syscalls.cc (close_all_files): reenabled.  The code is ok after
+	* syscalls.cc (close_all_files): re-enabled.  The code is ok after
 	all! The troubles were due to incorrect usage on exec() calls.
 	(setsid): no longer a stub
 	(ptsname): new
@@ -1930,7 +1930,7 @@ Sun Jun 22 17:27:03 1997  Ian Lance Taylor  <ian@cygnus.com>
 Fri Jun 20 11:06:09 1997  Geoffrey Noer  <noer@cygnus.com>
 
 	patch from sos@prospect.com.ru (Sergey Okhapkin):
-	* include/sys/wait.h: correct operator precidence bug
+	* include/sys/wait.h: correct operator precedence bug
 	in WIFSIGNALED
 
 Thu Jun 19 12:58:45 1997  Geoffrey Noer  <noer@cygnus.com>
@@ -1972,7 +1972,7 @@ Tue Jun 17 14:57:09 1997  Geoffrey Noer  <noer@cygnus.com>
 	random export
 	* fork.cc (cygwin_fork_helper1): inherit pgid and sid on fork
 	* misc.cc (cygwin32_*env): save environ value in __cygwin_environ
-	too.  Is __cygwin_environ variable really neccessary?  Why not
+	too.  Is __cygwin_environ variable really necessary?  Why not
 	export cygwin.dll's environ variable with "__cygwin_environ" name?
 	* pinfo.cc (pinfo::init_self): initialize pgid and sid
 	* signal.cc (kill_worker): new
@@ -2124,7 +2124,7 @@ Mon Jun  3 12:21:20 1997  Geoffrey Noer  <noer@cygnus.com>
 	appropriate
 	(cwait): ditto
 	* times.cc (__to_clock_t): add flag arg which says whether or not
-	to substract FACTOR from total
+	to subtract FACTOR from total
 	(times): also fill in tms_cstime and tms_cutime, add flag arg to
 	__to_clock_t calls
 	(totimeval): add extra flag passed on to __to_clock_t
@@ -2397,7 +2397,7 @@ Fri Apr 18 10:40:30 1997  Geoffrey Noer  <noer@cygnus.com>
 Thu Apr 17 23:50:50 1997  Geoffrey Noer  <noer@cygnus.com>
 
 	* path.h: increase path length in mount table to MAX_PATH
-	in size instad of 30.  This will increase cygwin.dll memory
+	in size instead of 30.  This will increase cygwin.dll memory
 	usage by 20K.  We need to remove static allocations from
 	path code.
 
@@ -2764,7 +2764,7 @@ Fri Jan  3 12:10:22 1997  Jeremy Allison <jra@cygnus.com>
 
 	* fork.cc: Added parameter to recreate_mmaps_after_fork
 	in child, and added set_child_mmap_ptr() call in parent.
-	Needed as cygwin.dll statics are not copied accros a fork.
+	Needed as cygwin.dll statistics are not copied across a fork.
 	* mmap.cc: Added parameter to recreate_mmaps_after_fork,
 	added set_child_mmap_ptr() call.
 	* winsup.h: Added mmap_ptr to pinfo struct. Removed obsolete

@@ -146,7 +146,7 @@ ENTRY (strcmp)
 
 	xorl	r12, r12, r12
 
-; Setup byte detector (more information bellow) [1]
+; Setup byte detector (more information below) [1]
 	vpack2wl	r8, NULL_32DT_1, NULL_32DT_1
 ; Set r9 as a copy of r8 for vectorized sub
 	asll	r9, r8, 7
@@ -324,7 +324,7 @@ ENDFUNC (strcmp)
 ; is gibberish in the differing bytes. We can use the same ffs and xbuf
 ; operations to get the differing byte position.
 ;
-; Note that the order of the operations isnt the same as in this explanation,
+; Note that the order of the operations isn't the same as in this explanation,
 ; to reduce register dependency between instructions
 ;
 ;
@@ -337,6 +337,6 @@ ENDFUNC (strcmp)
 ; main loop. The reason for this is because the only way this can happen is if
 ; the strings have the same length AND either are a multiple of 16/8 bytes, or
 ; the bytes that follow the NULL bytes also match. As this is extremely
-; unlikely, it isnt worth it to perform this optimization since it would require
+; unlikely, it isn't worth it to perform this optimization since it would require
 ; an extra branch in all runs
 ;

@@ -90,7 +90,7 @@ _setjmp
  *	jmp_buf env;
  *	int val;
  * 
- * This routine does not retore signal state.
+ * This routine does not restore signal state.
  * This routine does not override a zero val.
  */
 

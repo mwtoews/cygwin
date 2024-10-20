@@ -10,7 +10,7 @@ SYNOPSIS
 	char * strrchr(const char *<[string]>, int <[c]>);
 
 DESCRIPTION
-	This function finds the last occurence of <[c]> (converted to
+	This function finds the last occurrence of <[c]> (converted to
 	a char) in the string pointed to by <[string]> (including the
 	terminating null character).
 

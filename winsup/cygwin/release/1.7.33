@@ -72,7 +72,7 @@ Bug Fixes
   incorrectly set.
   Addresses: https://cygwin.com/ml/cygwin/2014-10/msg00292.html
 
-- Fix a SEGV in some 64 bit applications explicitely dlclosing DLLs.
+- Fix a SEGV in some 64 bit applications explicitly dlclosing DLLs.
   Addresses: https://cygwin.com/ml/cygwin/2014-10/msg00402.html
 
 - Fix -fuse-cxa-atexit handling where dlclose fails to trigger calling

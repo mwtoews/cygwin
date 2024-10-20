@@ -46,7 +46,7 @@ ENTRY(strcmp)
 	comb,=,n   s1,s2,samestring
 	comib,=,n  0,s1,s1isnull
         comib,=,n  0,s2,s2isnull
-/* Hope for word alignment.  Pick up low two bits of each adress */
+/* Hope for word alignment.  Pick up low two bits of each address */
         extru,<>   s1,31,2,tmp1
         ldwm       4(s1),s1word
         dep,=      s2,29,2,tmp1
@@ -73,7 +73,7 @@ wordcomparereturn:
 /* s1 has a null.  s2 has not been checked. */
 nullins1:
         /*If s2 has no nulls this is simple, but assume that it might
-          and fix up s1 to allow the word comparision to work by
+          and fix up s1 to allow the word comparison to work by
           scanning s1 and duplicating all the bytes in s2 below that byte into
           the remainder of s1.  A remainder only exists if the zero byte
           is found in the upper three bytes */

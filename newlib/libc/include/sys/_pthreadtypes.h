@@ -179,7 +179,7 @@ typedef __uint32_t pthread_cond_t;       /* identify a condition variable */
 
 typedef struct {
   int      is_initialized;
-  clock_t  clock;             /* specifiy clock for timeouts */
+  clock_t  clock;             /* specify clock for timeouts */
 #if defined(_POSIX_THREAD_PROCESS_SHARED)
   int      process_shared;    /* allow this to be shared amongst processes */
 #endif

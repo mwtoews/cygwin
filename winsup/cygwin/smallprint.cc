@@ -14,7 +14,7 @@ details. */
 #include <wchar.h>
 
 /*
-  Meaning of format conversion specifiers.  If 'l' isn't explicitely mentioned,
+  Meaning of format conversion specifiers.  If 'l' isn't explicitly mentioned,
   it's ignored!
 
    0       modifier: pad with zero instead of spaces

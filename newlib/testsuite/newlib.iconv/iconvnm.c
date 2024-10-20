@@ -97,7 +97,7 @@ int main(int argc, char **argv)
     
     if (failed)
     {
-        printf("%d FAILTURES\n", failed);
+        printf("%d FAILURES\n", failed);
         abort();
     }
 

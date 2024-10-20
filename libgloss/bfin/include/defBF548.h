@@ -842,7 +842,7 @@
 /* Keypad Registers */
 
 #define                         KPAD_CTL  0xffc04100   /* Controls keypad module enable and disable */
-#define                    KPAD_PRESCALE  0xffc04104   /* Establish a time base for programing the KPAD_MSEL register */
+#define                    KPAD_PRESCALE  0xffc04104   /* Establish a time base for programming the KPAD_MSEL register */
 #define                        KPAD_MSEL  0xffc04108   /* Selects delay parameters for keypad interface sensitivity */
 #define                      KPAD_ROWCOL  0xffc0410c   /* Captures the row and column output values of the keys pressed */
 #define                        KPAD_STAT  0xffc04110   /* Holds and clears the status of the keypad interface interrupt */
@@ -988,7 +988,7 @@
 
 #define                 HOSTDP_EN  0x1        /* HOSTDP Enable */
 #define                nHOSTDP_EN  0x0
-#define                HOSTDP_END  0x2        /* Host Endianess */
+#define                HOSTDP_END  0x2        /* Host Endianness */
 #define               nHOSTDP_END  0x0
 #define          HOSTDP_DATA_SIZE  0x4        /* Data Size */
 #define         nHOSTDP_DATA_SIZE  0x0

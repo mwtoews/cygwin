@@ -22,7 +22,7 @@
      intended to be as close to a superset of both as possible.
 
      Note that you can have more than one path to a file.  The mount
-     table is always prefered when translating Win32 paths to POSIX
+     table is always preferred when translating Win32 paths to POSIX
      paths.  Win32 paths in mount table entries may be UNC paths or
      standard Win32 paths starting with <drive-letter>:
 
@@ -522,7 +522,7 @@ get_nt_native_path (const char *path, UNICODE_STRING& upath, bool dos)
   return &upath;
 }
 
-/* Handle with extrem care!  Only used in a certain instance in try_to_bin.
+/* Handle with extreme care!  Only used in a certain instance in try_to_bin.
    Every other usage needs a careful check. */
 void
 path_conv::set_nt_native_path (PUNICODE_STRING new_path)
@@ -642,7 +642,7 @@ getfileattr (const char *path, bool caseinsensitive) /* path has to be always ab
    purposes it's necessary to have a path_conv::check function which
    takes a UNICODE_STRING src path, otherwise we waste a lot of time
    for converting back and forth.  The below implementation does
-   realy nothing but converting to char *, until path_conv handles
+   really nothing but converting to char *, until path_conv handles
    wide-char paths directly. */
 void
 path_conv::check (const UNICODE_STRING *src, unsigned opt,
@@ -838,7 +838,7 @@ path_conv::check (const char *src, unsigned opt,
 			  /* FIXME: This is YA bad hack to workaround that
 			     we're checking for isvirtual_dev at this point.
 			     This should only happen if the file is actually
-			     a virtual file, and NOT already if the preceeding
+			     a virtual file, and NOT already if the preceding
 			     path components constitute a virtual file.
 
 			     Anyway, what we do here is this:  If the descriptor
@@ -1066,7 +1066,7 @@ path_conv::check (const char *src, unsigned opt,
 		 newly derived path. */
 	      else if (symlen)
 		{
-		  /* if symlen is negativ, the actual native symlink or
+		  /* if symlen is negative, the actual native symlink or
 		      junction point is an inner path component.  Just fix up
 		      symlen to be positive and don't try any PC_SYM_FOLLOW
 		      handling. */
@@ -1196,7 +1196,7 @@ path_conv::check (const char *src, unsigned opt,
 	add_ext_from_sym (sym);
       if (dev == FH_NETDRIVE && component)
 	{
-	  /* This case indicates a non-existant resp. a non-retrievable
+	  /* This case indicates a non-existent resp. a non-retrievable
 	     share.  This happens for instance if the share is a printer.
 	     In this case the path must not be treated like a FH_NETDRIVE,
 	     but like a FH_FS instead, so the usual open call for files
@@ -1209,7 +1209,7 @@ path_conv::check (const char *src, unsigned opt,
 	     exist.  This is typically indicated by the fileattr content.
 	     So, why here?  The downside is that cygwin_conv_path just gets
 	     an error for these paths so it reports the error back to the
-	     application.  Unlike in all other cases of non-existant files,
+	     application.  Unlike in all other cases of non-existent files,
 	     for which check doesn't set error, so cygwin_conv_path just
 	     returns the path, as intended. */
 	  error = ENOENT;
@@ -1885,7 +1885,7 @@ symlink_native (const char *oldpath, path_conv &win32_newpath)
       return -1;
     }
   /* Don't allow native symlinks to Cygwin special files.  However, the
-     caller shoud know because this case shouldn't be covered by the
+     caller should know because this case shouldn't be covered by the
      default "nativestrict" behaviour, so we use a special return code. */
   if (win32_oldpath.isspecial ())
     return -2;
@@ -2014,7 +2014,7 @@ symlink_wsl (const char *oldpath, path_conv &win32_newpath)
 				     FileDispositionInformation);
       NtClose (fh);
       if (!NT_SUCCESS (status))
-	debug_printf ("Setting delete dispostion failed, status = %y", status);
+	debug_printf ("Setting delete disposition failed, status = %y", status);
       return -1;
     }
   NtClose (fh);
@@ -2341,7 +2341,7 @@ symlink_worker (const char *oldpath, path_conv &win32_newpath, bool isdevice)
 	  status = NtSetInformationFile (fh, &io, &fdi, sizeof fdi,
 					 FileDispositionInformation);
 	  if (!NT_SUCCESS (status))
-	    debug_printf ("Setting delete dispostion failed, status = %y",
+	    debug_printf ("Setting delete disposition failed, status = %y",
 			  status);
 	}
       NtClose (fh);
@@ -3274,7 +3274,7 @@ restart:
 
       if (NT_SUCCESS (status)
 	  /* Check file system while we're having the file open anyway.
-	     This speeds up path_conv noticably (~10%). */
+	     This speeds up path_conv noticeably (~10%). */
 	  && (fs.inited () || fs.update (&upath, h)))
 	{
 	  status = conv_hdl.get_finfo (h, fs.is_nfs ());
@@ -3453,7 +3453,7 @@ restart:
 	    goto file_not_symlink;
 	  else
 	    {
-	      /* Volume moint point or unrecognized reparse point type.
+	      /* Volume mount point or unrecognized reparse point type.
 		 Make sure the open handle is not used in later stat calls.
 		 The handle has been opened with the FILE_OPEN_REPARSE_POINT
 		 flag, so it's a handle to the reparse point, not a handle

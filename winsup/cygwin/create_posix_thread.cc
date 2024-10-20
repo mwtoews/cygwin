@@ -290,7 +290,7 @@ create_posix_thread (LPTHREAD_START_ROUTINE thread_func, PVOID thread_arg,
       real_guardsize = roundup2 (guardsize, wincap.page_size ());
       /* Add the guardsize to the stacksize */
       real_stacksize += real_guardsize;
-      /* Take dead zone page into account, which always stays uncommited. */
+      /* Take dead zone page into account, which always stays uncommitted. */
       real_stacksize += wincap.page_size ();
       /* Now roundup the result to the next allocation boundary. */
       real_stacksize = roundup2 (real_stacksize,
@@ -300,7 +300,7 @@ create_posix_thread (LPTHREAD_START_ROUTINE thread_func, PVOID thread_arg,
       if (!real_stackaddr)
 	return NULL;
       /* Set up committed region.  We set up the stack like the OS does,
-	 with a reserved region, the guard pages, and a commited region.
+	 with a reserved region, the guard pages, and a committed region.
 	 We commit the stack commit size from the executable header, but
 	 at least PTHREAD_STACK_MIN (64K). */
       static ULONG exe_commitsize;

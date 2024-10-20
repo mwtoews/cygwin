@@ -1130,7 +1130,7 @@ be not too open:</para>
 
 <para>If the second <command>ls</command> command still gives you
 <computeroutput>-rw-rw----</computeroutput> permissions after running
-the above commands, it is proably because the file's primary group
+the above commands, it is probably because the file's primary group
 is your user's personal group:</para>
 
 <screen>

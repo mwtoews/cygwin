@@ -140,7 +140,7 @@ int tcases[] = {	/* modes to give nodes created (1 per text case) */
        S_IFREG|06700,	/* ordinary file with mode 06700 (sgid & suid) */
 
 #ifdef CRAY
-       S_IFDIR|0777,	/* Direcory */
+       S_IFDIR|0777,	/* Directory */
        S_IRESTART|0400, /* restartbit  */
 #ifdef S_IFOFD
        S_IFOFD|0777,	/* off line, with data  */

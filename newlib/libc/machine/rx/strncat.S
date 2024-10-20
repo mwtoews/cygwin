@@ -11,7 +11,7 @@ _strncat:
 	cmp	#0, r3		; If max is zero we have nothing to do.
 	beq	2f
 	
-	mov 	r1, r4		; Leave the desintation pointer intact for the return value.
+	mov 	r1, r4		; Leave the destination pointer intact for the return value.
 	
 1:	mov.b	[r4+], r5	; Find the NUL byte at the end of the destination.
 	cmp	#0, r5

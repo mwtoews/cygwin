@@ -86,7 +86,7 @@ PrintString	.macro	NString,Num
 	.endm
 
 
-	/* IVA register array offets */
+	/* IVA register array offsets */
 
 #define	R_sr0		  0
 #define	R_sr1		  4

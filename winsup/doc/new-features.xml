@@ -131,7 +131,7 @@ Allow to run with full ASLR enabled and enable on Cygwin DLL by default.
 
 <listitem><para>
 Remove any special handling for the .com filename suffix. It has to
-be used always explicitely.
+be used always explicitly.
 </para></listitem>
 
 <listitem><para>
@@ -404,7 +404,7 @@ Windows 10 1803 or later and WSL installed.
 New file ioctls's FS_IOC_GETFLAGS and FS_IOC_SETFLAGS.  The actual inode
 flags are Cygwin-specific.  This allows to set or reset DOS attributes,
 file sparseness, FS level encryption and compression, as well as
-directory case sensitivity programatically.
+directory case sensitivity programmatically.
 </para></listitem>
 
 <listitem><para>
@@ -851,7 +851,7 @@ even for non-Cygwin processes.</para>
 <para>To accommodate standard Windows ACLs, the POSIX permissions of
 the owner and all other users in the ACL are computed using the Windows
 AuthZ API.  This may slow down the computation of POSIX permissions
-noticably in some circumstances, but is generally more correct.
+noticeably in some circumstances, but is generally more correct.
 The new code also ignores SYSTEM and Administrators group permissions
 when computing the MASK/CLASS_OBJ permission mask on old ACLs, and it
 doesn't deny access to SYSTEM and Administrators group based on the
@@ -1888,7 +1888,7 @@ behaviour on broken filesystems not recognized by Cygwin.
 
 <listitem><para>
 Add new mount option "bind" to allow remounting parts of the POSIX file
-hirarchy somewhere else.
+hierarchy somewhere else.
 </para></listitem>
 
 <listitem><para>

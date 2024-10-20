@@ -264,7 +264,7 @@ dll_load (HANDLE& handle, PWCHAR name)
 
 /* On x86_64, we need assembler wrappers for std_dll_init and wsock_init.
    In the x86_64 ABI it's no safe bet that frame[1] (aka 8(%rbp)) contains
-   the return address.  Consequentially, if we try to overwrite frame[1]
+   the return address.  Consequently, if we try to overwrite frame[1]
    with the address of dll_chain, we end up with a scrambled stack, the
    result depending on the optimization settings and the current frame of
    mind of the compiler.  So for x86_64, we disable overwriting the return
@@ -361,7 +361,7 @@ std_dll_init (struct func_info *func)
 /* Initialization function for winsock stuff. */
 
 #ifdef __x86_64__
-/* See above comment preceeding std_dll_init. */
+/* See above comment preceding std_dll_init. */
 INIT_WRAPPER (wsock_init)
 #else
 #error unimplemented for this target

@@ -318,7 +318,7 @@ ENDFUNC (memchr)
 ; r3 is set via bset, which means we can simply use a fls to obtain the first
 ; match (or ffs depending on the values in bset) [2].
 ; The reason for starting at 1 and not 0 is so r3 encodes how many double
-; words to go back, and it wouldnt make sense to go back 0 (the byte would be
+; words to go back, and it wouldn't make sense to go back 0 (the byte would be
 ; in the next loop iteration).
 ;
 ; The first step to take is point r0 to the appropriate double word.
@@ -334,7 +334,7 @@ ENDFUNC (memchr)
 ; words, so we want to analyze from last to first.
 ;
 ; We can ignore the first asr (which would be asr.f 2, as we started r3 on 1)
-; because if r13 isnt the target byte, r2 will always be overwritten so we can
+; because if r13 isn't the target byte, r2 will always be overwritten so we can
 ; just decide to start at r7, and overwrite it if needed.
 ;
 ; Now comes the tricky part. In order to obtain the first target byte, we need
@@ -352,7 +352,7 @@ ENDFUNC (memchr)
 ;
 ; One thing to note, is that ffs oddly returns 31 if no bit is found, setting
 ; the zero flag. As r9 is never all 0s at this stage (would mean there is no
-; NULL byte and we wouldnt be here) we dont need to worry about that. [6]
+; NULL byte and we wouldn't be here) we dont need to worry about that. [6]
 ;
 ; We can then convert the bit position into the last byte position by looking
 ; into bits 3 to 5, and shifting 3 bits to the right. This can be combined into

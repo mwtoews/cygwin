@@ -405,7 +405,7 @@
 #define MDR_DDR                MDS_DDR
 #define MDR_DI                 MDS_DI
 
-/* Aysnchronous Memory Controller - External Bus Interface Unit (0xFFC0 3C00-0xFFC0 3FFF) */
+/* Asynchronous Memory Controller - External Bus Interface Unit (0xFFC0 3C00-0xFFC0 3FFF) */
 #define EBIU_AMGCTL            0xFFC03C00  /* Asynchronous Memory Global Control Register */
 #define EBIU_AMBCTL0           0xFFC03C04  /* Asynchronous Memory Bank Control Register 0 */
 #define EBIU_AMBCTL1           0xFFC03C08  /* Asynchronous Memory Bank Control Register 1 */

@@ -27,7 +27,7 @@
  */
 
 /* Implementation of strcmp for ARMv6m.  This version is only used in
-   ARMv6-M when we want an efficient implementation.  Otherwize if the
+   ARMv6-M when we want an efficient implementation.  Otherwise if the
    code size is preferred, strcmp-armv4t.S will be used.  */
 
 	.thumb_func

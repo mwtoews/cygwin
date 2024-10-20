@@ -49,7 +49,7 @@ ENTRY (strlen)
 	mov	r13, r0
 	xor	r12, r12, r12
 
-; Setup byte detector (more information bellow) [1]
+; Setup byte detector (more information below) [1]
 	mov	r8, NULL_32DT_1
 ; Set r9 as a copy of r8 for vectorized sub
 	mov	r9, r8
@@ -137,7 +137,7 @@ ENTRY (strlen)
 	movl	r13, r0
 	xor	r12, r12, r12
 
-; Setup byte detector (more information bellow) [1]
+; Setup byte detector (more information below) [1]
 	vpack2wl	r8, NULL_32DT_1, NULL_32DT_1
 
 	asll	r1, r8, 7
@@ -243,7 +243,7 @@ ENDFUNC (strlen)
 ; r12 is set via bset, which means we can simply use a fls to obtain
 ; the first match (or ffs depending on the values in bset) [2].  The
 ; reason for starting at 1 and not 0 is so r12 encodes how many double
-; words to go back, and it wouldnt make sense to go back 0 (the NULL
+; words to go back, and it wouldn't make sense to go back 0 (the NULL
 ; would be in the next loop iteration).
 ;
 ; The first step to take is point r13 to the appropriate double word.
@@ -260,7 +260,7 @@ ENDFUNC (strlen)
 ; so we want to analyze from last to first.
 ;
 ; We can ignore the first asr (which would be asr.f 2, as we started
-; r12 on 1) because if r7 isnt the NULL byte, r2 will always be
+; r12 on 1) because if r7 isn't the NULL byte, r2 will always be
 ; overwritten so we can just decide to start at r7, and overwrite it
 ; if needed.
 ;
@@ -280,7 +280,7 @@ ENDFUNC (strlen)
 ;
 ; One thing to note, is that ffs oddly returns 31 if no bit is found,
 ; setting the zero flag. As r9 is never all 0s at this stage (would
-; mean there is no NULL byte and we wouldnt be here) we dont need to
+; mean there is no NULL byte and we wouldn't be here) we dont need to
 ; worry about that. [6]
 ;
 ; We can then convert the bit position into the last byte position by

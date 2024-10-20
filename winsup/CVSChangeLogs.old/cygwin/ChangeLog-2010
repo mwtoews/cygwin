@@ -18,7 +18,7 @@
 
 2010-12-16  Corinna Vinschen  <corinna@vinschen.de>
 
-	* security.cc (alloc_sd): Really fix erroneous inheritence entry
+	* security.cc (alloc_sd): Really fix erroneous inheritance entry
 	duplication now.  Add more comments for clarity.
 
 2010-12-15  Christian Franke  <franke@computer.org>
@@ -28,7 +28,7 @@
 
 2010-12-15  Corinna Vinschen  <corinna@vinschen.de>
 
-	* security.cc (alloc_sd): Fix erroneous inheritence entry duplication.
+	* security.cc (alloc_sd): Fix erroneous inheritance entry duplication.
 
 2010-12-12  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -60,7 +60,7 @@
 
 2010-12-06  Corinna Vinschen  <corinna@vinschen.de>
 
-	* path.cc (path_conv::check): Don't generate ENOENT for non-existant
+	* path.cc (path_conv::check): Don't generate ENOENT for non-existent
 	CYGDRIVE and NETDRIVE paths.  Add comment.
 
 2010-12-02  Corinna Vinschen  <corinna@vinschen.de>
@@ -1230,7 +1230,7 @@
 
 	* fhandler_disk_file.cc (fhandler_base::fstat_by_nfs_ea): Use handle
 	returned by get_stat_handle.
-	(fhandler_base::fstat_helper): Reinstatiate code to re-open the file
+	(fhandler_base::fstat_helper): Reinstantiate code to re-open the file
 	when checking for executability if called via fstat.  Explain why.
 
 2010-06-15  Corinna Vinschen  <corinna@vinschen.de>
@@ -1457,7 +1457,7 @@
 	* lib/_cygwin_crt0_common.cc: Declare pseudo runtime externs needed for
 	per_process structure.
 	(_cygwin_crt0_common): Fill in pseudo_reloc runtime constants.
-	* lib/pseudo-reloc-dummy.c: New file.  Dummy function to satisify ld.
+	* lib/pseudo-reloc-dummy.c: New file.  Dummy function to satisfy ld.
 	* lib/pseudo-reloc.c: Delete.
 
 2010-05-07  Corinna Vinschen  <corinna@vinschen.de>
@@ -1620,7 +1620,7 @@
 2010-04-21  Corinna Vinschen  <corinna@vinschen.de>
 
 	* dtable.cc (dtable::init_std_file_from_handle): Set access mask for
-	the slave side of ttys explicitely.  Explain why.
+	the slave side of ttys explicitly.  Explain why.
 
 2010-04-20  Christopher Faylor  <me+cygwin@cgf.cx>
 
@@ -1740,7 +1740,7 @@
 
 	* sec_helper.cc (get_null_sd): Make static.  Use PSECURITY_DESCRIPTOR
 	instead of SECURITY_DESCRIPTOR *.
-	(sec_acl): Fix fomratting.
+	(sec_acl): Fix formatting.
 	* security.h (get_null_sd): Drop declaration.
 
 2010-04-16  Corinna Vinschen  <corinna@vinschen.de>
@@ -2162,7 +2162,7 @@
 	* fhandler_process.cc (format_process_mounts): Ditto.
 	* pinfo.cc (pinfo::init): Pass pointer to shloc.
 	* shared.cc (shared_mem_inited): New variable.
-	(open_shared): Crate function wrapper for common use case.
+	(open_shared): Create function wrapper for common use case.
 	(open_shared): Accommodate change to fifth argument to a pointer.
 	(shared_info::initialize): Remove spinlock test.  Simplify function.
 	Move get_session_parent_dir call back here.
@@ -2389,7 +2389,7 @@
 	format.
 	* nlsfuncs.cc (dt_flags): Remove DT_ERACAL since crippled era data
 	in Windows makes it useless.
-	(__eval_datetimefmt): Check if locale's default calender has
+	(__eval_datetimefmt): Check if locale's default calendar has
 	non-gregorian start year.  Use era year also in default date entries,
 	if so.
 
@@ -2858,7 +2858,7 @@
 2010-01-25  Corinna Vinschen  <corinna@vinschen.de>
 
 	* nlsfuncs.cc (__get_lcid_from_locale):  Fix a comment.  Handle special
-	language/TERRITORY combinations explicitely.  Explain why.
+	language/TERRITORY combinations explicitly.  Explain why.
 
 2010-01-24  Corinna Vinschen  <corinna@vinschen.de>
 

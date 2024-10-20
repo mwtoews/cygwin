@@ -127,7 +127,7 @@ _strtoufix16_r (struct _reent *rptr,
       return 0;
     }
 
-  /* otherwise we have normal postive number in range */
+  /* otherwise we have normal positive number in range */
 
   /* strip off exponent */
   exp = ((word0(dbl) & Exp_mask) >> Exp_shift) - Bias;

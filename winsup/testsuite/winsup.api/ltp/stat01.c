@@ -142,7 +142,7 @@ main(int ac, char **av)
 				stat_buf.st_mode &= ~S_IFREG;
 				/*
 				 * Verify the data returned by stat(2)
-				 * aganist the expected data.
+				 * against the expected data.
 				 */
 				if ((stat_buf.st_uid != User_id) || \
 					(stat_buf.st_gid != Group_id) || \
@@ -153,7 +153,7 @@ main(int ac, char **av)
 						TESTFILE);
 				} else {
 					tst_resm(TPASS, "Functionality of "
-						"stat(2) on '%s' Succcessful",
+						"stat(2) on '%s' Successful",
 						TESTFILE);
 				}
 			} else {

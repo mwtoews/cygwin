@@ -92,10 +92,10 @@ ENTRY (memcpy)
 	jeq.d	[blink]
 	subl	r2, r2, 16
 	;; We are still having 15 bytes top to transfer, exactly like in the
-	;; case of below byte-by-byte transfer.  However, we already transfered
+	;; case of below byte-by-byte transfer.  However, we already transferred
 	;; at least 16bytes before, thus, we can create a new 16byte load which
 	;; re-reads parts of the already transfer data AND the remaining up to
-	;; 15 bytes of data still to be transfered.
+	;; 15 bytes of data still to be transferred.
 	;; The position of the window is controlled by the $r12 which is the
 	;; complement of the number of remaining bytes.
 	addl	r3, r3, r2

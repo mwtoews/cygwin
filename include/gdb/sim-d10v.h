@@ -40,7 +40,7 @@ extern "C" { // }
 
    The following translate a virtual DMAP/IMAP offset into a physical
    memory segment assigning the translated address to PHYS.  Since a
-   memory access may cross a page boundrary the number of bytes for
+   memory access may cross a page boundary the number of bytes for
    which the translation is applicable (or 0 for an invalid virtual
    offset) is returned. */
 

@@ -385,7 +385,7 @@ Tue Oct 19 22:10:21 1999  Christopher Faylor <cgf@cygnus.com>
 Tue Oct 19 21:09:42 1999  Christopher Faylor <cgf@cygnus.com>
 
 	Make minor changes throughout to accommodate new gcc merge.
-	* Makefile.in: Remvoe -fpermissive option when compiling using g++.
+	* Makefile.in: Remove -fpermissive option when compiling using g++.
 	* dcrt0.cc (noload): Mark as "unused" to avoid a compiler warning.
 	* exceptions.cc (sigreturn): Make this "extern" since it essentially
 	*is* extern.
@@ -621,7 +621,7 @@ Wed Sep 29 23:57:40 1999  Christopher Faylor <cgf@cygnus.com>
 	* times.cc (timezone): revert 'return TZ if set' patch.
 	* times.cc (timezone): uses now tzset() and _timezone.
 	* times.cc (gettimeofday): ditto.
-	* localtime.c (tzsetwall): no negative minutes if offset is negativ.
+	* localtime.c (tzsetwall): no negative minutes if offset is negative.
 	* localtime.c (tzsetwall): minutes place holder was missing if
 	minutes == 0 and seconds !=0 (h:0:s).
 	* localtime.c (tzsetwall): if timezone has no daylight saving
@@ -641,7 +641,7 @@ Sat Sep 25 15:11:04 1999  Christopher Faylor <cgf@cygnus.com>
 Sat Sep 25 13:36:06 1999  Christopher Faylor <cgf@cygnus.com>
 
 	* fhandler.h (fhandler_termios::line_edit): Add an extra argument.
-	* fhandler_serial.cc (fhandler_serial::open): Maintain consisten
+	* fhandler_serial.cc (fhandler_serial::open): Maintain consistent
 	fAbortOnError state.
 	* fhandler_termios.cc (fhandler_termios::line_edit): Use new
 	"always_accept" argument to control whether input_done is set
@@ -1027,7 +1027,7 @@ Mon Aug 16 00:24:29 1999  Christopher Faylor <cgf@cygnus.com>
 	* debug.cc (locker): Improve signal mutex locking.
 	* exceptions.cc (sig_handle): Pass STOP signals to call_handler to
 	ensure honoring of signal_mutex.
-	(call_handler): Move STOP code here after acquistion of signal_mutex.
+	(call_handler): Move STOP code here after acquisition of signal_mutex.
 	* fhandler_tty.cc (fhandler_tty_common::__acquire_output_mutex): Track
 	lockers for debugging.
 	(fhandler_tty_common::__release_output_mutex): Ditto.
@@ -1162,7 +1162,7 @@ Sun Aug  8 22:17:36 1999  Christopher Faylor <cgf@cygnus.com>
 
 Sun Aug  8 20:35:33 1999  Christopher Faylor <cgf@cygnus.com>
 
-	* exceptions.cc: Initalize NO_COPY variables.
+	* exceptions.cc: Initialize NO_COPY variables.
 	* pinfo.cc (record_death): Don't be so insistent about getting
 	the pinfo lock.
 	* sigproc.cc (proc_terminate): Tighten the region protected by
@@ -1535,7 +1535,7 @@ Wed Jul 14 22:08:52 1999  Christopher Faylor <cgf@cygnus.com>
 	before protecting the handles.  Use ForceCloseHandle to close
 	subproc_ready as it is now protected.  Close signal_mutex here.
 	* sigproc.h: Accommodate alive_parent rename.
-	* spawn.cc Use init_child_info to initilize memory block passed to
+	* spawn.cc Use init_child_info to initialize memory block passed to
 	subprocess.
 	* strace.cc (__system_printf): Write to screen before writing to strace
 	log.  Only write to strace log if we're actually stracing.
@@ -1753,7 +1753,7 @@ Sun Jun 27 17:07:34 1999  Christopher Faylor <cgf@cygnus.com>
 Wed Jun 23 22:53:00  Corinna Vinschen  <corinna@vinschen.de>
 
 	* fhandler.cc (fhandler_disk_file::fstat): If get_file_attribute()
-	signals a nonexistant acl, fstat sets default attributes now.
+	signals a nonexistent acl, fstat sets default attributes now.
 
 Wed Jun 23 10:22:56 1999  Geoffrey Noer  <noer@cygnus.com>
 
@@ -1784,7 +1784,7 @@ Mon Jun 21 21:34:06 1999  Christopher Faylor <cgf@cygnus.com>
 	error.
 	(handle_exceptions.cc): Use stackdump command to dump stack.  Call
 	try_to_debug.
-	(set_process_mask): Must be __stdcall or compiler get's confused.
+	(set_process_mask): Must be __stdcall or compiler gets confused.
 	(sig_handle): Detect SIGQUIT and SIGABRT.  Do a "stackdump" for these.
 	* fhandler.cc (get_file_owner): Add an argument to determine if
 	function should check for NT security.
@@ -1995,7 +1995,7 @@ Wed Jun 2 16:04:00 1999  Corinna Vinschen  <corinna@vinschen.de>
 	memory is taken from stack. Change parameters to receive a
 	pointer to a preallocated security buffer.
 	* shared.h: Change prototype for `sec_user' and `sec_user_nih'.
-	* sigproc.cc (getsem): Change call to `sec_user'. Additonally
+	* sigproc.cc (getsem): Change call to `sec_user'. Additionally
 	buffer for `sec_user'.
 	* spawn.cc (spawn_guts): Ditto.
 	Change all error output in function `sec_user' and in module
@@ -2121,7 +2121,7 @@ Wed May 26 22:56:51 1999  Christopher Faylor <cgf@cygnus.com>
 	Rename inuse_event and inuse_event_exists to "slave_alive"
 	throughout.
 	* shared.h: Eliminate inuse_event.  Replace with a boolean.
-	Elminate slave_opened.
+	Eliminate slave_opened.
 	Add some function declarations used by new methods.
 	* fhandler_tty.cc (fhandler_pty_master::hit_eof): Use better
 	method for determining EOF for pty master.
@@ -2588,11 +2588,11 @@ Wed Mar 24 20:04:21 1999  Christopher Faylor <cgf@cygnus.com>
 	(fhandler_console::open): Interruptible I/O is now handled in the
 	read function.  Mark this.
 	(fhandler_console::output_tcsetattr): Use ONLRET to control
-	binary behavior since it is more closely analgous.
+	binary behavior since it is more closely analogous.
 	(fhandler_console::input_tcsetattr): Don't set console flags if
 	there is no change or Windows 95 will eat input.
 	(fhandler_console::tcsetattr): Use ONLRET to control binary behavior
-	since it is more closely analgous.
+	since it is more closely analogous.
 	(fhandler_console::fhandler_console): Accommodate fhandler_termios
 	base class.
 	(fhandler_console::init): Ditto.

@@ -237,7 +237,7 @@ long but rather unsigned int on 64 bit.
 
 <listitem><para><literal>__CYGWIN32__</literal> is not defined in the
 64 bit toolchain.  This may hit a few projects which are around since before
-Y2K.  Check your project for occurences of <literal>__CYGWIN32__</literal>
+Y2K.  Check your project for occurrences of <literal>__CYGWIN32__</literal>
 and change them to <literal>__CYGWIN__</literal>, which is defined in the
 Cygwin toolchain since 1998, to get the same Cygwin-specific code changes done.
 </para></listitem>
@@ -255,7 +255,7 @@ project configury (cygport will do this by default) and try again.
 </para></listitem>
 
 <listitem><para>The project uses Windows functions on Cygwin and it's suffering
-from the problems described in the preceeding FAQ entry.
+from the problems described in the preceding FAQ entry.
 </para></listitem>
 
 </itemizedlist>
@@ -758,7 +758,7 @@ From here on, you're on your own or discuss problems on the
 <question><para>I may have found a bug in Cygwin, how can I debug it (the symbols in gdb look funny)?</para></question>
 <answer>
 
-<para>Debugging symbols are stripped from distibuted Cygwin binaries, so to
+<para>Debugging symbols are stripped from distributed Cygwin binaries, so to
 debug with <command>gdb</command> you will need to install the
 <package>cygwin-debuginfo</package> package to obtain the debug symbols for
 <filename>cygwin1.dll</filename>

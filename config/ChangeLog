@@ -642,7 +642,7 @@
 	(SC_PATH_TKCONFIG): Don't exit 0 if tkconfig fails.
 	(SC_LOAD_TCLCONFIG): Quote all uses of TCL_BIN_DIR, it may contain
 	"# no Tcl configs found".
-	(SC_LOAD_TKCONFIG): Similarily for TK_BIN_DIR.
+	(SC_LOAD_TKCONFIG): Similarly for TK_BIN_DIR.
 
 2009-04-09  Jakub Jelinek  <jakub@redhat.com>
 
@@ -787,7 +787,7 @@
 2008-02-20  Paolo Bonzini  <bonzini@gnu.org>
 
 	PR bootstrap/32009
-	* mh-ppc-darwin (BOOT_CFLAGS): Reenable.
+	* mh-ppc-darwin (BOOT_CFLAGS): Re-enable.
 
 2008-01-08  Jakub Jelinek  <jakub@redhat.com>
 
@@ -1087,7 +1087,7 @@
 
 2005-05-19  Kelley Cook  <kcook@gcc.gnu.org>
 
-	* accross.m4: Delete file.
+	* across.m4: Delete file.
 
 2005-05-12  Ryota Kunisawa  <kunisawa@access.co.jp>
 

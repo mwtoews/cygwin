@@ -756,7 +756,7 @@ fhandler_base::open (int flags, mode_t mode)
      preserved.  If you open a file on Windows with FILE_OVERWRITE{_IF} or
      FILE_SUPERSEDE, all streams are truncated, including the EAs.  So we don't
      use the FILE_OVERWRITE{_IF} flags, but instead just open the file and set
-     the size of the data stream explicitely to 0.  Apart from being more Linux
+     the size of the data stream explicitly to 0.  Apart from being more Linux
      compatible, this implementation has the pleasant side-effect to be more
      than 5% faster than using FILE_OVERWRITE{_IF} (tested on W7 32 bit). */
   if ((flags & O_TRUNC)

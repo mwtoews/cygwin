@@ -73,7 +73,7 @@ __extpsihi##rm##r_msw:		   	; \
 
 
 /* ifdefed out, because gcc doesn't like the # character in the above
-   macro.  The macro expands into an assembly languange comment anyways,
+   macro.  The macro expands into an assembly language comment anyways,
    so it serves no useful purpose.  */
 #if 0
 #define EXTPSIHI_RN_SN(rm,r_msw,r_lsw)	; \

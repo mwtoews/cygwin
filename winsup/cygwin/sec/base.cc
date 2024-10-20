@@ -1,6 +1,6 @@
 /* sec/base.cc: NT file access control functions
 
-   Originaly written by Gunther Ebert, gunther.ebert@ixos-leipzig.de
+   Originally written by Gunther Ebert, gunther.ebert@ixos-leipzig.de
    Completely rewritten by Corinna Vinschen <corinna@vinschen.de>
 
 This file is part of Cygwin.

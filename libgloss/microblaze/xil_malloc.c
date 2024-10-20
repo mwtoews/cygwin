@@ -274,7 +274,7 @@ void coalesce(M_HEADERP h)
       M_HEADERP next = (M_HEADERP)getend(h);
 
       if (next || isalloced(next))
-        break; /* no more coalscing can be done. */
+        break; /* no more coalescing can be done. */
          
       /* Take it off the free list. */
       i = getfreeindex(getsize(next));
@@ -759,8 +759,8 @@ xil_mstats(int verbosity)
 {  
   unsigned long totalfree = 0;
   int i;
-  printf("Memory Statics:\n"
-         "---------------\n");
+  printf("Memory Statistics:\n"
+         "------------------\n");
   printf("   Number of calls to malloc:   %ld.\n", nummallocs);
   printf("   Number of calls to free:     %ld.\n", numfrees);
   printf("   Number of calls to realloc:  %ld.\n", numreallocs);

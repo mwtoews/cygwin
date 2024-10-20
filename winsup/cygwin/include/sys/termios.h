@@ -21,9 +21,9 @@ details. */
 #define TIOCSCTTY	0x540E
 
 /* TIOCINQ is utilized instead of FIONREAD which has been
-accupied for other purposes under CYGWIN.
-Other UNIX ioctl requests has been omited because
-effects of their work one can achive by standard
+occupied for other purposes under CYGWIN.
+Other UNIX ioctl requests has been omitted because
+effects of their work one can achieve by standard
 POSIX commands */
 
 #define TIOCSBRK	0x5427

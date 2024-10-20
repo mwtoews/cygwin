@@ -68,7 +68,7 @@
  *	The forker function will fork <ncopies> minus one copies
  *	of the current process.  There are two modes in how the forks
  *	will be done.  Mode 0 (default) will have all new processes
- *	be childern of the parent process.    Using Mode 1,
+ *	be children of the parent process.    Using Mode 1,
  *	the parent process will have one child and that child will
  *	fork the next process, if necessary, and on and on.
  *	The forker function will return the number of successful
@@ -88,7 +88,7 @@
  *
  *	If the prefix parameter is not NULL and the fork system call fails,
  *      a error message will be printed to stderr.  The error message
- *      the be preceeded with prefix string.  If prefix is NULL,
+ *      the be preceded with prefix string.  If prefix is NULL,
  *      no error message is printed.
  *
  *    SPECIAL REQUIREMENTS
@@ -161,10 +161,10 @@ char *prefix;
 int
 forker(ncopies, mode, prefix)
 int ncopies;
-int mode;	/* 0 - all childern of parent, 1 - only 1 direct child */
+int mode;	/* 0 - all children of parent, 1 - only 1 direct child */
 char *prefix;   /* if ! NULL, an message will be printed to stderr */
 		/* if fork fails.  The prefix (program name) will */
-	        /* preceed the message */
+	        /* precede the message */
 {
     int cnt;
     int pid;
@@ -199,7 +199,7 @@ char *prefix;   /* if ! NULL, an message will be printed to stderr */
 
 	    break;
 
-	default :	/* all new processes are childern of parent */
+	default :	/* all new processes are children of parent */
 	    if ( (pid = fork()) == -1 ) {
 		if ( prefix != NULL ) 
 		    fprintf(stderr, "%s: %s,forker(): fork() failed, errno:%d %s\n",

@@ -57,7 +57,7 @@ extern unsigned spu_clock_slih (unsigned event_mask);
 /* Number of supported timers.  */
 #define SPU_TIMER_NTIMERS               4
 
-/* Recommended minimun spu timer interval time from (cat /proc/cpuinfo)
+/* Recommended minimum spu timer interval time from (cat /proc/cpuinfo)
     * QS20       100/14318000  = 6.98 usec
     * QS21/QS22  100/26666666  = 3.75 usec
     * PS3        100/79800000  = 1.25 usec  */

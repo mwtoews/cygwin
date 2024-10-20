@@ -1305,7 +1305,7 @@ fhandler_dev_tape::raw_read (void *ptr, size_t &ulen)
 	  devbufstart += bytes_to_read;
 	  if (devbufstart == devbufend)
 	    devbufstart = devbufend = 0;
-	  /* If a switch to variable block_size occured, just return the buffer
+	  /* If a switch to variable block_size occurred, just return the buffer
 	     remains until the buffer is empty, then proceed with usual variable
 	     block size handling (one block per read call). */
 	  if (!block_size)

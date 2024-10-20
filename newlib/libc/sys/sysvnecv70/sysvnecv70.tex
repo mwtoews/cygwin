@@ -81,7 +81,7 @@ memory by calling the @code{sbrk} function.
 
 On a Unix system, @code{sbrk} keeps track of the heap's extent by keeping a
 pointer to the end of the @code{bss} section.  Unix linkers
-traditionaly mark the end of @code{bss} by creating a symbol
+traditionally mark the end of @code{bss} by creating a symbol
 @code{_end}.  When the library wants more memory, it calls
 @code{sbrk} with the size of the request.  @code{sbrk} must then
 perform an operation specific to the target environment, and return a pointer
@@ -116,7 +116,7 @@ This functionality is traditionally provided in @code{crt0} and
 The @code{crt0} function usually contains the instructions first run
 by the operating system when an application starts.  The
 @code{crt0} function can take advantage of this and prepare the way
-for the libary.
+for the library.
 
 Another task for @code{crt0} is to call the @code{main} function
 provided by the application writer, and also to call @code{exit} if

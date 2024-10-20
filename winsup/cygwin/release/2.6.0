@@ -75,7 +75,7 @@ Bug Fixes
   This only affects 64 bit Cygwin.
   Addresses: https://cygwin.com/ml/cygwin/2016-07/msg00001.html
 
-- Handle "clear screen" escpae sequence in console window more reliable.
+- Handle "clear screen" escape sequence in console window more reliable.
   Addresses: https://cygwin.com/ml/cygwin/2016-07/msg00310.html
 
 - Allow kill(pid, <anysig>) on zombies to return successfully, rather than

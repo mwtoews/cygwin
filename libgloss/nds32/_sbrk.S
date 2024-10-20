@@ -70,7 +70,7 @@ _sbrk:
 	movi	$r0, 12
 	l.w     $r15, _impure_ptr
 	swi     $r0, [$r15]     /* Set errno.  */
-	movi	$r0, -1		/* Reture value is -1.  */
+	movi	$r0, -1		/* Return value is -1.  */
 	ret
 
 	.size	_sbrk, .-_sbrk

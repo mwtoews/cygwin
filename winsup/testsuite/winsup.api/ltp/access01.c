@@ -100,7 +100,7 @@
  * 	  Setup signal handling.
  *	  Pause for SIGUSR1 if option specified.
  *	  Create a temp directory and cd to it.
- *	  Creat a temp file wil read, write and execute permissions.
+ *	  Create a temp file with read, write and execute permissions.
  * 
  * 	Test:
  *	 Loop if the proper options are given.

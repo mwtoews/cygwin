@@ -252,7 +252,7 @@ eirr: .equ	23			; External Interrupt Request
 
 cr24: .equ	24
 
-ppda: .equ	24			; Physcial Page Directory Address
+ppda: .equ	24			; Physical Page Directory Address
 
 tr0: .equ	24			; Temporary register 0
 

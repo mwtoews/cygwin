@@ -129,7 +129,7 @@ FUNC_START(setjmp)
 	/* If __powerpc64__, then add 96 to the offset shown from this point on until
 	   the end of this function.  This difference comes from the fact that
 	   we save 23 64-bit registers instead of 23 32-bit registers above and
-	   we take alignement requirements of floating point and Altivec stores
+	   we take alignment requirements of floating point and Altivec stores
 	   into account.  */
 
 	stfdu	14,8(3)		# offset 96
@@ -244,7 +244,7 @@ FUNC_START(longjmp)
 	addi	3,3,164
 #elif __powerpc64__
 	/* In the first load, add 8 to r3 so that the subsequent floating
-	   point loades are aligned on an 8 byte boundary and the Altivec
+	   point loads are aligned on an 8 byte boundary and the Altivec
 	   loads are aligned on a 16 byte boundary.  */
 	ldu	1,8(3)		# offset 8
 	ldu	2,8(3)		# offset 16
@@ -320,7 +320,7 @@ FUNC_START(longjmp)
 	/* If __powerpc64__, then add 96 to the offset shown from this point on until
 	   the end of this function.  This difference comes from the fact that
 	   we restore 23 64-bit registers instead of 23 32-bit registers above and
-	   we take alignement requirements of floating point and Altivec loads
+	   we take alignment requirements of floating point and Altivec loads
 	   into account.  */
 
 	lfdu	14,8(3)         # offset 96 

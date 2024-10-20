@@ -2,7 +2,7 @@
 #define _MB_ENDIAN_H
 
 /* Convenience macros for loading and store 4 bytes in a byte invariant way with
- * a singe instruction. Endianess affects this and we rely on MicroBlaze
+ * a single instruction. Endianness affects this and we rely on MicroBlaze
  * load/store reverse instructions to do the trick on little-endian systems.
  */
 #ifdef __LITTLE_ENDIAN__

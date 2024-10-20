@@ -60,8 +60,8 @@ all: support.o ${TESTS}
 	done
 
 #
-# here's all the dependancies. This is a little messy cause we want
-# dependancies to work for the rule we just defined. this isn't
+# here's all the dependencies. This is a little messy cause we want
+# dependencies to work for the rule we just defined. this isn't
 # tottally ideal cause if one of the architectures doesn't build. it
 # relinks for all of the scrip0t files.
 #
@@ -196,7 +196,7 @@ dos:
 	objcopy -O srec misc-oki.x misc-oki.sre
 
 # this is a minimalist testing API for these test cases to keep the
-# outout standardized enough to help with automated testing.
+# output standardized enough to help with automated testing.
 support.o: ${srcdir}/../config/support.c
 	rootme=`pwd | sed  -e 's@/[^/]*$$@@'`; \
 	$(CC_FOR_TARGET) $(CFLAGS_FOR_TARGET) -O2 $(INCLUDES) -c $<

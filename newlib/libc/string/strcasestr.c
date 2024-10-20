@@ -10,7 +10,7 @@ SYNOPSIS
 	char *strcasestr(const char *<[s]>, const char *<[find]>);
 
 DESCRIPTION
-	<<strcasestr>> searchs the string <[s]> for
+	<<strcasestr>> searches the string <[s]> for
 	the first occurrence of the sequence <[find]>.  <<strcasestr>>
 	is identical to <<strstr>> except the search is
 	case-insensitive.

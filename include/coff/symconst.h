@@ -30,7 +30,7 @@
 #define GLEVEL_2	0	/* for upward compat reasons. */
 #define GLEVEL_3	3
 
-/* magic number fo symheader */
+/* magic number for symheader */
 #define magicSym	0x7009
 /* The Alpha uses this value instead, for some reason.  */
 #define magicSym2	0x1992
@@ -99,7 +99,7 @@
 #define stLocal		4	/* local variable */
 #define stLabel		5	/* label */
 #define stProc		6	/*     "      "	 Procedure */
-#define stBlock		7	/* beginnning of block */
+#define stBlock		7	/* beginning of block */
 #define stEnd		8	/* end (of anything) */
 #define stMember	9	/* member (of anything	- struct/union/enum */
 #define stTypedef	10	/* type definition */

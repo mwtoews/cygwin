@@ -107,7 +107,7 @@
   ((SECTION).s_flags |= IMAGE_SCN_ALIGN_POWER_CONST ((ALIGNMENT_POWER)))
 
 #define IMAGE_SCN_LNK_NRELOC_OVFL            0x01000000  /* Section contains extended relocations. */
-#define IMAGE_SCN_MEM_NOT_CACHED             0x04000000  /* Section is not cachable.               */
+#define IMAGE_SCN_MEM_NOT_CACHED             0x04000000  /* Section is not cacheable.              */
 #define IMAGE_SCN_MEM_NOT_PAGED              0x08000000  /* Section is not pageable.               */
 #define IMAGE_SCN_MEM_SHARED                 0x10000000  /* Section is shareable.                  */
 
@@ -343,12 +343,12 @@ typedef struct
 #undef  E_FILNMLEN
 #define E_FILNMLEN	18	/* # characters in a file name.  */
 
-/* Import Tyoes fot ILF format object files..  */
+/* Import Types for ILF format object files..  */
 #define IMPORT_CODE	0
 #define IMPORT_DATA	1
 #define IMPORT_CONST	2
 
-/* Import Name Tyoes for ILF format object files.  */
+/* Import Name Types for ILF format object files.  */
 #define IMPORT_ORDINAL		0
 #define IMPORT_NAME		1
 #define IMPORT_NAME_NOPREFIX	2

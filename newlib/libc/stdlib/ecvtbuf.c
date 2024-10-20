@@ -18,7 +18,7 @@ SYNOPSIS
 
 DESCRIPTION
 	<<ecvtbuf>> and <<fcvtbuf>> produce (null-terminated) strings
-	of digits representating the <<double>> number <[val]>.
+	of digits representing the <<double>> number <[val]>.
 
 	The only difference between <<ecvtbuf>> and <<fcvtbuf>> is the
 	interpretation of the second argument (<[chars]> or

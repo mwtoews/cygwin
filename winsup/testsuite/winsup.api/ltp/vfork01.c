@@ -221,7 +221,7 @@ main(int ac, char **av)
 					_exit(1);
 				}
 
-				/* Now, do the actual comparision */
+				/* Now, do the actual comparison */
 				if (Peuid != Ceuid || Pegid != Cegid  || \
 					Psuid != Csuid || Psgid != Csgid  || \
 					Pruid != Cruid || Prgid != Crgid  || \

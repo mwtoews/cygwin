@@ -131,7 +131,7 @@ extern const struct tic80_operand tic80_operands[];
    registers (ex: r10), control registers (ex: FPST), condition codes (ex:
    eq0.b), bit numbers (ex: gt.b), etc are large enough that they can be
    or'd into an int where the lower bits contain the actual numeric value
-   that correponds to this predefined symbol.  This way a single int can
+   that corresponds to this predefined symbol.  This way a single int can
    contain both the value of the symbol and it's type.
  */
 
@@ -169,7 +169,7 @@ extern const struct tic80_operand tic80_operands[];
 
 #define TIC80_OPERAND_PCREL	(1 << 5)
 
-/* This flag is a hint to the disassembler for using hex as the prefered
+/* This flag is a hint to the disassembler for using hex as the preferred
    printing format, even for small positive or negative immediate values.
    Normally values in the range -999 to 999 are printed as signed decimal
    values and other values are printed in hex. */

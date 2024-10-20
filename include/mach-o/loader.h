@@ -259,7 +259,7 @@ bfd_mach_o_section_type;
 
 typedef enum bfd_mach_o_section_attribute
 {
-  /* Section has no specified attibutes.  */
+  /* Section has no specified attributes.  */
   BFD_MACH_O_S_ATTR_NONE              = 0,
 
   /* Section has local relocation entries.  */

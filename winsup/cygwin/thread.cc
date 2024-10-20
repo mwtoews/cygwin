@@ -8,7 +8,7 @@ details. */
 
 /* Implementation overview and caveats:
 
-   Win32 puts some contraints on what can and cannot be implemented.  Where
+   Win32 puts some constraints on what can and cannot be implemented.  Where
    possible we work around those contrainsts.  Where we cannot work around
    the constraints we either pretend to be conformant, or return an error
    code.
@@ -1200,7 +1200,7 @@ pthread_cond::unblock (const bool all)
   LONG releaseable;
 
   /*
-   * Block outgoing threads (and avoid simultanous unblocks)
+   * Block outgoing threads (and avoid simultaneous unblocks)
    */
   mtx_out.lock ();
 
@@ -1265,7 +1265,7 @@ pthread_cond::wait (pthread_mutex_t mutex, PLARGE_INTEGER timeout)
   mtx_out.lock ();
 
   if (rv != WAIT_OBJECT_0 && WaitForSingleObject (sem_wait, 0) == WAIT_OBJECT_0)
-    /* Thread got cancelled ot timed out while a signalling is in progress.
+    /* Thread got cancelled or timed out while a signalling is in progress.
        Set wait result back to signaled */
     rv = WAIT_OBJECT_0;
 
@@ -1723,7 +1723,7 @@ pthread_key::run_destructor ()
     }
 }
 
-/* pshared mutexs */
+/* pshared mutexes */
 
 /* static members */
 
@@ -3318,7 +3318,7 @@ pthread_sigqueue (pthread_t *thread, int sig, const union sigval value)
   return (int) sig_send (NULL, si, (*thread)->cygtls);
 }
 
-/* Cancelability */
+/* Cancellability */
 
 int
 pthread_cancel (pthread_t thread)
@@ -3356,7 +3356,7 @@ _pthread_cleanup_pop (int execute)
   pthread::self ()->pop_cleanup_handler (execute);
 }
 
-/* provided for source level compatability.
+/* provided for source level compatibility.
    See http://www.opengroup.org/onlinepubs/007908799/xsh/pthread_getconcurrency.html
 */
 int
@@ -3365,7 +3365,7 @@ pthread_getconcurrency ()
   return MT_INTERFACE->concurrency;
 }
 
-/* provided for source level compatability.  See
+/* provided for source level compatibility.  See
 http://www.opengroup.org/onlinepubs/007908799/xsh/pthread_getconcurrency.html
 */
 int
@@ -3580,7 +3580,7 @@ pthread_attr_setstack (pthread_attr_t *attr, void *addr, size_t size)
     return EINVAL;
   /* The incoming address addr points to the lowest addressable byte of a
      buffer of size bytes.  Due to the way pthread_attr_setstackaddr is defined
-     on Linux, the lowest address ot the stack can't be reliably computed when
+     on Linux, the lowest address of the stack can't be reliably computed when
      using pthread_attr_setstackaddr/pthread_attr_setstacksize.  Therefore we
      store the uppermost address of the stack in stackaddr.  See also the
      comment in pthread_attr_setstackaddr. */
@@ -3790,7 +3790,7 @@ pthread_mutex_getprioceiling (const pthread_mutex_t *mutex,
 
      We can support mutex priorities in the future though:
      Store a priority with each mutex.
-     When the mutex is optained, set the thread priority as appropriate
+     When the mutex is obtained, set the thread priority as appropriate
      When the mutex is released, reset the thread priority.  */
   return ENOSYS;
 }

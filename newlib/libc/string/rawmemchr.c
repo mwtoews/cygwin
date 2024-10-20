@@ -17,7 +17,7 @@ DESCRIPTION
 	be used when it is certain that the character <[c]> will be found.
 
 RETURNS
-	A pointer to the first occurance of character <[c]>.
+	A pointer to the first occurrence of character <[c]>.
 
 PORTABILITY
 <<rawmemchr>> is a GNU extension.
@@ -38,7 +38,7 @@ QUICKREF
 /* How many bytes are loaded each iteration of the word copy loop.  */
 #define LBLOCKSIZE (sizeof (long))
 
-/* Threshhold for punting to the bytewise iterator.  */
+/* Threshold for punting to the bytewise iterator.  */
 #define TOO_SMALL(LEN)  ((LEN) < LBLOCKSIZE)
 
 #if LONG_MAX == 2147483647L

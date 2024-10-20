@@ -85,9 +85,9 @@ struct ns32k_opcode {
   unsigned char opcode_size;
   unsigned long opcode_seed;
   const char *operands;
-  unsigned char im_size;	/* not used by dissassembler */
+  unsigned char im_size;	/* not used by disassembler */
   const char *default_args;	/* default to those args when none given */
-  char default_modec;		/* default to this addr-mode when ambigous
+  char default_modec;		/* default to this addr-mode when ambiguous
 				   ie when the argument of a general addr-mode
 				   is a plain constant */
   char default_model;		/* is a plain label */

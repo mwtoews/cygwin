@@ -113,7 +113,7 @@ ambapp_ahb_dev_init (unsigned int ioarea,
 	  addr = ambapp_pnp_start (mbar);
 	  if (ambapp_pnp_mbar_type (mbar) == AMBA_TYPE_AHBIO)
 	    {
-	      /* AHB I/O area is releative IO_AREA */
+	      /* AHB I/O area is relative IO_AREA */
 	      addr = AMBA_TYPE_AHBIO_ADDR (addr, ioarea);
 	      mask =
 		(((unsigned int) (ambapp_pnp_mbar_mask ((~mbar)) << 8) |
@@ -344,7 +344,7 @@ ambapp_scan (unsigned int ioarea,
   return 0;
 }
 
-/* Match search options againt device */
+/* Match search options against device */
 int
 ambapp_dev_match_options (struct ambapp_dev_hdr *dev, unsigned int options,
 			  int vendor, int device)
@@ -436,7 +436,7 @@ ambapp_for_each (struct ambapp_dev_hdr *root,
 	      index = 0;
 	    }
 
-	  /* Conditions must be fullfilled for function to be called */
+	  /* Conditions must be fulfilled for function to be called */
 	  if (ambapp_dev_match_options (dev, options, vendor, device) == 1)
 	    {
 	      /* Correct device and vendor ID */

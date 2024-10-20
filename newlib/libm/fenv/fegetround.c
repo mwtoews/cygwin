@@ -46,7 +46,7 @@ This method returns the current rounding direction.
 
 RETURNS
 This method returns the rounding direction, corresponding to the value
-of the respective rouding macro. If the current rounding direction cannot
+of the respective rounding macro. If the current rounding direction cannot
 be determined, then a negative value is returned.
 
 PORTABILITY

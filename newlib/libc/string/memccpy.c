@@ -39,7 +39,7 @@ PORTABILITY
 /* How many bytes are copied each iteration of the word copy loop.  */
 #define LITTLEBLOCKSIZE (sizeof (long))
 
-/* Threshhold for punting to the byte copier.  */
+/* Threshold for punting to the byte copier.  */
 #define TOO_SMALL(LEN)  ((LEN) < LITTLEBLOCKSIZE)
 
 /* Macros for detecting endchar */

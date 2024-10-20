@@ -27,7 +27,7 @@
  * ALGORITHM
  *	loop if that option is specified
  * 	   call close using the TEST macro and passing in an invalid fd
- *	   if the call succeedes
+ *	   if the call succeeds
  *	      issue a FAIL message
  *	   else
  *	      log the errno

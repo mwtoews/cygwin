@@ -56,7 +56,7 @@
 	(copyout_msqid_ds): Ditto.
 	(msgctl): Use copyout_msqid_ds and copyin_msqid_ds to copy msqid_ds
 	structures from cygserver to client and vice versa on Cygwin.
-	(msgsnd): Special case copyin of msg_type on 64 bit Cygwin.
+	(msgsnd): Special case copy in of msg_type on 64 bit Cygwin.
 	(msgrcv): Special case copyout of msg_type on 64 bit Cygwin.
 
 2012-12-04  Corinna Vinschen  <corinna@vinschen.de>

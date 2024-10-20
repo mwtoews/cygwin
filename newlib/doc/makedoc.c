@@ -1259,7 +1259,7 @@ compile (char *string)
 		   case '7':
 		   case '8':
 		   case '9':
-		     /* Got a number, embedd the magic push number
+		     /* Got a number, embed the magic push number
 			function */
 		     add_to_definition(ptr, push_number);
 		     add_to_definition(ptr, (stinst_type)atol(word));

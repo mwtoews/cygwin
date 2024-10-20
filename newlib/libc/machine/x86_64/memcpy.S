@@ -35,7 +35,7 @@ quadword_aligned:
   pushq    r13
   pushq    r14
 
-  movq    rdx, rcx                /* Copy 128 bytes at a time with minimum cache polution */
+  movq    rdx, rcx                /* Copy 128 bytes at a time with minimum cache pollution */
   shrq    $7, rcx
 
   .p2align 4

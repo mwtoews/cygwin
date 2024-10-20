@@ -55,7 +55,7 @@
  */
 static __inline vector double _sinhd2(vector double x)
 {
-  // Coefficents for the power series
+  // Coefficients for the power series
   vec_double2 f03 = spu_splats(1.66666666666666666667E-01);  // 1/(3!)
   vec_double2 f05 = spu_splats(8.33333333333333333333E-03);  // 1/(5!)
   vec_double2 f07 = spu_splats(1.98412698412698412698E-04);  // 1/(7!)

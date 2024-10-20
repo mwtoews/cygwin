@@ -86,7 +86,7 @@ __ea void *mremap_ea (__ea void *old_address, size_ea_t old_size,
                        size_ea_t new_size, unsigned long flags);
 int msync_ea (__ea void *start, size_ea_t length, int flags);
 
-/* EA memory mangement functions */
+/* EA memory management functions */
 __ea void *calloc_ea (size_ea_t nmemb, size_ea_t length);
 void free_ea (__ea void *ptr);
 __ea void *malloc_ea (size_ea_t size);

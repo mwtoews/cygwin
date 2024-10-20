@@ -1,6 +1,6 @@
 /* Oki bug report [OKI013]
  
-   Variable argments test failed.
+   Variable arguments test failed.
 
    Execution result.
    val1, val2 = 1, 0

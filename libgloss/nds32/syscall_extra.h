@@ -48,7 +48,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	.align	2
 \name:
 	/* Make syscall with arg=`\num'.
-	   Reture value `-1' stored in $r0 means there is something wrong.
+	   Return value `-1' stored in $r0 means there is something wrong.
 	   If there is something wrong, make syscall to get `SYS_geterr' to get
 	   error code to see what exactly happens and store it in errno  .  */
 	syscall	\num		/* Make syscall with arg=`\num'.  */

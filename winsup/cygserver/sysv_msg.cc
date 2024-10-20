@@ -238,7 +238,7 @@ msgunload()
 		 * Look for an unallocated and unlocked msqid_ds.
 		 * msqid_ds's can be locked by msgsnd or msgrcv while
 		 * they are copying the message in/out.  We can't
-		 * re-use the entry until they release it.
+		 * reuse the entry until they release it.
 		 */
 		msqptr = &msqids[msqid];
 		if (msqptr->msg_qbytes != 0 ||
@@ -554,7 +554,7 @@ msgget(struct thread *td, struct msgget_args *uap)
 			 * Look for an unallocated and unlocked msqid_ds.
 			 * msqid_ds's can be locked by msgsnd or msgrcv while
 			 * they are copying the message in/out.  We can't
-			 * re-use the entry until they release it.
+			 * reuse the entry until they release it.
 			 */
 			msqptr = &msqids[msqid];
 			if (msqptr->msg_qbytes == 0 &&

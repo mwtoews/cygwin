@@ -23,7 +23,7 @@
 #ifndef _VMS_LBR_H
 #define _VMS_LBR_H
 
-/* Libray HeaDer.  */
+/* Library HeaDer.  */
 
 /* Magic numbers.  Should match the major version.  */
 

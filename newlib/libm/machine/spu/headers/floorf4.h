@@ -95,7 +95,7 @@ static __inline vector float _floorf4(vector float value)
 
   out = (vec_float4)spu_add(spu_sel((vec_uint4)value, insert, mask), addend);
 
-  /* Preserve orignal sign bit (for -0 case)
+  /* Preserve original sign bit (for -0 case)
    */
   out = spu_sel(out, value, spu_splats((unsigned int)0x80000000));
 

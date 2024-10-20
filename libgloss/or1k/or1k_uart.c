@@ -59,7 +59,7 @@
 #define FCR_TRIG_8  0x80 // Trigger level 8 bytes
 #define FCR_TRIG_14 0xC0 // Trigger level 14 bytes
 
-// Line Control Reigster values and bits
+// Line Control Register values and bits
 #define LCR_BPC_5 0x0  // 5 bits per character
 #define LCR_BPC_6 0x1  // 6 bits per character
 #define LCR_BPC_7 0x2  // 7 bits per character

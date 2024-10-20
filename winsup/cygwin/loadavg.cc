@@ -23,7 +23,7 @@
   Processor Time).  The number of runnable processes is estimated as
   ProcessorQueueLength.
 
-  Note that PDH will only return data for '% Processor Time' afer the second
+  Note that PDH will only return data for '% Processor Time' after the second
   call to PdhCollectQueryData(), as it's computed over an interval, so the first
   attempt to estimate load will fail and 0.0 will be returned.
 

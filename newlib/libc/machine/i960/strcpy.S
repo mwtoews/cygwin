@@ -102,7 +102,7 @@
 	three out of four times) that the destination string as strcpy sees
 	it will NOT be word aligned (i.e. that the null byte won't be the
 	last byte of a word).  But it is not worth the complication to that
-	routine to force word aligned memory accesses to be gaurenteed.
+	routine to force word aligned memory accesses to be guaranteed.
 */
 	.globl _strcpy, _strcat
 	.globl __strcpy, __strcat

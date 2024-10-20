@@ -1785,7 +1785,7 @@ fetch_posix_offset (PDS_DOMAIN_TRUSTSW td, cyg_ldap *cldap)
 	id_val = cldap->fetch_posix_offset_for_domain (td->DnsDomainName);
       if (id_val < PRIMARY_POSIX_OFFSET)
 	{
-	  /* If the offset is less than the primay domain offset, we're bound
+	  /* If the offset is less than the primary domain offset, we're bound
 	     to suffer collisions with system and local accounts.  Move offset
 	     to a fixed replacement fake offset.  This may result in collisions
 	     between other domains all of which were moved to this replacement
@@ -2621,7 +2621,7 @@ pwdgrp::fetch_account_from_windows (fetch_user_arg_t &arg, cyg_ldap *pldap)
 	  /* Starting with Windows 10, LookupAccountSid/Name return valid
 	     info for the login session with new SID_NAME_USE value
 	     SidTypeLogonSession.  To return the same info as on
-	     pre-Windows 10, we have to handle this type explicitely here
+	     pre-Windows 10, we have to handle this type explicitly here
 	     now and convert the name to "CurrentSession". */
 	  get_logon_sid ();
 	  if (PSID (logon_sid) == NO_SID)

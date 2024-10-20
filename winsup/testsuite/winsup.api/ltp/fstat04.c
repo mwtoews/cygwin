@@ -134,7 +134,7 @@ main(int ac, char **av)
 		if (STD_FUNCTIONAL_TEST) {
 			/*
 			 * Verify the data returned by fstat(2)
-			 * aganist the expected data.
+			 * against the expected data.
 			 */
 			if ((stat_buf.st_uid != User_id) ||
 			    (stat_buf.st_gid != Group_id) ||
@@ -144,7 +144,7 @@ main(int ac, char **av)
 					 "'%s' Failed", TESTFILE);
 			} else {
 				tst_resm(TPASS, "Functionality of fstat(2) on "
-					 "'%s' Succcessful", TESTFILE);
+					 "'%s' Successful", TESTFILE);
 			}
 		} else {
 			tst_resm(TPASS, "call succeeded");

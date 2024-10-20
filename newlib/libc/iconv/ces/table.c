@@ -51,7 +51,7 @@
  * Table-based CES converter deals with CCS tables placed into iconv/ccs
  * subdirectory. First, converter tries to find needed CCS table among
  * linked-in tables. If not found, it tries to load it from external file
- * (only if corespondent capability was enabled in Newlib configuration). 
+ * (only if correspondent capability was enabled in Newlib configuration).
  *
  * 16 bit encodings are assumed to be Big Endian.
  */
@@ -442,7 +442,7 @@ find_code_size (ucs2_t code,
  *    int direction - conversion direction.
  *
  * DESCRIPTION:
- *    Loads conversion table of appropriate endianess from external file
+ *    Loads conversion table of appropriate endianness from external file
  *    and initializes 'iconv_ccs_desc_t' table description structure.
  *    If 'direction' is 0 - load "To UCS" table, else load "From UCS"
  *    table.

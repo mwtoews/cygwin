@@ -69,7 +69,7 @@
 #define F_ARM_5		(0x4c00)
 
 /*
-  ARMMAGIC ought to encoded the procesor type,
+  ARMMAGIC ought to encoded the processor type,
   but it is too late to change it now, instead
   the flags field of the internal_f structure
   is used as shown above.

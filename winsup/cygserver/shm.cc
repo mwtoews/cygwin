@@ -81,7 +81,7 @@ client_request_shm::serve (transport_layer_base *const conn,
   client->release ();
   thread td (client, &_parameters.in.ipcblk, false);
   int res;
-  shmop_t shmop = _parameters.in.shmop; /* Get's overwritten otherwise. */
+  shmop_t shmop = _parameters.in.shmop; /* Gets overwritten otherwise. */
   switch (shmop)
     {
       case SHMOP_shmat:

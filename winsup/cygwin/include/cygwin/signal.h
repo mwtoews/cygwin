@@ -239,7 +239,7 @@ enum
   SEGV_ACCERR,				/* invalid permissions for mapped object */
 
   BUS_ADRALN = 25,			/* invalid address alignment.  */
-  BUS_ADRERR,				/* non-existant physical address.  */
+  BUS_ADRERR,				/* non-existent physical address.  */
   BUS_OBJERR,				/* object specific hardware error.  */
 
   CLD_EXITED = 28,			/* child has exited */

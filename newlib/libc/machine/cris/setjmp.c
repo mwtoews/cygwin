@@ -64,7 +64,7 @@ setjmp (jmp_buf buf)
   /* No offsets in the compatibility mode.  Also, movem saves in
      different order on v10 than on v32, so we use single move
      instructions instead, this not being a speed-prioritized operation.
-     And we don't save CCR or CCS; since long unuseful.  */
+     And we don't save CCR or CCS; since long not useful.  */
   __asm__ __volatile__
     ("move.d %1,$r13							\n\
       move 0f,$mof							\n\

@@ -327,22 +327,22 @@
 /* Old, unofficial value for National Semiconductor CompactRISC - CR16 */
 #define EM_CR16_OLD		115
 
-/* AVR magic number.  Written in the absense of an ABI.  */
+/* AVR magic number.  Written in the absence of an ABI.  */
 #define EM_AVR_OLD		0x1057
 
-/* MSP430 magic number.  Written in the absense of everything.  */
+/* MSP430 magic number.  Written in the absence of everything.  */
 #define EM_MSP430_OLD		0x1059
 
-/* Morpho MT.   Written in the absense of an ABI.  */
+/* Morpho MT.   Written in the absence of an ABI.  */
 #define EM_MT			0x2530
 
 /* FR30 magic number - no EABI available.  */
 #define EM_CYGNUS_FR30		0x3330
 
-/* OpenRISC magic number.  Written in the absense of an ABI.  */
+/* OpenRISC magic number.  Written in the absence of an ABI.  */
 #define EM_OPENRISC_OLD		0x3426
 
-/* DLX magic number.  Written in the absense of an ABI.  */
+/* DLX magic number.  Written in the absence of an ABI.  */
 #define EM_DLX			0x5aa5
 
 /* FRV magic number - no EABI available??.  */
@@ -357,7 +357,7 @@
 /* D30V backend magic number.  Written in the absence of an ABI.  */
 #define EM_CYGNUS_D30V		0x7676
 
-/* Ubicom IP2xxx;   Written in the absense of an ABI.  */
+/* Ubicom IP2xxx;   Written in the absence of an ABI.  */
 #define EM_IP2K_OLD		0x8217
 
 /* (Deprecated) Temporary number for the OpenRISC processor.  */
@@ -372,7 +372,7 @@
 /* Cygnus M32R ELF backend.  Written in the absence of an ABI.  */
 #define EM_CYGNUS_M32R		0x9041
 
-/* V850 backend magic number.  Written in the absense of an ABI.  */
+/* V850 backend magic number.  Written in the absence of an ABI.  */
 #define EM_CYGNUS_V850		0x9080
 
 /* old S/390 backend magic number. Written in the absence of an ABI.  */
@@ -384,7 +384,7 @@
 #define EM_XSTORMY16		0xad45
 
 /* mn10200 and mn10300 backend magic numbers.
-   Written in the absense of an ABI.  */
+   Written in the absence of an ABI.  */
 #define EM_CYGNUS_MN10300	0xbeef
 #define EM_CYGNUS_MN10200	0xdead
 
@@ -466,7 +466,7 @@
 #define SHT_FINI_ARRAY	  15		/* Array of ptrs to finish functions */
 #define SHT_PREINIT_ARRAY 16		/* Array of ptrs to pre-init funcs */
 #define SHT_GROUP	  17		/* Section contains a section group */
-#define SHT_SYMTAB_SHNDX  18		/* Indicies for SHN_XINDEX entries */
+#define SHT_SYMTAB_SHNDX  18		/* Indices for SHN_XINDEX entries */
 
 #define SHT_LOOS	0x60000000	/* First of OS specific semantics */
 #define SHT_HIOS	0x6fffffff	/* Last of OS specific semantics */
@@ -693,7 +693,7 @@
 
 #define STV_DEFAULT	0		/* Visibility is specified by binding type */
 #define STV_INTERNAL	1		/* OS specific version of STV_HIDDEN */
-#define STV_HIDDEN	2		/* Can only be seen inside currect component */
+#define STV_HIDDEN	2		/* Can only be seen inside current component */
 #define STV_PROTECTED	3		/* Treat as STB_LOCAL inside current component */
 
 /* Relocation info handling macros.  */
@@ -758,7 +758,7 @@
    DT_VALRNGHI) and virtual address range (DT_ADDRRNGLO to DT_ADDRRNGHI),
    are used on Solaris.  We support them everywhere.  Note these values
    lie outside of the (new) range for OS specific values.  This is a
-   deliberate special case and we maintain it for backwards compatability.
+   deliberate special case and we maintain it for backwards compatibility.
  */
 #define DT_VALRNGLO	0x6ffffd00
 #define DT_GNU_PRELINKED 0x6ffffdf5
@@ -899,7 +899,7 @@
 #define VERSYM_VERSION		0x7fff
 
 /* This is a special token which appears as part of a symbol name.  It
-   indictes that the rest of the name is actually the name of a
+   indicates that the rest of the name is actually the name of a
    version node, and is not part of the actual name.  This is a GNU
    extension.  For example, the symbol name `stat@ver2' is taken to
    mean the symbol `stat' in version `ver2'.  */
@@ -915,7 +915,7 @@
 /* Possible bitmasks for si_flags.  */
 
 #define SYMINFO_FLG_DIRECT	0x0001	/* Direct bound symbol */
-#define SYMINFO_FLG_PASSTHRU	0x0002	/* Pass-thru symbol for translator */
+#define SYMINFO_FLG_PASSTHRU	0x0002	/* Pass-through symbol for translator */
 #define SYMINFO_FLG_COPY	0x0004	/* Symbol is a copy-reloc */
 #define SYMINFO_FLG_LAZYLOAD	0x0008	/* Symbol bound to object to be lazy loaded */
 

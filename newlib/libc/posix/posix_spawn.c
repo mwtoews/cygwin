@@ -49,7 +49,7 @@ DESCRIPTION
 Use <<posix_spawn>> and <<posix_spawnp>> to create a new child process
 from the specified process image file. <<argc>> is the argument count
 and <<argv>> is an array of argument strings passed to the new program.
-<<envp>> is an array of stings, which are passed as environment to the
+<<envp>> is an array of strings, which are passed as environment to the
 new program.
 
 The <<path>> argument to <<posix_spawn>> identifies the new process

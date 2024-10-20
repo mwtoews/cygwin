@@ -106,7 +106,7 @@ struct bfd;
 SIM_DESC sim_open (SIM_OPEN_KIND kind, struct host_callback_struct *callback, struct bfd *abfd, char **argv);
 
 
-/* Destory a simulator instance.
+/* Destroy a simulator instance.
 
    QUITTING is non-zero if we cannot hang on errors.
 
@@ -137,7 +137,7 @@ void sim_close (SIM_DESC sd, int quitting);
 
    FIXME: For some hardware targets, before a loaded program can be
    executed, it requires the manipulation of VM registers and tables.
-   Such manipulation should probably (?) occure in
+   Such manipulation should probably (?) occur in
    sim_create_inferior. */
 
 SIM_RC sim_load (SIM_DESC sd, char *prog, struct bfd *abfd, int from_tty);
@@ -151,7 +151,7 @@ SIM_RC sim_load (SIM_DESC sd, char *prog, struct bfd *abfd, int from_tty);
    Hardware simulator: This function shall initialize the processor
    registers to a known value.  The program counter and possibly stack
    pointer shall be set using information obtained from ABFD (or
-   hardware reset defaults).  ARGV and ENV, dependant on the target
+   hardware reset defaults).  ARGV and ENV, dependent on the target
    ABI, may be written to memory.
 
    Process simulator: After a call to this function, a new process
@@ -183,7 +183,7 @@ int sim_write (SIM_DESC sd, SIM_ADDR mem, const unsigned char *buf, int length);
 
    Legacy implementations ignore LENGTH and always return -1.
 
-   If LENGTH does not match the size of REGNO no data is transfered
+   If LENGTH does not match the size of REGNO no data is transferred
    (the actual register size is still returned). */
 
 int sim_fetch_register (SIM_DESC sd, int regno, unsigned char *buf, int length);
@@ -225,7 +225,7 @@ void sim_info (SIM_DESC sd, int verbose);
    indicated by that signal.  If a value of zero is passed in then the
    simulation will continue as if there were no outstanding signal.
    The effect of any other SIGGNAL value is is implementation
-   dependant.
+   dependent.
 
    Process simulator: If SIGRC is non-zero then the corresponding
    signal is delivered to the simulated program and execution is then
@@ -245,17 +245,17 @@ int sim_stop (SIM_DESC sd);
 /* Fetch the REASON why the program stopped.
 
    SIM_EXITED: The program has terminated. SIGRC indicates the target
-   dependant exit status.
+   dependent exit status.
 
    SIM_STOPPED: The program has stopped.  SIGRC uses the host's signal
-   numbering as a way of identifying the reaon: program interrupted by
+   numbering as a way of identifying the reason: program interrupted by
    user via a sim_stop request (SIGINT); a breakpoint instruction
    (SIGTRAP); a completed single step (SIGTRAP); an internal error
    condition (SIGABRT); an illegal instruction (SIGILL); Access to an
    undefined memory region (SIGSEGV); Mis-aligned memory access
    (SIGBUS).  For some signals information in addition to the signal
    number may be retained by the simulator (e.g. offending address),
-   that information is not directly accessable via this interface.
+   that information is not directly accessible via this interface.
 
    SIM_SIGNALLED: The program has been terminated by a signal. The
    simulator has encountered target code that causes the the program

@@ -544,7 +544,7 @@ tst_exit()
 #endif
 
    /*
-    * Call tst_flush() flush any ouput in the buffer or the last
+    * Call tst_flush() flush any output in the buffer or the last
     * result not printed because of CONDENSE mode.
     */
    tst_flush();

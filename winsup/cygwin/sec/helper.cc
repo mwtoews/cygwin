@@ -246,7 +246,7 @@ cygsid::get_sid (DWORD s, DWORD cnt, DWORD *r, bool well_known)
   PISID dsid = (PISID) psid;
   for (i = 0; i < cnt; ++i)
     dsid->SubAuthority[i] = r[i];
-  /* If the well_known flag isn't set explicitely, we check the SID
+  /* If the well_known flag isn't set explicitly, we check the SID
      for being a well-known SID ourselves. That's necessary because this
      cygsid is created from a SID string, usually from /etc/passwd or
      /etc/group.  The calling code just doesn't know if the SID is well-known
@@ -383,7 +383,7 @@ security_descriptor::realloc (size_t nsize)
 {
   PSECURITY_DESCRIPTOR tmp;
 
-  /* Can't re-use buffer allocated by GetSecurityInfo. */
+  /* Can't reuse buffer allocated by GetSecurityInfo. */
   if (psd && !sd_size)
     free ();
   if (!(tmp = (PSECURITY_DESCRIPTOR) ::realloc (psd, nsize)))

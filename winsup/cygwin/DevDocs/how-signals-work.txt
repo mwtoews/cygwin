@@ -43,7 +43,7 @@ sigpacket::process is called.  This function determines what action, if
 any, to take on the signal.  Possible actions are: Ignore the signal
 (e.g., SIGUSR1), terminate the program (SIGKILL, SIGTERM), stop the
 program (SIGSTOP, SIGTSTP, etc.), wake up a sigwait or sigwaitinfo in a
-targetted thread, or call a signal handler (possibly in a thread).  If
+targeted thread, or call a signal handler (possibly in a thread).  If
 no thread information has been sent to sigpacket::process, it determines
 the correct thread to use based on various heuristics, as per UNIX.  As
 per linux, the only time a handler is called in a thread is when there

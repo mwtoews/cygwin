@@ -178,7 +178,7 @@ AC_ARG_ENABLE(newlib-reent-binary-compat,
 
 dnl Support --enable-newlib-reent-thread-local
 AC_ARG_ENABLE(newlib-reent-thread-local,
-[  --enable-newlib-reent-thread-local   enable thread-local storage objects as a replacment for struct _reent members],
+[  --enable-newlib-reent-thread-local   enable thread-local storage objects as a replacement for struct _reent members],
 [if test "${newlib_reent_thread_local+set}" != set; then
   case "${enableval}" in
     yes) newlib_reent_thread_local=yes ;;
@@ -363,7 +363,7 @@ AM_CONDITIONAL(HAVE_DOC, test x$have_multisubdir = xno)
 # multilib there is a "newlib" subdirectory.  This directory is specified by a
 # -B option for the support libraries.  In order to find the newlib artifacts
 # (ctr0.o, libc.a, libg.a and libm.a) they must be located in a proper multilib
-# subdirectory withing the build directory.
+# subdirectory within the build directory.
 AM_CONDITIONAL(HAVE_MULTISUBDIR, test x$have_multisubdir = xyes)
 
 CRT0=
@@ -455,7 +455,7 @@ if test "${newlib_reent_binary_compat}" = "yes"; then
 fi
 
 if test "${newlib_reent_thread_local}" = "yes"; then
-  AC_DEFINE(_WANT_REENT_THREAD_LOCAL, 1, [Define to enable thread-local storage objects as a replacment for struct _reent members.])
+  AC_DEFINE(_WANT_REENT_THREAD_LOCAL, 1, [Define to enable thread-local storage objects as a replacement for struct _reent members.])
 fi
 
 _mb_len_max=1

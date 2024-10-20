@@ -392,7 +392,7 @@ retry_after_transaction_error:
       status = NtSetInformationFile (fh, &io, &fdi, sizeof fdi,
 				     FileDispositionInformation);
       if (!NT_SUCCESS (status))
-	debug_printf ("Setting delete dispostion failed, status = %y",
+	debug_printf ("Setting delete disposition failed, status = %y",
 		      status);
       NtClose (fh);
       fh = NULL;

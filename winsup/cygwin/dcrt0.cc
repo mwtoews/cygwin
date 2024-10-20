@@ -411,7 +411,7 @@ child_info_fork::alloc_stack ()
 		     stackaddr, stackbase, teb->DeallocationStack,
 		     teb->Tib.StackBase);
 	}
-      /* Commit the area commited in parent. */
+      /* Commit the area committed in parent. */
       stacksize = (PBYTE) stackbase - (PBYTE) stacklimit;
       stack_ptr = VirtualAlloc (stacklimit, stacksize, MEM_COMMIT,
 				PAGE_READWRITE);
@@ -441,7 +441,7 @@ child_info_fork::alloc_stack ()
   else
     {
       /* Fork has been called from main thread.  Simply commit the region
-	 of the stack commited in the parent but not yet commited in the
+	 of the stack committed in the parent but not yet committed in the
 	 child and create new guardpages. */
       if (NtCurrentTeb ()->Tib.StackLimit > stacklimit)
 	{
@@ -766,7 +766,7 @@ dll_crt0_0 ()
   if (!dynamically_loaded)
     sigproc_init ();
 
-  /* See comment preceeding myfault_altstack_handler in exception.cc. */
+  /* See comment preceding myfault_altstack_handler in exception.cc. */
   AddVectoredContinueHandler (0, myfault_altstack_handler);
 
   debug_printf ("finished dll_crt0_0 initialization");

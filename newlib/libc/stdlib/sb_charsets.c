@@ -611,7 +611,7 @@ wchar_t __cp_conv[27][0x80] = {
     0x41f, 0x42f, 0x420, 0x421, 0x422, 0x423, 0x416, 0x412,
     0x42c, 0x42b, 0x417, 0x428, 0x42d, 0x429, 0x427, 0x42a },
   /* The following are not valid Windows codepages, but they fit nicely here.
-     The CP numbers are only used internally and are guranteed not to clash
+     The CP numbers are only used internally and are guaranteed not to clash
      with valid Windows codepage identifier. */
   /* CP101 (GEORGIAN-PS)  Georgian charset, used as the default charset in
      the ka_GE locale (Georgian, Georgia).  Apparently derived from Windows

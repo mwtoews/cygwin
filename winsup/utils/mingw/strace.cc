@@ -976,7 +976,7 @@ Trace system calls and signals\n\
   -p, --pid=n                  attach to executing program with cygwin pid n\n\
   -q, --quiet                  suppress messages about attaching, detaching, etc.\n\
   -S, --flush-period=PERIOD    flush buffered strace output every PERIOD secs\n\
-  -t, --timestamp              use an absolute hh:mm:ss timestamp insted of \n\
+  -t, --timestamp              use an absolute hh:mm:ss timestamp instead of \n\
 			       the default microsecond timestamp.  Implies -d\n\
   -T, --toggle                 toggle tracing in a process already being\n\
 			       traced. Requires -p <pid>\n\

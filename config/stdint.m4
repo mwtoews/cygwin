@@ -20,7 +20,7 @@ dnl typedefs, especially uint8_t,int32_t,uintptr_t.
 dnl Many older installations will not provide this file, but some will
 dnl have the very same definitions in <inttypes.h>. In other environments
 dnl we can use the inet-types in <sys/types.h> which would define the
-dnl typedefs int8_t and u_int8_t respectivly.
+dnl typedefs int8_t and u_int8_t respectively.
 dnl
 dnl This macros will create a local "_stdint.h" or the headerfile given as
 dnl an argument. In many cases that file will pick the definition from a

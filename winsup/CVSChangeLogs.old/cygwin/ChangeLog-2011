@@ -212,7 +212,7 @@
 	(wow64_test_for_64bit_parent): Fix comment.  Check current stack
 	against real expected main thread stack addresses.
 	(wow64_revert_to_original_stack): Fix and add comments. Check memory
-	against real expected main thread stack addresses.  Use orignal stack
+	against real expected main thread stack addresses.  Use original stack
 	if reserved area is >= 256K.
 
 2011-12-16  Christopher Faylor  <me.cygwin2011@cgf.cx>
@@ -604,7 +604,7 @@
 	* errno.cc (errmap): Add PRIVILEGE_NOT_HELD.
 
 	* fhandler_tty.cc (fhandler_pty_master::setup): When creating a thread
-	use shorter name to reduce debuggging output.
+	use shorter name to reduce debugging output.
 	* select.cc (start_thread_pipe): Ditto.
 	(start_thread_serial): Ditto.
 	(start_thread_socket): Ditto.
@@ -767,7 +767,7 @@
 
 2011-11-23  Christopher Faylor  <me.cygwin2011@cgf.cx>
 
-	* pipe.cc (fhandler_pipe::create): Avoid derefencing a NULL pointer.
+	* pipe.cc (fhandler_pipe::create): Avoid dereferencing a NULL pointer.
 
 	* child_info.h (child_info): Reorganize some elements so that the ones
 	which are initialized in a constructor are all together.
@@ -1621,7 +1621,7 @@
 	(inode_t::unlock_and_remove): New method to unlock node and to delete
 	it if it's unused in current process.
 	(fhandler_base::del_my_locks): Drop global list lock.  Drop variable
-	no_locks_left.  Simpify unlocking and removing node by just calling
+	no_locks_left.  Simplify unlocking and removing node by just calling
 	unlock_and_remove.
 	(fixup_lockf_after_exec): Call notused method for each node.
 	(inode_t::get): Call use method.  Lock node only if outside of list
@@ -1681,7 +1681,7 @@
 2011-08-25  Corinna Vinschen  <corinna@vinschen.de>
 
 	* fhandler.cc (fhandler_base::open): Never open files with
-	FILE_OVERWITE/FILE_OVERWRITE_IF.  Set file size to 0 explicitely if
+	FILE_OVERWITE/FILE_OVERWRITE_IF.  Set file size to 0 explicitly if
 	regular, existing file has been opened for writing with O_TRUNC flag
 	set.  Explain why.
 
@@ -2077,7 +2077,7 @@
 	* heap.cc (eval_start_address): New static function to evaluate the
 	best start address for the application heap.
 	(heap_init): Call eval_start_address to fetch the start value for
-	start_address.  Move preceeding comment to eval_start_address.
+	start_address.  Move preceding comment to eval_start_address.
 
 2011-07-21  Yaakov Selkowitz  <yselkowitz@users.sourceforge.net>
 
@@ -2287,7 +2287,7 @@
 	(build_fh_name): Check return code from cnew against address of
 	fh_oom to test for out of memory condition.
 	(fh_alloc): Ditto.
-	(build_fh_pc): Avoid a crash due to useing a NULL fhandler.
+	(build_fh_pc): Avoid a crash due to using a NULL fhandler.
 	* pipe.cc (fhandler_pipe::create): Check if build_fh_dev returned a
 	valid pointer before using it.
 
@@ -2572,14 +2572,14 @@
 	(fhandler_console::set_input_state): Ditto.
 	(fhandler_console::open): Accommodate tcinit argument change and change
 	from tc to tc().
-	(fhandler_console::input_tcsetattr): Accomodate change from tc to tc().
+	(fhandler_console::input_tcsetattr): Accommodate change from tc to tc().
 	(fhandler_console::input_tcsetattr): Ditto.
 	(fhandler_console::write_normal): Ditto.
 	(fhandler_console::init): Ditto.
 	(fhandler_console::igncr_enabled): Ditto.
 	* fhandler_termios.cc (fhandler_termios::tcinit): Remove first argument.
 	Expect tc() to have been set up first.  Use tc() rather than tc.
-	(fhandler_termios::tcsetpgrp): Accomodate change from tc to tc().
+	(fhandler_termios::tcsetpgrp): Accommodate change from tc to tc().
 	(fhandler_termios::tcgetpgrp): Ditto.
 	(fhandler_termios::bg_check): Ditto.
 	(fhandler_termios::line_edit: Ditto.
@@ -2843,7 +2843,7 @@
 	* mount.cc (mount_info::conv_to_win32_path): Adapt to device struct
 	changes.
 	(mount_info::conv_to_win32_path): Ditto.
-	* path.cc (path_conv::check): Retrive major/minor numbers via a method
+	* path.cc (path_conv::check): Retrieve major/minor numbers via a method
 	rather than accessing them directly from device.  Rely on dev operators
 	to set/retrieve device information as required by device struct change.
 	* path.h (isproc_dev): Move to devices.h.
@@ -2869,14 +2869,14 @@
 	(tty_list::terminate): Adapt to changes to ctty.
 	(tty_list::init): Adapt to change to setntty - pass in device major
 	number.
-	(tty::exists): Use get_unit() to retrive tty unit number.
+	(tty::exists): Use get_unit() to retrieve tty unit number.
 	(tty::open_mutex): Ditto.
 	(tty::open_inuse): Ditto.
 	(tty::create_inuse): Ditto.
 	(tty::get_event): Ditto.
 	(tty_min::ttyname): Define new function.
 	* tty.h (tty_min::ntty): Redefine as fh_devices.
-	(tty::exists): Use get_unit() to retrive tty unit number.
+	(tty::exists): Use get_unit() to retrieve tty unit number.
 	(tty::open_mutex): Ditto.
 	(tty::open_inuse): Ditto.
 	(tty::create_inuse): Ditto.
@@ -3016,7 +3016,7 @@
 	function.  Add lots of comments to explain what we do.
 	(CygwinCreateThread): Reserve our own stack in case we got no
 	application stack.  Add comments.
-	* ntdll.h (struct _TEB): Extend defintion up to DeallocationStack
+	* ntdll.h (struct _TEB): Extend definition up to DeallocationStack
 	member.
 	* thread.cc (pthread_attr::pthread_attr): Use "(size_t) -1"
 	rather then 0xffffffff.
@@ -3296,7 +3296,7 @@
 	* environ.cc (set_chunksize): Remove.
 	(parse_thing): Remove forkchunk entry.
 	* fork.cc (child_copy): Drop handling external chunksize setting.
-	* wincap.cc: Througout, drop chunksize.
+	* wincap.cc: Throughout, drop chunksize.
 	(wincapc::set_chunksize): Remove.
 	* wincap.h (struct wincaps): Drop chunksize and declaration of
 	set_chunksize.
@@ -3763,9 +3763,9 @@
 2011-05-02  Corinna Vinschen  <corinna@vinschen.de>
 
 	* fhandler_serial.cc (fhandler_serial::raw_read): Add restartability
-	after a signal.  Add cancelability.
+	after a signal.  Add cancellability.
 	(fhandler_serial::raw_write): Wait for write to succeed if O_NONBLOCK
-	is not set.  Add signal handling and cancelability.
+	is not set.  Add signal handling and cancellability.
 
 2011-05-01  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -3905,7 +3905,7 @@
 2011-04-29  Corinna Vinschen  <corinna@vinschen.de>
 
 	* posix_ipc.cc (ipc_cond_timedwait): Only wait for pthread's
-	cancel_event if thread's cancelability isn't disabled.
+	cancel_event if thread's cancellability isn't disabled.
 
 2011-04-28  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -4019,7 +4019,7 @@
 	SE_DACL_PROTECTED flag.
 	(check_file_access): Remove mapping.  Use file_mapping instead.
 	(check_registry_access): Rename mapping to reg_mapping.
-	* wincap.cc: Througout, drop use_get_sec_info_on_dirs,
+	* wincap.cc: Throughout, drop use_get_sec_info_on_dirs,
 	* wincap.h (struct wincaps): Drop use_get_sec_info_on_dirs.
 
 2011-04-24  Corinna Vinschen  <corinna@vinschen.de>
@@ -4309,7 +4309,7 @@
 	* select.cc (select_stuff::wait): Always use MWMO_INPUTAVAILABLE.
 	(peek_windows): Drop NT4-only condition in call to PeekMessage.
 	* syscalls.cc (gethostid): Remove NT4-only workaround.
-	* wincap.cc: Througout, drop has_dacl_protect,
+	* wincap.cc: Throughout, drop has_dacl_protect,
 	has_broken_if_oper_status, has_process_io_counters,
 	has_terminal_services, has_extended_priority_class, has_guid_volumes,
 	has_fileid_dirinfo, has_mwmo_inputavailable and supports_sse from
@@ -4809,7 +4809,7 @@
 	* path.cc (symlink_worker): Ditto for symlinks.
 	* security.cc (get_file_sd): Always call GetSecurityInfo for directories
 	on XP and Server 2003.  Improve comment to explain why.
-	(set_file_attribute): Explicitely cast mode_t value to bool in call to
+	(set_file_attribute): Explicitly cast mode_t value to bool in call to
 	get_file_sd.
 	* wincap.h (wincaps::use_get_sec_info_on_dirs): New element.
 	* wincap.cc: Implement above element throughout.
@@ -5180,7 +5180,7 @@
 
 2011-01-19  Corinna Vinschen  <corinna@vinschen.de>
 
-	* spawn.cc (av::fixup): Reenable #! handling for all exec functions.
+	* spawn.cc (av::fixup): Re-enable #! handling for all exec functions.
 	Return ENOEXEC in !p_type_exec case only for unrecognized files.
 	Fix comment formatting.
 
@@ -5197,11 +5197,11 @@
 	(execle): New function.
 	(execlp): New function.
 	(execv): Call spawnve.
-	(execve): Drop converting NULL envp to emtpy envp.
+	(execve): Drop converting NULL envp to empty envp.
 	(execvp): Call spawnve.
-	(execvpe): Drop converting NULL envp to emtpy envp.  Call spawnve.
+	(execvpe): Drop converting NULL envp to empty envp.  Call spawnve.
 	(fexecve): Call spawnve.
-	* spawn.cc (spawnve): Convert NULL envp to emtpy envp.  Remove outdated
+	* spawn.cc (spawnve): Convert NULL envp to empty envp.  Remove outdated
 	comment.
 	(spawnlp): Call spawnve.
 	(spawnlpe): Ditto.
@@ -5222,7 +5222,7 @@
 	from here.
 	(execvpe): Ditto.
 	* spawn.cc (spawn_guts): Filter _P_PATH_TYPE_EXEC from mode and
-	store in p_type_exec.  Call av::fixup with addtional p_type_exec
+	store in p_type_exec.  Call av::fixup with additional p_type_exec
 	argument.
 	(spawnve): Check for filtered mode.
 	(spawnvpe): Add _P_PATH_TYPE_EXEC flag when calling spawnve.
@@ -5281,7 +5281,7 @@
 	partition.
 	(fhandler_dev_floppy::open): Don't lock partitions here.
 	(fhandler_dev_floppy::close): Keep track of partition handle reference
-	count.  Close handles and remove partitions pointer ony if count is 0.
+	count.  Close handles and remove partitions pointer only if count is 0.
 	(fhandler_dev_floppy::dup): Just copy partitions pointer and increment
 	reference count.
 

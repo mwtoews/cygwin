@@ -34,7 +34,7 @@
 #include <stddef.h>
 #include "vec_literal.h"
 
-/* Computes the length of the maximum initial segement
+/* Computes the length of the maximum initial segment
  * of the string pointed to by s1 which consists entirely
  * of characters from the string pointed to by s2.
  */
@@ -71,7 +71,7 @@ size_t strspn(const char *s1, const char *s2)
     ptr2 = (vec_uchar16 *)((unsigned int)(ptr2) + 1);
     splat = initial_splat;
 
-    /* For each character of s2, compare agains a quadword of s1,
+    /* For each character of s2, compare against a quadword of s1,
      * accumulating match success in the variable match.
      */
     while (spu_extract((vec_uint4)data2, 0)) {

@@ -147,7 +147,7 @@
 
 2004-08-24  Corinna Vinschen  <corinna@vinschen.de>
 
-	* winsup.api/mmaptest01.c (main): Accomodate 9x memory usage.
+	* winsup.api/mmaptest01.c (main): Accommodate 9x memory usage.
 
 2004-08-24  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -501,7 +501,7 @@
 
 	* winsup.api/pthread/: New directory. Ports of pthread functionality
 	tests from pthreads-win32 project.
-	* winsup.api/pthread/test.h: Commmon declaraions for pthread tests.
+	* winsup.api/pthread/test.h: Common declarations for pthread tests.
 	* winsup.api/pthread/cleanup2.c: New test.
 	* winsup.api/pthread/cleanup3.c: Ditto.
 	* winsup.api/pthread/condvar1.c: Ditto.
@@ -558,16 +558,16 @@
 
 2001-10-29  Egor Duda  <deo@logos-m.ru>
 
-	* winsup.api/ltp/stat03.c: Supress compiler warning.
+	* winsup.api/ltp/stat03.c: Suppress compiler warning.
 
 2001-10-29  Egor Duda  <deo@logos-m.ru>
 
-	* winsup.api/signal-into-win32-api.c: Supress compiler warning.
+	* winsup.api/signal-into-win32-api.c: Suppress compiler warning.
 
 Mon Oct  8 14:15:00 2001  Corinna Vinschen <corinna@vinschen.de>
 
 	* winsup.api/mmaptest01.c: Add several tests on mmaps.  Use libltp.
-	* winsup.api/winsup.exp: Link all tests agains libltp.
+	* winsup.api/winsup.exp: Link all tests against libltp.
 
 Fri Oct  5 11:15:55 2001  Christopher Faylor <cgf@cygnus.com>
 
@@ -735,7 +735,7 @@ Thu Oct  4 22:19:39 2001  Christopher Faylor <cgf@cygnus.com>
 
 2001-04-27  Corinna Vinschen  <corinna@vinschen.de>
 
-	* winsup.api/mmaptest04.c: Take care for binmode explicitely.
+	* winsup.api/mmaptest04.c: Take care for binmode explicitly.
 
 2001-04-19  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -794,6 +794,6 @@ Thu Oct  4 22:19:39 2001  Christopher Faylor <cgf@cygnus.com>
 	to <testname>.log
 	* winsup.api/ltp/: New directory. Contains cygwin port of testsuite
 	from Linux Testing Project
-	* winsup.api/sigchld.c: New file. Test if process recieves SIGCHLD
+	* winsup.api/sigchld.c: New file. Test if process receives SIGCHLD
 	signal when its child terminates.
 	* winsup.api/waitpid.c: New file. Test if waitpid function works

@@ -104,7 +104,7 @@
 
 	.reg	rsp, gr1	; local register stack pointer
 
-	; System-wide statics
+	; System-wide statistics
 	.reg	s0, gr64
 	.reg	spillreg, s0	; pointer to user spill handler
 	.reg	s1, gr65
@@ -163,7 +163,7 @@
 	.reg	t14, gr110
 	.reg	t15, gr111
 
-	; User process statics
+	; User process statistics
 	.reg	u0, gr112
 	.reg	u1, gr113
 	.reg	u2, gr114

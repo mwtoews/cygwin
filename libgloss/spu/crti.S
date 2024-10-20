@@ -36,7 +36,7 @@
 .macro FUNC_START
 	# Create a stack frame with two slots: LR and BC
 	# The .init and .fini section don't change the call-preserved 
-	# registes, therefore no need to save them.
+	# registers, therefore no need to save them.
 	stqd    $lr, 16($sp)
 	stqd    $sp, -32($sp)
 	ai      $sp, $sp, -32

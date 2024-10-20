@@ -825,12 +825,12 @@ exception::handle (EXCEPTION_RECORD *e, exception_list *frame, CONTEXT *in,
   sig_send (NULL, si, &me);	/* Signal myself */
   if ((NTSTATUS) e->ExceptionCode == STATUS_STACK_OVERFLOW)
     {
-      /* If we catched a stack overflow, and if the signal handler didn't exit
+      /* If we caught a stack overflow, and if the signal handler didn't exit
 	 or longjmp, we're back here and about to continue, supposed to run the
 	 offending instruction again.  That works on Linux, but not on Windows.
 	 In case of a stack overflow we're not immediately returning to the
 	 system exception handler, but to NTDLL::__stkchk.  __stkchk will then
-	 terminate the applicaton.  So what we do here is to signal our current
+	 terminate the application.  So what we do here is to signal our current
 	 process again, but this time with SIG_DFL action.  This creates a
 	 stackdump and then exits through our own means. */
       global_sigs[SIGSEGV].sa_handler = SIG_DFL;
@@ -1059,7 +1059,7 @@ has_visible_window_station ()
   /* Check if the process is associated with a visible window station.
      These are processes running on the local desktop as well as processes
      running in terminal server sessions.
-     Processes running in a service session not explicitely associated
+     Processes running in a service session not explicitly associated
      with the desktop (using the "Allow service to interact with desktop"
      property) are running in an invisible window station. */
   if ((station_hdl = GetProcessWindowStation ())

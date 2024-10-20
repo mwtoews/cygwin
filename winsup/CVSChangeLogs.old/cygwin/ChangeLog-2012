@@ -148,11 +148,11 @@
 
 	* fhandler.cc (fhandler_base::write): Don't attempt to sparsify
 	an already sparse file.  Drop check for FILE_SUPPORTS_SPARSE_FILES
-	flag.  Explicitely set FILE_ATTRIBUTE_SPARSE_FILE attribute in
+	flag.  Explicitly set FILE_ATTRIBUTE_SPARSE_FILE attribute in
 	cached attributes.
 	(fhandler_base::lseek): Only set did_lseek if sparseness is supported.
 	* fhandler_disk_file.cc (fhandler_disk_file::ftruncate): Don't attempt
-	to sparsify an already sparse file.  Explicitely set
+	to sparsify an already sparse file.  Explicitly set
 	FILE_ATTRIBUTE_SPARSE_FILE attribute in cached attributes.
 	* mount.cc (oopt): Add "sparse" flag.
 	(fillout_mntent): Ditto.
@@ -534,7 +534,7 @@
 
 2012-08-16  Christopher Faylor  <me.cygwin2012@cgf.cx>
 
-	* cygheap.cc (init_cygheap::find_tls): Don't consider unitialized
+	* cygheap.cc (init_cygheap::find_tls): Don't consider uninitialized
 	threads.
 	* cygtls.cc (_cygtls::operator HANDLE): Return NULL when tid is not
 	set.
@@ -962,7 +962,7 @@
 	(struct _IP_ADAPTER_ADDRESSES_LH): Ditto.
 	(SIO_GET_INTERFACE_LIST): Ditto.
 	(ws_freeaddrinfo): Rename from freeaddrinfo so as not to collide with
-	Winsock declaration.  Change througout.
+	Winsock declaration.  Change throughout.
 	(ws_getaddrinfo): Ditto.
 	(ws_getnameinfo): Ditto.
 	* select.cc: Include netdb.h after defining USE_SYS_TYPES_FD_SET.
@@ -1344,9 +1344,9 @@
 	* sec_helper.cc (_recycler_sd): New function to create security
 	descriptors suitable for the recycler bin starting with Vista.
 	* security.cc (add_access_allowed_ace): Use RtlAddAccessAllowedAceEx
-	and drop code to set AceFlags explicitely.
+	and drop code to set AceFlags explicitly.
 	(add_access_denied_ace): Use RtlAddAccessDeniedAceEx and drop code to
-	set AceFlags explicitely.
+	set AceFlags explicitly.
 	* security.h (_recycler_sd): Declare.
 	(recycler_sd): Define.
 	* syscalls.cc (desktop_ini): Change formatting.
@@ -1354,7 +1354,7 @@
 	since Vista,
 	(try_to_bin): Handle ReFS just like NTFS.  Write Vista and later
 	Recycler in all uppercase, just like shell32 does when recreating it.
-	Fix comments to include ReFS.  Don't implicitely reuse object
+	Fix comments to include ReFS.  Don't implicitly reuse object
 	attributes from earlier NtOpenFile call, rather recreate it for safety.
 	Use recycler_sd call when creating security descriptor for Recycler
 	dirs and files on Vista and later.  Write third line of desktop.ini
@@ -1629,7 +1629,7 @@
 2012-05-03  Corinna Vinschen  <corinna@vinschen.de>
 
 	* net.cc (get_adapters_addresses): Only create thread on affected
-	systems.  Change comment acordingly.
+	systems.  Change comment accordingly.
 	* wincap.h (wincaps::has_gaa_largeaddress_bug): New element.
 	* wincap.cc: Implement above element throughout.
 	(wincap_8): New globale wincaps to support Windows 8.
@@ -1731,7 +1731,7 @@
 
 2012-04-15  Christopher Faylor  <me.cygwin2012@cgf.cx>
 
-	* wincap.h: Rename assitant to assistant throughout.
+	* wincap.h: Rename assistant to assistant throughout.
 	* wincap.cc: Ditto.
 	* devices.in (exists_console): Use fhandler_console::exists () rather
 	than raw test.
@@ -1739,7 +1739,7 @@
 	* fhandler.h (fhandler_console::exists): Define new function.
 	* fhandler_console.cc (fhandler_console::need_invisible): Use
 	fhandler_console::exists () rather than raw test.
-	* spawn.cc: Rename assitant to assistant throughout.
+	* spawn.cc: Rename assistant to assistant throughout.
 	(child_info_spawn::worker): Simplify test for when to start a
 	non-Cygwin process in its own process group.  Just do it whenever we
 	start a non-Cygwin process.
@@ -1825,7 +1825,7 @@
 
 	* passwd.cc (_getpass_close_fd): New static pthread cleanup handler.
 	(getpass): Rework to use /dev/tty in the first place.  Install
-	_getpass_close_fd as pthread cleanup handler.  Flush prompt explicitely.
+	_getpass_close_fd as pthread cleanup handler.  Flush prompt explicitly.
 	Lock input and switch off signal input handling when reading password.
 
 2012-04-03  Corinna Vinschen  <corinna@vinschen.de>
@@ -1945,7 +1945,7 @@
 	* devices.in: Move previous functions earlier since they are now only
 	defined static.  Rename some functions due to an as-yet unresolved bug
 	in gendevices.  Rename posix part of internal-only devices with a
-	double-slash.  gendevices will eventuall translate that to a ":".
+	double-slash.  gendevices will eventually translate that to a ":".
 	(device::parse): Rework to use dev pointer and dev_storage_end.
 	* devices.cc: Regenerate.
 	* gendevices: Translate "// to ": after shilka processing.
@@ -2328,7 +2328,7 @@
 	size from start of import RVA table to end of section.
 	(find_first_notloaded_dll): Take big executables into account.  Use
 	offset and size computation as in hook_or_detect_cygwin, just simpler.
-	(hook_or_detect_cygwin): Return NULL rather than false througout.
+	(hook_or_detect_cygwin): Return NULL rather than false throughout.
 	Change computation of required mapping size to take non-gcc compilers
 	into account.  Explain the differences and what we do against them.
 	Don't alloca buf if fn is NULL.  Never use buf if fn is NULL.
@@ -2544,7 +2544,7 @@
 2012-02-20  Corinna Vinschen  <corinna@vinschen.de>
 
 	* flock.cc (inode_t::del_my_locks): Drop useless counter lc.  Close
-	lock object handle explicitely in case of called during fork.  Add
+	lock object handle explicitly in case of called during fork.  Add
 	comment to explain why.
 	* fork.cc (frok::child): Drop declaration of fixup_lockf_after_fork.
 
@@ -2696,7 +2696,7 @@
 
 	* miscfuncs.cc (thread_wrapper): Fix typo in comment.
 	(CygwinCreateThread): Take dead zone of Windows stack into account.
-	Change the way how the stack is commited and how to handle guardpages.
+	Change the way how the stack is committed and how to handle guardpages.
 	Explain how and why.
 	* thread.h (PTHREAD_DEFAULT_STACKSIZE): Change definition.  Explain why.
 
@@ -2710,7 +2710,7 @@
 	* exceptions.cc (stackdump): Rework to perform all operations needed
 	for a stackdump and to avoid recursion.
 	(exception::handle): Use simplified stackdump interface.
-	* sigproc.cc (signal::exit): Ditto.  Delete now, uneeded declaration.
+	* sigproc.cc (signal::exit): Ditto.  Delete now, unneeded declaration.
 
 2012-02-11  Corinna Vinschen  <corinna@vinschen.de>
 

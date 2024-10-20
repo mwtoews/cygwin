@@ -78,7 +78,7 @@ _duplocale_r (struct _reent *p, struct __locale_t *locobj)
   return new_locale;
 
 error:
-  /* An error occured while we had already (potentially) allocated memory.
+  /* An error occurred while we had already (potentially) allocated memory.
      Free memory and return NULL.  errno is supposed to be set already. */
 #ifdef __HAVE_LOCALE_INFO__
   while (--i > 0)

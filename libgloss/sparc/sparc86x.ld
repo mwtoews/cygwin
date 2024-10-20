@@ -41,7 +41,7 @@ _RAM_START = 0x40010000;
 _RAM_END = _RAM_START + _RAM_SIZE;
 
 /*
- * Base address of the on-CPU peripherals. This is for compatability
+ * Base address of the on-CPU peripherals. This is for compatibility
  * with the simulator.
  */
 
@@ -66,11 +66,11 @@ __trap_stack = (_RAM_START + _RAM_SIZE - 4 * 16) - _STACK_SIZE;
  * with both.
  */
 /*
- * Initalize some symbols to be zero so we can reference them in the
+ * Initialize some symbols to be zero so we can reference them in the
  * crt0 without core dumping. These functions are all optional, but
  * we do this so we can have our crt0 always use them if they exist. 
  * This is so BSPs work better when using the crt0 installed with gcc.
- * We have to initalize them twice, so we cover a.out (which prepends
+ * We have to initialize them twice, so we cover a.out (which prepends
  * an underscore) and coff object file formats.
  */
 PROVIDE (hardware_init_hook = 0);

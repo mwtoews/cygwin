@@ -24,7 +24,7 @@ SYNOPSIS
 
 DESCRIPTION
 <<ecvt>> and <<fcvt>> produce (null-terminated) strings of digits
-representating the <<double>> number <[val]>.
+representing the <<double>> number <[val]>.
 <<ecvtf>> and <<fcvtf>> produce the corresponding character
 representations of <<float>> numbers.
 

@@ -35,7 +35,7 @@
 /*
  * pattern_check(buf, buflen, pat, patlen, patshift)
  *
- * Check a buffer of length buflen against repeated occurrances of
+ * Check a buffer of length buflen against repeated occurrences of
  * a pattern whose length is patlen.  Patshift can be used to rotate
  * the pattern by patshift bytes to the left.
  *
@@ -43,7 +43,7 @@
  * (patshift % patshift) bytes.
  *
  * pattern_check returns -1 if the buffer does not contain repeated
- * occurrances of the indicated pattern (shifted by patshift).
+ * occurrences of the indicated pattern (shifted by patshift).
  *
  * The algorithm used to check the buffer relies on the fact that buf is 
  * supposed to be repeated copies of pattern.  The basic algorithm is
@@ -63,7 +63,7 @@ int pattern_check( char * , int , char * , int , int );
 /*
  * pattern_fill(buf, buflen, pat, patlen, patshift)
  *
- * Fill a buffer of length buflen with repeated occurrances of
+ * Fill a buffer of length buflen with repeated occurrences of
  * a pattern whose length is patlen.  Patshift can be used to rotate
  * the pattern by patshift bytes to the left.
  *

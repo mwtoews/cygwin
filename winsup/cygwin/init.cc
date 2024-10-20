@@ -84,7 +84,7 @@ dll_entry (HANDLE h, DWORD reason, void *static_load)
       dynamically_loaded = (static_load == NULL);
 
       /* Starting with adding the POSIX-1.2008 per-thread locale functionality,
-	 we need an initalized _REENT area even for the functions called from
+	 we need an initialized _REENT area even for the functions called from
 	 dll_crt0_0.  Most importantly, we need the _REENT->_locale pointer
 	 initialized to NULL, so subsequent calls to locale-specific functions
 	 will always fall back to __global_locale, rather then crash due to

@@ -1072,8 +1072,8 @@
 #define CNT1_COMMAND            0xFFC0330C  /* Counter 1 Command Register                   */
 #define CNT1_DEBOUNCE           0xFFC03310  /* Counter 1 Debounce Register                  */
 #define CNT1_COUNTER            0xFFC03314  /* Counter 1 Counter Register                   */
-#define CNT1_MAX                0xFFC03318  /* Counter 1 Boundry Value Register - max count */
-#define CNT1_MIN                0xFFC0331C  /* Counter 1 Boundry Value Register - min count */
+#define CNT1_MAX                0xFFC03318  /* Counter 1 Boundary Value Register - max count */
+#define CNT1_MIN                0xFFC0331C  /* Counter 1 Boundary Value Register - min count */
 
 
 /* SPI1 Controller              (0xFFC03400 - 0xFFC034FF)                                   */
@@ -1093,8 +1093,8 @@
 #define CNT0_COMMAND            0xFFC0350C  /* Counter 0 Command Register                   */
 #define CNT0_DEBOUNCE           0xFFC03510  /* Counter 0 Debounce Register                  */
 #define CNT0_COUNTER            0xFFC03514  /* Counter 0 Counter Register                   */
-#define CNT0_MAX                0xFFC03518  /* Counter 0 Boundry Value Register - max count */
-#define CNT0_MIN                0xFFC0351C  /* Counter 0 Boundry Value Register - min count */
+#define CNT0_MAX                0xFFC03518  /* Counter 0 Boundary Value Register - max count */
+#define CNT0_MIN                0xFFC0351C  /* Counter 0 Boundary Value Register - min count */
 
 
 /* Motor Control PWM0 Registers (0xFFC03700 - 0xFFC037FF)                                   */
@@ -1272,7 +1272,7 @@
 
 /* SYSCR Masks */
 #define BMODE_BYPASS            0x0000  /* Bypass boot ROM, execute from 16-bit external memory  */
-#define BMODE_FLASH_ASYNC       0x0001  /* Boot from stacked parallel flash in asynchornous mode */
+#define BMODE_FLASH_ASYNC       0x0001  /* Boot from stacked parallel flash in asynchronous mode */
 #define BMODE_FLASH_SYNC        0x0002  /* Boot from stacked parallel flash in synchornous mode  */
 #define BMODE_SPIMEM            0x0003  /* Boot from serial SPI memory (master mode)             */
 #define BMODE_SPIHOST           0x0004  /* Boot from SPI0 host (slave mode)                      */
@@ -2150,7 +2150,7 @@
 #define SADD_LEN                0x0002  /* Slave Address Length                             */
 #define STDVAL              0x0004  /* Slave Transmit Data Valid                            */
 #define NAK                 0x0008  /* NAK/ACK* Generated At Conclusion Of Transfer             */
-#define GEN                 0x0010  /* General Call Adrress Matching Enabled                    */
+#define GEN                 0x0010  /* General Call Address Matching Enabled                    */
 
 /* TWI_SLAVE_STAT Masks */
 #define SDIR                0x0001  /* Slave Transfer Direction (Transmit/Receive*)             */

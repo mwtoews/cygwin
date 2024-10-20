@@ -35,7 +35,7 @@ frm_fp_rnd (unsigned frm)
     case 1: return FP_RZ;
     case 2: return FP_RM;
     case 3: return FP_RP;
-    /* 4 ~ 7 is invalid value, so just retun FP_RP.  */
+    /* 4 ~ 7 is invalid value, so just return FP_RP.  */
     default:return FP_RP;
     }
 }

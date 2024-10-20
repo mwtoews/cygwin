@@ -142,7 +142,7 @@ SYM (_start):
 	movel	d0, sp@-
 
 /*
- * drop down into exit incase the user doesn't. This should drop
+ * drop down into exit in case the user doesn't. This should drop
  * control back to the ROM monitor, if there is one. This calls the
  * exit() from the C library so the C++ tables get cleaned up right.
  */

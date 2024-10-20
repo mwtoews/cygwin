@@ -738,7 +738,7 @@ fhandler_disk_file::fchmod (mode_t mode)
     {
       /* chmod on NFS shares works by writing an EA of type NfsV3Attributes.
 	 Only type and mode have to be set.  Apparently type isn't checked
-	 for consistency, so it's sufficent to set it to NF3REG all the time. */
+	 for consistency, so it's sufficient to set it to NF3REG all the time. */
       struct {
 	FILE_FULL_EA_INFORMATION ffei;
 	char buf[sizeof (NFS_V3_ATTR) + sizeof (fattr3)];
@@ -922,7 +922,7 @@ fhandler_disk_file::fchown (uid_t uid, gid_t gid)
     ret = set_file_sd (get_handle (), pc, sd_ret, true);
 
   /* If you're running a Samba server with no winbind, the uid<->SID mapping
-     is disfunctional.  Even trying to chown to your own account fails since
+     is dysfunctional.  Even trying to chown to your own account fails since
      the account used on the server is the UNIX account which gets used for
      the standard user mapping.  This is a default mechanism which doesn't
      know your real Windows SID.  There are two possible error codes in
@@ -1735,7 +1735,7 @@ fhandler_base::open_fs (int flags, mode_t mode)
 
 /* POSIX demands that pread/pwrite don't change the current file position.
    While NtReadFile/NtWriteFile support atomic seek-and-io, both change the
-   file pointer if the file handle has been opened for synchonous I/O.
+   file pointer if the file handle has been opened for synchronous I/O.
    Using this handle for pread/pwrite would break atomicity, because the
    read/write operation would have to be followed by a seek back to the old
    file position.  What we do is to open another handle to the file on the
@@ -2059,7 +2059,7 @@ fhandler_disk_file::mkdir (mode_t mode)
       /* FIXME: This default behaviour badly breaks interoperability.
 		Inspecting the content of case-sensitive directories
 		on remote machines results in lots of errors like
-		disappearing diretories and files, file not found, etc. */
+		disappearing directories and files, file not found, etc. */
 
       /* Starting with Windows 10 1803, try to create all dirs below the
          installation root as case-sensitive.  If STATUS_NOT_SUPPORTED

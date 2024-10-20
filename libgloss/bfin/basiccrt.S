@@ -294,7 +294,7 @@ L$clock_is_set:
 #endif
 
 #if 0
-	// Write the cplb exception handler to the EVT if approprate and
+	// Write the cplb exception handler to the EVT if appropriate and
 	// initialise the CPLBs if they're needed. couldn't do
 	// this before we set up the stacks.
 	P2.H = ___cplb_ctrl;
@@ -337,7 +337,7 @@ L$still_interrupt_in_ipend:
 		// servicing IVG15 (which we will 'service' for the whole
 		// program, so that the program is in supervisor mode.
 		//
-		// Need to do this to 'finish' servicing the reset interupt.
+		// Need to do this to 'finish' servicing the reset interrupt.
 
 L$supervisor_mode:
 	[--SP] = RETI;	// re-enables the interrupt system

@@ -35,7 +35,7 @@
 #include "vec_literal.h"
 
 /* Scans the string pointed to by s for the character c and
- * returns a pointer to the last occurance of c. If
+ * returns a pointer to the last occurrence of c. If
  * c is not found, then NULL is returned.
  */
 char * strrchr(const char *s, int c)
@@ -95,7 +95,7 @@ char * strrchr(const char *s, int c)
   res_ptr = spu_sel(spu_promote((unsigned int)(ptr), 0), res_ptr, cmp);
   res_cmp = spu_sel(cmp_c, res_cmp, cmp);
 
-  /* Bit reserve res_cmp for locating last occurance.
+  /* Bit reserve res_cmp for locating last occurrence.
    */
   mask = spu_cmpeq(res_cmp, 0);
 
@@ -104,8 +104,8 @@ char * strrchr(const char *s, int c)
 						VEC_LITERAL(vec_uchar16,
 							    15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0)));
 
-  /* Compute the location (ptr) of the last occurance of c. If no
-   * occurance was found (ie, element 0 of res_cmp == 0, then return
+  /* Compute the location (ptr) of the last occurrence of c. If no
+   * occurrence was found (ie, element 0 of res_cmp == 0, then return
    * NULL.
    */
   result = spu_sub(spu_add(res_ptr, 15), spu_cntlz(res_cmp));

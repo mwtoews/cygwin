@@ -147,7 +147,7 @@ struct __sbuf {
 
 /* Cygwin must use __sFILE64 for backward compatibility, even though
    it's not defining __LARGE64_FILES anymore.  To make sure that __sFILE
-   is never defined, disable it here explicitely. */
+   is never defined, disable it here explicitly. */
 #ifndef __CYGWIN__
 
 struct __sFILE {

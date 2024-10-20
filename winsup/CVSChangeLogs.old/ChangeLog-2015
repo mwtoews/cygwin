@@ -147,7 +147,7 @@
 
 2009-01-21  Corinna Vinschen  <corinna@vinschen.de>
 
-	* configure.in: Remove --enable-server option.  Allways add the
+	* configure.in: Remove --enable-server option.  Always add the
 	cygserver directory to $SUBDIRS.
 	* configure: Regenerate.
 
@@ -218,7 +218,7 @@
 
 2006-07-14  Corinna Vinschen  <corinna@vinschen.de>
 
-	* configure.in: Reenable building the subauth subdir.
+	* configure.in: Re-enable building the subauth subdir.
 	* configure: Regenerate.
 
 2006-05-24  Christopher Faylor  <cgf@timesys.com>
@@ -504,7 +504,7 @@ Sun Dec  3 00:21:31 2000  Christopher Faylor <cgf@cygnus.com>
 
 Mon Oct 23 00:50:02 2000  Christopher Faylor <cgf@cygnus.com>
 
-	* Makefile.common (LIBGCC): Acommodate older gcc's that don't need
+	* Makefile.common (LIBGCC): Accommodate older gcc's that don't need
 	libstdc++.a.
 
 Sat Oct 21 18:01:22 2000  Christopher Faylor <cgf@cygnus.com>

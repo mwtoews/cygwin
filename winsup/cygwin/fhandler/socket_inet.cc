@@ -733,7 +733,7 @@ fhandler_socket_inet::bind (const struct sockaddr *name, int namelen)
 
   if (!saw_reuseaddr ())
     {
-      /* If the application didn't explicitely request SO_REUSEADDR,
+      /* If the application didn't explicitly request SO_REUSEADDR,
 	 enforce POSIX standard socket binding behaviour by setting the
 	 SO_EXCLUSIVEADDRUSE socket option.  See cygwin_setsockopt()
 	 for a more detailed description. */
@@ -812,7 +812,7 @@ fhandler_socket_inet::connect (const struct sockaddr *name, int namelen)
       if (err == WSAEISCONN)
 	connect_state (connected);
       /* Winsock returns WSAEWOULDBLOCK if the non-blocking socket cannot be
-         conected immediately.  Convert to POSIX/Linux compliant EINPROGRESS. */
+         connected immediately.  Convert to POSIX/Linux compliant EINPROGRESS. */
       else if (is_nonblocking () && err == WSAEWOULDBLOCK)
 	WSASetLastError (WSAEINPROGRESS);
       /* Winsock returns WSAEINVAL if the socket is already a listener.

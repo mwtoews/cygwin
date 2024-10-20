@@ -1406,7 +1406,7 @@ wait_retry:
 	case WAIT_SIGNALED:
 	  if (totalread > 0)
 	    goto out;
-	  termios_printf ("wait catched signal");
+	  termios_printf ("wait caught signal");
 	  set_sig_errno (EINTR);
 	  totalread = -1;
 	  goto out;
@@ -1523,7 +1523,7 @@ wait_retry:
 	    }
 	  else
 	    {
-	      /* MSDN states that 5th prameter can be used to determine total
+	      /* MSDN states that 5th parameter can be used to determine total
 		 number of bytes in pipe, but for some reason this number doesn't
 		 change after successful read. So we have to peek into the pipe
 		 again to see if input is still available */
@@ -2227,7 +2227,7 @@ fhandler_pty_master::write (const void *ptr, size_t len)
 	{
 	  /* req_xfer_input is true if "ESC[6n" was sent just for
 	     triggering transfer_input() in master. In this case,
-	     the responce sequence should not be written. */
+	     the response sequence should not be written. */
 	  if (!get_ttyp ()->req_xfer_input)
 	    WriteFile (to_slave_nat, wpbuf, ixput, &n, NULL);
 	  ixput = 0;
@@ -2518,7 +2518,7 @@ fhandler_pty_slave::fixup_after_exec ()
    is deleted if the master is dup()'ed and the original is closed. In
    this case, dup()'ed instance still exists, therefore, master thread
    is also still alive even though the instance has been deleted. As a
-   result, accesing member variables in this function causes access
+   result, accessing member variables in this function causes access
    violation. */
 
 DWORD
@@ -2675,7 +2675,7 @@ pty_master_thread (VOID *arg)
    instance is deleted if the master is dup()'ed and the original is
    closed. In this case, dup()'ed instance still exists, therefore,
    master forwarding thread is also still alive even though the instance
-   has been deleted. As a result, accesing member variables in this
+   has been deleted. As a result, accessing member variables in this
    function causes access violation. */
 
 DWORD
@@ -2939,7 +2939,7 @@ fhandler_pty_master::setup ()
      PeekNamedPipe() from blocking in transfer_input().
      Accordig to the official document, in order to access the handle
      opened with FILE_FLAG_OVERLAPPED, it is mandatory to pass the
-     OVERLAPP structure, but in fact, it seems that the access will
+     OVERLAP structure, but in fact, it seems that the access will
      fallback to the blocking access if it is not specified. */
   res = fhandler_pipe::create (&sec_none, &from_master_nat, &to_slave_nat,
 			       fhandler_pty_common::pipesize, pipename,
@@ -3218,7 +3218,7 @@ fhandler_pty_common::process_opost_output (HANDLE h, const void *ptr,
   return res;
 }
 
-  /* Pseudo console supprot is realized using a tricky technic.
+  /* Pseudo console support is realized using a tricky technique.
      PTY need the pseudo console handles, however, they cannot
      be retrieved by normal procedure. Therefore, run a helper
      process in a pseudo console and get them from the helper.
@@ -3923,7 +3923,7 @@ fhandler_pty_slave::transfer_input (tty::xfer_dir dir, HANDLE from, tty *ttyp,
   tmp_pathbuf tp;
   char *buf = tp.c_get ();
 
-  bool transfered = false;
+  bool transferred = false;
 
   if (dir == tty::to_cyg && ttyp->pcon_activated)
     { /* from handle is console handle */
@@ -3988,14 +3988,14 @@ fhandler_pty_slave::transfer_input (tty::xfer_dir dir, HANDLE from, tty *ttyp,
 	      *p1 = '\n';
 	      n = p1 - p0 + 1;
 	      if (n && WriteFile (to, p0, n, &n, NULL) && n)
-		transfered = true;
+		transferred = true;
 	      p0 = p1 + 1;
 	      p_cr = (char *) memchr (p0, '\r', len - (p0 - ptr));
 	      p_lf = (char *) memchr (p0, '\n', len - (p0 - ptr));
 	    }
 	  n = len - (p0 - ptr);
 	  if (n && WriteFile (to, p0, n, &n, NULL) && n)
-	    transfered = true;
+	    transferred = true;
 	}
     }
   else
@@ -4029,16 +4029,16 @@ fhandler_pty_slave::transfer_input (tty::xfer_dir dir, HANDLE from, tty *ttyp,
 	      n = nlen;
 	    }
 	  if (n && WriteFile (to, ptr, n, &n, NULL) && n)
-	    transfered = true;;
+	    transferred = true;;
 	}
     }
   CloseHandle (to);
 
   /* Fix input_available_event which indicates availability in cyg pipe. */
-  if (dir == tty::to_nat) /* all data is transfered to nat pipe,
+  if (dir == tty::to_nat) /* all data is transferred to nat pipe,
 			     so no data available in cyg pipe. */
     ResetEvent (input_available_event);
-  else if (transfered) /* There is data transfered to cyg pipe. */
+  else if (transferred) /* There is data transferred to cyg pipe. */
     SetEvent (input_available_event);
   ttyp->pty_input_state = dir;
   ttyp->discard_input = false;

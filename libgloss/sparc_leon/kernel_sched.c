@@ -54,10 +54,10 @@ leonbare_sched ()
 
   LEONBARE_KR_CURRENT = new;
 
-  /* to be able to programm symetrically on kernel level each thread
+  /* to be able to program symmetrically on kernel level each thread
      saves its spinlock on mutexes and kernel and irq flags in its
      own save region. On a kernel switch they are released until the
-     thread is reawakened. Then the locks will be reaquired (and finally
+     thread is reawakened. Then the locks will be reacquired (and finally
      released when the codeblock exits). The locking can be recursive. */
   if (old->th_prot.krp_k_depth)
     {

@@ -66,7 +66,7 @@
  *	(See the parse_opts(3) man page).
  * 
  *    OUTPUT SPECIFICATIONS
- *	Standard tst_res output formt.
+ *	Standard tst_res output format.
  * 	
  *    DURATION
  * 	Terminates - with frequency and infinite modes.

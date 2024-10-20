@@ -32,7 +32,7 @@ details. */
 #define __PTHREAD_KEYS_MAX 1024
 /* Actually the minimum stack size is somewhat of a split personality.
    The size parameter in a CreateThread call is the size of the initially
-   commited stack size, which can be specified as low as 4K.  However, the
+   committed stack size, which can be specified as low as 4K.  However, the
    default *reserved* stack size is 1 Meg, unless the .def file specifies
    another STACKSIZE value.  And even if you specify a stack size below 64K,
    the allocation granularity is in the way.  You can never squeeze multiple

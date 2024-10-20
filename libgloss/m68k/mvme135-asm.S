@@ -69,14 +69,14 @@ loop:					/* fill table to gen. vector */
         movel   SYM (_catchException), 0x14(a1) /* vector = 5,  divide by 0 */
         movel   SYM (_catchException), 0x18(a1) /* vector = 6,  chk, chk2 instruction */
         movel   SYM (_catchException), 0x1c(a1) /* vector = 7,  ftrap, trap, trapv ins */
-        movel   SYM (_catchException), 0x20(a1) /* vector = 8,  priviledge violation */
+        movel   SYM (_catchException), 0x20(a1) /* vector = 8,  privilege violation */
         movel   SYM (_catchException), 0x24(a1) /* vector = 9,  trace */
         movel   SYM (_catchException), 0x28(a1) /* vector = 10, Aline opcode */
         movel   SYM (_catchException), 0x2c(a1) /* vector = 11, fline opcode */
         movel   SYM (_catchException), 0x30(a1) /* vector = 12, reserved */
         movel   SYM (_catchException), 0x34(a1) /* vector = 13, coprocessor protocol violation */
         movel   SYM (_catchException), 0x38(a1) /* vector = 14, format error */
-        movel   SYM (_catchException), 0x3c(a1) /* vector = 15, unitialized interupt */
+        movel   SYM (_catchException), 0x3c(a1) /* vector = 15, uninitialized interrupt */
         
         /* unassigned, reserved */
         movel   SYM (_catchException), 0x40(a1) /* vector = 16 */
@@ -104,7 +104,7 @@ loop:					/* fill table to gen. vector */
         movel   SYM (_catchException), 0xe4(a1) /* vector = 57 */
         movel   SYM (_catchException), 0xe8(a1) /* vector = 58 */
 
-/***        movel   &__debug_level7, 0x7c(a1) /* level7 interupt vector */
+/***        movel   &__debug_level7, 0x7c(a1) /* level7 interrupt vector */
 
 	movecl	a1, vbr		/* change VBR to new table */        
 	unlk	fp

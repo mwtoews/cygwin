@@ -45,7 +45,7 @@ static __inline long long int _llrintf(float x)
 
   in = spu_promote(x, 0);
 
-  /* Place mantissa bits (including implied most signficant
+  /* Place mantissa bits (including implied most significant
    * bit) into the most significant bits of element 3. Elements
    * 0, 1, and 2 are zeroed.
    */

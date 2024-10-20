@@ -27,7 +27,7 @@ HP-UX native:
     Correct output is
     1.0 = 1.000000E+00, 0.3010 = 3.000000E-01, -1.0 = -1.000000E+0
     1.0 = 1.000000E+00, 0.3010 = 3.010000E-01, -1.0 = -1.000000E+00
-    These test only pass if the outut matches:
+    These test only pass if the output matches:
     Correct output is
     ans = 1.000000E+00, ans1 = 3.010000E-01, ans2 = -1.000000E+00
     ans = 1.000000E+00, ans1 = 3.010000E-01, ans2 = -1.000000E+00
@@ -48,7 +48,7 @@ Test run on Oki:
     Correct output is
     1.0 = 1.000000E+00, 0.3010 = 3.000000E-01, -1.0 = -1.000000E+0
     1.0 = 1.586860E-318, 0.3010 = -1.009091E-303, -1.0 = 5.290504E-315
-    These test only pass if the outut matches:
+    These test only pass if the output matches:
     Correct output is
     ans = 1.000000E+00, ans1 = 3.010000E-01, ans2 = -1.000000E+00
     ans = 4.940656E-324, ans1 = -5.299809E-315, ans2 = 5.290504E-315
@@ -157,7 +157,7 @@ test_4()
 
   printf ("These test only pass if the output matches:\nCorrect output is\n1.0 = 1.000000E+00, 0.3010 = 3.000000E-01, -1.0 = -1.000000E+0\n");
   printf ("1.0 = %E, 0.3010 = %E, -1.0 = %E\n", 1.0, 0.3010, -1.0);
-  printf ("These test only pass if the outut matches:\nCorrect output is\nans = 1.000000E+00, ans1 = 3.010000E-01, ans2 = -1.000000E+00\n");
+  printf ("These test only pass if the output matches:\nCorrect output is\nans = 1.000000E+00, ans1 = 3.010000E-01, ans2 = -1.000000E+00\n");
   printf ("ans = %E, ans1 = %E, ans2 = %E\n", ans, ans1, ans2);
 }
 

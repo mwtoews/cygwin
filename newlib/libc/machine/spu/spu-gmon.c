@@ -385,7 +385,7 @@ __mcount_internal (uintptr_t frompc, uintptr_t selfpc)
 
   /* top->selfpc != selfpc
      The pc we have got is not the pc we already stored (i.e. multiple function
-     calls to the same fuction within a function. The arc is not at front of
+     calls to the same function within a function. The arc is not at front of
      the chain.  */
   for (;;)
     {

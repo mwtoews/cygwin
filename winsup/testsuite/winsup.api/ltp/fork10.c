@@ -23,7 +23,7 @@
  *
  * DESCRIPTION
  *	Check inheritance of file descriptor by children, they
- * 	should all be refering to the same file.
+ * 	should all be referring to the same file.
  *
  * ALGORITHM
  *	Child reads several chars and exits. 

@@ -232,7 +232,7 @@ putreg (unsigned char *buf, int regnum, void *mem_p, int count)
 }
 
 /*
- * This function does all command procesing for interfacing to gdb.
+ * This function does all command processing for interfacing to gdb.
  */
 void 
 handle_exception(void)

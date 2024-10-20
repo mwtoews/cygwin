@@ -386,7 +386,7 @@ retry:
 	      *fd2p = s3;
       }
       (void) write(s, name, strlen(name) + 1);
-      /* should public key encypt the password here */
+      /* should public key encrypt the password here */
       (void) write(s, pass, strlen(pass) + 1);
       (void) write(s, cmd, strlen(cmd) + 1);
       if (read(s, &c, 1) != 1) {

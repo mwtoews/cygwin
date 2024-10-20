@@ -93,7 +93,7 @@ ambapp_ahb_dev_init (unsigned int ioarea,
 	  addr = ambapp_pnp_start (mbar);
 	  if (ambapp_pnp_mbar_type (mbar) == AMBA_TYPE_AHBIO)
 	    {
-	      /* AHB I/O area is releative IO_AREA */
+	      /* AHB I/O area is relative IO_AREA */
 	      addr = AMBA_TYPE_AHBIO_ADDR (addr, ioarea);
 	      mask =
 		(((unsigned int) (ambapp_pnp_mbar_mask ((~mbar)) << 8) |

@@ -70,7 +70,7 @@ _start:
 	 *        +-------+-------+-------+-------+
 	 *  word     0       1       2       3
 	 *
- 	 * By the end of this sequence, the prefered slot (word 0) of
+ 	 * By the end of this sequence, the preferred slot (word 0) of
 	 * R4 will contain the LS offset of argv region, which also
 	 * serves as the base offset for $SP.
 	 */

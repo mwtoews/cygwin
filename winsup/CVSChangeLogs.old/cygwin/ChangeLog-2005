@@ -125,7 +125,7 @@
 
 2005-12-26  Christopher Faylor  <cgf@timesys.com>
 
-	* dcrt0.cc (__api_fatal): Simplify to just use strace mechamisms.
+	* dcrt0.cc (__api_fatal): Simplify to just use strace mechanisms.
 	(do_exit): Move minimal_printf...
 	* pinfo.cc (pinfo::exit): ...into here.
 	* strace.cc (strace::vprntf): Guarantee output to the console when
@@ -652,7 +652,7 @@
 	(_cygtls::init_thread): Do it here instead and use member function.
 	(_cygtls::handle_threadlist_exception): Move into _cygtls class.
 	(_cygtls::init_exception_handler): Ditto.  Rely on existence of 'el'
-	memmber in _cygtls.
+	member in _cygtls.
 	(_cygtls::init_threadlist_exceptions): Ditto.
 	* dcrt0.cc (dll_crt0_1): Remove exception_list definition and setting
 	since it now commonly resides in the tls.
@@ -896,7 +896,7 @@
 2005-11-23  Christopher Faylor  <cgf@timesys.com>
 
 	* fhandler_tty.cc (fhandler_tty_slave::open): Reset the current windows
-	station whenever ctty == -1 regardles of whether there's a windows
+	station whenever ctty == -1 regardless of whether there's a windows
 	station already assigned.  Close the old windows station in this
 	situation.
 	* pinfo.cc (_pinfo::set_ctty): Reinstate incrementing of console count
@@ -1144,7 +1144,7 @@
 2005-11-01  Christopher Faylor  <cgf@timesys.com>
 
 	* include/sys/cygwin.h: Define CYGWIN_SIGNAL_STRING.
-	* exceptins.cc (sigpacket::process): Send a _CYGWIN_SIGNAL_STRING to
+	* exceptions.cc (sigpacket::process): Send a _CYGWIN_SIGNAL_STRING to
 	gdb if the process is being debugged.  A WIP.
 
 2005-10-29  Christopher Faylor  <cgf@timesys.com>
@@ -1437,7 +1437,7 @@
 	* syslog.cc (try_connect_syslogd): Add priority parameter. Use writev
 	to add the priority to the message in a syslog conformant way.
 	(vsyslog): If facility isn't set in the priority, use default facility
-	as given in call to openlog. Fix agressive use of spaces in syslog
+	as given in call to openlog. Fix aggressive use of spaces in syslog
 	output. Call try_connect_syslogd with priority parameter.
 
 2005-10-11  Christopher Faylor  <cgf@timesys.com>
@@ -1654,7 +1654,7 @@
 
 2005-09-27  Corinna Vinschen  <corinna@vinschen.de>
 
-	* cygheap.cc (cygheap_init): Add GLOBAL_PRIV to hProcToken explicitely
+	* cygheap.cc (cygheap_init): Add GLOBAL_PRIV to hProcToken explicitly
 	since hProcImpToken isn't initialized here.
 	* shared.cc (open_shared): Always print mapname instead of name in
 	debug output.
@@ -3534,7 +3534,7 @@
 	* fhandler_mailslot.cc: New file.
 	* select.cc (peek_mailslot): New function.
 	(verify_mailslot): Ditto.
-	(struct mailslotinf): New stuct to handle select on mailslots.
+	(struct mailslotinf): New struct to handle select on mailslots.
 	(thread_mailslot): New function.
 	(start_thread_mailslot): Ditto.
 	(mailslot_cleanup): Ditto.
@@ -5200,7 +5200,7 @@
 2005-02-17  Corinna Vinschen  <corinna@vinschen.de>
 
 	* times.cc (utimes): Open files with FILE_WRITE_ATTRIBUTES first,
-	if that fails, try opeing with GENERIC_WRITE.  Fix comments.
+	if that fails, try opening with GENERIC_WRITE.  Fix comments.
 
 2005-02-15  Christopher Faylor  <cgf@timesys.com>
 
@@ -5369,7 +5369,7 @@
 	(fhandler_process::fstat): Handle pipes and sockets.
 	(fhandler_process::open): Handle opening /proc/<pid>/fd.
 	(fhandler_process::fill_filebuf): Generate empty names for
-	non exisiting file descriptors.
+	non existing file descriptors.
 	* fhandler_socket.cc (fhandler_socket::get_proc_fd_name): Always
 	generate "socket:[number]" strings as on Linux.
 	(fhandler_socket::open): New method.
@@ -5378,7 +5378,7 @@
 	(path_conv::check): Handle pipes and sockets in /proc.
 	Set correct device type for AF_LOCAL sockets.
 	* pinfo.cc (_pinfo::commune_recv): Generate empty names for
-	non exisiting file descriptors.
+	non existing file descriptors.
 	(_pinfo::fd): Ditto.
 	* pipe.cc (fhandler_pipe::open): New method.
 
@@ -5737,7 +5737,7 @@
 	* init.cc (dll_entry): Release myself before exiting.
 	* sigproc.cc (proc_can_be_signalled): Set errno appropriately.
 	(sig_send): Ditto.  Also remove ill-advised test for !myself->sendsig
-	since this is an indication of a process which is still initializating
+	since this is an indication of a process which is still initializing
 	-- it is not an error.
 	(child_info::sync): Don't set exitcode here.  Assume that will happen
 	in proc_waiter, if necessary.

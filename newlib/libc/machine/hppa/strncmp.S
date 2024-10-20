@@ -18,7 +18,7 @@
 /* 		    > 0 iff s1 lexicographically greater than s2 */
 /* 		    = 0 iff s1 lexicographically equal to s2 */
 /*  		    = 0 iff s1 lexicographically equal to s2 */
-/*		    quit after n charachters */
+/*		    quit after n characters */
 #include "DEFS.h"
 
 #define s1   	  26

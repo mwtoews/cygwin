@@ -22,18 +22,18 @@
  *	kill04.c
  *
  * DESCRIPTION
- *	Test case to check that kill() fails when passed a non-existant pid.
+ *	Test case to check that kill() fails when passed a non-existent pid.
  *
  * ALGORITHM
  *	call setup
  *	loop if the -i option was given
  *	fork a child
- *	execute the kill system call with a non-existant PID
+ *	execute the kill system call with a non-existent PID
  *	check the return value
  *	if return value is not -1
  *		issue a FAIL message, break remaining tests and cleanup
  *	if we are doing functional testing
- *		if the errno was set to 3 (No such proccess)
+ *		if the errno was set to 3 (No such process)
  *			issue a PASS message
  *		otherwise
  *			issue a FAIL message

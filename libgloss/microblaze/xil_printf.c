@@ -160,7 +160,7 @@ static int getnum( charptr* linep)
 /* control of a formatting string. Not all of the    */
 /* standard C format control are supported. The ones */
 /* provided are primarily those needed for embedded  */
-/* systems work. Primarily the floaing point         */
+/* systems work. Primarily the floating point        */
 /* routines are omitted. Other formats could be      */
 /* added easily by following the examples shown for  */
 /* the supported formats.                            */

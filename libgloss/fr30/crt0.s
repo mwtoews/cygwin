@@ -23,7 +23,7 @@ _start:
 	ldi:32	_init, r0
 	call	@r0
 	
-	;;  Setup destrcutors to be called from exit.
+	;;  Setup destructors to be called from exit.
 	;;  (Just in case main never returns....)
 	ldi:32	atexit, r0
 	ldi:32	_fini, r4

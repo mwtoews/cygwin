@@ -715,7 +715,7 @@ sub generate_ccsbi_h($)
   print CCSBI_H " * Defining ${macro_to_ucs_ccs}XXX macro or ${macro_from_ucs_ccs}XXX\n";
   print CCSBI_H " * macro is needed to enable \"XXX encoding -> UCS\" or \"UCS -> XXX encoding\"\n";
   print CCSBI_H " * part of CCS table.\n";
-  print CCSBI_H " * CCS tables aren't linked if Newlib was configuted to use external CCS tables.\n";
+  print CCSBI_H " * CCS tables aren't linked if Newlib was configured to use external CCS tables.\n";
   print CCSBI_H " */\n";
   
   print CCSBI_H "#ifndef _ICONV_ENABLE_EXTERNAL_CCS\n\n";

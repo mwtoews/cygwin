@@ -79,7 +79,7 @@ __sccl (register char *tab,
 	   * Unix scanf treats `a-z' as `the letters a through z', but treats
 	   * `a-a' as `the letter a, the character -, and the letter a'.
 	   *
-	   * For compatibility, the `-' is not considerd to define a range if
+	   * For compatibility, the `-' is not considered to define a range if
 	   * the character following it is either a close bracket (required by
 	   * ANSI) or is not numerically greater than the character we just
 	   * stored in the table (c).

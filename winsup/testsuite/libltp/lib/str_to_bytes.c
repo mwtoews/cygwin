@@ -191,7 +191,7 @@ main(int argc, char **argv)
     int ind;
 
     if (argc == 1 ) {
-	fprintf(stderr, "missing str_to_bytes() parameteres\n");
+	fprintf(stderr, "missing str_to_bytes() parameters\n");
 	exit(1);
     }
    

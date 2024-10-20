@@ -132,7 +132,7 @@ main(int ac, char **av)
 
 
         /*
-         * Check to see if getgroups() fails on erraneous condition.
+         * Check to see if getgroups() fails on erroneous condition.
          */
 	TEST( getgroups(-1,gidset) );
 	

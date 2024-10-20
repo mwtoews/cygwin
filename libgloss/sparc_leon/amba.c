@@ -139,7 +139,7 @@ amba_init (void)
 	}
     }
 
-  /* Find LEON3 Interrupt controler */
+  /* Find LEON3 Interrupt controller */
   LEON3_IrqCtrl_Regs = (volatile LEON3_IrqCtrl_Regs_Map *)
     amba_find_apbslv_addr (VENDOR_GAISLER, GAISLER_IRQMP, 0);
   LEON3_GpTimer_Regs = (volatile LEON3_GpTimer_Regs_Map *)

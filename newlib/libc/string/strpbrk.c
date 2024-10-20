@@ -10,7 +10,7 @@ SYNOPSIS
 	char *strpbrk(const char *<[s1]>, const char *<[s2]>);
 
 DESCRIPTION
-	This function locates the first occurence in the string
+	This function locates the first occurrence in the string
 	pointed to by <[s1]> of any character in string pointed to by
 	<[s2]> (excluding the terminating null character).
 

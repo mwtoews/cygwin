@@ -56,7 +56,7 @@ __FBSDID("$FreeBSD: src/lib/libc/stdlib/random.c,v 1.25 2007/01/09 00:28:10 imp 
  * then initialized to contain information for random number generation with
  * that much state information.  Good sizes for the amount of state
  * information are 32, 64, 128, and 256 bytes.  The state can be switched by
- * calling the setstate() routine with the same array as was initiallized
+ * calling the setstate() routine with the same array as was initialized
  * with initstate().  By default, the package runs with 128 bytes of state
  * information and generates far better random numbers than a linear
  * congruential generator.  If the amount of state information is less than
@@ -232,7 +232,7 @@ static inline uint32_t good_rand (int32_t x)
 #else   /* !USE_WEAK_SEEDING */
 /*
  * Compute x = (7^5 * x) mod (2^31 - 1)
- * wihout overflowing 31 bits:
+ * without overflowing 31 bits:
  *      (2^31 - 1) = 127773 * (7^5) + 2836
  * From "Random number generators: good ones are hard to find",
  * Park and Miller, Communications of the ACM, vol. 31, no. 10,
@@ -314,7 +314,7 @@ srandom(unsigned x)
  *
  * Note: The Sparc platform requires that arg_state begin on an int
  * word boundary; otherwise a bus error will occur. Even so, lint will
- * complain about mis-alignment, but you should disregard these messages.
+ * complain about misalignment, but you should disregard these messages.
  */
 char *
 initstate(unsigned seed,		/* seed for R.N.G. */
@@ -385,7 +385,7 @@ initstate(unsigned seed,		/* seed for R.N.G. */
  *
  * Note: The Sparc platform requires that arg_state begin on an int
  * word boundary; otherwise a bus error will occur. Even so, lint will
- * complain about mis-alignment, but you should disregard these messages.
+ * complain about misalignment, but you should disregard these messages.
  */
 char *
 setstate(char *arg_state /* pointer to state array */)

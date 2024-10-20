@@ -102,7 +102,7 @@ static __inline vector double _sqrtd2(vector double in)
   dg = spu_extend(fg);
 
   /* Perform two double precision Newton-Raphson iteration to improve 
-   * accuracy to about 44 and 88 bits repectively.
+   * accuracy to about 44 and 88 bits respectively.
    */
   dy2 = spu_add(dy, dy);
   de = spu_nmsub(dy, dg, dhalf);

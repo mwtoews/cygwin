@@ -52,7 +52,7 @@ int cnt;
  *  program counter and status register onto the supervisor stack and then
  *  transfers execution to a location specified in its vector table.
  *  The handlers for the exception vectors are hardwired to jmp to an address
- *  given by the relation:  (exception - 256) * 6.  These are decending 
+ *  given by the relation:  (exception - 256) * 6.  These are descending
  *  addresses starting from -6, -12, -18, ...  By allowing 6 bytes for
  *  each entry, a jsr, jmp, bsr, ... can be used to enter the exception 
  *  handler.  Using a jsr to handle an exception has an added benefit of
@@ -315,7 +315,7 @@ char * buffer;
   
 }
 
-/* send the packet in buffer.  The host get's one chance to read it.  
+/* send the packet in buffer.  The host gets one chance to read it.
    This routine does not wait for a positive acknowledge.  */
 
 void putpacket(buffer)
@@ -473,7 +473,7 @@ int hexToInt(char **ptr, int *intValue)
 }
 
 /*
- * This function does all command procesing for interfacing to gdb.
+ * This function does all command processing for interfacing to gdb.
  */
 void handle_exception(int exceptionVector)
 {
@@ -653,7 +653,7 @@ void handle_exception(int exceptionVector)
                           printf("frame at 0x%x has pc=0x%x, except#=%d\n",
                                  frame,frame->exceptionPC,
                                  frame->exceptionVector);
-                      /* re-use the last frame, we're skipping it (longjump?)*/
+                      /* reuse the last frame, we're skipping it (longjump?)*/
 		      frame = (Frame *) 0;
 	              _returnFromException( frame );  /* this is a jump */
                   }

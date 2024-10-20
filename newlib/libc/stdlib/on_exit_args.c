@@ -10,7 +10,7 @@
  * to the functions that need _on_exit_args struct (on_exit() and
  * __cxa_atexit()) would fail.
  *
- * Thats why a static instance of _on_exit_args struct is provided for
+ * That's why a static instance of _on_exit_args struct is provided for
  * _REENT_SMALL configuration. This way the first 32 calls to atexit()-like
  * functions don't need malloc() and will always succeed.
  *

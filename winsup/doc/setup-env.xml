@@ -14,7 +14,7 @@ environment variables that affect Cygwin's operation.</para>
 <para>
 The <envar>CYGWIN</envar> variable is used to configure a few global
 settings for the Cygwin runtime system.  Typically you can leave
-<envar>CYGWIN</envar> unset, but if you want to set one ore more
+<envar>CYGWIN</envar> unset, but if you want to set one or more
 options, you can set it using a syntax like this, depending on the shell
 in which you're setting it.  Here is an example in CMD syntax:</para>
 

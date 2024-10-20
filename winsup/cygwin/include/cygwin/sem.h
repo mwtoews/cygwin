@@ -111,8 +111,8 @@ union semun {
     unsigned short  *array;	/* array for GETALL, SETALL */
 };
 /* Therefore this union is only declared here if building internal code.
-   _KERNEL must not be defined in exernal applications!  Declare union
-   semun explicitely as required by SUSv3, please. */
+   _KERNEL must not be defined in external applications!  Declare union
+   semun explicitly as required by SUSv3, please. */
 #endif /* _KERNEL */
 
 int semctl (int semid, int semnum, int cmd, ...);

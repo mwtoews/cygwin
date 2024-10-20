@@ -69,7 +69,7 @@
 #define STYP_LOADER 0x1000
 
 /* Specifies an exception section.  A section of this type provides 
-   information to identify the reason that a trap or ececptin occured within 
+   information to identify the reason that a trap or ececptin occurred within
    and executable object program */
 #define STYP_EXCEPT 0x0100
 
@@ -138,7 +138,7 @@
 /* Dwarf symbol.  */
 #define C_DWARF		112
 
-/* Auxillary Symbol Entries  */
+/* Auxiliary Symbol Entries  */
 
 /* x_smtyp values:  */
 #define	SMTYP_ALIGN(x)	((x) >> 3)	/* log2 of alignment */

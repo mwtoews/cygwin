@@ -64,7 +64,7 @@ static __inline vector float _sqrtf4(vector float in)
   vec_float4 mant, err, err_p1, err_p2, err_p3;
   vec_float4 out;
 
-  /* Compute the mantissa of the result seperately from 
+  /* Compute the mantissa of the result separately from
    * the exponent to assure complete accuracy over the allowable
    * input range. The mantissa is computed for inputs in the 
    * range [0.5, 2.0).

@@ -78,7 +78,7 @@ back_porch:
 	 bv		0(r2)		/* return--were done. */
          stbys,e     tmp1,0(d_addr)    /* kerplunk! whew !  */
 
-/* Begin non_aligned code. (no refrence to politics) */
+/* Begin non_aligned code. (no reference to politics) */
 not_aligned:
         sub,>=       tmp2,tmp1,tmp3     /* compute the shift quantity again and skip the load if tmp2 > tmp1. */
         ldwm         4(0,s_addr),tmp1   /* load up the first word from the source. tmp1 = *s_addr++ */

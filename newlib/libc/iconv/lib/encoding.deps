@@ -386,7 +386,7 @@ CCS: cp855
 ALIASES: ibm855 855 csibm855
 ENTRY END
 
-# IBM 866 - an updated version of CP 855 which followes the more logical Russian alphabet 
+# IBM 866 - an updated version of CP 855 which follows the more logical Russian alphabet
 # ordering of the alternativny variant that is preferred by many Russian users.
 ENTRY
 ENCODING: cp866

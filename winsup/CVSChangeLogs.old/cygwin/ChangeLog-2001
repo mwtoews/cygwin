@@ -99,11 +99,11 @@
 	(shared_info::initialize): Use new magic number stuff, for shared
 	region.
 	(memory_init): Ditto, for mount table.
-	* shared_info.h: Accomodate new magic number stuff for shared region
+	* shared_info.h: Accommodate new magic number stuff for shared region
 	and mount table.
 	* sigproc.cc: Rely on "child_info_magic.h" to accommodate new magic
 	number header stuff.
-	(init_child_info): Initialize new fields in child_info) to accomodate
+	(init_child_info): Initialize new fields in child_info) to accommodate
 	magic numbers.
 	* winsup.h: Rename multiple_cygwin_die to multiple_cygwin_problem.
 	* include/cygwin/version.h: Define macros for manipulating version
@@ -327,7 +327,7 @@
 
 	* dir.cc (opendir): Only pass path_conv argument to opendir, since name
 	is already part of the fhandler.
-	* dtable.cc (dtable::build_fhandler): Accomodate new FH_CYGDRIVE type.
+	* dtable.cc (dtable::build_fhandler): Accommodate new FH_CYGDRIVE type.
 	* fhandler.cc (fhandler_base::opendir): Nuke name argument.
 	* fhandler.h: Add FH_CYGDRIVE to "device" enum.
 	(fhandler_base::opendir): Nuke name argument.
@@ -1326,7 +1326,7 @@ Sun Sep 30 22:51:41 2001  Christopher Faylor <cgf@cygnus.com>
 	dtable::reset_unix_path_name method to reset path.
 	* syscalls.cc (stat_worker): Reorganize to always call fstat method.
 	Pass path_conv method to fhandler_*::open.
-	(chroot): Elminate a goto.
+	(chroot): Eliminate a goto.
 
 Sun Sep 30 17:37:43 2001  Christopher Faylor <cgf@cygnus.com>
 
@@ -1351,7 +1351,7 @@ Sat Sep 29 18:26:00 2001  Robert Collins <rbtcollins@hotmail.com>
 	verifyable_object_isvalid ().
 	(pthread_cond::Signal): Ditto. Also attempt to fix the lost signal race
 	with pthread_cond::TimedWait().
-	(check_valid_pointer): Change definiton to void const *.
+	(check_valid_pointer): Change definition to void const *.
 	(verifyable_object_isvalid): Add new parameter to allow identification of
 	static initializers, and return a enum rather than magic numbers.
 	(__pthread_create): Ditto.
@@ -1526,11 +1526,11 @@ Tue Sep 25 21:25:00 2001  Robert Collins <rbtcollins@hotmail.com>
 	(__sem_wait): Ditto.
 	(__sem_trywait): Ditto.
 	(__sem_post): Ditto.
-	(verifyable_object_isvalid): Recieve a pointer to a pointer for verification.
+	(verifyable_object_isvalid): Receive a pointer to a pointer for verification.
 	(__pthread_mutexattr_getprotocol): Fix typo in magic number.
 	(__pthread_mutexattr_getpshared): Ditto.
 	(__pthread_mutexattr_gettype): Ditto.
-	* thread.h (verifyable_object_isvalid): Change prototype to recieve a pointer to a
+	* thread.h (verifyable_object_isvalid): Change prototype to receive a pointer to a
 	pointer for verification.
 	* include/pthread.h: Fix typo for __cleanup_routine_type typedef. (Contrib from Net).
 
@@ -1739,7 +1739,7 @@ Fri Sep 14 00:18:52 2001  Christopher Faylor <cgf@cygnus.com>
 
 	* fhandler.h (fhandler_pipe::is_slow): Return true only if pipes are
 	reliable (i.e., not Win9x).
-	* wincap.cc: Make statics NO_COPY to avoid fork overhead.
+	* wincap.cc: Make statistics NO_COPY to avoid fork overhead.
 
 Thu Sep 13 23:01:00 2001  Christopher Faylor <cgf@cygnus.com>
 
@@ -1947,7 +1947,7 @@ Sun Sep  9 18:36:00 2001  Corinna Vinschen <corinna@vinschen.de>
 	* grp.cc (enum grp_state): Eliminate.
 	(class grp_check): Ditto.
 	(group_state): Define as `class pwdgrp_check'.
-	(parse_grp): Remeber path and modification time of /etc/group file.
+	(parse_grp): Remember path and modification time of /etc/group file.
 	* passwd.cc (enum_pwd_state): Eliminate.
 	(class pwd_check): Ditto.
 	(passwd_state): Define as `class pwdgrp_check'.
@@ -2560,7 +2560,7 @@ Wed 18 Jul 2001 12:54:17  Corinna Vinschen <corinna@vinschen.de>
 
 Wed 18 Jul 2001 11:56:00  Corinna Vinschen <corinna@vinschen.de>
 
-	* syscalls.cc (_unlink): Explicitly check for non-existant file.
+	* syscalls.cc (_unlink): Explicitly check for non-existent file.
 
 Tue 17 Jul 2001 10:19:00  Corinna Vinschen <corinna@vinschen.de>
 
@@ -2615,7 +2615,7 @@ Fri Jul 13 13:13:09 2001  Christopher Faylor <cgf@cygnus.com>
 Tue Jul 10 23:01:00 2001  Corinna Vinschen <corinna@vinschen.de>
 
 	* mmap.cc (fhandler_disk_file::mmap): Try to open file mappings
-	by a unified name when running under 9x/ME. If that failes, create
+	by a unified name when running under 9x/ME. If that fails, create
 	the file mapping using the unified name.
 
 Mon Jul  9 10:43:00 2001  Corinna Vinschen <corinna@vinschen.de>
@@ -2732,7 +2732,7 @@ Mon Jun 18 17:09:25 2001  Christopher Faylor <cgf@cygnus.com>
 	* fhandler_tty.cc (fhandler_tty_slave::init): Revert 2001-06-16 change.
 
 	* fork.cc (fork_copy): Print more debugging info.
-	(fork_parent): Change order of arguments to accomdate buggy gcc.
+	(fork_parent): Change order of arguments to accommodate buggy gcc.
 	(fork): Ditto.
 
 Sun Jun 17 18:54:46 2001  Christopher Faylor <cgf@cygnus.com>
@@ -2842,7 +2842,7 @@ Sat Jun  9 23:20:00 2001  Corinna Vinschen <corinna@vinschen.de>
 Thu Jun  7 15:54:32 2001  Robert Collins <rbtcollins@hotmail.com>
 
 	* thread.cc (pthread_cond::Broadcast): Don't print error messages on
-	invalid mutexs - user programs are allowed to call
+	invalid mutexes - user programs are allowed to call
 	pthread_cond_broadcast like that.
 	(__pthread_cond_timedwait): Initialise themutex properly.
 	(__pthread_cond_wait): Initialise themutex properly.
@@ -2901,7 +2901,7 @@ Sun Jun  3 09:49:55 2001  Robert Collins  <rbtcollins@hotmail.com>
 
 Sat Jun  2 23:11:52 2001  Christopher Faylor <cgf@cygnus.com>
 
-	* syscalls.cc (sleep): Try to be a little more accomodating of signal
+	* syscalls.cc (sleep): Try to be a little more accommodating of signal
 	arrival.  Ensure that the signal handler is called.
 
 Sat Jun  2 14:07:28 2001  Christopher Faylor <cgf@cygnus.com>
@@ -3115,7 +3115,7 @@ Sat May 19 23:40:00 2001  Corinna Vinschen <corinna@vinschen.de>
 	again.
 	* syscalls.cc (seteuid): Rearranged. Call `create_token' now when
 	needed. Call `subauth' if `create_token' fails. Try setting token
-	owner and primary group only if token was not explicitely created
+	owner and primary group only if token was not explicitly created
 	by `create_token'.
 	* uinfo.cc (internal_getlogin): Try harder to generate correct user
 	information. Especially don't trust return value of `GetUserName'.
@@ -3138,7 +3138,7 @@ Sat May 19 01:22:43 2001  Christopher Faylor <cgf@cygnus.com>
 
 Fri May 18 10:31:00 2001  Corinna Vinschen <corinna@vinschen.de>
 
-	* net.cc (wsock_event::wait): Explicitely cancel IO when a signal
+	* net.cc (wsock_event::wait): Explicitly cancel IO when a signal
 	arrived to avoid data loss. Fallback to blocking IO when canceling
 	fails.
 
@@ -3737,7 +3737,7 @@ Sun Apr 22 00:22:00 2001  Robert Collins <rbtcollins@hotmail.com>
 	(getpwnam_r): Ditto.
 	* thread.h (pthread_mutex): New constructors for pshared operation.
 	(MTinterface): Associative array for pshared mutex's.
-	* thread.cc (MTinterface::Init): Initailize pshared mutex array.
+	* thread.cc (MTinterface::Init): Initialize pshared mutex array.
 	(pthread_cond::BroadCast): Implementation notes.
 	(pthread_cond::TimedWait): Remove use of SignalObjectAndWait on non-NT systems.
 	(pthread_mutex::pthread_mutex(unsigned short)): New function.
@@ -3793,7 +3793,7 @@ Fri Apr 20 14:50:00 2001  Corinna Vinschen <corinna@vinschen.de>
 
 	* Makefile.in: Add object files `sec_helper.cc' and `sec_acl.cc'.
 	* security.cc: Swap out several functions.
-	* sec_acl.cc: New file. Move Sun compatibel ACL functions from
+	* sec_acl.cc: New file. Move Sun compatible ACL functions from
 	`security.cc' to here.
 	* sec_helper.cc: New file. Move security helper functions from
 	`security.cc' to here.
@@ -3995,7 +3995,7 @@ Thu Apr 12 23:19:00 2001  Corinna Vinschen <corinna@vinschen.de>
 	* path.cc: Add global variable `pcheck_case'.
 	(struct symlink_info): Add member `case_clash' and method `case_check'.
 	(path_prefix_p_): Call `pathnmatch' instead of `strncasematch'.
-	(pathnmatch): New funtion.
+	(pathnmatch): New function.
 	(pathmatch): Ditto.
 	(path_conv::check): Add handling for case checking.
 	(symlink): Check for case clash.
@@ -4142,7 +4142,7 @@ Sun Apr  8 20:36:55 2001  Benjamin Riefenstahl  <Benjamin.Riefenstahl@epost.de>
 Thu Apr  5 22:41:00 2001  Corinna Vinschen <corinna@vinschen.de>
 
 	* syscalls.cc (stat_worker): Fix conditional which still allowed
-	successful stat'ing of non-existant files.
+	successful stat'ing of non-existent files.
 
 Wed Apr  4 10:37:44 2001  Christopher Faylor <cgf@cygnus.com>
 
@@ -4692,11 +4692,11 @@ Mon Mar  5 01:25:03 2001  Christopher Faylor <cgf@cygnus.com>
 2001-03-04  Egor Duda  <deo@logos-m.ru>
 
 	* fhandler.h (class fhandler_tty_common): New mutex and event to
-	syncronize input on master tty with slave tty.
+	synchronize input on master tty with slave tty.
 	* fhandler_tty.cc (fhandler_pty_master::accept_input): Use them to
-	syncronize with slave.
+	synchronize with slave.
 	* fhandler_tty.cc (fhandler_tty_slave::read): Use input mutex and
-	event to syncronize with master. Do not limit amount of data read
+	event to synchronize with master. Do not limit amount of data read
 	from master to vmin value. Interrupt on signal and return already
 	read data, if any.
 	* fhandler_tty.cc (fhandler_tty_slave::open): Handle input mutex and
@@ -4752,7 +4752,7 @@ Wed Feb 28 15:10:00 2001  Corinna Vinschen <corinna@vinschen.de>
 
 	* fhandler.h (class fhandler_console): Make all variables that
 	describe "state" of console to be members of fhandler_console.
-	default_color is now the color which is set when console recieves
+	default_color is now the color which is set when console receives
 	reset command.
 	* fhandler_console.cc (fhandler_console::fhandler_console): Turn
 	mouse handling and raw keyboard mode off by default. Initialize
@@ -4780,7 +4780,7 @@ Wed Feb 28 15:10:00 2001  Corinna Vinschen <corinna@vinschen.de>
 	reverse mode, \033[39m - restore default foreground color.
 	\033[49m - restore default background color. \033[2000h - turn on raw
 	keyboard mode, \033[2000l - turn off raw keyboard mode.
-	* fhandler_console.cc (fhandler_console::write): Set attribues to
+	* fhandler_console.cc (fhandler_console::write): Set attributes to
 	default values on reset command.
 
 2001-02-26  Mike Simons  <msimons@moria.simons-clan.com>
@@ -4919,7 +4919,7 @@ Mon Feb 19 22:25:53 2001  Christopher Faylor <cgf@cygnus.com>
 	* cygwin.din: Export rand48 functions.
 	* thread.cc (MTinterface::Init): Remove the initialization of
 	`reent_data'.
-	* dcrt0.cc: Add the initalizer to the declaration of `reent_data'.
+	* dcrt0.cc: Add the initializer to the declaration of `reent_data'.
 	* include/cygwin/version.h: Bump CYGWIN_VERSION_API_MINOR to 35.
 
 2001-02-16  Egor Duda  <deo@logos-m.ru>
@@ -5065,7 +5065,7 @@ Sun Jan 28 19:29:08 2001  Christopher Faylor <cgf@cygnus.com>
 	* cygheap.cc (init_cheap): Don't specify a load address for the heap.
 	It doesn't work on #!*& Windows 9x.
 	(cygheap_init): Move GetUserName to memory_init.
-	* dcrt0.cc (dll_crt0_1): Call new memory_init functin, eliminate call
+	* dcrt0.cc (dll_crt0_1): Call new memory_init function, eliminate call
 	to heap_init.
 	* heap.cc (heap_init): Improve error output.
 	* heap.h: Correct some declarations.

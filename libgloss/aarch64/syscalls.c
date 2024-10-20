@@ -178,7 +178,7 @@ initialise_monitor_handles (void)
   int i;
 
   /* Open the standard file descriptors by opening the special
-   * teletype device, ":tt", read-only to obtain a descritpor for
+   * teletype device, ":tt", read-only to obtain a descriptor for
    * standard input and write-only to obtain a descriptor for standard
    * output. Finally, open ":tt" in append mode to obtain a descriptor
    * for standard error. Since this is a write mode, most kernels will

@@ -39,7 +39,7 @@ QUICKREF
 /* How many bytes are copied each iteration of the word copy loop.  */
 #define LBLOCKSIZE (sizeof (long))
 
-/* Threshhold for punting to the byte copier.  */
+/* Threshold for punting to the byte copier.  */
 #define TOO_SMALL(LEN)  ((LEN) < LBLOCKSIZE)
 
 int

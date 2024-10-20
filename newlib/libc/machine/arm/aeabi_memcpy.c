@@ -37,7 +37,7 @@
    The FP registers are used in memcpy for target __ARM_ARCH_7A.
    Therefore, we can't just simply use alias to support the function
    aeabi_memcpy for target __ARM_ARCH_7A.  Instead, we choose the
-   previous versions of memcpy to suppport it as an alternative.  */
+   previous versions of memcpy to support it as an alternative.  */
 
 /* NOTE: This ifdef MUST match the one in aeabi_memcpy-armv7a.S.  */
 #if defined (__ARM_ARCH_7A__) && defined (__ARM_FEATURE_UNALIGNED) && \

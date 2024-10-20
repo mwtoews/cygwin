@@ -745,7 +745,7 @@ shmget_allocate_segment(struct thread *td, struct shmget_args *uap, int mode)
 	shmseg = &shmsegs[segnum];
 	/*
 	 * In case we sleep in malloc(), mark the segment present but deleted
-	 * so that noone else tries to create the same key.
+	 * so that no one else tries to create the same key.
 	 */
 	shmseg->shm_perm.mode = SHMSEG_ALLOCATED | SHMSEG_REMOVED;
 	shmseg->shm_perm.key = uap->key;

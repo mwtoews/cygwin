@@ -151,9 +151,9 @@ cyg_ldap::wait (cygthread *thr)
   return 0;
 }
 
-/* ================================================================= */
-/* Helper struct and functions for interruptible LDAP initalization. */
-/* ================================================================= */
+/* ================================================================== */
+/* Helper struct and functions for interruptible LDAP initialization. */
+/* ================================================================== */
 
 struct cyg_ldap_init {
   cyg_ldap *that;

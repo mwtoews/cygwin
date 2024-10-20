@@ -27,7 +27,7 @@ process's parent in the pid and process group chains.
 b) is where the cygwin process hangs around as a 'stub' presenting it's
 pid as the win32 process's pid, to allow cygwin tools to kill the win32
 process.
-once a-c has occured, execution resumes.
+once a-c has occurred, execution resumes.
 * If the mode is _P_OVERLAY, this process exits, otherwise it's
 behaviour depends on the mode parameter. See the last block of
 spawn_guts.

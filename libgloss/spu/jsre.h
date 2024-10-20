@@ -30,7 +30,7 @@ POSSIBILITY OF SUCH DAMAGE.
 Author: Andreas Neukoetter (ti95neuk@de.ibm.com)
 */
 
-/* this file provides the mappings for the JSRE defined interface for PE assisted libary calls */
+/* this file provides the mappings for the JSRE defined interface for PE assisted library calls */
 
 #include <sys/stat.h>
 #include <sys/syscall.h>

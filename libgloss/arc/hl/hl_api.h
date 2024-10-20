@@ -55,7 +55,7 @@ uint32_t _user_hostlink (uint32_t vendor, uint32_t opcode,
 			 const char *format, ...);
 
 
-/* Fuctions for direct work with the Hostlink buffer.  */
+/* Functions for direct work with the Hostlink buffer.  */
 volatile __uncached char *_hl_pack_int (volatile __uncached char *p,
 					uint32_t x);
 volatile __uncached char *_hl_pack_ptr (volatile __uncached char *p,

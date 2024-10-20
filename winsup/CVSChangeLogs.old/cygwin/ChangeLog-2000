@@ -497,7 +497,7 @@ Mon Nov  6 01:04:35 2000  Christopher Faylor <cgf@cygnus.com>
 	parent when reparenting execed process.
 	* pinfo.h (_pinfo): Remember the logical handle of the parent process.
 	* sigproc.cc (proc_subproc): Record most stuff necessary for the _pinfo
-	structure that is inferrable from myself when adding children.
+	structure that is inferable from myself when adding children.
 	(wait_sig): Always set 'pending_signals' flag when about to kick off
 	the signal scanning loop.  Reset it only if there are no pending
 	signals.
@@ -1092,7 +1092,7 @@ Thu Oct 12 17:58:03 2000  Christopher Faylor <cgf@cygnus.com>
 	* security.cc (get_pw_sid): Defend against NULL.
 	* sigproc.cc (proc_subproc): Fix debugging output.
 	(wait_sig): Ditto.
-	* strace.cc: Make statics NO_COPY throughout.
+	* strace.cc: Make statistics NO_COPY throughout.
 	(strace::vsprntf): Defend against NULL.
 
 Thu Oct 12 00:25:29 2000  Christopher Faylor <cgf@cygnus.com>
@@ -1994,7 +1994,7 @@ Wed Aug  2 22:58:07 2000  Christopher Faylor <cgf@cygnus.com>
 	* spawn.cc (spawn_guts): Reorganize slightly to consolidate handling
 	when there is a CreateProcess error.
 	(_spawnve): Only longjmp back to vfork handling when a process has been
-	successfuly started.
+	successfully started.
 	* winsup.h (vfork_save): Extend to include frame info.  Remove obsolete
 	cpplus conditionals.
 
@@ -3031,7 +3031,7 @@ Wed May 24 21:59:00 2000  Corinna Vinschen <corinna@vinschen.de>
 
 	* dir.cc (writable_directory): Comment out previous code,
 	return always 1 for now.
-	(mkdir): Call set_file_attribute explicitely with S_IFDIR mode bit.
+	(mkdir): Call set_file_attribute explicitly with S_IFDIR mode bit.
 	* syscalls.cc (chown_worker): Ditto.
 	(chmod): Ditto.
 	* security.cc (get_nt_attribute): Fix error in debug output.
@@ -3359,7 +3359,7 @@ Wed Apr 26 23:23:23 2000  Christopher Faylor <cgf@cygnus.com>
 Wed Apr 26 16:20:00 2000  Corinna Vinschen <corinna@vinschen.de>
 
 	* syscalls.cc (stat_worker): Previous patch could succeed
-	in stating a non-existant file.
+	in stating a non-existent file.
 
 Wed Apr 26 01:07:16 2000  Christopher Faylor <cgf@cygnus.com>
 
@@ -3411,7 +3411,7 @@ Thu Apr 25 16:37:00 2000  Corinna Vinschen <corinna@vinschen.de>
 	(alloc_sd): Change default permissions according to Linux permissions
 	for group and world when write permission is set.
 	* syscalls.cc (stat_worker): Avoid different permission problems
-	when requesting file informations.
+	when requesting file information.
 
 Thu Apr 25 10:50:00 2000  Corinna Vinschen <corinna@vinschen.de>
 
@@ -3730,7 +3730,7 @@ Fri Mar 10 13:20:50 2000  Christopher Faylor <cgf@cygnus.com>
 
 Fri Mar 10 13:03:06 2000  Christopher Faylor <cgf@cygnus.com>
 
-	* sigproc.cc (wait_sig): Add addtional debugging output.
+	* sigproc.cc (wait_sig): Add additional debugging output.
 
 Thu Mar  9 15:25:01 2000  Christopher Faylor <cgf@cygnus.com>
 
@@ -4048,7 +4048,7 @@ Sun Jan  9 20:18:00 2000  Corinna Vinschen  <corinna@vinschen.de>
 	* security.cc (alloc_sd): Rearrange order of ACE creation.
 	(setacl): Optimize creation of ACEs related to inheritance.  Code
 	cleanup.
-	(aclcheck): Disable check for existance of DEF_)CLASS_OBJ.
+	(aclcheck): Disable check for existence of DEF_)CLASS_OBJ.
 
 Sat Jan  8 18:42:32 2000  Christopher Faylor <cgf@cygnus.com>
 

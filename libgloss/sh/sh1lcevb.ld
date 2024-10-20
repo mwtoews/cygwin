@@ -17,11 +17,11 @@ MEMORY
 /* (Commented out because it doesn't seem to work right) */
 /*PROVIDE (__stack = 0xa00ff00);*/
 
-/* Initalize some symbols to be zero so we can reference them in the
+/* Initialize some symbols to be zero so we can reference them in the
    crt0 without core dumping. These functions are all optional, but
    we do this so we can have our crt0 always use them if they exist. 
    This is so BSPs work better when using the crt0 installed with gcc.
-   We have to initalize them twice, so we cover a.out (which prepends
+   We have to initialize them twice, so we cover a.out (which prepends
    an underscore) and coff object file formats. */
 
 PROVIDE (hardware_init_hook = 0);

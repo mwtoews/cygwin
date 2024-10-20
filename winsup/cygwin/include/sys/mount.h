@@ -37,7 +37,7 @@ enum
   MOUNT_PROC =		_BIT (10),	/* /proc "filesystem" */
   MOUNT_RO =		_BIT (12),	/* read-only "filesystem" */
   MOUNT_NOACL =		_BIT (13),	/* support reading/writing ACLs */
-  MOUNT_NOPOSIX =	_BIT (14),	/* Case insensitve path handling */
+  MOUNT_NOPOSIX =	_BIT (14),	/* Case insensitive path handling */
   MOUNT_OVERRIDE =	_BIT (15),	/* Allow overriding of root */
   MOUNT_IMMUTABLE =	_BIT (16),	/* Mount point can't be changed */
   MOUNT_AUTOMATIC =	_BIT (17),	/* Mount point was added automatically */

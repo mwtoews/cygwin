@@ -25,7 +25,7 @@
  */
 
 /*
- * Funtions, macros, etc implimented in iconv library but used by other
+ * Functions, macros, etc implemented in iconv library but used by other
  * NLS-related subsystems too.
  */
 #ifndef __SYS_ICONVNLS_H__

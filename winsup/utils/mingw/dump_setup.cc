@@ -240,10 +240,10 @@ transform_chars (PWCHAR path, PWCHAR path_end)
 extern "C" NTAPI NTSTATUS NtQueryAttributesFile (POBJECT_ATTRIBUTES,
 						 PFILE_BASIC_INFORMATION);
 
-/* This function checks for file existance and fills the stat structure
+/* This function checks for file existence and fills the stat structure
    with only the required mode info.  We're using a native NT function
    here, otherwise we wouldn't be able to check for files with special
-   characters not valid in Win32, and espacially not valid using the
+   characters not valid in Win32, and especially not valid using the
    ANSI API. */
 static int
 simple_nt_stat (const char *filename, struct stat *st)

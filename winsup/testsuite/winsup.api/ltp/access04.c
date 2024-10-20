@@ -21,7 +21,7 @@
  * Test Name: access01
  *
  * Test Description:
- *  Verify that access() succeeds to check the existance of a file if
+ *  Verify that access() succeeds to check the existence of a file if
  *  search access is permitted on the pathname of the specified file.
  *
  * Expected Result:
@@ -130,7 +130,7 @@ main(int ac, char **av)
 		if (STD_FUNCTIONAL_TEST) {
 			/*
 			 * Use stat(2) to cross-check the
-			 * existance of testfile under
+			 * existence of testfile under
 			 * specified path.
 			 */
 			if (stat(TESTFILE, &stat_buf) < 0) {

@@ -1042,7 +1042,7 @@ env_compare (const void *key, const void *memb)
 
    If new_token is set, we're going to switch the user account in
    child_info_spawn::worker.  If so, we're also fetching the Windows default
-   environment for the new user, and merge it into the environment we propage
+   environment for the new user, and merge it into the environment we propagate
    to the child. */
 char **
 build_env (const char * const *envp, PWCHAR &envblock, int &envc,

@@ -222,7 +222,7 @@ SECTIONS
       Note - the symbols defined here are *not* enclosed by the PROVIDE
       keyword.  This is deliberate.  The crt0 library provides weak
       definitions of these symbols and those weak definitions *must* be
-      overriden by the correct values.
+      overridden by the correct values.
 
       The status word is used to control how the .upper.data section
       is initialized at application start up.  If the word is non-zero

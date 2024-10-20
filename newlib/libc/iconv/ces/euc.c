@@ -211,7 +211,7 @@ euc_convert_from_ucs (void *data,
           char buf[ICONV_MB_LEN_MAX];
           outbytesleft1 = ICONV_MB_LEN_MAX;
           outbuf1 = &buf[0];
-          /* See wether this is right sequence */
+          /* See whether this is right sequence */
           res = 
             (int)_iconv_from_ucs_ces_handlers_table.convert_from_ucs (
                                                          d->data[i],

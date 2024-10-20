@@ -165,7 +165,7 @@ in_trap_handler:
 ! available before jumping into C code.  It will also restore the world if you
 ! return from handle_exception.
 !
-! On entry, trap_low expects l1 and l2 to contain pc and npc respectivly.
+! On entry, trap_low expects l1 and l2 to contain pc and npc respectively.
 
 	.globl _trap_low
 _trap_low:
@@ -775,7 +775,7 @@ hexToInt(char **ptr, int *intValue)
 }
 
 /*
- * This function does all command procesing for interfacing to gdb.  It
+ * This function does all command processing for interfacing to gdb.  It
  * returns 1 if you should skip the instruction at the trap address, 0
  * otherwise.
  */

@@ -1576,9 +1576,9 @@ enum
 
 /* The order of overloaded instructions matters.  Label arguments and
    register arguments look the same. Instructions that can have either
-   for arguments must apear in the correct order in this table for the
+   for arguments must appear in the correct order in this table for the
    assembler to pick the right one. In other words, entries with
-   immediate operands must apear after the same instruction with
+   immediate operands must appear after the same instruction with
    registers.
 
    Many instructions are short hand for other instructions (i.e., The
@@ -1706,7 +1706,7 @@ extern int bfd_mips_num_opcodes;
   */
 
 /* Save/restore encoding for the args field when all 4 registers are
-   either saved as arguments or saved/restored as statics.  */
+   either saved as arguments or saved/restored as statistics.  */
 #define MIPS16_ALL_ARGS    0xe
 #define MIPS16_ALL_STATICS 0xb
 
@@ -1936,7 +1936,7 @@ extern const int bfd_mips16_num_opcodes;
    string are ignored when assembling, and written into the output
    when disassembling.
 
-   The followings are for 16-bit microMIPS instructions.
+   The following are for 16-bit microMIPS instructions.
 
    "ma" must be $28
    "mc" 3-bit MIPS registers 2-7, 16, 17 (MICROMIPSOP_*_MC) at bit 4
@@ -2144,7 +2144,7 @@ extern const struct mips_operand *decode_micromips_operand (const char *);
 extern const struct mips_opcode micromips_opcodes[];
 extern const int bfd_micromips_num_opcodes;
 
-/* A NOP insn impemented as "or at,at,zero".
+/* A NOP insn implemented as "or at,at,zero".
    Used to implement -mfix-loongson2f.  */
 #define LOONGSON2F_NOP_INSN	0x00200825
 

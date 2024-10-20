@@ -42,7 +42,7 @@ flockfile() or ftrylockfile() functions.  If threads are disabled,
 then <<getchar_unlocked>> is equivalent to <<getchar>>.
 
 The <<_getchar_unlocked_r>> function is simply the reentrant version of
-<<getchar_unlocked>> which passes an addtional reentrancy structure pointer
+<<getchar_unlocked>> which passes an additional reentrancy structure pointer
 argument: <[ptr]>.
 
 RETURNS

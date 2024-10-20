@@ -499,7 +499,7 @@ main (int argc, char **argv)
 
       case 'V':
       case 'v':		/* Keep this option for historical reasons,
-			   but don't advertize it. */
+			   but don't advertise it. */
 	print_version ();
 	exit (0);
 	break;

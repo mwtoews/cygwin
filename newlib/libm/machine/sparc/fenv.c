@@ -314,7 +314,7 @@ feupdateenv(const fenv_t *envp)
 }
 
 /*
- * The following functions are extentions to the standard
+ * The following functions are extensions to the standard
  */
 int
 feenableexcept(int mask)

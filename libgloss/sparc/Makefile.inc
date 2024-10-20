@@ -116,7 +116,7 @@ endif
 ## Compile a fully linked binary. The -N option is for a.out, so the
 ## base address will be zero, rather than the default of 0x2020. The
 ## -Wl,-T*.ld is for the linker script. By using -Wl, the linker script
-## is put on the proper place in the comand line for ld, and all the
+## is put on the proper place in the command line for ld, and all the
 ## symbols will get fully resolved.
 
 check_PROGRAMS += %D%/erc32-test

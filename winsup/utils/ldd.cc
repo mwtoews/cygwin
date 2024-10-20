@@ -531,7 +531,7 @@ map_file (const wchar_t *filename)
 }
 
 
-/* this will return a pointer immediatly behind the DOS-header
+/* this will return a pointer immediately behind the DOS-header
    0 if error */
 static void *
 skip_dos_stub (const IMAGE_DOS_HEADER *dos_ptr)

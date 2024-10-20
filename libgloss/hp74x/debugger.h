@@ -12,7 +12,7 @@
 
 ****************************************************************************/
 
-	/* Debugger register array offets */
+	/* Debugger register array offsets */
 
 #define	R_gr0		 0
 #define	R_gr1		 4
@@ -111,8 +111,8 @@
 #define	LF	0x0a	/* <ctrl>J	line feed	(down arrow) */
 #define	VT	0x0b	/* <ctrl>K	vertical tab	(up arrow) */
 #define	FF	0x0c	/* <ctrl>L	form feed	(right arrow) */
-#define	RTN	0x0d	/* <ctrl>M	carrage return */
-#define	CR	0x0d	/* <ctrl>M	carrage return */
+#define	RTN	0x0d	/* <ctrl>M	carriage return */
+#define	CR	0x0d	/* <ctrl>M	carriage return */
 #define	INSC	0x0e	/* <ctrl>N	insert char	(input only, non-std) */
 #define	XON	0x11	/* <ctrl>Q	DC1 - continue */
 #define	BT	0x12	/* <ctrl>R	reverse tab	(input only, non-std) */

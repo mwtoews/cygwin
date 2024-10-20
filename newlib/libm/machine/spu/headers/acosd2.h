@@ -53,7 +53,7 @@
  * 	Compute the arc cosine of the vector of double precision elements 
  * 	specified by x, returning the resulting angles in radians. The input
  *      elements are to be in the closed interval [-1, 1]. Values outside 
- *      this range result in a invalid operation execption being latched in 
+ *      this range result in a invalid operation exception being latched in
  *	the FPSCR register and a NAN is returned.
  *
  * 	The basic algorithm computes the arc cosine using PI/2 - asind2(x). 
@@ -91,7 +91,7 @@
  *	
  *	    result = (x3*pq + x)*multiplier - addend;
  *
- *	Where P5-P0 and Q5-Q0 are the polynomial coeficients. See asind2 
+ *	Where P5-P0 and Q5-Q0 are the polynomial coefficients. See asind2
  *	for additional details.
  */
 static __inline vector double _acosd2(vector double x)

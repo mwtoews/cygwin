@@ -15,7 +15,7 @@ AC_DEFUN([GCC_CHECK_ATTRIBUTE_WEAK], [
   fi])
 
 dnl Check whether weak refs work like the ELF ones.
-dnl This means that the weak reference works without having to satify 
+dnl This means that the weak reference works without having to satisfy
 dnl linkage for the item.
 dnl There are targets (at least Darwin) where we have fully functional
 dnl weakrefs at runtime, but must supply the referenced item at link time.

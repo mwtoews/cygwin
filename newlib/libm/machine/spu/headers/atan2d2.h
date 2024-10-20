@@ -50,7 +50,7 @@
  *
  * DESCRIPTION
  *  The atan2d2 function returns a vector containing the angles
- *  whose tangets are y/x for the corresponding elements of the
+ *  whose tangents are y/x for the corresponding elements of the
  *  input vectors.
  *
  *  The reason this function exists is to use the signs of the

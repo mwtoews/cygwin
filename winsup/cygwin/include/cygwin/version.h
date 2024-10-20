@@ -497,7 +497,7 @@ details. */
 #define CYGWIN_VERSION_API_MAJOR 0
 #define CYGWIN_VERSION_API_MINOR 355
 
-/* There is also a compatibity version number associated with the shared memory
+/* There is also a compatibility version number associated with the shared memory
    regions.  It is incremented when incompatible changes are made to the shared
    memory region *or* to any named shared mutexes, semaphores, etc. */
 

@@ -240,10 +240,10 @@ __exception_code_end:
 __previous:
 	.space	(__exception_code_end - __exception_code)
 	# This subtracting two addresses is working
-	# but is not garenteed to continue working.
+	# but is not guaranteed to continue working.
 	# The assemble reserves the right to put these
 	# two labels into different frags, and then
-	# cant take their difference.
+	# can't take their difference.
 
 	.text
 

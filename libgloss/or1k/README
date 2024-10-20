@@ -28,7 +28,7 @@ overwritten in _or1k_board_init_early).
 
 A second stack for exceptions is allocated as we allow exceptions to
 be arbitrary complex and call C functions etc. It is not an option to
-re-use the current software stack as we want to be so generic, that
+reuse the current software stack as we want to be so generic, that
 this can also be a virtual memory stack at moment of exception. The
 exception starts below the normal software stack and is
 _or1k_exception_stack_size large.

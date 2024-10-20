@@ -76,8 +76,8 @@ typedef struct {
 	bfd_vma	cbSymOffset;	/* offset to start of local symbols*/
 	long	ioptMax;	/* max index into optimization symbol entries */
 	bfd_vma	cbOptOffset;	/* offset to optimization symbol entries */
-	long	iauxMax;	/* number of auxillary symbol entries */
-	bfd_vma	cbAuxOffset;	/* offset to start of auxillary symbol entries*/
+	long	iauxMax;	/* number of auxiliary symbol entries */
+	bfd_vma	cbAuxOffset;	/* offset to start of auxiliary symbol entries*/
 	long	issMax;		/* max index into local strings */
 	bfd_vma	cbSsOffset;	/* offset to start of local strings */
 	long	issExtMax;	/* max index into external strings */
@@ -315,7 +315,7 @@ typedef struct {
 
 
 /*
- * Auxillary information occurs only if needed.
+ * Auxiliary information occurs only if needed.
  * It ALWAYS occurs in this order when present.
 
 	    isymMac		used by stProc only
@@ -346,7 +346,7 @@ typedef union {
 	long	dnHigh;		/* high dimension */
 	long	isym;		/* symbol table index (end of proc) */
 	long	iss;		/* index into string space (not used) */
-	long	width;		/* width for non-default sized struc fields */
+	long	width;		/* width for non-default sized struct fields */
 	long	count;		/* count of ranges for variant arm */
 	} AUXU, *pAUXU;
 #define cbAUXU sizeof(AUXU)
@@ -369,7 +369,7 @@ typedef struct {
 	unsigned ot: 8;		/* optimization type */
 	unsigned value: 24;	/* address where we are moving it to */
 	RNDXR	rndx;		/* points to a symbol or opt entry */
-	unsigned long	offset;	/* relative offset this occured */
+	unsigned long	offset;	/* relative offset this occurred */
 	} OPTR, *pOPTR;
 #define optNil	((pOPTR) 0)
 #define cbOPTR sizeof(OPTR)
@@ -419,10 +419,10 @@ typedef long FIT, *pFIT;
 /* Dense numbers
  *
  * Rather than use file index, symbol index pairs to represent symbols
- *	and globals, we use dense number so that they can be easily embeded
+ *	and globals, we use dense number so that they can be easily embedded
  *	in intermediate code and the programs that process them can
- *	use direct access tabls instead of hash table (which would be
- *	necesary otherwise because of the sparse name space caused by
+ *	use direct access tables instead of hash table (which would be
+ *	necessary otherwise because of the sparse name space caused by
  *	file index, symbol index pairs. Dense number are represented
  *	by RNDXRs.
  */

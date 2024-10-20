@@ -14,7 +14,7 @@ What's new:
 - New file ioctls's FS_IOC_GETFLAGS and FS_IOC_SETFLAGS.  The actual
   inode flags are Cygwin-specific.  This allows to set or reset
   DOS attributes, file sparseness, FS level encryption and compression,
-  as well as directory case sensitivity programatically.
+  as well as directory case sensitivity programmatically.
 
 - New tools chattr(1) and lsattr(1) to utilize setting and viewing the
   aforementioned new ioctl's on the command line.

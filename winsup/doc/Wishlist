@@ -31,7 +31,7 @@
 
     - Write our own man pages in DocBook <refentry> form.  Such files
       should be XInclude-able in regular API/user manuals, and only have
-      to have the same mininal info as in the Doxygen case above.  It
+      to have the same minimal info as in the Doxygen case above.  It
       just requires a more verbose markup format.
 
 - Remove autotools outputs from repo.  (configure, Makefile, etc.)

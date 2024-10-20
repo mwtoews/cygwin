@@ -39,7 +39,7 @@ QUICKREF
 /* How many bytes are loaded each iteration of the word copy loop.  */
 #define LBLOCKSIZE (sizeof (long))
 
-/* Threshhold for punting to the bytewise iterator.  */
+/* Threshold for punting to the bytewise iterator.  */
 #define TOO_SMALL(LEN)  ((LEN) < LBLOCKSIZE)
 
 #if LONG_MAX == 2147483647L

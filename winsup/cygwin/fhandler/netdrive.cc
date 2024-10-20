@@ -26,7 +26,7 @@ details. */
 #include <dirent.h>
 #include <wctype.h>
 
-/* SMBv1 is deprectated and not even installed by default anymore on
+/* SMBv1 is deprecated and not even installed by default anymore on
    Windows 10 and 11 machines or their servers.
 
    As a result, neither WNetOpenEnumW() nor NetServerEnum() work as
@@ -438,7 +438,7 @@ fhandler_netdrive::exists ()
   DWORD protocol = 0;
 
   /* Handle "tsclient" (Microsoft Terminal Services) and
-     "wsl$" (Plan 9 Network Provider) explicitely.
+     "wsl$" (Plan 9 Network Provider) explicitly.
      Both obviously don't resolve with GetAddrInfoW. */
   if (!strcmp (get_name () + 2, TERMSRV_DIR))
     protocol = WNNC_NET_TERMSRV;

@@ -109,7 +109,7 @@ G =  3.57142857142857150787e-01; /* 5/14      = 0x3FD6DB6D, 0xB6DB6DB7 */
 	r=(r-t)/(w+r);	/* r-s is exact */
 	t=t+t*r;
 
-    /* retore the sign bit */
+    /* restore the sign bit */
 	GET_HIGH_WORD(high,t);
 	SET_HIGH_WORD(t,high|sign);
 	return(t);

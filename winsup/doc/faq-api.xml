@@ -44,7 +44,7 @@ deprecated by regular, automated test releases.  See the next FAQ entry
 are created whenever a significant patch is pushed to the Cygwin git
 repo at <ulink url="https://cygwin.com/cgit/newlib-cygwin/"/>.
 You can download the cygwin package test releases just like any other
-test release for any Cgywin package using the Cygwin Setup program.
+test release for any Cygwin package using the Cygwin Setup program.
 For more info, see
 <xref linkend="faq.setup.testrels"></xref>.
 </para>
@@ -261,7 +261,7 @@ actions are provided by clicking on the symlink.  However, if a NTFS
 symlink points to a file "foo", and "foo" is deleted and replaced by
 a directory "foo", the symlink type of an NTFS symlink pointing to "foo"
 is unchanged and subsequently Windows Explorer will misbehave.
-Consequentially, creating dangling NTFS symlinks is a nuisance, since
+Consequently, creating dangling NTFS symlinks is a nuisance, since
 the library does not know what type the still-to-be-created symlink
 target will be.  Cygwin will not create dangling NTFS symlinks, but
 fallback to creating the default symlink type (winsymlinks:native) or
@@ -286,7 +286,7 @@ Windows path then.  While Cygwin shortcuts are shown without the ".lnk"
 suffix in `ls' output, non-Cygwin shortcuts are shown with the suffix.
 </para>
 
-<para>For enabling this or the preceeding symlink type, see
+<para>For enabling this or the preceding symlink type, see
 <ulink url="https://cygwin.com/cygwin-ug-net/using-cygwinenv.html"/>
 </para></listitem>
 

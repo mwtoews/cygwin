@@ -6,7 +6,7 @@ board definition and simply overwrite the weak symbols.
 If you think it is worth adding a new board, you need to perform the following
 steps:
 
- * Decide for a meaningful board name (refered to as <board> below). It should
+ * Decide for a meaningful board name (referred to as <board> below). It should
    be specific enough (not openrisc..), but be rather generic if it may cover
    similar boards as well.
  

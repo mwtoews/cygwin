@@ -1,4 +1,4 @@
-/* isatty.c -- chek the terminal device.
+/* isatty.c -- check the terminal device.
  *
  * Copyright (C) 2015 FTDI (support@ftdichip.com)
  *

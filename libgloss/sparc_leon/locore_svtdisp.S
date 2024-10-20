@@ -40,7 +40,7 @@
 
 #define NUMREGWINDOWS 8
 
-/* Unexcpected trap will halt the processor by forcing it to error state */
+/* Unexpected trap will halt the processor by forcing it to error state */
 #define BAD_TRAP ta 0; nop; nop; nop;
 
 /* Software trap. Treat as BAD_TRAP */

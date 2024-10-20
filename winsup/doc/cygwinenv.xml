@@ -63,7 +63,7 @@ This is applicable only to programs run from non-Cygwin programs such as a CMD p
 That means that this setting does not affect globbing operations for shells such as
 bash, sh, tcsh, zsh, etc.
 Default is set.</para>
-<para>This option also accepts an optional <literal>[no]ignorecase</literal> modifer.
+<para>This option also accepts an optional <literal>[no]ignorecase</literal> modifier.
 If supplied, wildcard matching is case insensitive.  The default is <literal>noignorecase</literal></para>
 </listitem>
 

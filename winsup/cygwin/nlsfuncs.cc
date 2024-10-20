@@ -1064,7 +1064,7 @@ __set_lc_messages_from_win (const char *name,
   else
     {
       strcpy (locale, name);
-      /* Removes the charset from the locale and attach the modifer to the
+      /* Removes the charset from the locale and attach the modifier to the
 	 language_TERRITORY part. */
       c = strchr (locale, '.');
       if (c)
@@ -1517,7 +1517,7 @@ strxfrm (char *__restrict s1, const char *__restrict s2, size_t sn)
 
 /* Fetch default ANSI codepage from locale info and generate a setlocale
    compatible character set code.  Called from newlib's setlocale(), if the
-   charset isn't given explicitely in the POSIX compatible locale specifier. */
+   charset isn't given explicitly in the POSIX compatible locale specifier. */
 extern "C" void
 __set_charset_from_locale (const char *loc, char *charset)
 {
@@ -1607,7 +1607,7 @@ __set_charset_from_locale (const char *loc, char *charset)
       break;
     default:
       /* Some (pretty new) EU locales don't exist in GLibc and haven't been
-	 catched above.  Check for @euro modifier again and make these locales
+	 caught above.  Check for @euro modifier again and make these locales
 	 always use ISO-8859-15. */
       if (modifier && !strcmp (modifier + 1, "euro"))
 	cs = "ISO-8859-15";
@@ -1621,7 +1621,7 @@ __set_charset_from_locale (const char *loc, char *charset)
 /* Called from fhandler_tty::setup_locale.  Set a codepage which reflects the
    internal charset setting.  This is *not* necessarily the Windows
    codepage connected to a locale by default, so we have to set this
-   up explicitely. */
+   up explicitly. */
 UINT
 __eval_codepage_from_internal_charset ()
 {

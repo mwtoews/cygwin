@@ -620,7 +620,7 @@
 
 #define                 HOSTDP_EN  0x1        /* HOSTDP Enable */
 #define                nHOSTDP_EN  0x0
-#define                HOSTDP_END  0x2        /* Host Endianess */
+#define                HOSTDP_END  0x2        /* Host Endianness */
 #define               nHOSTDP_END  0x0
 #define          HOSTDP_DATA_SIZE  0x4        /* Data Size */
 #define         nHOSTDP_DATA_SIZE  0x0

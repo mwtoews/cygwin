@@ -34,7 +34,7 @@
  *  TIRTOS provides an implementation for the sys/lock APIs if re-entrancy
  *  support is enabled. If re-entrancy support is disabled or an app is built
  *  without TIRTOS but using the libraries built for TIRTOS, these empty
- *  stubs are required to succesfully link the app.
+ *  stubs are required to successfully link the app.
  */
 
 #include <sys/lock.h>

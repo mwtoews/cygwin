@@ -473,7 +473,7 @@ typedef struct tic4x_inst tic4x_inst_t;
   { name, opcode|0x00200000, 0xffe00000, "r,@", level }, \
   { name, opcode|0x00400000, 0xffe00000, "r,*", level }
 
-/* D: Decrement and brach operations
+/* D: Decrement and branch operations
    Syntax: <i>c ARn, dst
        c   = condition
        ARn = AR register 0-7 (A)
@@ -519,7 +519,7 @@ typedef struct tic4x_inst tic4x_inst_t;
    Instr: 1/1 - CALLc, C4X: LAJc
 */
 
-/* LL: Load-load parallell operation
+/* LL: Load-load parallel operation
    Syntax: <i> src2, dst2 || <i> src1, dst1
        src1 = Indirect 0,1,IR0,IR1 (J)
        dst1 = Register 0-7 (K)
@@ -533,7 +533,7 @@ typedef struct tic4x_inst tic4x_inst_t;
   { name "2_" name "1", opcode, 0xfe000000, "i;L|J,K", level }, \
   { name "1_" name "2", opcode, 0xfe000000, "J,K|i;L", level }
 
-/* LS: Store-store parallell operation
+/* LS: Store-store parallel operation
    Syntax: <i> src2, dst2 || <i> src1, dst1
        src1 = Register 0-7 (H)
        dst1 = Indirect 0,1,IR0,IR1 (J)
@@ -613,7 +613,7 @@ typedef struct tic4x_inst tic4x_inst_t;
   { nameb "3_" namea "3", opcode|0x03000000, 0xff000000, "i;H;M|j;K;N", level }, \
   { nameb "3_" namea "3", opcode|0x03000000, 0xff000000, "i;H;M|K;j;N", level }
 
-/* P: General 2-operand operation with parallell store
+/* P: General 2-operand operation with parallel store
    Syntax: <ia> src2, dst1 || <ib> src3, dst2
        src2 = Indirect 0,1,IR0,IR1, ENH: register (i)
        dst1 = Register 0-7 (L)
@@ -628,7 +628,7 @@ typedef struct tic4x_inst tic4x_inst_t;
   { namea "_" nameb, opcode, 0xfe000000, "i;L|H,J", level }, \
   { nameb "_" namea, opcode, 0xfe000000, "H,J|i;L", level }
 
-/* Q: General 3-operand operation with parallell store
+/* Q: General 3-operand operation with parallel store
    Syntax: <ia> src1, src2, dst1 || <ib> src3, dst2
        src1 = Register 0-7 (K)
        src2 = Indirect 0,1,IR0,IR1, ENH: register (i)
@@ -644,7 +644,7 @@ typedef struct tic4x_inst tic4x_inst_t;
   { namea "3_" nameb    , opcode, 0xfe000000, "K,i;L|H,J", level }, \
   { nameb "_"  namea "3", opcode, 0xfe000000, "H,J|K,i;L", level }
 
-/* QC: General commutative 3-operand operation with parallell store
+/* QC: General commutative 3-operand operation with parallel store
    Syntax: <ia> src2, src1, dst1 || <ib> src3, dst2
            <ia> src1, src2, dst1 || <ib> src3, dst2 - Manual
        src1 = Register 0-7 (K)

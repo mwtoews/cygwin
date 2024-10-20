@@ -1,6 +1,6 @@
 Contributed by Robert Collins
 
-fhandlers are the core mechanism by which cygwin provides a file descripter (fd)
+fhandlers are the core mechanism by which cygwin provides a file descriptor (fd)
 interface to things such as a random number generated, winsock sockets, raw disk
 devices, the clipboard, the console and so on. Under unix access to all such
 devices is via a combination of IOCTL's and open/close/read/write calls. Some
@@ -14,7 +14,7 @@ functionality for the fd interface. The base class operates on win32 backed
 files. The various derived classes utilise win32 primitives to provide their
 specific functionality.
 
-When a file is opened - not necesarily via open() a fd is assigned to it. The fd
+When a file is opened - not necessarily via open() a fd is assigned to it. The fd
 includes a pointer to the actual fhandler that operates this specific file. All
 file-oriented system calls then operate off this basic structure.
 

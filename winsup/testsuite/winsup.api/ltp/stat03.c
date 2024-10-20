@@ -345,7 +345,7 @@ setup2()
  * int
  * longpath_setup() - setup to create a node with a name length exceeding
  *                    the MAX. length of PATH_MAX.
- *   This function retruns 0.
+ *   This function returns 0.
  */
 int
 longpath_setup()

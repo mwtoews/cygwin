@@ -38,12 +38,12 @@
  * of vector literal construction. The two formats are:
  *
  * 1) Altivec styled using parenthesis
- * 2) C grammer friendly styled using curly braces
+ * 2) C grammar friendly styled using curly braces
  *
  * The macro, VEC_LITERAL has been developed to provide some portability
  * in these two styles. To achieve true portability, user must specify all
  * elements of the vector being initialized. A single element can be provided
- * but only the first element guarenteed across both construction styles.
+ * but only the first element guaranteed across both construction styles.
  *
  * The VEC_SPLAT_* macros have been provided for portability of vector literal
  * construction when all the elements of the vector contain the same value.

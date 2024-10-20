@@ -226,7 +226,7 @@ struct tcphdr {
 #define TCP_RACK_EARLY_SEG    1060 /* If early recovery max segments */
 #define TCP_RACK_REORD_THRESH 1061 /* RACK reorder threshold (shift amount) */
 #define TCP_RACK_REORD_FADE   1062 /* Does reordering fade after ms time */
-#define TCP_RACK_TLP_THRESH   1063 /* RACK TLP theshold i.e. srtt+(srtt/N) */
+#define TCP_RACK_TLP_THRESH   1063 /* RACK TLP threshold i.e. srtt+(srtt/N) */
 #define TCP_RACK_PKT_DELAY    1064 /* RACK added ms i.e. rack-rtt + reord + N */
 #define TCP_RACK_TLP_INC_VAR  1065 /* Does TLP include rtt variance in t-o */
 #define TCP_BBR_IWINTSO	      1067 /* Initial TSO window for BBRs first sends */
@@ -294,7 +294,7 @@ struct tcphdr {
 #define TCP_NO_PRR         	1122 /* If pacing, don't use prr  */
 #define TCP_RACK_NONRXT_CFG_RATE 1123 /* In recovery does a non-rxt use the cfg rate */
 #define TCP_SHARED_CWND_ENABLE   1124 	/* Use a shared cwnd if allowed */
-#define TCP_TIMELY_DYN_ADJ       1125 /* Do we attempt dynamic multipler adjustment with timely. */
+#define TCP_TIMELY_DYN_ADJ       1125 /* Do we attempt dynamic multiplier adjustment with timely. */
 #define TCP_RACK_NO_PUSH_AT_MAX 1126 /* For timely do not push if we are over max rtt */
 #define TCP_RACK_PACE_TO_FILL 1127 /* If we are not in recovery, always pace to fill the cwnd in 1 RTT */
 #define TCP_SHARED_CWND_TIME_LIMIT 1128 /* we should limit to low time values the scwnd life */

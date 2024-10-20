@@ -369,7 +369,7 @@ Tue Oct 22 09:25:32 1996  Jeremy Allison <jra@cygnus.com>
 	stdin is a console.
 	* pinfo.cc (pinfo::record_death): Added code to clean
 	the pinfo array if we are an exiting parent.
-	* spawn.cc: Removed erroneous code to clean childs
+	* spawn.cc: Removed erroneous code to clean children
 	pinfo entry.
 	* wait.cc: Changed WAIT_ERROR_RC to Win32 WAIT_FAILED.
 	Tidied up access to pinfo array.
@@ -382,7 +382,7 @@ Tue Oct 22 01:26:52 1996  Geoffrey Noer  <noer@cygnus.com>
 	* include/Windows32/Functions.h:
 	* include/Windows32/Structures.h:
 	* include/Windows32/UnicodeFunctions.h:
-	Fixes to just commited changes
+	Fixes to just committed changes
 
 Mon Oct 21 19:58:50 1996  Geoffrey Noer  <noer@cygnus.com>
 
@@ -567,10 +567,10 @@ Thu Oct  3 16:19:23 1996  Jeremy Allison <jra@cygnus.com>
 	and understanding which variables are class variables much simpler.
 	Changed name member to unix_path_name_ and made dynamic rather
 	than a fixed 31 byte buffer per entry.
-	* fhandler.cc: Updated varable access for above.
-	* fcntl.cc: Updated varable access for above.
-	* hinfo.cc: Updated varable access for above.
-	* spawn.cc: Updated varable access for above.
+	* fhandler.cc: Updated variable access for above.
+	* fcntl.cc: Updated variable access for above.
+	* hinfo.cc: Updated variable access for above.
+	* spawn.cc: Updated variable access for above.
 	* syscalls.cc: Added fsync (null call) and fchmod(null
 	call at present).
 	* net.cc: Added ioctls for SIOCGIFCONF and SIOCGIFFLAGS.
@@ -597,7 +597,7 @@ Tue Oct 1 17:27:34 1996  Jeremy Allison (jra@cygnus.com)
 Tue Oct 1 15:40:39 1996  Jeremy Allison (jra@cygnus.com)
 
 	* fork.cc (cygwin_fork_helper1): Fixed resource leak of process
-	handles, added cleanup code. Also fixed timout problem when child
+	handles, added cleanup code. Also fixed timeout problem when child
 	cannot be initialized.
 	* dirsearch.cc (readdir): Changed comparison to explicitly check for
 	INVALID_HANDLE_VALUE. Test < 0 fails with void *.
@@ -716,7 +716,7 @@ Fri Sep  6 09:33:13 1996  Doug Evans  <dje@canuck.cygnus.com>
 	(symlink_follow): Likewise.  New arg EXEC, callers updated.
 	* syscalls.cc (_stat_worker): New arg CALLER, callers updated.
 
-	* syscalls.cc: Delete all occurences of in/out and MARK.
+	* syscalls.cc: Delete all occurrences of in/out and MARK.
 
 Thu Sep  5 18:51:01 1996  Doug Evans  <dje@canuck.cygnus.com>
 
@@ -754,7 +754,7 @@ Mon Aug 26 13:46:30 1996  Doug Evans  <dje@canuck.cygnus.com>
 	* winsup.h (cygwin_fork_helper): Delete.
 
 	* path.cc: #include <fcntl.h>.
-	(symlink,readlink): Reenable, rewrite.
+	(symlink,readlink): Re-enable, rewrite.
 	(symlink_follow): New function.
 	* path.h (symlink): Delete.
 	(SYMLINK_COOKIE, MAX_LINK_DEPTH): Define.
@@ -831,7 +831,7 @@ Mon Aug 19 09:22:35 1996  Doug Evans  <dje@canuck.cygnus.com>
 	* dcrt0.cc (dll_crt0:1): Call it.
 	* winsup.h (dump_jmp_buf): Declare it.
 
-	* fork.cc (cygwin_fork_helper1): Reenable child suspend before
+	* fork.cc (cygwin_fork_helper1): Re-enable child suspend before
 	stack copy code.
 
 Sat Aug 17 04:06:36 1996  Geoffrey Noer  <noer@cygnus.com>
@@ -951,7 +951,7 @@ Mon Jul 15 13:07:23 1996  Michael Meissner  <meissner@tiktok.cygnus.com>
 
 	* Makefile.in (install): If cross compiling, install the
 	cygwin.dll file as $target_alias-cygwin.dll in the bin directory,
-	instead of plain cygin.dll.
+	instead of plain cygwin.dll.
 	Install the cygwin.dll file in the library directory as well.
 
 	* configure.in: Test for cross compiling, and if cross compiling,
@@ -965,7 +965,7 @@ Mon Jul 15 13:07:23 1996  Michael Meissner  <meissner@tiktok.cygnus.com>
 	and transform the name if cross compiling.
 
 	* utils/configure.in: Test for cross compiling, and if cross
-	compiling, tranform mount, umount, ps, etc.  Do not call
+	compiling, transform mount, umount, ps, etc.  Do not call
 	AC_PROG_INSTALL anymore.
 
 	* utils/configure: Regenerate.
@@ -984,7 +984,7 @@ Thu Jul 11 14:08:09 1996  Geoffrey Noer  <noer@cygnus.com>
 
 	* fhandler.cc: correct typo in comment
 	* exceptions.cc: remove definition of sig_func_ptr, replace
-	occurances with newlib-defined _sig_func_ptr.
+	occurrences with newlib-defined _sig_func_ptr.
 
 Wed Jul 10 19:12:18 1996  Doug Evans  <dje@canuck.cygnus.com>
 
@@ -1048,7 +1048,7 @@ Fri Jul  5 15:36:48 1996  Doug Evans  <dje@canuck.cygnus.com>
 
 	* shared.cc (open_shared_file_map): Mark shared map as not inherited.
 
-	* signal.cc (signal): Delete (void *) coersion of result.
+	* signal.cc (signal): Delete (void *) coercion of result.
 	(usleep): Convert microseconds to milliseconds.  Delete second copy.
 	(_raise): Use _sig_func_ptr.
 

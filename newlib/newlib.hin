@@ -409,7 +409,7 @@
    restricted storage. */
 #undef _WANT_REENT_SMALL
 
-/* Define to enable thread-local storage objects as a replacment for struct
+/* Define to enable thread-local storage objects as a replacement for struct
    _reent members. */
 #undef _WANT_REENT_THREAD_LOCAL
 

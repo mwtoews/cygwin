@@ -8,7 +8,7 @@ What's new:
 - Allow to run with full ASLR enabled and enable on Cygwin DLL by default.
 
 - Remove any special handling for the .com filename suffix. It has to
-  be used always explicitely.
+  be used always explicitly.
 
 - Add code to handle setrlimit(RLIMIT_AS).
 

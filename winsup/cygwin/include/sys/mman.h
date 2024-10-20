@@ -30,7 +30,7 @@ extern "C" {
 #define MAP_ANON MAP_ANONYMOUS
 /* Non-standard flag */
 #define MAP_NORESERVE 0x4000	/* Don't reserve swap space for this mapping.
-				   Page protection must be set explicitely
+				   Page protection must be set explicitly
 				   to access page. Only supported for anonymous
 				   private mappings. */
 #define MAP_AUTOGROW 0x8000	/* Grow underlying object to mapping size.

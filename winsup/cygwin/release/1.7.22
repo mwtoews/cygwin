@@ -26,7 +26,7 @@ Bug fixes:
   Fixes: http://cygwin.com/ml/cygwin/2013-07/msg00375.html
 
 - Fix long-standing problem which allows to access files via ".." using an
-  invalid POSIX path, for instance, `cd nonexistant/../existing_dir".
+  invalid POSIX path, for instance, `cd nonexistent/../existing_dir".
   Fixes: http://cygwin.com/ml/cygwin/2013-05/msg00222.html
 
 - Fix an initialization bug in XSI IPC on, which could result in

@@ -772,7 +772,7 @@ struct aarch64_inst
   /* Corresponding opcode entry.  */
   const aarch64_opcode *opcode;
 
-  /* Condition for a truly conditional-executed instrutions, e.g. b.cond.  */
+  /* Condition for a truly conditional-executed instructions, e.g. b.cond.  */
   const aarch64_cond *cond;
 
   /* Operands information.  */
@@ -819,7 +819,7 @@ typedef struct aarch64_inst aarch64_inst;
    libopcodes) because that some errors are detected (and then notified to GAS)
    by libopcodes (rather than by GAS solely).
 
-   The first three errors are only deteced by GAS while the
+   The first three errors are only detected by GAS while the
    AARCH64_OPDE_INVALID_VARIANT error can only be spotted by libopcodes as
    only libopcodes has the information about the valid variants of each
    instruction.

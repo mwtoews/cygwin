@@ -83,7 +83,7 @@ Thu Nov  2  2:01:00 2000  Corinna Vinschen <corinna@vinschen.de>
 
 Sat Oct 28 01:37:55 2000  Christopher Faylor <cgf@cygnus.com>
 
-	* Makefile.in: Accomodate newer gcc's which require linking of c++
+	* Makefile.in: Accommodate newer gcc's which require linking of c++
 	programs with g++.  Fixup output for some compilations.
 	* cygcheck.cc: Respond to compiler warnings.
 	* dumper.cc (main): Ditto.
@@ -116,7 +116,7 @@ Tue Oct 17  1:09:00 2000  Corinna Vinschen <corinna@vinschen.de>
 
 Sat Oct 14 23:42:58 2000  Christopher Faylor <cgf@cygnus.com>
 
-	* ps.cc (main): Accomodate new PID_ constant.
+	* ps.cc (main): Accommodate new PID_ constant.
 
 Thu Oct 12 02:19:12 2000  Christopher Faylor <cgf@cygnus.com>
 
@@ -191,7 +191,7 @@ Thu Aug 24 18:02:35 2000  Christopher Faylor <cgf@cygnus.com>
 
 Mon Jul 31 15:12:00 2000  Corinna Vinschen <corinna@vinschen.de>
 
-	* passwd.c (main): Initialize oldpwd before beeing used.
+	* passwd.c (main): Initialize oldpwd before being used.
 
 Sat Jul 29 00:44:46 2000  Christopher Faylor <cgf@cygnus.com>
 
@@ -231,7 +231,7 @@ Sat Jun 24 23:16:33 2000  Christopher Faylor <cgf@cygnus.com>
 	* cygcheck.cc (cygwin_info): New function.  Scans DLL for Cygwin
 	version info.
 	(dll_info): Add path parameter for checking "cygwin1.dll".
-	(track_down): Accomodate additional parameter for dll_info.
+	(track_down): Accommodate additional parameter for dll_info.
 	(ls): Ditto.
 	(dump_sys_info): Always print cygwin1.dll last.
 
@@ -266,7 +266,7 @@ Fri May 20  0:01:00 2000  Corinna Vinschen <corinna@vinschen.de>
 Thu May 18 14:38:26 2000  Christopher Faylor <cgf@cygnus.com>
 
 	* Makefile.in: Eliminate WINSUP_DEPS.
-	* cygpath.cc: Reorganize includes to accomodate sys/cygwin.h changes.
+	* cygpath.cc: Reorganize includes to accommodate sys/cygwin.h changes.
 	* mkgroup.c: Ditto.
 	* mkpasswd.c: Ditto.
 	* mount.cc: Ditto. Eliminate use of cygwin source specific includes.

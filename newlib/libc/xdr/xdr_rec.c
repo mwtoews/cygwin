@@ -122,7 +122,7 @@ typedef struct rec_strm
   caddr_t out_base;             /* output buffer (points to frag header) */
   caddr_t out_finger;           /* next output position */
   caddr_t out_boundry;          /* data cannot up to this address */
-  u_int32_t *frag_header;       /* beginning of curren fragment */
+  u_int32_t *frag_header;       /* beginning of current fragment */
   bool_t frag_sent;             /* true if buffer sent in middle of record */
   /*
    * in-coming bits
@@ -601,7 +601,7 @@ xdrrec_eof (XDR * xdrs)
  * The client must tell the package when an end-of-record has occurred.
  * The second paraemters tells whether the record should be flushed to the
  * (output) tcp stream.  (This let's the package support batched or
- * pipelined procedure calls.)  TRUE => immmediate flush to tcp connection.
+ * pipelined procedure calls.)  TRUE => immediate flush to tcp connection.
  */
 bool_t
 xdrrec_endofrecord (XDR * xdrs,

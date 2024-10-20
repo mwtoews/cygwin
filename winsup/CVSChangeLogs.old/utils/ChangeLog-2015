@@ -39,7 +39,7 @@
 	(do_sysfolders): Or cygdrive_flag to cygwin_conv_path call.
 	(do_pathconv): Simply or absolute_flag to conv_func.  Or
 	cygdrive_flag to conv_func.
-	(do_options): Initalize absolute_flag to CCP_RELATIVE.  Initialize new
+	(do_options): Initialize absolute_flag to CCP_RELATIVE.  Initialize new
 	cygdrive_flag.  Set absolute_flag to CCP_ABSOLUTE on -a.  Set
 	cygdrive_flag to CCP_PROC_CYGDRIVE on -U.
 
@@ -112,7 +112,7 @@
 2015-08-03  Corinna Vinschen  <corinna@vinschen.de>
 
 	* strace.cc (main2): Don't call setvbuf on NULL descriptor.
-	Explicitely fclose ofile.
+	Explicitly fclose ofile.
 
 2015-07-29  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -241,7 +241,7 @@
 	prefix.
 	(usage): Extend help output for -l option.
 	(main): Drop superfluous goto and label.  Make machine prefixing for
-	local machine when using -l option dependend on options in
+	local machine when using -l option depend on options in
 	/etc/nsswitch.conf.
 	* mkpasswd.c: Ditto.
 
@@ -519,7 +519,7 @@
 
 2012-11-27  Christopher Faylor  <me.cygwin2012@cgf.cx>
 
-	* Makefile.in: Make sure that libz is always loaded staticly.
+	* Makefile.in: Make sure that libz is always loaded statically.
 
 2012-11-26  Christopher Faylor  <me.cygwin2012@cgf.cx>
 
@@ -983,7 +983,7 @@
 
 	* dump_setup.cc (tfx_chars): New WCHAR array, copied from Cygwin.
 	(transform_chars): New function, copied from Cygwin.
-	(simple_nt_stat): New function to check file existance using native
+	(simple_nt_stat): New function to check file existence using native
 	NT function.  Explain why.
 	(directory_exists): Call simple_nt_stat.
 	(file_exists): Ditto.
@@ -1151,7 +1151,7 @@
 
 2010-02-10  Corinna Vinschen  <corinna@vinschen.de>
 
-	* getlocale.c (main): Restrict -a loop to avoid psudo language entries
+	* getlocale.c (main): Restrict -a loop to avoid pseudo language entries
 	on Vista and later.
 
 2010-02-10  Corinna Vinschen  <corinna@vinschen.de>
@@ -1269,7 +1269,7 @@
 	--enable-unique-object-names, --disable-unique-object-names, and
 	--show-unique-object-names.
 	(main): Handle new options.
-	* utils.sgml (cygcheck): Change documentaion accordingly.
+	* utils.sgml (cygcheck): Change documentation accordingly.
 
 2009-10-28  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -1377,7 +1377,7 @@
 	(long_options): Add --codepage option.
 	(options): Add -C option.
 	(usage): Add -C/--codepage description.
-	(my_wcstombs): New function.  Use througout instead of wcstombs.
+	(my_wcstombs): New function.  Use throughout instead of wcstombs.
 	(do_options): Handle -C/--codepage option.
 	* utils.sgml (cygpath): Add description for new -C/--codepage option.
 
@@ -1408,7 +1408,7 @@
 
 2009-05-11  Corinna Vinschen  <corinna@vinschen.de>
 
-	* Makefile.in: Link ps.exe agains ntdll.dll.
+	* Makefile.in: Link ps.exe against ntdll.dll.
 	* ps.cc (main): Enable SE_DEBUG_NAME privilege if Windows processes
 	have to be enumerated.  Workaround EnumProcessModules problem when
 	running under WOW64 and use NtQueryInformationProcess to fetch
@@ -1481,7 +1481,7 @@
 	(main): Drop fetching caller info from logonserver.  Only fetch
 	server from environment when trying to change password for own
 	account.  Drop admin check entirely in case of doing account
-	maintainance.  Otherwise replace check for admin by result of
+	maintenance.  Otherwise replace check for admin by result of
 	caller_is_admin call.
 
 2009-03-22  Corinna Vinschen  <corinna@vinschen.de>
@@ -1756,7 +1756,7 @@
 2008-08-18  Corinna Vinschen  <corinna@vinschen.de>
 
 	* mkgroup.c (main): Always unset environment variable POSIXLY_CORRECT.
-	Keep track of optional argumnts and fix up optind afterwards.
+	Keep track of optional arguments and fix up optind afterwards.
 	* mkpasswd.c (main): Ditto.
 
 2008-08-17  Christopher Faylor  <me+cygwin@cgf.cx>
@@ -1922,7 +1922,7 @@
 	char.  Ignore -g and -s options.  Prefer to take homedir from $HOME
 	over $HOMEDRIVE/$HOMEPATH.
 	* path.cc (oopts): Add "acl", "noacl", "posix=0" and "posix=1" options.
-	(getmntent): Accomodate throughout.
+	(getmntent): Accommodate throughout.
 	* ps.cc: Fix copyright dates.
 	* utils.sgml: Fix text for mkgroup and mkpasswd.
 
@@ -2252,7 +2252,7 @@
 
 2006-12-21  Corinna Vinschen  <corinna@vinschen.de>
 
-	* dumper.cc: Include ansidecl.h before including bfd.h to woraround
+	* dumper.cc: Include ansidecl.h before including bfd.h to workaround
 	a problem with the order in which system include files are included.
 
 2006-12-11  Christopher Faylor  <me@cgf.cx>
@@ -2269,12 +2269,12 @@
 	* regtool.cc (key_type): Drop.
 	(REG_AUTO): Define.
 	(value_type): Replace key_type.  Use REG_xxx values directly.
-	Accomodate change throughout.
+	Accommodate change throughout.
 	(longopts): Add --dword, --dword-le, --none, --qword and --hex options.
 	(opts): Add -d, -D, -n, -Q and -x options.
 	(types): Array to convert REG_xxx into strings.
 	(hex): New variable to keep value of --hex option.
-	(usage): Accomodate new options.  Print only the necessary by default.
+	(usage): Accommodate new options.  Print only the necessary by default.
 	Only be verbose in case of -h/--help option.
 	(cmd_list): Use key separator from -K option when printing.
 	Print value type when verbose option is given.  Handle so far not
@@ -2365,7 +2365,7 @@
 2006-07-27  Corinna Vinschen  <corinna@vinschen.de>
 
 	* cygpath.c (get_long_name): Cover the case that GetLongPathName
-	doesn't return valid information for non-existant files.  Just return
+	doesn't return valid information for non-existent files.  Just return
 	incoming filename in that case.
 
 2006-07-03  Kazuhiro Fujieda  <fujieda@jaist.ac.jp>
@@ -3454,8 +3454,8 @@
 
 	* cygpath.cc (long_options): Add "dos" and "mixed", correct "close",
 	"file" and "type" to use NULL flag.
-	(usage): Clean up usage output (more), accomodate new options.
-	(main): Add --dos and --mixed options; accomodate all output forms in
+	(usage): Clean up usage output (more), accommodate new options.
+	(main): Add --dos and --mixed options; accommodate all output forms in
 	--type.  Make UNIXy output default.
 
 2002-06-18  Joshua Daniel Franklin  <joshuadfranklin@yahoo.com>
@@ -3813,7 +3813,7 @@
 2002-02-27  Joshua Daniel Franklin <joshuadfranklin@yahoo.com>
 	    Christopher Faylor  <cgf@redhat.com>
 
-	Change appropriate globals to statics throughout.
+	Change appropriate globals to statistics throughout.
 	* cygcheck.cc (usage): Simplify usage output.  Generalize to allow use
 	for help.
 	(longopts): Add version option.
@@ -3883,12 +3883,12 @@
 2002-01-21  Christopher Faylor  <cgf@redhat.com>
 
 	* Makefile.in (CXXFLAGS): Ensure that important settings are preserved
-	even when overriden by command line.
+	even when overridden by command line.
 
 2002-01-21  Christopher Faylor  <cgf@redhat.com>
 
 	* Makefile.in: Build intermediate cygcheck.o to force use of MINGW_CXXFLAGS.
-	* cygcheck.cc (cygwin_info): Intitialize variable to quiet g++ warning.
+	* cygcheck.cc (cygwin_info): Initialize variable to quiet g++ warning.
 	(dump_sysinfo): Make variables unsigned to quiet g++ warnings.
 	* strace.cc (version_string): Rename from SCCSid.
 	(add_child): Remove unused variable.
@@ -4159,7 +4159,7 @@ Sat Sep  1 15:58:11 2001  Christopher Faylor <cgf@cygnus.com>
 	* dumper.h: (dumper::print_core_section_list): Declare it.
 	* dumper.cc (print_section_name): New function.
 	(dumper::collect_process_information): Augment debugging output.
-	Stop debugee processing if it posts double exception.
+	Stop debuggee processing if it posts double exception.
 	(usage): Fix typo in option name.
 
 Tue Aug 28 14:45:02 2001  Christopher Faylor <cgf@cygnus.com>

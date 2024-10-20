@@ -34,7 +34,7 @@
 #include <stddef.h>
 #include "vec_literal.h"
 
-/* Locates the first occurance in string pointed to by s1 of
+/* Locates the first occurrence in string pointed to by s1 of
  * any character in the string pointed to by s2. A null pointer
  * is returned if no character in s2 occurs in s1.
  */
@@ -69,7 +69,7 @@ char * strpbrk(const char *s1, const char *s2)
     ptr2 = (vec_uchar16 *)((unsigned int)(ptr2) + 1);
     splat = initial_splat;
 
-    /* For each character of s2, compare agains a quadword of s1,
+    /* For each character of s2, compare against a quadword of s1,
      * accumulating match success in the variable match.
      */
     while (spu_extract((vec_uint4)data2, 0)) {

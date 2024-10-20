@@ -109,7 +109,7 @@ __bb_exit_func (void)
 	    }
 
 	  /* After a fork, another process might try to read and/or write
-	     the same file simultanously.  So if we can, lock the file to
+	     the same file simultaneously.  So if we can, lock the file to
 	     avoid race conditions.  */
 
 	  /* If the file is not empty, and the number of counts in it is the
@@ -793,7 +793,7 @@ __bb_init_prg (void)
                    malloc (BB_BUCKETS * sizeof (struct bb_edge *));
       if (bb_hashbuckets)
 	/* Use a loop here rather than calling bzero to avoid having to
-	   conditionalize its existance.  */
+	   conditionalize its existence.  */
 	for (i = 0; i < BB_BUCKETS; i++)
 	  bb_hashbuckets[i] = 0;
     }

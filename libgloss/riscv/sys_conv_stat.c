@@ -1,7 +1,7 @@
 #include <machine/syscall.h>
 #include "kernel_stat.h"
 
-/* Convert linux's stat64 sturct to newlib's stat.  */
+/* Convert linux's stat64 struct to newlib's stat.  */
 void
 _conv_stat (struct stat *st, struct kernel_stat *kst)
 {

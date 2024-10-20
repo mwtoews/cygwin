@@ -94,7 +94,7 @@ yield ()
      cpus so, presumably (hah!), this + using a lower priority will
      stall this thread temporarily and cause another to run.
      (stackoverflow and others seem to confirm that setting this thread
-     to a lower priority and calling Sleep with a 0 paramenter will
+     to a lower priority and calling Sleep with a 0 parameter will
      have this desired effect)
 
      CV 2017-03-08: Drop lowering the priority.  It leads to potential

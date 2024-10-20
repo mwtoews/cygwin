@@ -66,7 +66,7 @@ _hl_fstat (int fd, struct stat *buf)
   int32_t ret;
   uint32_t host_errno;
 
-  /* Special version of hostlink - retuned values are passed
+  /* Special version of hostlink - returned values are passed
    * through inargs.
    */
   host_errno = _user_hostlink (HL_GNUIO_EXT_VENDOR_ID, HL_GNUIO_EXT_FSTAT,

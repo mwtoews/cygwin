@@ -57,7 +57,7 @@
 
 2007-12-14  Corinna Vinschen  <corinna@vinschen.de>
 
-	* dtable.cc (dtable::set_file_pointers_for_exec): Reenable.  Fix
+	* dtable.cc (dtable::set_file_pointers_for_exec): Re-enable.  Fix
 	comment.
 	* spawn.cc (spawn_guts): Call cygheap->fdtab.set_file_pointers_for_exec
 	only for non-Cygwin processes.
@@ -259,7 +259,7 @@
 
 	* posix_ipc.cc (ipc_names): Rename max_len to prefix_len.  Store
 	the prefix len in it.
-	(check_path): Take length parameter.  Use this length insetad of
+	(check_path): Take length parameter.  Use this length instead of
 	calling strlen.  Allow PATH_MAX length paths.
 	(ipc_mutex_init): Use MAX_PATH instead of CYG_MAX_PATH.
 	(ipc_cond_init): Ditto.
@@ -586,14 +586,14 @@
 	(etc::fn): Change type to OBJECT_ATTRIBUTES.
 	(etc::last_modified): Change type to LARGE_INTEGER.
 	(etc::init): Take PUNICODE_STRING as second argument.
-	* path.cc: Accomodate above changes.
+	* path.cc: Accommodate above changes.
 	(etc::test_file_change): Use NT native functions.
 	(etc::dir_changed): Ditto.
 	* uinfo.cc (pwdgrp::load): Call etc::init with NT native path.
 
 2007-08-21  Corinna Vinschen  <corinna@vinschen.de>
 
-	* fhandler_disk_file.cc: Change debugging output througout to print
+	* fhandler_disk_file.cc: Change debugging output throughout to print
 	the NT status consistently.  Use UNICODE path information if available.
 
 2007-08-20  Corinna Vinschen  <corinna@vinschen.de>
@@ -827,7 +827,7 @@
 	* syscalls.cc (rename): Check oldpath and newpath for trailing dir
 	separators, require them to be existing directories if so.  Check
 	for a request to change only the case of the filename.  Check paths
-	for case insensitve equality only once.  Handle renaming a directory
+	for case insensitive equality only once.  Handle renaming a directory
 	to another, existing directory by unlinking the destination directory
 	first.  If newpath points to an existing file with R/O attribute set,
 	try to unset R/O attribute first.  Augment hardlink test by not
@@ -1141,7 +1141,7 @@
 	(fhandler_disk_file::opendir): Drop pathname length check.
 	Remove outdated comment.  Use get_name method instead of accessing
 	pc.normalized_path directly.
-	(readdir_get_ino): Drop unused dir parameter.  Accomodate throughout.
+	(readdir_get_ino): Drop unused dir parameter.  Accommodate throughout.
 	Allocate fname dynamically.  Call new stat_worker instead of lstat64.
 	Call NtOpenFile instead of CreateFile.  Call NtClose instead of
 	CloseHandle.
@@ -1324,7 +1324,7 @@
 	(privilege_luid_by_name): Drop declaration.
 	(set_privilege): Change declaration.
 	(set_process_privilege): Drop definition.
-	(_push_thread_privilege): Accomodate new set_privilege parameters.
+	(_push_thread_privilege): Accommodate new set_privilege parameters.
 	* wincap.h (wincapc::max_sys_priv): New element.
 	* wincap.cc: Implement above element throughout.
 	(wincap_2000sp4): New wincaps structure.
@@ -1702,7 +1702,7 @@
 
 2007-05-22  Corinna Vinschen  <corinna@vinschen.de>
 
-	* path.cc (cwdstuff::set): Avoid double aquiring of cwd_lock.
+	* path.cc (cwdstuff::set): Avoid double acquiring of cwd_lock.
 	Open directory with inheriting enabled.
 
 2007-05-21  Christian Franke <franke@computer.org>
@@ -1831,7 +1831,7 @@
 	* fhandler_process.cc (fhandler_process::fstat): Ditto.
 	* fhandler_disk_file.cc (fhandler_base::fstat_by_handle): Take
 	additional parameter for creation time.  Fill st_birthtim with it.
-	Accomodate additional creation time parameter throughout.
+	Accommodate additional creation time parameter throughout.
 	* fhandler_raw.cc (fhandler_dev_raw::fstat): Set new stat member
 	st_birthtim to useful value.
 	* fhandler.cc (fhandler_base::fstat): Ditto.
@@ -2059,7 +2059,7 @@
 
 2007-02-22  Corinna Vinschen  <corinna@vinschen.de>
 
-	* dir.cc (rmdir): Move existance check in front of
+	* dir.cc (rmdir): Move existence check in front of
 	has_dot_last_component check.  Simplify setting errno in latter case.
 
 2007-02-22  Corinna Vinschen  <corinna@vinschen.de>
@@ -2074,7 +2074,7 @@
 2007-02-22  Corinna Vinschen  <corinna@vinschen.de>
 
 	Throughout remove all usage of wincap.access_denied_on_delete.
-	* dir.cc (rmdir): Add existance check to be errno-compatible with Linux.
+	* dir.cc (rmdir): Add existence check to be errno-compatible with Linux.
 	* fhandler_disk_file.cc (fhandler_disk_file::rmdir): Drop test for
 	non-existent dir on 9x share.
 	* syscalls.cc (unlink): Add comment.
@@ -2184,7 +2184,7 @@
 	* posix_ipc.cc: Include thread.h and semaphore.h.  Remove TODO
 	comment.
 	(ipc_names): Add max_len member.  Set to maximum length of the path
-	before tacking on the prefix path.  Set prefix path for named semaphors
+	before tacking on the prefix path.  Set prefix path for named semaphores
 	to /dev/shm, as on Linux.
 	(enum ipc_type_t): Change sem to semaphore to avoid name conflicts.
 	(check_path): Detect empty paths.  Use ipc_names's max_len member.
@@ -2302,7 +2302,7 @@
 2007-02-08  Corinna Vinschen  <corinna@vinschen.de>
 
 	* syscalls.cc (check_shm): New static function to do path checking
-	common to shm_open and shm_unlink.  Check for /dev/shm existance.
+	common to shm_open and shm_unlink.  Check for /dev/shm existence.
 	(shm_open): Call check_shm.
 	(shm_unlink): Ditto.
 

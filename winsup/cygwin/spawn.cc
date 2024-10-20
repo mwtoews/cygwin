@@ -95,7 +95,7 @@ find_exec (const char *name, path_conv& buf, const char *search,
       && (suffix = perhaps_suffix (name, buf, err, opt)) != NULL)
     {
       /* Overwrite potential symlink target with original path.
-	 See comment preceeding this method. */
+	 See comment preceding this method. */
       tmp_path = tmp;
       if (!has_slash)
 	tmp_path = stpcpy (tmp, "./");
@@ -156,7 +156,7 @@ find_exec (const char *name, path_conv& buf, const char *search,
 	  if (buf.has_acls () && check_file_access (buf, X_OK, true))
 	    continue;
 	  /* Overwrite potential symlink target with original path.
-	     See comment preceeding this method. */
+	     See comment preceding this method. */
 	  buf.set_posix (tmp_path);
 	  retval = buf.get_posix ();
 	  goto out;
@@ -535,7 +535,7 @@ child_info_spawn::worker (const char *prog_arg, const char *const *argv,
 	 process ignore Ctrl-C by default.  If we don't do that, pressing Ctrl-C
 	 in a console will break native processes running in the background,
 	 because the Ctrl-C event is sent to all processes in the console, unless
-	 they ignore it explicitely.  CREATE_NEW_PROCESS_GROUP does that for us. */
+	 they ignore it explicitly.  CREATE_NEW_PROCESS_GROUP does that for us. */
       pid_t ctty_pgid =
 	::cygheap->ctty ? ::cygheap->ctty->tc_getpgid () : 0;
       if (!iscygwin () && ctty_pgid && ctty_pgid != myself->pgid)

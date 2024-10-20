@@ -350,7 +350,7 @@ dumper::collect_memory_sections ()
       if (mbi.State != MEM_COMMIT)
 	{
 	  skip_region_p = 1;
-	  disposition = "skipped due to uncommited";
+	  disposition = "skipped due to uncommitted";
 	}
 
       {
@@ -501,7 +501,7 @@ dumper::dump_thread (asection * to, process_thread * thread)
   if (tid == 0)
     {
       /* this is a special case. we don't know, which thread
-	 was active when exception occured, so let's blame
+	 was active when exception occurred, so let's blame
 	 the first one */
       thread_pstatus.data.thread_info.is_active_thread = TRUE;
       tid = (DWORD) - 1;
@@ -630,7 +630,7 @@ dumper::collect_process_information ()
 
 	case EXIT_PROCESS_DEBUG_EVENT:
 
-	  deb_printf ("debugee quits");
+	  deb_printf ("debuggee quits");
 	  ContinueDebugEvent (current_event.dwProcessId,
 			      current_event.dwThreadId,
 			      DBG_CONTINUE);

@@ -29,7 +29,7 @@ The function <<wcstoll>> converts the wide string <<*<[s]>>> to
 a <<long long>>. First, it breaks down the string into three parts:
 leading whitespace, which is ignored; a subject string consisting
 of characters resembling an integer in the radix specified by <[base]>;
-and a trailing portion consisting of zero or more unparseable characters,
+and a trailing portion consisting of zero or more unparsable characters,
 and always including the terminating null character. Then, it attempts
 to convert the subject string into a <<long long>> and returns the
 result.

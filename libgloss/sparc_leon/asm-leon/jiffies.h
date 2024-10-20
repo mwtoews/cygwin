@@ -30,7 +30,7 @@
 #include <asm-leon/clock.h>
 #include <asm-leon/linkage.h>
 
-/* Suppose we want to devide two numbers NOM and DEN: NOM/DEN, the we can
+/* Suppose we want to divide two numbers NOM and DEN: NOM/DEN, the we can
  * improve accuracy by shifting LSH bits, hence calculating:
  *     (NOM << LSH) / DEN
  * This however means trouble for large NOM, because (NOM << LSH) may no

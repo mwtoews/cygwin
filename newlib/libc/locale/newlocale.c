@@ -137,7 +137,7 @@ _newlocale_r (struct _reent *p, int category_mask, const char *locale,
   for (i = 1; i < _LC_LAST; ++i)
     {
       /* If we have a base locale, and the category is not in category_mask
-	 or the new category is the base categroy, just copy over. */
+	 or the new category is the base category, just copy over. */
       if (base && (((1 << i) & category_mask) == 0
 		   || !strcmp (base->categories[i], new_categories[i])))
 	{
@@ -202,7 +202,7 @@ _newlocale_r (struct _reent *p, int category_mask, const char *locale,
   return new_locale;
 
 error:
-  /* An error occured while we had already (potentially) allocated memory.
+  /* An error occurred while we had already (potentially) allocated memory.
      Free memory and return NULL.  errno is supposed to be set already. */
 #ifdef __HAVE_LOCALE_INFO__
   for (i = 1; i < _LC_LAST; ++i)

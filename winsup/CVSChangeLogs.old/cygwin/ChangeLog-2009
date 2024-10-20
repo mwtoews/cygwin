@@ -253,7 +253,7 @@
 
 	* ntea.cc (read_ea): Try to open file first to have more sensible
 	error codes.  Always refuse non "user." EAs for Linux compatibility
-	and return EOPNOTSUPP.  Fix handling of empty (== non-existant) EAs.
+	and return EOPNOTSUPP.  Fix handling of empty (== non-existent) EAs.
 	Always prepend "user." prefix to EA names.
 	(write_ea): Try to open file first to have more sensible error codes.
 	Always refuse non "user." EAs for Linux compatibility and return
@@ -319,7 +319,7 @@
 	(get_avphys_pages): Ditto.
 	(get_phys_pages): Ditto.
 	* cygwin.din: Export them.
-	* include/sys/sysinfo.h: New header, decalre above new functions.
+	* include/sys/sysinfo.h: New header, declare above new functions.
 	* include/cygwin/version.h (CYGWIN_VERSION_API_MINOR): Bump.
 	* posix.sgml: Mention them as GNU extensions.
 
@@ -475,7 +475,7 @@
 2009-10-31  Corinna Vinschen  <corinna@vinschen.de>
 
 	* sec_helper.cc (security_descriptor::realloc): Call free first if
-	current security desriptor has been allocated by GetSecurityInfo.
+	current security descriptor has been allocated by GetSecurityInfo.
 
 2009-10-30  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -1018,7 +1018,7 @@
 2009-08-21  Corinna Vinschen  <corinna@vinschen.de>
 
 	* mmap.cc (mmap64): Allocate fh_disk_file on cygheap.  Delete
-	explicitely before returning.
+	explicitly before returning.
 
 2009-08-20  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -1250,7 +1250,7 @@
 	* path.cc (path_conv::add_ext_from_sym): Accommodate const'ness of
 	known_suffixes.
 	(path_conv::set_normalized_path): Ditto for normalized_path.
-	(path_conv::check): Use modifiable_path whereever we need to modify the
+	(path_conv::check): Use modifiable_path wherever we need to modify the
 	path element.  Use set_path to set the path.
 	(path_conv::~path_conv): Accommodate new const'ness.
 	* spawn.cc (perhaps_suffix): Declare ext as const since that's what is
@@ -1560,7 +1560,7 @@
 	* fhandler_netdrive.cc (GET_RESOURCE_INFO): Remove.
 	(thread_netdrive): Drop GET_RESOURCE_INFO case.
 	(fhandler_netdrive::exists): Use GET_RESOURCE_OPENENUM info class
-	to check for existance.
+	to check for existence.
 
 2009-07-15  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -1697,7 +1697,7 @@
 	memory used by socket select functions.  Combine them into a single
 	struct select.
 	* cygtls.cc: Accommodate above change throughout.
-	(_cygtls::init_thread): Drop initalizing of sockevt to
+	(_cygtls::init_thread): Drop initializing of sockevt to
 	INVALID_HANDLE_VALUE.
 	(_cygtls::fixup_after_fork): Reset sockevt to NULL.
 	(_cygtls::remove): Don't use sockevt value to bail out prematurely.
@@ -1853,7 +1853,7 @@
 	(start_thread_pipe): Don't allocate device_specific_pipe stuff here.
 	Assume that it has been allocated earlier.
 	(pipe_cleanup): Rely on select_pipe_info destructor to clean up pipe
-	paraphenalia.
+	paraphernalia.
 	(fhandler_*::select_*): Derive select_record from new select_stuff
 	argument.
 	(fhandler_pipe::select_*): Ditto.  Allocate pipe-specific field if not
@@ -2225,7 +2225,7 @@
 	* dcrt0.cc (dll_crt0_1): Revert to calling _setlocale_r so that only
 	the applications locale is reverted to "C".
 	* environ.cc (environ_init): Remove unused got_lc variable.
-	* fhandler.h (class dev_console): Remove now unsed locale variables.
+	* fhandler.h (class dev_console): Remove now unused locale variables.
 	* fhandler_console.cc (fhandler_console::get_tty_stuff): Remove
 	setting dev_console's locale members.
 	(dev_console::con_to_str): Use internal locale settings.  Default to
@@ -2875,7 +2875,7 @@
 
 2009-03-24  Yaakov Selkowitz  <yselkowitz@cygwin.com>
 
-	* include/mntent.h: Remove declarations of nonexistant addmntent
+	* include/mntent.h: Remove declarations of nonexistent addmntent
 	and hasmntopt.  Update and clarify the /etc/mtab comment.
 
 2009-03-23  Corinna Vinschen  <corinna@vinschen.de>
@@ -3366,7 +3366,7 @@
 
 	* syscalls.cc (enum bin_status): New type.
 	(try_to_bin): Return bin_status.  Rename win32_path to pc.  Rename h
-	to fh.  Rename fh to tmp_fh.  Add code to set delete dispostion and
+	to fh.  Rename fh to tmp_fh.  Add code to set delete disposition and
 	more code to replace file moved to bin by another, temporary file.
 	Add comments to explain why.
 	(unlink_nt): Replace move_to_bin with bin_stat.  Only set bin_stat

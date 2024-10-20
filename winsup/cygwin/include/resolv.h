@@ -102,7 +102,7 @@ __END_DECLS
 /*
  * Resolver configuration file.
  * Normally not present, but may contain the address of the
- * inital name server(s) to query and the domain search list.
+ * initial name server(s) to query and the domain search list.
  */
 
 #ifndef _PATH_RESCONF
@@ -151,7 +151,7 @@ struct res_sym {
 struct __res_state_ext;
 
 struct __res_state {
-	int	retrans;		/* retransmition time interval */
+	int	retrans;		/* retransmission time interval */
 	int	retry;			/* number of times to retransmit */
 	u_long	options;		/* option flags - see below. */
 	int	nscount;		/* number of name servers */
@@ -181,7 +181,7 @@ struct __res_state {
 			u_int16_t		nscount;
 			u_int16_t		nstimes[MAXNS];	/* ms. */
 			int			nssocks[MAXNS];
-			struct __res_state_ext *ext;	/* extention for IPv6 */
+			struct __res_state_ext *ext;	/* extension for IPv6 */
 		} _ext;
 	} _u;
 };
@@ -202,7 +202,7 @@ union res_sockaddr_union {
 };
 
 /*
- * Resolver flags (used to be discrete per-module statics ints).
+ * Resolver flags (used to be discrete per-module statistics ints).
  */
 #define	RES_F_VC	0x00000001	/* socket is TCP */
 #define	RES_F_CONN	0x00000002	/* socket is connected */
@@ -219,7 +219,7 @@ union res_sockaddr_union {
 #define RES_AAONLY	0x00000004	/* authoritative answers only (!IMPL)*/
 #define RES_USEVC	0x00000008	/* use virtual circuit */
 #define RES_PRIMARY	0x00000010	/* query primary server only (!IMPL) */
-#define RES_IGNTC	0x00000020	/* ignore trucation errors */
+#define RES_IGNTC	0x00000020	/* ignore truncation errors */
 #define RES_RECURSE	0x00000040	/* recursion desired */
 #define RES_DEFNAMES	0x00000080	/* use default domain name */
 #define RES_STAYOPEN	0x00000100	/* Keep TCP socket open */

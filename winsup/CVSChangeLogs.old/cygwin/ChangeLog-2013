@@ -41,7 +41,7 @@
 	start_time here.
 	* pinfo.cc (pinfo::thisproc): Use PID_NEW when initializing pinfo.
 	Avoid checking h for NULL multiple times.  Don't set start_time here.
-	(pinfo_init): Aways set ppid last.  Tweak strace output.
+	(pinfo_init): Always set ppid last.  Tweak strace output.
 	(pinfo::init): Handle new PID_NEW flag.  Wait for shared memory to
 	contain useful information.  Set start_time if PID_NEW.
 	(_onreturn:h): Define as HANDLE rather than HANDLE *.
@@ -269,7 +269,7 @@
 2013-11-19  Corinna Vinschen  <corinna@vinschen.de>
 
 	* net.cc (cygwin_getaddrinfo): Fix a comment.  Only memset whints if
-	hints is NULL.  Add a comment and set whints.ai_family explicitely to
+	hints is NULL.  Add a comment and set whints.ai_family explicitly to
 	AF_UNSPEC to follow glibc man page closely.  Check flags against whints
 	for locality.
 
@@ -302,7 +302,7 @@
 	(load_ipv6_funcs): Remove.
 	(cygwin_getaddrinfo): Drop calling load_ipv6.  Handle AI_IDN* flags.
 	Convert input strings to wchar_t and call GetAddrInfoW/FreeAddrInfoW.
-	In case hints is NULL, set default ai_flags explicitely to
+	In case hints is NULL, set default ai_flags explicitly to
 	AI_V4MAPPED | AI_ADDRCONFIG, as documented for Glibc.  Only add AI_ALL
 	if AI_ADDRCONFIG is not given.  Unconditionally add Windows-specific
 	AI_DISABLE_IDN_ENCODING to ai_flags to make IDN behaviour compatible
@@ -624,7 +624,7 @@
 	* cygheap.h (user_heap_info::sbrk): Declare new function.
 	(user_heap_info::init): Ditto.
 	* heap.cc (user_heap_info::init): Rename from heap_init().  Avoid
-	explictly using cygheap->user_heap.
+	explicitly using cygheap->user_heap.
 	(sbrk): Use user_heap_info method via cygheap->user_heap.
 	(user_heap_info::sbrk): Renamed from sbrk().  Eliminate explicit use of
 	cygheap->user_heap.  Change some pointer arithmetic to use (char *) for
@@ -636,7 +636,7 @@
 
 	* heap.cc (sbrk): Add a FIXME comment to VirtualFree call.  Fix memory
 	reservation and commit strategy when more memory is requested than
-	available on the heap.  Release newly reserved memory if commiting
+	available on the heap.  Release newly reserved memory if committing
 	it fails.  Add more comments to explain what we do.
 
 2013-08-30  Corinna Vinschen  <corinna@vinschen.de>
@@ -991,7 +991,7 @@
 
 	* nlsfuncs.cc (__collate_range_cmp): Convert input to wchar_t and call
 	wcscoll since all calling functions are using wide chars.  Explain in
-	preceeding comment.
+	preceding comment.
 
 2013-06-18  Corinna Vinschen  <corinna@vinschen.de>
 

@@ -138,7 +138,7 @@ fhandler_procsys::exists (struct stat *buf)
       /* Ok, so we're desperate and the file still maybe on some filesystem.
 	 To check this, we now split the path until we can finally access any
 	 of the parent's.  Then we fall through to check the parent type.  In
-	 contrast to the first parent check, we now check explicitely with
+	 contrast to the first parent check, we now check explicitly with
 	 trailing backslash.  This will fail for directories in the internal
 	 namespace, so we won't accidentally test those. */
       dir = path;

@@ -168,7 +168,7 @@ _scanf_i (struct _reent *rptr,
 #endif
   xdigits = xdigits + 16 - pdata->base;
 
-  /* Initilize ccltab according to pdata->base.  */
+  /* Initialize ccltab according to pdata->base.  */
   __sccl (pdata->ccltab, (unsigned char *) xdigits);
   for (; pdata->width; pdata->width--)
     {

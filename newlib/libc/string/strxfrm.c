@@ -16,7 +16,7 @@ DESCRIPTION
 	<[s1]>. The transformation is such that if the <<strcmp>>
 	function is applied to the two transformed strings, it returns
 	a value greater than, equal to, or less than zero,
-	correspoinding to the result of a <<strcoll>> function applied
+	corresponding to the result of a <<strcoll>> function applied
 	to the same two original strings.
 
 	No more than <[n]> characters are placed into the resulting

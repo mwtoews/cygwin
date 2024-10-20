@@ -393,7 +393,7 @@
 2012-08-26  H.J. Lu  <hongjiu.lu@intel.com>
 
 	PR binutils/4970
-	* Makefile.def (host_modules): Rmove lib_path=.libs from bfd
+	* Makefile.def (host_modules): Remove lib_path=.libs from bfd
 	and opcodes.
 	* Makefile.in: Regenerated.
 
@@ -426,7 +426,7 @@
 
 2012-07-03  Richard Guenther  <rguenther@suse.de>
 
-	* Makfile.def (isl): Remove not necessary extra_exports and
+	* Makefile.def (isl): Remove not necessary extra_exports and
 	extra_make_flags.
 	(cloog): Use $$CPPFLAGS instead of ${CPPFLAGS}.
 	* Makefile.in: Regenerated.
@@ -1202,7 +1202,7 @@
 	PR lto/47225
 	* Makefile.def: Add dependency for install-gcc
 	on install-lto-plugin.
-	* Makfile.in: Regenerated
+	* Makefile.in: Regenerated
 
 	2011-01-25  Jakub Jelinek  <jakub@redhat.com>
 
@@ -1328,7 +1328,7 @@
 	PR binutils/12258
 	* configure.ac: Correct comments for --enable-gold/--enable-ld.
 	Properly check default linker.
-	* configure: Regnerated.
+	* configure: Regenerated.
 
 2010-11-23  Matthias Klose  <doko@ubuntu.com>
 
@@ -1339,7 +1339,7 @@
 2010-11-20  Ian Lance Taylor  <iant@google.com>
 
 	* configure.ac: Only disable a language library if no language needs
-	it.  Don't let --disable-libgcj uncondtionally disable libffi.
+	it.  Don't let --disable-libgcj unconditionally disable libffi.
 	* configure: Rebuild.
 
 2010-11-20  Paolo Bonzini  <bonzini@gnu.org>
@@ -2057,7 +2057,7 @@
 
 	PR bootstrap/40338
 	* configure.ac (comparestring): Create new variable.
-	* Makefile.tpl (comparestring): Use to skip some comparisions.
+	* Makefile.tpl (comparestring): Use to skip some comparisons.
 	* configure: Regenerate.
 	* Makefile.in: Regenerate.
 
@@ -2731,7 +2731,7 @@
 	(expandConditionalJump): Renamed to ...
 	(insertExpandedMnemonic): ... this.
 
-	* opcodes/s390-opc.c: Re-group the operand format makros.
+	* opcodes/s390-opc.c: Re-group the operand format macros.
 	(INSTR_RIE_RRPU, INSTR_RIE_RRP0, INSTR_RIE_RUPI,
 	INSTR_RIE_R0PI, INSTR_RIE_RUPU, INSTR_RIE_R0PU, INSTR_RIE_R0IU,
 	INSTR_RIE_R0I0, INSTR_RIE_R0UU, INSTR_RIE_R0U0,
@@ -2903,7 +2903,7 @@
 
 	* Makefile.def: To avoid problems running with parallel makes,
 	build newlib before libgloss so that target specific header
-	files are availble.
+	files are available.
 	* Makefile.in: Regenerate.
 
 2007-10-11  Daniel Jacobowitz  <dan@codesourcery.com>
@@ -2964,7 +2964,7 @@
 	* configure.ac (mips*-sde-elf*): New stanza.  Add target-libiberty
 	to $skipdirs and only disable gprof for newlib.  Use the normal
 	mips*-elf* handling in other respects.
-	* configure: Regnerate.
+	* configure: Regenerate.
 
 2007-09-12  David Daney  <ddaney@avtrex.com>
 
@@ -4299,7 +4299,7 @@
 
 2005-07-06  Geoffrey Keating  <geoffk@apple.com>
 
-	* configure.in: Don't build sim or rda when targetting darwin.
+	* configure.in: Don't build sim or rda when targeting darwin.
 	* configure: Regenerate.
 
 2005-07-04  Ben Elliston  <bje@gnu.org>
@@ -4585,7 +4585,7 @@
 
 2004-12-16  Andrew Stubbs  <andrew.stubbs@st.com>
 
-	* configure.in (sh64-*-*): Reenable gprof.
+	* configure.in (sh64-*-*): Re-enable gprof.
 	* configure: Regenerate.
 
 2004-12-09  Jim Blandy  <jimb@redhat.com>
@@ -4722,7 +4722,7 @@
 
 2004-10-12  Kelley Cook  <kcook@gcc.gnu.org>
 
-	* configure.in (*-*-cygwin*): Supress warning if newlib not present.
+	* configure.in (*-*-cygwin*): Suppress warning if newlib not present.
 	* configure: Regenerate.
 
 2004-10-06  Paolo Bonzini  <bonzini@gnu.org>
@@ -4785,7 +4785,7 @@
 2004-09-15  Andrew Pinski  <pinskia@physics.uc.edu>
 
 	PR target/11572
-	* configure.in (*-*-darwin*): Renable libobjc.
+	* configure.in (*-*-darwin*): Re-enable libobjc.
 	* configure: Regenerate.
 
 2004-09-09  Daniel Berlin  <dberlin@dberlin.org>
@@ -6168,7 +6168,7 @@
 
 2003-02-25  Nick Clifton  <nickc@redhat.com>
 
-	* configure: Remove site-file supprot - it is obsolete.
+	* configure: Remove site-file support - it is obsolete.
 
 2003-02-24  Uwe Stieber <uwe@wwws.de>
 
@@ -6394,7 +6394,7 @@
 	* Makefile.in: Regenerate.
 
 	* configure.in: Remove unnecessary PATH setting.
-	* configure: Regnerate.
+	* configure: Regenerate.
 
 	* configure.in: Don't default to unprefixed tools unless
 	the native tools will work.
@@ -6614,7 +6614,7 @@
 	(continuing slow-motion replay)
 	* Makefile.tpl: Make all-target, install-target behave similarly
 	to all, install (only hitting configured targets).  Eliminate
-	unused macro defintions.
+	unused macro definitions.
 
 	* Makefile.tpl: Add all-gcc: all-build-libiberty dependency when
 	build != host.
@@ -6760,7 +6760,7 @@
 2002-09-29  Andrew Cagney  <ac131313@redhat.com>
 
 	Revert below (note that src does not contain Makefile.tpl):
-	* Makefile.tpl: Make subsituted variables more autoconfy.
+	* Makefile.tpl: Make substituted variables more autoconfy.
 	* Makefile.in: Regenerate.
 
 2002-09-29  Nathanael Nerode  <neroden@gcc.gnu.org>
@@ -6785,7 +6785,7 @@
 
 2002-09-25  Nathanael Nerode  <neroden@gcc.gnu.org>
 
-	* Makefile.tpl: Make subsituted variables more autoconfy.
+	* Makefile.tpl: Make substituted variables more autoconfy.
 	* Makefile.in: Regenerate.
 	* configure: Make seds more autoconfy.
 
@@ -6997,7 +6997,7 @@
 
 2002-05-31  Olaf Hering  <olh@suse.de>
 
-	* config-ml.in: Propogate DESTDIR also.
+	* config-ml.in: Propagate DESTDIR also.
 
 2002-05-29  Jason Thorpe  <thorpej@wasabisystems.com>
 
@@ -7172,7 +7172,7 @@
 
 2002-02-11  Adam Megacz <adam@xwt.org>
 
-	* gcc/Makefile.in: Removed libstdc++-v3 dependancy for libjava and
+	* gcc/Makefile.in: Removed libstdc++-v3 dependency for libjava and
 	boehm-gc
 
 2002-02-09  Alexandre Oliva  <aoliva@redhat.com>
@@ -8090,7 +8090,7 @@ Fri Jun  8 11:14:02 2001  Andrew Cagney  <cagney@b1.cygnus.com>
 2000-08-20  Doug Evans  <dje@casey.transmeta.com>
 
 	* Makefile.in (ALL_MODULES): Add all-cgen.
-	(CROSS_CHECK_MODULES,INSTALL_MODULES,CLEAN_MODULES): Similarily.
+	(CROSS_CHECK_MODULES,INSTALL_MODULES,CLEAN_MODULES): Similarly.
 	(all-cgen): New target.
 	(all-opcodes,all-sim): Depend on all-cgen.
 	* configure.in (host_tools): Add cgen.
@@ -8208,7 +8208,7 @@ Fri Jun  8 11:14:02 2001  Andrew Cagney  <cagney@b1.cygnus.com>
 
 2000-06-28  Corinna Vinschen  <vinschen@cygnus.com>
 
-	* ltconfig: Check for host_os beeing one of `cygwin', `mingw' or
+	* ltconfig: Check for host_os being one of `cygwin', `mingw' or
 	`os2'. Force ac_cv_exeext to be ".exe" in that case.
 
 2000-06-19  Timothy Wall  <twall@cygnus.com>
@@ -9367,7 +9367,7 @@ Tue Apr 14 12:24:45 1998  J. Kean Johnston  <jkj@sco.com>
 Tue Apr 14 11:33:51 1998  Krister Walfridsson <cato@df.lth.se>
 
 	* configure: Define DEFAULT_M4 by searching PATH.
-	* Makfile.in: Use DEFAULT_M4.
+	* Makefile.in: Use DEFAULT_M4.
 
 Mon Apr 13 15:37:24 1998  Ian Lance Taylor  <ian@cygnus.com>
 
@@ -9894,7 +9894,7 @@ Wed Sep 10 21:29:54 1997  Jeffrey A Law  (law@cygnus.com)
 
 Wed Sep 10 15:19:22 1997  Jeffrey A Law  (law@cygnus.com)
 
-	* config.sub: Accept 'amigados' for backward compatability.
+	* config.sub: Accept 'amigados' for backward compatibility.
 
 Mon Sep  8 20:46:20 1997  Ian Lance Taylor  <ian@cygnus.com>
 
@@ -11706,7 +11706,7 @@ Sun Oct 22 13:04:42 1995  Michael Meissner  <meissner@tiktok.cygnus.com>
 
 Fri Oct 20 18:02:10 1995  Michael Meissner  <meissner@tiktok.cygnus.com>
 
-	* cfg-ml-com.in (powerpc*-eabi*): Add mcall-aixdesc varients.
+	* cfg-ml-com.in (powerpc*-eabi*): Add mcall-aixdesc variants.
 
 Thu Oct 19 10:40:57 1995  steve chamberlain  <sac@slash.cygnus.com>
 
@@ -12000,7 +12000,7 @@ Tue Jul 18 10:58:51 1995  Michael Meissner  <meissner@tiktok.cygnus.com>
 
 Mon Jul  3 13:44:51 1995  Steve Chamberlain  <sac@slash.cygnus.com>
 
-	* Makfile.in (DLLTOOL_FOR_TARGET): New name, pass it down.
+	* Makefile.in (DLLTOOL_FOR_TARGET): New name, pass it down.
 	* config.sub, configure.in (win32): New target and host.
 
 Wed Jun 28 23:57:08 1995  Steve Chamberlain  <sac@slash.cygnus.com>
@@ -12067,7 +12067,7 @@ Thu May 11 17:23:26 1995  Per Bothner  <bothner@kalessin.cygnus.com>
 
 Tue May  9 15:52:05 1995  Michael Meissner  <meissner@cygnus.com>
 
-	* config.sub: Recognize powerpcle as the little endian varient of
+	* config.sub: Recognize powerpcle as the little endian variant of
 	the PowerPC.  Recgonize ppc as a PowerPC variant, and ppcle as a
 	powerpcle variant.  Convert pentium into i586, not i486.  Add p5
 	alias for i586.  Map new x86 variants p6, k5, nexgen into i586
@@ -12792,7 +12792,7 @@ Thu May 19 09:29:12 1994  Steve Chamberlain  (sac@cygnus.com)
 Fri May 13 13:28:34 1994  Steve Chamberlain  (sac@cygnus.com)
 
 	* Makefile.in (Move HOST_PREFIX_1 and friends up so
-	they can be overriden by templates.
+	they can be overridden by templates.
 
 Sat May  7 16:46:44 1994  Steve Chamberlain  (sac@cygnus.com)
 
@@ -13070,7 +13070,7 @@ Thu Jan 20 16:13:41 1994  Stu Grossman  (grossman at cygnus.com)
 
 Mon Jan 17 15:06:56 1994  Ken Raeburn  (raeburn@cujo.cygnus.com)
 
-	* Makefile.in: Replace all occurrances of "rootme" with "r" and
+	* Makefile.in: Replace all occurrences of "rootme" with "r" and
 	"$${rootme}" with "$$r", to increase the likelihood that the do-*
 	commands (plus user environment) will fit SCO limits.
 
@@ -13166,7 +13166,7 @@ Tue Nov  9 15:54:01 1993  Mark Eichin  (eichin@cygnus.com)
 Fri Nov  5 08:07:27 1993  D. V. Henkel-Wallace  (gumby@blues.cygnus.com)
 
 	* config.sub: accept unixware as an alias for svr4.2.
-	Fix some inconsistancies with the gcc version.
+	Fix some inconsistencies with the gcc version.
 
 Fri Nov  5 15:14:12 1993  Jim Kingdon  (kingdon@lioth.cygnus.com)
 
@@ -13689,7 +13689,7 @@ Thu May 20 14:19:18 1993  Ken Raeburn  (raeburn@cambridge.cygnus.com)
 
 Tue May 18 20:26:41 1993  david d `zoo' zuhn  (zoo at cirdan.cygnus.com)
 
-	* configure.in: remove some program from Alpha targetted toolchains
+	* configure.in: remove some program from Alpha targeted toolchains
 
 Tue May 18 15:23:19 1993  Ken Raeburn  (raeburn@cygnus.com)
 
@@ -13726,7 +13726,7 @@ Tue May 11 10:14:25 1993  Fred Fish  (fnf@cygnus.com)
 	archive, so the testsuite can be extracted, configured, and
 	run separately from the gdb distribution.  Blow away the Chill
 	tests that require a Chill compiled executable, since GNU Chill
-	is not yet publically available.
+	is not yet publicly available.
 
 Mon May 10 17:22:26 1993  david d `zoo' zuhn  (zoo at cirdan.cygnus.com)
 
@@ -14040,7 +14040,7 @@ Sun Feb 21 11:15:22 1993  Mike Werner  (mtw@poseidon.cygnus.com)
 	Migrated dejagnu testcases and support files for testing software
 	tools to reside as subdirectories, currently called "testsuite",
 	within the directory of the software tool.  Migrated all programs,
-	support libraries, etc. beloging to dejagnu proper from
+	support libraries, etc. belonging to dejagnu proper from
 	devo/deja-gnu to devo/dejagnu.	These files were moved "as is"
 	with no modifications.	The changes to these files which will
 	allow them to configure, build, and execute properly will be made
@@ -14634,7 +14634,7 @@ Mon Jun 22 23:43:48 1992  Per Bothner  (bothner@cygnus.com)
 
 Mon Jun 22 18:30:26 1992  Steve Chamberlain  (sac@thepub.cygnus.com)
 
-	* configure: fix various problems with propogating
+	* configure: fix various problems with propagating
 	makefile_target_frag in subdirs.
 	* configure.in: config libgcc if its there
 
@@ -14712,7 +14712,7 @@ Fri May  8 08:31:41 1992  K. Richard Pixley  (rich@cygnus.com)
 	* configure: print the "Building in" message only when building in
 	  other than "." AND verbose.
 
-	* configure: remove -s, rework -v to better accomodate guested
+	* configure: remove -s, rework -v to better accommodate guested
 	  configures.
 
 	* standards.texi: updated to 3 may, fixed librid <-> libdir typo.
@@ -14748,7 +14748,7 @@ Wed Apr 22 18:06:55 1992  K. Richard Pixley  (rich@rtl.cygnus.com)
 
 Wed Apr 22 14:38:34 1992  Fred Fish  (fnf@cygnus.com)
 
-	* configure:  Test for existance of files before trying to mv
+	* configure:  Test for existence of files before trying to mv
 	them, to avoid numerous non-existance messages.
 
 Tue Apr 21 12:31:33 1992  K. Richard Pixley  (rich@cygnus.com)
@@ -14838,7 +14838,7 @@ Tue Mar 31 16:32:57 1992  K. Richard Pixley  (rich@cygnus.com)
 Mon Mar 30 22:20:23 1992  K. Richard Pixley  (rich@cygnus.com)
 
 	* Makefile.in: add send_pr.  remove "force" from .stmp-gprof rule.
-	  Supress echoing of all the "if [ -d ... $(MAKE)" lines.
+	  Suppress echoing of all the "if [ -d ... $(MAKE)" lines.
 
 Wed Mar 25 15:20:04 1992  Stu Grossman  (grossman@cygnus.com)
 

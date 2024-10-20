@@ -184,7 +184,7 @@ test_sok (char *is,
 {
   if (strcmp(is,shouldbe))
     {
-    printf("%s:%d, inacurate answer: (%s should be %s)\n",
+    printf("%s:%d, inaccurate answer: (%s should be %s)\n",
 	   iname, 
 	   theline,
 	   is, shouldbe);
@@ -196,7 +196,7 @@ test_iok (int is,
        int shouldbe)
 {
   if (is != shouldbe){
-    printf("%s:%d, inacurate answer: (%08x should be %08x)\n",
+    printf("%s:%d, inaccurate answer: (%08x should be %08x)\n",
 	   iname, 
 	   theline,
 	   is, shouldbe);
@@ -215,7 +215,7 @@ test_scok (char *is,
 {
   if (strncmp(is,shouldbe, count))
     {
-    printf("%s:%d, inacurate answer: (%s should be %s)\n",
+    printf("%s:%d, inaccurate answer: (%s should be %s)\n",
 	   iname, 
 	   theline,
 	   is, shouldbe);

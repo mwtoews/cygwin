@@ -168,7 +168,7 @@ _flat_map:
        msr     cptr_el3, x0
        isb
 
-       /* set up vector lenght in ZCR_EL3 (4 LSB).  */
+       /* set up vector length in ZCR_EL3 (4 LSB).  */
        mov     x2, #0xF
 
        /* Try to set the maximum value supported by the architecture (2048).

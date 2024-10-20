@@ -54,7 +54,7 @@ int background( char * );
  *              descendent, resulting in only one direct descendent of the
  *              parent and each other child is a child of another child in
  *              relation to the parent.
- * arg 3: prefix: string to preceed any error messages.  A value of NULL
+ * arg 3: prefix: string to precede any error messages.  A value of NULL
  *              results in no error messages on failure.
  * returns: returns to parent the number of children forked.
  */

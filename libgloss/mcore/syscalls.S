@@ -27,7 +27,7 @@ brkval:	.long	_end
 
 	
 FUNC_START _exit
-	mov	r1, r1		// accomodate simulator glitch...
+	mov	r1, r1		// accommodate simulator glitch...
 	.short	0x5000
 	br	_exit		// hard loop here
 

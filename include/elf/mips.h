@@ -580,7 +580,7 @@ extern void bfd_mips_elf32_swap_reginfo_out
 /* Linker should generate implicit weak names for this section.  */
 #define SHF_MIPS_NAMES		0x02000000
 
-/* Section contais text/data which may be replicated in other sections.
+/* Section contains text/data which may be replicated in other sections.
    Linker should retain only one copy.  */
 #define SHF_MIPS_NODUPES	0x01000000
 

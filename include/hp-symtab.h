@@ -55,7 +55,7 @@
    $DEBUG$.  $DEBUG$ contains several subspaces which group related
    debug symbols.
 
-   $GNTT$ contains information for global variables, types and contants.
+   $GNTT$ contains information for global variables, types and constants.
 
    $LNTT$ contains information for procedures (including nesting), scoping
    information, local variables, types, and constants.
@@ -1304,7 +1304,7 @@ struct dntt_type_doc_function
 
 /* DNTT_TYPE_DOC_MEMFUNC is unused by GDB */
 
-/* DNTT_TYPE_GENERIC and DNTT_TYPE_BLOCK are convience structures
+/* DNTT_TYPE_GENERIC and DNTT_TYPE_BLOCK are convenience structures
    so we can examine a DNTT entry in a generic fashion.  */
 struct dntt_type_generic
 {

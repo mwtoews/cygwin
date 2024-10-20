@@ -485,7 +485,7 @@ class pthread_null : public pthread
   ~pthread_null();
 
   /* From pthread These should never get called
-  * as the ojbect is not verifyable
+  * as the object is not verifyable
   */
   bool create (void *(*)(void *), pthread_attr *, void *);
   void exit (void *value_ptr) __attribute__ ((noreturn));

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <fcntl.h>
 
-#define USAGE	"USAGE: checkum -[vhcs] infile outfile\n\t-v\tverbose\n\
+#define USAGE	"USAGE: checksum -[vhcs] infile outfile\n\t-v\tverbose\n\
 \t-h\thelp\n\t-c\tcheck checksum\n\t-s\tprint the ipl size"
 static int verbose = 0;
 static int verify  = 0;

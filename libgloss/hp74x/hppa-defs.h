@@ -35,7 +35,7 @@ struct _dev {
 };
 
 /*
- * Register defintions
+ * Register definitions
  */
 #define gr0	%r0			/* always ZERO */
 #define gr1	%r1			/* ADDIL results only */
@@ -58,8 +58,8 @@ struct _dev {
 #define gr18	%r18
 #define gr19	%r19			/* 4th temp register */
 #define gr20	%r20			/* 3rd temp register */
-#define gr21	%r21			/* 2rd temp register */
-#define gr22	%r22			/* 1rd temp register */
+#define gr21	%r21			/* 2nd temp register */
+#define gr22	%r22			/* 1st temp register */
 #define gr23	%r23			/* argument 3 */
 #define gr24	%r24			/* argument 2 */
 #define gr25	%r25			/* argument 1 */
@@ -107,8 +107,8 @@ struct _dev {
 #define LF      0x0a    /* <ctrl>J      line feed       (down arrow) */
 #define VT      0x0b    /* <ctrl>K      vertical tab    (up arrow) */
 #define FF      0x0c    /* <ctrl>L      form feed       (right arrow) */
-#define RTN     0x0d    /* <ctrl>M      carrage return */
-#define CR      0x0d    /* <ctrl>M      carrage return */
+#define RTN     0x0d    /* <ctrl>M      carriage return */
+#define CR      0x0d    /* <ctrl>M      carriage return */
 
 #define INSC    0x0e    /* <ctrl>N      insert char     (input only, non-std) */
 #define XON     0x11    /* <ctrl>Q      DC1 - continue */

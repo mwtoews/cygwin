@@ -23,7 +23,7 @@
  *
  * DESCRIPTION
  *	Check that exit flushes output file buffers and closes files upon
- *	exitting
+ *	exiting
  *
  * ALGORITHM
  * 	Fork a process that creates a file and writes a few bytes, and

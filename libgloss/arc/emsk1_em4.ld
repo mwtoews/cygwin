@@ -1,4 +1,4 @@
-/* Memory map fo ARC EM Starter Kit v1 - EM4 */
+/* Memory map for ARC EM Starter Kit v1 - EM4 */
 
 MEMORY
 {

@@ -67,11 +67,11 @@ PROVIDE (__stack = 1M - 8);
  */
 
 /*
- * Initalize some symbols to be zero so we can reference them in the
+ * Initialize some symbols to be zero so we can reference them in the
  * crt0 without core dumping. These functions are all optional, but
  * we do this so we can have our crt0 always use them if they exist. 
  * This is so BSPs work better when using the crt0 installed with gcc.
- * We have to initalize them twice, so we multiple object file
+ * We have to initialize them twice, so we multiple object file
  * formats, as some prepend an underscore.
  */
 PROVIDE (hardware_exit_hook = 0);

@@ -48,17 +48,17 @@ enum ipc_type_t
 static bool
 check_path (char *res_name, ipc_type_t type, const char *name, size_t len)
 {
-  /* Note that we require the existance of the appropriate /dev subdirectories
+  /* Note that we require the existence of the appropriate /dev subdirectories
      for POSIX IPC object support, similar to Linux (which supports the
      directories, but doesn't require to mount them).  We don't create
      these directory here, that's the task of the installer.  But we check
-     for existance and give ample warning. */
+     for existence and give ample warning. */
   path_conv path (ipc_names[type].prefix, PC_SYM_NOFOLLOW);
   if (path.error || !path.exists () || !path.isdir ())
     {
       small_printf (
 	"Warning: '%s' does not exists or is not a directory.\n\n"
-	"%ss require the existance of this directory.\n"
+	"%ss require the existence of this directory.\n"
 	"Create the directory '%s' and set the permissions to 01777.\n"
 	"For instance on the command line: mkdir -m 01777 %s\n",
 	ipc_names[type].prefix, ipc_names[type].description,

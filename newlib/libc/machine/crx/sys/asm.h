@@ -140,7 +140,7 @@
 #define _loadmp_(src, mask)  	__asm__("loadmp %0,%1" : /* No output */ : \
 					"r" ((unsigned int)src) , "i" (mask))
 
-/* Multiply Accumulate Instrutions */
+/* Multiply Accumulate Instructions */
 #define _macsb_(hi, lo, src1, src2)  	__asm__("macsb %1,%0" \
 					: =l (lo), =h (hi) \
 					: "r" ((char)src1) , "r" (src2))
@@ -160,7 +160,7 @@
   					: =l (lo), =h (hi) \
 					: "r" ((unsigned int)src1) , "r" (src2))
 
-/* Q-Format Multiply Accumulate Instrutions */
+/* Q-Format Multiply Accumulate Instructions */
 #define _macqb_(src1, src2)  	__asm__("macqb %1,%0" \
   					: =l (lo), =h (hi) \
 					:"r" ((char)src1) , "r" (src2))
@@ -207,7 +207,7 @@
 #define _movd_(src, dest)  	__asm__("movd %1,%0" : "=r" (dest)  : \
 					"ri" ((unsigned int)src) , "0" (dest))
 
-/* mtpr and mfpr Insturctions */
+/* mtpr and mfpr Instructions */
 #define _mtpr_(procregd, src)  __asm__("mtpr\t%0," procregd : /* no output */ : \
 				       "r" (src) : "cc")
 #define _mfpr_(procregd, dest) __asm__("mfpr\t" procregd ",%0" : "=r" (dest) : \

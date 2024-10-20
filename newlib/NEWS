@@ -38,7 +38,7 @@
 - fixes to ldtoa
 - add clock support to nvptx port
 - various pthread POSIX APIs added
-- added implementatio for sig2str/str2sig
+- added implementation for sig2str/str2sig
 - strtod/strtof to set errno to ERANGE consistently for underflow
 - fixed rounding issue with sqrt/sqrtf
 - fixed heap fragmentation issue with nano-malloc
@@ -346,7 +346,7 @@
 
 * Removed _asctime, _next, _scanpoint, and _signgam fields from struct
   _reent.  These are no longer necessary since there are now functions
-  that explictly support multiple threads (asctime_r, ctime_r, gamma_r,
+  that explicitly support multiple threads (asctime_r, ctime_r, gamma_r,
   gmtime_r, lgamma_r, localtime_r, rand_r, & strtok_r).
 
 
@@ -387,7 +387,7 @@
 
 * unctrl added.
 
-* dtoa.c updated from master dtoa.c soruces (netlib.att.com)
+* dtoa.c updated from master dtoa.c sources (netlib.att.com)
 
 * Various bug fixes.
 

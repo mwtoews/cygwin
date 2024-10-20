@@ -207,7 +207,7 @@ struct if_data {
  *   features & capabilities on this interface.
  *   Capabilities are defined by IFCAP_* below.
  * struct if_data.ifi_hwassist in mbuf CSUM_ flag form, controlled by above
- *   contains the enabled optional feature & capabilites that can be used
+ *   contains the enabled optional feature & capabilities that can be used
  *   individually per packet and are specified in the mbuf pkthdr.csum_flags
  *   field.  IFCAP_* and CSUM_* do not match one to one and CSUM_* may be
  *   more detailed or differentiated than IFCAP_*.
@@ -326,7 +326,7 @@ struct if_msghdr {
  * extensible after ifm_data_off or within ifm_data.  Both the if_msghdr and
  * if_data now have a member field detailing the struct length in addition to
  * the routing message length.  Macros are provided to find the start of
- * ifm_data and the start of the socket address strucutres immediately following
+ * ifm_data and the start of the socket address structures immediately following
  * struct if_msghdrl given a pointer to struct if_msghdrl.
  */
 #define	IF_MSGHDRL_IFM_DATA(_l) \
@@ -368,7 +368,7 @@ struct ifa_msghdr {
  * extensible after ifam_metric or within ifam_data.  Both the ifa_msghdrl and
  * if_data now have a member field detailing the struct length in addition to
  * the routing message length.  Macros are provided to find the start of
- * ifm_data and the start of the socket address strucutres immediately following
+ * ifm_data and the start of the socket address structures immediately following
  * struct ifa_msghdrl given a pointer to struct ifa_msghdrl.
  */
 #define	IFA_MSGHDRL_IFAM_DATA(_l) \

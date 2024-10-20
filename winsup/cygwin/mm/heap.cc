@@ -131,7 +131,7 @@ user_heap_info::init ()
     }
   else
     {
-      /* total size commited in parent */
+      /* total size committed in parent */
       SIZE_T allocsize = (char *) top - (char *) base;
 
       /* Loop until we've managed to reserve an adequate amount of memory. */
@@ -180,7 +180,7 @@ user_heap_info::init ()
 
 #define pround(n) (((size_t)(n) + page_const) & ~page_const)
 /* Linux defines n to be intptr_t, newlib defines it to be ptrdiff_t.
-   It shouldn't matter much, though, since the function is not standarized
+   It shouldn't matter much, though, since the function is not standardized
    and sizeof(ptrdiff_t) == sizeof(intptr_t) anyway. */
 extern "C" void *
 sbrk (ptrdiff_t n)

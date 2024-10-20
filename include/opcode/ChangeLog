@@ -1468,7 +1468,7 @@
 
 	* cgen.h (CGEN_BITSET_ATTR_VALUE): Fix definition.
 	(CGEN_ATTR_ENTRY): Change "value" to type "unsigned".
-	(CGEN_CPU_TABLE): Make isas a ponter.
+	(CGEN_CPU_TABLE): Make isas a pointer.
 
 	2003-09-29  Dave Brolley  <brolley@redhat.com>
 
@@ -1897,7 +1897,7 @@
 
 2004-01-09  Anil Paranjpe  <anilp1@KPITCummins.com>
 
-	* h8300.h (BITOP): Dissallow operations on @aa:16 and @aa:32
+	* h8300.h (BITOP): Disallow operations on @aa:16 and @aa:32
 	except for the H8S.
 
 For older changes see ChangeLog-9103

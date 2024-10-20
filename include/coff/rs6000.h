@@ -229,7 +229,7 @@ struct external_reloc {
 #define DEFAULT_DATA_SECTION_ALIGNMENT 4
 #define DEFAULT_BSS_SECTION_ALIGNMENT 4
 #define DEFAULT_TEXT_SECTION_ALIGNMENT 4
-/* For new sections we havn't heard of before */
+/* For new sections we haven't heard of before */
 #define DEFAULT_SECTION_ALIGNMENT 4
 
 /* The ldhdr structure.  This appears at the start of the .loader
@@ -337,7 +337,7 @@ struct external_core_dumpx
 };
 
 
-/* Core file verion.  */
+/* Core file version.  */
 #define CORE_DUMPX_VERSION 0x0feeddb1
 #define CORE_DUMPXX_VERSION 0x0feeddb2
 

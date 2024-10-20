@@ -261,7 +261,7 @@ AC_SUBST(LIBERTY)
 ])
 
 dnl ====================================================================
-dnl Find the opcodes library. This is used to do dissasemblies.
+dnl Find the opcodes library. This is used to do disassemblies.
 AC_DEFUN([CYG_AC_PATH_OPCODES], [
 AC_MSG_CHECKING(for the opcodes library in the build tree)
 dirlist=".. ../../ ../../../ ../../../../ ../../../../../ ../../../../../../ ../../../../../../.. ../../../../../../../.. ../../../../../../../../.. ../../../../../../../../../.."
@@ -658,7 +658,7 @@ AC_SUBST(ILUTOP)
 dnl ====================================================================
 dnl This defines the byte order for the host. We can't use
 dnl AC_C_BIGENDIAN, cause we want to create a config file and
-dnl substitue the real value, so the header files work right
+dnl substitute the real value, so the header files work right
 AC_DEFUN([CYG_AC_C_ENDIAN], [
 AC_MSG_CHECKING(to see if this is a little endian host)
 AC_CACHE_VAL(ac_cv_c_little_endian, [

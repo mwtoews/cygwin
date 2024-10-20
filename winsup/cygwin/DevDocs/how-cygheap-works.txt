@@ -72,7 +72,7 @@ to this "shared memory" is the child.
 
 Under Windows 9x, due to address limitations, we can't just map the
 shared memory region into the cygheap position.  So, instead, the memory
-is mapped whereever Windows wants to put it, a new heap region is
+is mapped wherever Windows wants to put it, a new heap region is
 allocated at the same place as in the parent, the contents of the shared
 memory is *copied* to the new heap, and the shared memory is unmapped.
 Simple, huh?

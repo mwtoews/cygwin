@@ -746,7 +746,7 @@ is_mmapped_region (caddr_t start_addr, caddr_t end_address)
    Otherwise, return MMAP_NONE if the address range is not covered by an
    attached or noreserve map.
 
-   On MAP_NORESERVE_COMMITED, the exeception handler should return 0 to
+   On MAP_NORESERVE_COMMITED, the exception handler should return 0 to
    allow the application to retry the memory access, or the calling Cygwin
    function should retry the Windows system call. */
 
@@ -950,7 +950,7 @@ mmap (void *addr, size_t len, int prot, int flags, int fd, off_t off)
 	}
 
       /* You can't create mappings with PAGE_EXECUTE protection if
-	 the file isn't explicitely opened with EXECUTE access. */
+	 the file isn't explicitly opened with EXECUTE access. */
       OBJECT_ATTRIBUTES attr;
       NTSTATUS status;
       HANDLE h;
@@ -1032,7 +1032,7 @@ mmap (void *addr, size_t len, int prot, int flags, int fd, off_t off)
 	}
 
       /* If the requested offset + len is <= file size, drop MAP_AUTOGROW.
-	 This simplifes fhandler::mmap's job. */
+	 This simplifies fhandler::mmap's job. */
       if (autogrow (flags) && (off + (off_t) len) <= fsiz)
 	flags &= ~MAP_AUTOGROW;
     }

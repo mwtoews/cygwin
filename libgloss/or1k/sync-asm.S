@@ -76,16 +76,16 @@ or1k_sync_ll:
 	.type	or1k_sync_sc,@function
 or1k_sync_sc:
 #ifdef __OR1K_MULTICORE__
-	// swa sets the flag if it was succesfull
+	// swa sets the flag if it was successful
 	// Store the value to address and set flag
 	l.swa 0(r3),r4
 	OR1K_DELAYED(
 		// Set return to success speculatively (may go to delay slot)
 		OR1K_INST(l.ori r11,r0,1),
-		// If the swa was successfull, jump to end
+		// If the swa was successful, jump to end
 		OR1K_INST(l.bf  .or1k_sync_sc_done)
 	)
-	// If the swa was not successfull, set
+	// If the swa was not successful, set
 	l.or r11,r0,r0
 .or1k_sync_sc_done:
 	OR1K_DELAYED_NOP(OR1K_INST(l.jr r9))
@@ -108,7 +108,7 @@ or1k_sync_cas:
 	l.sfeq	r11,r4
 	/* If not equal: abort and return the read value */
 	OR1K_DELAYED_NOP(OR1K_INST(l.bnf .or1k_sync_cas_done))
-	/* If compare was successfull: try writing */
+	/* If compare was successful: try writing */
 	l.swa	0(r3),r5
 	/* If writing was not successful: restart */
 	OR1K_DELAYED_NOP(OR1K_INST(l.bnf or1k_sync_cas))

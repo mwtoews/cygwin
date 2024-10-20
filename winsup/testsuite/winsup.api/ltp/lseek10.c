@@ -150,7 +150,7 @@ main(int ac, char **av)
 			test_desc = Test_cases[ind].desc;
 			whence = Test_cases[ind].Whence;
 	
-			/* Assign the 'fd' values appropriatly */
+			/* Assign the 'fd' values appropriately */
 			if (fildes == 1) {
 				fildes = fd1;
 			} else if (fildes == 2) {

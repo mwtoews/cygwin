@@ -10,7 +10,7 @@ SYNOPSIS
 	void assert(int <[expression]>);
 
 DESCRIPTION
-	Use this macro to embed debuggging diagnostic statements in
+	Use this macro to embed debugging diagnostic statements in
 	your programs.  The argument <[expression]> should be an
 	expression which evaluates to true (nonzero) when your program
 	is working as you intended.

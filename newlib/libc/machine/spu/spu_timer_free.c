@@ -37,7 +37,7 @@ POSSIBILITY OF SUCH DAMAGE.
    to succeed. Maybe be called:
     * after allocated, before it's started
     * after it's been explicitly stopped
-   Returns 0 on success, timer sucessfully deallocated. Returns <0 on failure
+   Returns 0 on success, timer successfully deallocated. Returns <0 on failure
     * SPU_TIMER_INVALID_ID - id out of range
     * SPU_TIMER_ERR_FREE - id in free state
     * SPU_TIMER_ERR_ACTIVE - id in handled or active state  */

@@ -1336,7 +1336,7 @@ __SVFWSCANF_R (struct _reent *rptr,
 	    {
 	      c = _fgetwc_r (rptr, fp);
 	      /*
-	       * This code mimicks the integer conversion
+	       * This code mimics the integer conversion
 	       * code, but is much simpler.
 	       */
 	      switch (c)

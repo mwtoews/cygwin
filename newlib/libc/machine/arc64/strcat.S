@@ -50,7 +50,7 @@
 ; R0 char* dest (destination string)
 ; R1 const char* src (source string)
 ; ret (R0):
-;		- char* (destiantion string)
+;		- char* (destination string)
 ;
 
 #if defined (__ARC64_ARCH32__)
@@ -536,7 +536,7 @@ ENDFUNC (strcat)
 ; r6 is set via bset, which means we can simply use a fls to obtain the first
 ; match (or ffs depending on the values in bset) [2].
 ; The reason for starting at 1 and not 0 is so r6 encodes how many double
-; words to go back, and it wouldnt make sense to go back 0 (the NULL would be
+; words to go back, and it wouldn't make sense to go back 0 (the NULL would be
 ; in the next loop iteration).
 ;
 ; The first step to take is point r13 to the appropriate double word.
@@ -552,7 +552,7 @@ ENDFUNC (strcat)
 ; double words, so we want to analyze from last to first.
 ;
 ; We can ignore the first asr (which would be asr.f 2, as we started r6 on 1)
-; because if r7 isnt the NULL byte, r2 will always be overwritten so we can
+; because if r7 isn't the NULL byte, r2 will always be overwritten so we can
 ; just decide to start at r7, and overwrite it if needed.
 ;
 ; Now comes the tricky part. In order to obtain the first NULL byte, we need to
@@ -570,7 +570,7 @@ ENDFUNC (strcat)
 ;
 ; One thing to note, is that ffs oddly returns 31 if no bit is found, setting
 ; the zero flag. As r9 is never all 0s at this stage (would mean there is no
-; NULL byte and we wouldnt be here) we dont need to worry about that. [6]
+; NULL byte and we wouldn't be here) we dont need to worry about that. [6]
 ;
 ; We can then convert the bit position into the last byte position by looking
 ; into bits 3 to 5, and shifting 3 bits to the right. This can be combined into

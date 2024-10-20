@@ -52,7 +52,7 @@ TYPE0 _isatty, VH_ISATTY
 	.align	2
 _isatty:
 	syscall	SYS_isatty	/* Make syscall with SWID=`SYS_isatty'.
-				   Reture value `0' stored in $r0 means
+				   Return value `0' stored in $r0 means
 				   there is something wrong.  */
 	bnez	$r0, 1f		/* Branch if success.  */
 	syscall	SYS_geterr	/* There is something wrong.  */

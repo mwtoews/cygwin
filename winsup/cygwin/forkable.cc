@@ -32,7 +32,7 @@ details. */
 
 /* Create the lastsepcount directories found in ntdirname, where
    counting is done along path separators (including trailing ones).
-   Returns true when these directories exist afterwards, false otherways.
+   Returns true when these directories exist afterwards, false otherwise.
    The ntdirname is used for the path-splitting. */
 static bool
 mkdirs (PWCHAR ntdirname, int lastsepcount)
@@ -821,7 +821,7 @@ rmdirs_synchronized (WCHAR ntbuf[NT_MAX_PATH], int depth, int maxdepth,
 
 /* Try to lock the mutex handle with almost no timeout, then close the
    mutex handle.  Locking before closing is to get the mutex closing
-   promoted synchronously, otherways we might end up with no one
+   promoted synchronously, otherwise we might end up with no one
    succeeding in create-with-lock, which is the precondition
    to actually remove the hardlinks from the filesystem. */
 bool

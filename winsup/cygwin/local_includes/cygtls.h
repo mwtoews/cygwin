@@ -151,7 +151,7 @@ typedef struct struct_waitq
   HANDLE thread_ev;
 } waitq;
 
-/* Changes to the below structure may require acompanying changes to the
+/* Changes to the below structure may require accompanying changes to the
    gawk parser in the shell script 'gentls_offsets' */
 
 extern "C" int __sjfault (jmp_buf);
@@ -293,7 +293,7 @@ public:
     _cnt = _my_tls.locals.pathbufs._counters;
     /* myfault_altstack_handler needs the current stack pointer and the
        address of the _except block to restore the context correctly.
-       See comment preceeding myfault_altstack_handler in exception.cc. */
+       See comment preceding myfault_altstack_handler in exception.cc. */
     ret = (DWORD64) _ret;
     __asm__ volatile ("movq %%rsp,%0": "=o" (frame));
   }

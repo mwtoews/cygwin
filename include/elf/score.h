@@ -78,7 +78,7 @@
 /* Linker should generate implicit weak names for this section.  */
 #define SHF_SCORE_NAMES		0x02000000
 
-/* Section contais text/data which may be replicated in other sections.
+/* Section contains text/data which may be replicated in other sections.
    Linker should retain only one copy.  */
 #define SHF_SCORE_NODUPES	0x01000000
 

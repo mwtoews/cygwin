@@ -37,7 +37,7 @@
 /*!Open a file
 
    @param[in] file  The name of the file to open
-   @param[in] flags The flags definining how the file should be opened
+   @param[in] flags The flags defining how the file should be opened
    @param[in] mode  The permissions to be used in the new file
 
    @return  0 on success, -1 on failure with an error code in errno.         */

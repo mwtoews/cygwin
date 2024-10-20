@@ -18,7 +18,7 @@ SECTIONS
 	*(.zcommon)
   }
   /* This is the read only part of the zero data area.
-     Having it as a seperate section prevents its
+     Having it as a separate section prevents its
      attributes from being inherited by the zdata
      section.  Specifically it prevents the zdata
      section from being marked READONLY.  */
@@ -137,7 +137,7 @@ SECTIONS
 	*(.rosdata)
   }
   /* We place the .sbss data section AFTER the .rosdata section, so that
-     it can directly preceed the .bss section.  This allows runtime startup
+     it can directly precede the .bss section.  This allows runtime startup
      code to initialise all the zero-data sections by simply taking the
      value of '_edata' and zeroing until it reaches '_end'.  */
   .sbss :

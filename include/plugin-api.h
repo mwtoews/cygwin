@@ -300,7 +300,7 @@ enum ld_plugin_status
                                          size_t* len);
 
 /* The linker's interface for specifying the desired order of sections.
-   The sections should be specifed using the array SECTION_LIST in the
+   The sections should be specified using the array SECTION_LIST in the
    order in which they should appear in the final layout.  NUM_SECTIONS
    specifies the number of entries in each array.  This should be invoked
    in the all_symbols_read handler.  */

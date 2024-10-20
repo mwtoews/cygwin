@@ -198,7 +198,7 @@ LBTAILQ_HEAD (leonbare_mutex_queue, leonbare_mutex) *
        char *th_stack_base;
        unsigned int th_stack_size;
        struct _reent th_reent;	/* reentrant structure for newlib */
-       struct _reent *th_reentp;	/* pointer to eather pt_reent or global reent */
+       struct _reent *th_reentp;	/* pointer to either pt_reent or global reent */
 
        struct leonbare_thread_protect th_prot;
 

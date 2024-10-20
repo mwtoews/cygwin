@@ -56,7 +56,7 @@
 static __inline vector double _coshd2(vector double x)
 {
  
-  // Coefficents for the power series
+  // Coefficients for the power series
   vec_double2 f02 = spu_splats(5.00000000000000000000E-1);   // 1/(2!)
   vec_double2 f04 = spu_splats(4.16666666666666666667E-2);   // 1/(4!)
   vec_double2 f06 = spu_splats(1.38888888888888888889E-3);   // 1/(6!)

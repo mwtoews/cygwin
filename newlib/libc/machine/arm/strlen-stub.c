@@ -68,7 +68,7 @@ strlen (const char* str)
        "neg	len, len\n\t"
        /* First word of data */
        "ldr	data, [addr], #4\n\t"
-       /* Ensure bytes preceeding start ... */
+       /* Ensure bytes preceding start ... */
        "add	ip, len, #4\n\t"
        "mov	ip, ip, asl #3\n\t"
        "mvn	r2, #0\n\t"

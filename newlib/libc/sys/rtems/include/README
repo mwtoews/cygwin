@@ -11,7 +11,7 @@ Date:   Wed Jul 6 14:03:48 2022 +0100
     architectures such as CHERI may support ZFS before they support DTrace
     and the old model of WITHOUT_CDDL disabling both wasn't helpful.
 
-    For compatiblity, the CDDL option remains and WITHOUT_CDDL implies
+    For compatibility, the CDDL option remains and WITHOUT_CDDL implies
     WITHOUT_DTRACE.  WITHOUT_DTRACE also implies WITHOUT_CTF.
 
     As part of this change, largely convert cddl/*/Makefile to using the
@@ -34,7 +34,7 @@ sys/sys/_sockaddr_storage.h sys/sys/socket.h sys/sys/sockio.h \
 sys/sys/syslog.h sys/sys/_termios.h sys/sys/ttycom.h sys/sys/ttydefaults.h \
 sys/sys/_uio.h sys/sys/uio.h sys/sys/un.h
 
-Use the follwing commands to map FreeBSD paths to Newlib paths:
+Use the following commands to map FreeBSD paths to Newlib paths:
 
 sed -i 's,include/arpa/inet.h,newlib/libc/sys/rtems/include/arpa/inet.h,g' *.patch
 sed -i 's,include/netdb.h,newlib/libc/sys/rtems/include/netdb.h,g' *.patch

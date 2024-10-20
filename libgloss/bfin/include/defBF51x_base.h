@@ -595,7 +595,7 @@
 #define HMDMA0_CONTROL			0xFFC03300	/* Handshake MDMA0 Control Register						*/
 #define HMDMA0_ECINIT			0xFFC03304	/* HMDMA0 Initial Edge Count Register					*/
 #define HMDMA0_BCINIT			0xFFC03308	/* HMDMA0 Initial Block Count Register					*/
-#define HMDMA0_ECURGENT			0xFFC0330C	/* HMDMA0 Urgent Edge Count Threshhold Register				*/
+#define HMDMA0_ECURGENT			0xFFC0330C	/* HMDMA0 Urgent Edge Count Threshold Register				*/
 #define HMDMA0_ECOVERFLOW		0xFFC03310	/* HMDMA0 Edge Count Overflow Interrupt Register			*/
 #define HMDMA0_ECOUNT			0xFFC03314	/* HMDMA0 Current Edge Count Register					*/
 #define HMDMA0_BCOUNT			0xFFC03318	/* HMDMA0 Current Block Count Register					*/
@@ -603,7 +603,7 @@
 #define HMDMA1_CONTROL			0xFFC03340	/* Handshake MDMA1 Control Register						*/
 #define HMDMA1_ECINIT			0xFFC03344	/* HMDMA1 Initial Edge Count Register					*/
 #define HMDMA1_BCINIT			0xFFC03348	/* HMDMA1 Initial Block Count Register					*/
-#define HMDMA1_ECURGENT			0xFFC0334C	/* HMDMA1 Urgent Edge Count Threshhold Register				*/
+#define HMDMA1_ECURGENT			0xFFC0334C	/* HMDMA1 Urgent Edge Count Threshold Register				*/
 #define HMDMA1_ECOVERFLOW		0xFFC03350	/* HMDMA1 Edge Count Overflow Interrupt Register			*/
 #define HMDMA1_ECOUNT			0xFFC03354	/* HMDMA1 Current Edge Count Register					*/
 #define HMDMA1_BCOUNT			0xFFC03358	/* HMDMA1 Current Block Count Register					*/
@@ -626,8 +626,8 @@
 #define CNT_COMMAND			0xFFC0350C  /* Command Register 								*/
 #define CNT_DEBOUNCE			0xFFC03510  /* Debounce Register 								*/
 #define CNT_COUNTER			0xFFC03514  /* Counter Register 								*/
-#define CNT_MAX				0xFFC03518  /* Boundry Value Register - max count					*/
-#define CNT_MIN				0xFFC0351C  /* Boundry Value Register - min count					*/
+#define CNT_MAX				0xFFC03518  /* Boundary Value Register - max count					*/
+#define CNT_MIN				0xFFC0351C  /* Boundary Value Register - min count					*/
 
 
 /* OTP/FUSE Registers 			(0xFFC03600 - 0xFFC036FF)									*/
@@ -1743,7 +1743,7 @@
 #define SADD_LEN				0x0002	/* Slave Address Length								*/
 #define STDVAL				0x0004	/* Slave Transmit Data Valid							*/
 #define NAK					0x0008	/* NAK/ACK* Generated At Conclusion Of Transfer 			*/
-#define GEN					0x0010	/* General Call Adrress Matching Enabled					*/
+#define GEN					0x0010	/* General Call Address Matching Enabled					*/
 
 /* TWI_SLAVE_STAT Masks	*/
 #define SDIR				0x0001	/* Slave Transfer Direction (Transmit/Receive*)				*/

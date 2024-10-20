@@ -83,7 +83,7 @@ main(int argc, char **argv)
 	/*
 	 * At least some CPU time must be used. This is
 	 * achieved by executing the times(2) call for
-	 * atleast 5 secs. This logic makes it independant
+	 * at least 5 secs. This logic makes it independent
 	 * of the processor speed.
 	 */
 	start_time = time(NULL);
@@ -137,7 +137,7 @@ main(int argc, char **argv)
 			} else if (pid2 == 0) {
 				for (i = 0; i < 2000000; i++);
 				/*
-				 * Atleast some CPU time must be used
+				 * At least some CPU time must be used
 				 * even in the child process (thereby
 				 * making it independent of the
 				 * processor speed). In fact the child

@@ -58,7 +58,7 @@ DESCRIPTION
 
         There must be sufficient address arguments for the given format
         specifiers; if not the results are unpredictable and likely
-        disasterous.  Excess address arguments are merely ignored.
+        disastrous.  Excess address arguments are merely ignored.
 
         <<wscanf>> often produces unexpected results if the input diverges from
         an expected pattern. Since the combination of <<gets>> or <<fgets>>

@@ -39,13 +39,13 @@ struct leonbare_kernel leonbare_kernel;
  * ...
  * queue n: [ ... ]
  *
- *  Seach through ready queue [0 - LEONBARE_RUNQ_READY_NR-1] for the
+ *  Search through ready queue [0 - LEONBARE_RUNQ_READY_NR-1] for the
  *  first thread in a queue'ss head to discover
  *  leonbare_thread_tick_callback() will put threads that have their th_caccount
  *  consumed into the prepare-run queues. th_caccount is already initialized
  *  to the value for the next schedule round. So all there is to do is to
  *  move the to prepare-run queues to run queues [0 - LEONBARE_RUNQ_READY_NR-1].
- *  return the first thread in any queue, similary to leonbare_sched_next().
+ *  return the first thread in any queue, similarly to leonbare_sched_next().
  *  Using LEONBARE_KR_RUNQ_WHICH and leonbare_thread.th_runq_which one can
  *  determine weather the thread is in a runqueue or a prepare-runqueue:
  *  LEONBARE_KR_RUNQ_WHICH == leonbare_thread.th_runq_which : thread in runqueue

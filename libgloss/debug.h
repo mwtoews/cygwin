@@ -30,7 +30,7 @@ struct trap_info
 
 /* 
  * prototypes for the functions in debug.c. As these'll only be used with GCC,
- * we don't worry about no stinkin K&R comilers.
+ * we don't worry about no stinkin K&R compilers.
  */
 extern void exception_handler (int, unsigned long);
 extern unsigned char *mem2hex(unsigned char *, unsigned char *, int, int);
@@ -64,7 +64,7 @@ extern char *gdb_write_reg(int, long);	        /* P - write one register */
 extern char *gdb_exited();			/* W - process exited */
 extern char *gdb_terminated();			/* X - process terminated */
 extern char *gdb_hex();				/* O - hex encoding */
-extern char *gdb_thread_alive(int);		/* A - tread alive request */
+extern char *gdb_thread_alive(int);		/* A - thread alive request */
 extern char *gdb_extended();			/* ! - extended protocol */
 extern char *gdb_debug();			/* d - toggle stub diagnostics */
 extern char *gdb_toggle();			/* unsupported, toggle stub on/off */
@@ -120,7 +120,7 @@ struct gdb_ops {
   char	*(*gdb_exited);				/* W - process exited */
   char	*(*gdb_terminated);			/* X - process terminated */
   char	*(*gdb_hex);				/* O - hex encoding */
-  char	*(*gdb_thread_alive)(int);		/* A - tread alive request */
+  char	*(*gdb_thread_alive)(int);		/* A - thread alive request */
 						/* FIXME: not standard yet */
   char	*(*gdb_extended);			/* ! - extended protocol */
   char	*(*gdb_debug);				/* d - toggle stub diagnostics */

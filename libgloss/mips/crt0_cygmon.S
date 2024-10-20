@@ -91,7 +91,7 @@ zerobss:
      *    do this even though we aren't passing arguments, because
      *    main might be declared to have them.
 	 *    Some ports need a larger alignment for the stack, so we
-	 *    subtract 32, which satisifes the stack for the arguments and
+	 *    subtract 32, which satisfies the stack for the arguments and
 	 *    keeps the stack pointer better aligned.
      */
 	subu	v0, v0, 32

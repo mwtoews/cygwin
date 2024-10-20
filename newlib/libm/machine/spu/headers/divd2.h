@@ -77,7 +77,7 @@ static __inline vector double _divd2(vector double a_in, vector double b_in)
 #ifdef __SPU_EDP__  
   vec_double2 denorm_scale = (vec_double2)spu_splats(0x4330000000000000ULL);
 
-  /* Identify all possible special values that must be accomodated including:
+  /* Identify all possible special values that must be accommodated including:
    * +-0, +-infinity, +-denorm, and NaNs.
    */
   a_nan    = spu_testsv(a_in, (SPU_SV_NAN));
@@ -127,7 +127,7 @@ static __inline vector double _divd2(vector double a_in, vector double b_in)
   a_exp_1s = (vec_ullong2)spu_cmpeq(a_exp, exp_mask_u32);
   b_exp_1s = (vec_ullong2)spu_cmpeq(b_exp, exp_mask_u32);
 
-  /* Identify all possible special values that must be accomodated including:
+  /* Identify all possible special values that must be accommodated including:
    * +-denorm, +-0, +-infinity, and NaNs.
    */
   a_denorm = (vec_ullong2)spu_cmpeq(a_exp, 0);		/* really is a_exp_0 */

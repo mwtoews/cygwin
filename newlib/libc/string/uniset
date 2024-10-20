@@ -292,7 +292,7 @@ while ($_ = shift(@ARGV)) {
 	$setfile = $2;
 	$setfile = "$setfile..$setfile" if $setfile =~ /^([0-9A-Fa-f]{4,8})$/;
 	if ($setfile =~ /^([0-9A-Fa-f]{4,8})(-|\.\.)([0-9A-Fa-f]{4,8})$/) {
-	    # handle intervall specification on command line
+	    # handle interval specification on command line
 	    $first = hex($1);
 	    $last = hex($3);
 	    for ($i = $first; $i <= $last; $i++) {
@@ -525,7 +525,7 @@ while ($_ = shift(@ARGV)) {
 	print "</TABLE>\n";
     } elsif (/^sources$/) {
 	# count how many characters are attributed to the various source set combinations
-	print "<P>Number of occurences of source character set combinations:\n<TABLE border=2>" if $html;
+	print "<P>Number of occurrences of source character set combinations:\n<TABLE border=2>" if $html;
 	for $i (keys(%used)) {
 	    next if ($name{$i} eq "<control>");
 	    $sources = $used{$i};

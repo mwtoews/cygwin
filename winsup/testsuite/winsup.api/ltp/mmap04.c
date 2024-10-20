@@ -261,7 +261,7 @@ setup()
 /*
  * cleanup() - performs all ONE TIME cleanup for this test at
  *             completion or premature exit.
- * 	       Free the memeory allocated to dummy variable.
+ * 	       Free the memory allocated to dummy variable.
  * 	       Remove the temporary directory created.
  */
 void 

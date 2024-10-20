@@ -160,7 +160,7 @@
 
 	* net.cc (struct win64_servent): Define for x86_64.  Explain why.
 	(WIN_SERVENT): Define for all targets.
-	(dup_ent): Use WIN_SERVENT to access critical servent members
+	(dup_ent): Use WIN_SERVENT to access critical servant members
 	throughout.
 
 2013-03-27  Corinna Vinschen  <corinna@vinschen.de>
@@ -244,7 +244,7 @@
 
 	* autoload.cc (.#dllname_info): Call _std_dll_init on x86_64 bit, too.
 	(INIT_WRAPPER): Change to accommodate the change of the init functions
-	from sysv_abit to ms_abi.  Fix preceeding comment accordingly.  Add
+	from sysv_abit to ms_abi.  Fix preceding comment accordingly.  Add
 	SEH information and comments.
 	(std_dll_init): Drop leading underscore on x86_64.  Drop sysv_abi
 	comment.
@@ -409,7 +409,7 @@
 	(getifaddrs): Always call get_ifs.
 	(get_ifconf): Ditto.
 	(if_nametoindex): Drop Pre-XP considerations.
-	(load_ipv6_funcs): Ditto.  Fix preceeding comment.
+	(load_ipv6_funcs): Ditto.  Fix preceding comment.
 	* sec_auth.cc (lsaauth): Drop code handling fake_login_sid.
 	* sec_helper.cc (fake_logon_sid): Remove.
 	(set_cygwin_privileges): Fix uncommented statement to drop pre-XP
@@ -1005,7 +1005,7 @@
 2012-12-11  Corinna Vinschen  <corinna@vinschen.de>
 
 	* Makefile.in (TLSOFFSETS_H): Let configure fill in.  Change all
-	occurence of tlsoffsets.h to $(TLSOFFSETS_H).
+	occurrence of tlsoffsets.h to $(TLSOFFSETS_H).
 	$(srcdir)/$(TLSOFFSETS_H): Add @CONFIG_DIR@ as parameter to
 	gentls_offsets so the script knows the target CPU.
 	* configure.ac (TLSOFFSETS_H): Set according to target.
@@ -1017,7 +1017,7 @@
 2012-12-11  Corinna Vinschen  <corinna@vinschen.de>
 
 	* Makefile.in (DLL_NAME): Let configure fill in.
-	(DIN_FILE): Ditto.  Change all occurence of cygwin.din to $(DIN_FILE).
+	(DIN_FILE): Ditto.  Change all occurrence of cygwin.din to $(DIN_FILE).
 	* configure.ac (DLL_NAME): Set according to target.
 	(DIN_FILE): Ditto.
 	* configure: Regenerate.
@@ -1067,7 +1067,7 @@
 	to SIZE_T.
 	(get_mem_values): Ditto for n and length.
 	* mmap.cc (MapView): Ditto for commitsize and viewsize.
-	(class mmap_record): Ditto for len.  Use SIZE_T througout for memory
+	(class mmap_record): Ditto for len.  Use SIZE_T throughout for memory
 	size in method args and return types.
 	* ntdll.h (NtLockVirtualMemory): Fix type of memory size parameters
 	to SIZE_T.
@@ -1091,7 +1091,7 @@
 	(struct _semid_ds32): Define on 64 bit in _KERNEL mode.
 	* include/cygwin/shm.h: Enforce 4 byte alignment on all structs.
 	(struct _shmid_ds32): Define on 64 bit in _KERNEL mode.
-	(struct shminfo): Enhance coment on shmall member.
+	(struct shminfo): Enhance comment on shmall member.
 	(struct shm_info): Convert type of all members to int32_t.
 	* include/cygwin/sysproto.h (struct semctl_args): Change definition to
 	use the same structure on 32 and 64 bit.
@@ -1215,7 +1215,7 @@
 	absolutely clear that we mean the 32 bit maximum.
 	* fhandler_socket.cc: Ditto.
 	* pinfo.cc: Ditto with INT32_MAX.
-	* select.cc (fd_mask): Drop gratuitious definition.
+	* select.cc (fd_mask): Drop gratuitous definition.
 	(sizeof_fd_set): Cast to size_t.
 	* shared.cc (pround): Cast to ptrdiff_t.
 	* strace.cc (strace::activate): Fix format string.
@@ -1227,7 +1227,7 @@
 	* sync.h (class muto): De-const name.
 	* syslog.cc (try_connect_syslogd): Take size_t as third argument.
 	(vsyslog): Convert len to size_t.
-	* thread.cc: Use {U}INT32_MAX rather than {U}LONG_MAX.  Througout change
+	* thread.cc: Use {U}INT32_MAX rather than {U}LONG_MAX.  Throughout change
 	types used in Windows calls to matching Windows types.
 	(pthread::cancel): Fix access to instruction pointer for x86_64.
 	(pthread_attr_getstack): Cast to ptrdiff_t for pointer arithmetic.
@@ -1285,7 +1285,7 @@
 	member of FAST_CWD_* structures to work on 64 bit.
 	* path.cc (symlink_info::check_shortcut): Add cast to avoid compiler
 	warning.
-	(cygwin_conv_path_list): Drop ununsed variable.
+	(cygwin_conv_path_list): Drop unused variable.
 	(peek32): Define with int32_t cast on 64 bit to allow easier fetching
 	of instruction pointer relative addresses.
 	(find_fast_cwd_pointer): Add new implementation for x86_64.
@@ -1306,7 +1306,7 @@
 	* nlsfuncs.cc (__collate_range_cmp): Add casts to avoid compiler
 	warnings.
 	* ntdll.h: Drop accommodations for Mingw32.  Fix a couple of formatting
-	glitches.  Add a comment to all structures explicitely tested on 64 bit.
+	glitches.  Add a comment to all structures explicitly tested on 64 bit.
 	(SYSTEM_INFORMATION_CLASS): Change SystemProcessesAndThreadsInformation
 	to SystemProcessInformation and SystemProcessorTimes to
 	SystemProcessorPerformanceInformation to match MSDN.
@@ -1335,11 +1335,11 @@
 	is valid on 32 and 64 bit.
 	* pinfo.cc (winpids::enum_processes): Add cast to avoid compiler
 	warnings.
-	* select.cc (pipe_data_available): Add braces in initalization of an
+	* select.cc (pipe_data_available): Add braces in initialization of an
 	IO_STATUS_BLOCK to match new definition.
 	* wincap.h (class wincapc): Change type of wow64 to ULONG_PTR to match
 	MSDN description.
-	(wincapc::is_wow64): Convert return value explicitely to bool.
+	(wincapc::is_wow64): Convert return value explicitly to bool.
 	* wow64.cc (wow64_test_for_64bit_parent): Change type of wow64 to
 	ULONG_PTR to match MSDN description.  Add a cast to avoid compiler
 	warning.
@@ -1629,7 +1629,7 @@
 	cpu.
 	* smallprint.cc (__small_vsprintf): Fix up for 64 bit.  Handle 'l' size
 	modifier in 'd', 'o', 'u', 'x' conversion to print "long" values on a
-	per cpu base.  Add 'O' conversion.  Change comment accrdingly.
+	per cpu base.  Add 'O' conversion.  Change comment accordingly.
 	* include/cygwin/signal.h (struct _uc_fpxreg): Define for 64 bit.
 	(struct _uc_xmmreg): Ditto.
 	(struct _fpstate): Ditto.

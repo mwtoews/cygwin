@@ -31,7 +31,7 @@ off: <filename>C:\cygwin\</filename>.  Then "etc" and the filename to
 look for is attached: <filename>C:\cygwin\etc\fstab</filename>.  So the
 /etc directory must be parallel to the directory in which the cygwin1.dll
 exists and <filename>/etc</filename> must not be a Cygwin symlink
-pointing to another directory.  Consequentially none of the files from
+pointing to another directory.  Consequently none of the files from
 the above list, including the directory <filename>/etc/fstab.d</filename>
 is allowed to be a Cygwin symlink either.</para>
 
@@ -98,7 +98,7 @@ NWFS) which choke on these filenames.  They return with an error like
 recognizes these filesystems and works around this problem by applying
 the same rule as for the other forbidden characters.  Leading spaces and
 trailing dots and spaces will be converted to UNICODE characters in the
-private use area.  This behaviour can be switched on explicitely for a
+private use area.  This behaviour can be switched on explicitly for a
 filesystem or a directory tree by using the mount option
 <literal>dos</literal>.</para>
 
@@ -263,7 +263,7 @@ files.</para>
 <sect2 id="pathnames-posixdevices"> <title>POSIX devices</title>
 <para>While there is no need to create a POSIX <filename>/dev</filename> 
 directory, the directory is automatically created as part of a Cygwin
-installation.  It's existence is often a prerequisit to run certain
+installation.  It's existence is often a prerequisite to run certain
 applications which create symbolic links, fifos, or UNIX sockets in
 <filename>/dev</filename>.  Also, the directories <filename>/dev/shm</filename>
 and <filename>/dev/mqueue</filename> are required to exist to use named POSIX

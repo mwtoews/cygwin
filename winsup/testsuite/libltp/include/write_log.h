@@ -45,7 +45,7 @@
 
 /*
  * User view of a write log record.  Note that this is not necessiliary
- * how the data is formatted on disk (signifigant compression occurrs), so
+ * how the data is formatted on disk (significant compression occurs), so
  * don't expect to od the write log file and see things formatted this way.
  */
 
@@ -101,7 +101,7 @@ struct wlog_rec {
  *
  * Note that there is lots of bit-masking done here.  The w_pathlen,
  * w_hostlen, and w_patternlen fields MUST have enough bits to hold
- * WLOG_MAX_PATH, WLOG_MAX_HOST, and WLOG_MAX_PATTERN bytes respectivly.
+ * WLOG_MAX_PATH, WLOG_MAX_HOST, and WLOG_MAX_PATTERN bytes respectively.
  */
 
 struct wlog_rec_disk {

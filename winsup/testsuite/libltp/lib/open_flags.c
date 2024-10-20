@@ -72,7 +72,7 @@
  *	be a comma "," or pipe "|".  If <mode> is one and not all 
  *	<openflags> bits can be converted to symbols, the "UNKNOWN"
  *	symbol will be added to return string.
- * 	Openflags2symbols will return the indentified symbols.
+ * 	Openflags2symbols will return the identified symbols.
  * 	If no symbols are recognized the return value will be a empty
  * 	string or the "UNKNOWN" symbol.
  *
@@ -259,7 +259,7 @@ openflags2symbols(int openflags, char *sep, int mode)
     }
 
     /*
-     *  Loop through all but O_RDONLY elments of Open_flags
+     *  Loop through all but O_RDONLY elements of Open_flags
      */
     for(ind=1; ind < size; ind++) {
 	  

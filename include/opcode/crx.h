@@ -202,7 +202,7 @@ operand_type;
    general-purpose registers) as operands.  */
 #define USER_REG       (1 << 15)
 
-/* Indicates that instruction can perfom a cst4 mapping.  */
+/* Indicates that instruction can perform a cst4 mapping.  */
 #define CST4MAP	       (1 << 16)
 
 /* Instruction shouldn't allow 'sp' usage.  */

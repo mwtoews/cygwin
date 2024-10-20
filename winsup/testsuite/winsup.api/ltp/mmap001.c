@@ -55,7 +55,7 @@ void setup()
 {
   char buf[1024];
   /*
-   * setup a default signal hander and a
+   * setup a default signal handler and a
    * temporary working directory.
    */
   tst_sig(FORK, DEF_HANDLER, cleanup);

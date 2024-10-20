@@ -343,7 +343,7 @@ One feature can be enabled by specifying `--enable-FEATURE=yes' or
 
 `--disable-newlib-unbuf-stream-opt'
      NEWLIB does optimization when `fprintf to write only unbuffered unix
-     file'.  It creates a temorary buffer to do the optimization that
+     file'.  It creates a temporary buffer to do the optimization that
      increases stack consumption by about `BUFSIZ' bytes.  This option
      disables the optimization and saves size of text and stack.
      Enabled by default.
@@ -355,7 +355,7 @@ One feature can be enabled by specifying `--enable-FEATURE=yes' or
      Disabled by default.
 
 `--enable-newlib-use-gdtoa'
-     Use gdtoa rather than legacy ldtoa.  gdtoa privides more accurate
+     Use gdtoa rather than legacy ldtoa.  gdtoa provides more accurate
      output and faster conversion than legacy ldtoa, while it requires
      more heap memory.  gdtoa sometimes requires 16KB heap memory, so
      if the platform does not have enough heap memory, consider disabling

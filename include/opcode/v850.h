@@ -104,7 +104,7 @@ extern const int v850_num_opcodes;
 struct v850_operand
 {
   /* The number of bits in the operand.  */
-  /* If this value is -1 then the operand's bits are in a discontinous
+  /* If this value is -1 then the operand's bits are in a discontinuous
      distribution in the instruction. */
   int bits;
 

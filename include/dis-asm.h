@@ -152,7 +152,7 @@ typedef struct disassemble_info
 
   /* Function called to check if a SYMBOL is can be displayed to the user.
      This is used by some ports that want to hide special symbols when
-     displaying debugging outout.  */
+     displaying debugging output.  */
   bfd_boolean (* symbol_is_valid)
     (asymbol *, struct disassemble_info *dinfo);
 

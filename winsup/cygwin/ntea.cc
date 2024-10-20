@@ -148,8 +148,8 @@ read_ea (HANDLE hdl, path_conv &pc, const char *name, char *value, size_t size)
 	      break;
 	    case STATUS_NONEXISTENT_EA_ENTRY:
 	      /* Actually STATUS_NONEXISTENT_EA_ENTRY is either never generated,
-		 or it was only generated in some old and long forgotton NT
-		 version.  See below.  For safty reasons, we handle it here,
+		 or it was only generated in some old and long forgotten NT
+		 version.  See below.  For safety reasons, we handle it here,
 		 nevertheless. */
 	      set_errno (ENOATTR);
 	      break;
@@ -342,7 +342,7 @@ write_ea (HANDLE hdl, path_conv &pc, const char *name, const char *value,
 		 also returned for STATUS_EA_LIST_INCONSISTENT, which means the
 		 incoming EA list is... inconsistent.  For obvious reasons we
 		 translate ERROR_EA_LIST_INCONSISTENT to EINVAL, so we have to
-		 handle STATUS_EA_TOO_LARGE explicitely here, to get the correct
+		 handle STATUS_EA_TOO_LARGE explicitly here, to get the correct
 		 mapping to ENOSPC. */
 	      set_errno (ENOSPC);
 	      break;

@@ -195,7 +195,7 @@
 
 2003-04-15  Rohit Kumar Srivastava <rohits@kpitcummins.com>
 
-	* common.h: Replace occurrances of 'Hitachi' with 'Renesas'.
+	* common.h: Replace occurrences of 'Hitachi' with 'Renesas'.
 
 2003-04-01  Bob Wilson  <bob.wilson@acm.org>
 
@@ -366,7 +366,7 @@
 
 2002-09-12  Roland McGrath  <roland@redhat.com>
 
-	* dwarf2.h: Updates from GCC version of thie file:
+	* dwarf2.h: Updates from GCC version of this file:
 	(enum dwarf_location_atom): DW_OP_calli -> DW_OP_call_ref.
 	Add DW_OP_GNU_push_tls_address.
 	(DW_OP_lo_user): Change to 0xe0.
@@ -652,7 +652,7 @@
 
 2001-06-29  James Cownie <jcownie@etnus.com>
 
-	* dwarf2.h: Add DWARF 2.1 attribues.
+	* dwarf2.h: Add DWARF 2.1 attributes.
 
 2001-06-15  Per Bothner  <per@bothner.com>
 
@@ -1080,10 +1080,10 @@
 	(SHT_FINI_ARRAY): New value for sh_type field.
 	(SHT_PREINIT_ARRAY): New value for sh_type field.
 	(SHT_HIUSER): Change value.
-	(SHF_MERGE): New valye for sh_flags field.
-	(SHF_STRINGS): New valye for sh_flags field.
-	(SHF_INFO_LINK): New valye for sh_flags field.
-	(SHF_OS_NONCONFORMING): New valye for sh_flags field.
+	(SHF_MERGE): New value for sh_flags field.
+	(SHF_STRINGS): New value for sh_flags field.
+	(SHF_INFO_LINK): New value for sh_flags field.
+	(SHF_OS_NONCONFORMING): New value for sh_flags field.
 	(SHF_MASKOS): Change value.
 	(ELF_ST_VISIBILITY): New macro.
 	(ELF_ST_OTHER): New macro.
@@ -1403,7 +1403,7 @@ Sun Aug  9 20:26:49 CDT 1998  Catherine Moore  <clm@cygnus.com>
 
 Wed Aug  5 15:52:35 1998  Nick Clifton  <nickc@cygnus.com>
 
-	* arm.h: Add ELF header flags to specify compile time optins:
+	* arm.h: Add ELF header flags to specify compile time options:
 	EF_INTERWORK: New flag.
 	EF_APCS_26: New flag.
 	EF_APCS_FLOAT: New flag.
@@ -1804,7 +1804,7 @@ Wed Mar  8 18:14:37 1995  Michael Meissner  <meissner@tiktok.cygnus.com>
 
 Tue Feb 14 13:59:13 1995  Michael Meissner  <meissner@tiktok.cygnus.com>
 
-	* common.h (EM_PPC): Use offical value of 20, not 17.
+	* common.h (EM_PPC): Use official value of 20, not 17.
 	(EM_PPC_OLD): Define this to be the old value of EM_PPC.
 
 Tue Jan 24 09:40:59 1995  Michael Meissner  <meissner@tiktok.cygnus.com>

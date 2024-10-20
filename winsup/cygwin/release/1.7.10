@@ -41,7 +41,7 @@ What's new:
 
 - Add /proc/devices, /proc/misc, /proc/sysvipc, /proc/swaps.
 
-- Make various system functions thread cancelation points per POSIX.
+- Make various system functions thread cancellation points per POSIX.
 
 - Add ioctl FIONREAD handling for non-sockets.
 

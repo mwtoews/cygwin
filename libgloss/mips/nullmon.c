@@ -24,7 +24,7 @@
    we can insure that the testsuite will run without references or
    linkages to nonexistent monitor services.
    Similarly, every service provided by this file muse be provided by all
-   monitor speciifc interfaces.
+   monitor specific interfaces.
    PLEASE DO NOT MAKE THIS FILE SPECIFIC TO ANY MONITOR
  */   
 

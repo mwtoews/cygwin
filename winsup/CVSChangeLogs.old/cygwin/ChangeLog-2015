@@ -36,7 +36,7 @@
 
 2015-12-14  Sebastian Huber  <sebastian.huber@embedded-brains.de>
 
-	* include/cygwin/signal.h (sigset_t): Move defintition to newlib.
+	* include/cygwin/signal.h (sigset_t): Move definition to newlib.
 
 2015-12-11  Ken Brown  <kbrown@cornell.edu>
 
@@ -70,7 +70,7 @@
 	the fact that we access a FILE_ALL_INFORMATION structure now.
 	(fhandler_base::open_fs): Set ino directly from IndexNumber stored in
 	pc.fai().
-	* fhandler.h (fhandler_base::fstat_helper): Fix declaration accrdingly.
+	* fhandler.h (fhandler_base::fstat_helper): Fix declaration accordingly.
 
 2015-12-10  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -407,7 +407,7 @@
 	* sec_acl.cc (get_posix_access): Only set saw_group_obj flag if we saw
 	the ACCESS_ALLOWED_ACE.
 
-	* fhandler_disk_file.cc (fhandler_disk_file::fchmod): Deliberatly
+	* fhandler_disk_file.cc (fhandler_disk_file::fchmod): Deliberately
 	set GROUP_OBJ and CLASS_OBJ perms to new group perms.  Add comment
 	to explain why.
 	* security.cc (set_created_file_access): Ditto.
@@ -431,7 +431,7 @@
 	from prototype.
 	* security.cc (create_object_sd_from_attribute): Drop handle parameter.
 	Just create the standard POSIXy security descriptor.
-	(set_object_attribute): Accommodate dropped paramter in call to
+	(set_object_attribute): Accommodate dropped parameter in call to
 	create_object_sd_from_attribute.
 	* fhandler_tty.cc: Ditto, throughout.
 
@@ -440,7 +440,7 @@
 
 	* fhandler.cc (fhandler_base::open_with_arch): Call open with mode
 	not umasked.
-	(fhandler_base::open): Explicitely umask mode on NFS here.  Call new
+	(fhandler_base::open): Explicitly umask mode on NFS here.  Call new
 	set_created_file_access rather than set_file_attribute.
 	* fhandler_disk_file.cc (fhandler_disk_file::fchmod): Reimplement
 	setting permissions on filesystems supporting ACLs using the new
@@ -477,7 +477,7 @@
 	(set_posix_access): Ditto.
 	* syscalls.cc (open): Call open_with_arch with mode not umasked.
 
-	* sec_acl.cc: Change preceeding comment explaining new-style ACLs.
+	* sec_acl.cc: Change preceding comment explaining new-style ACLs.
 	Describe how to generate deny ACEs in more detail.  Accommodate the
 	fact that a NULL deny ACE is used for {DEF_}CLASS_OBJ, rather than
 	a special Cygwin ACE.  Improve further comments.
@@ -720,7 +720,7 @@
 	(get_phys_pages): New helper to handle _SC_PHYS_PAGES.
 	(cpuid2_cache_descriptor): New array to map Intel CPUID 2 descriptor
 	values to cache type, cache size, associativity and linesize.
-	(cpuid2_cache_desc_compar): Comparision function for bsearch over
+	(cpuid2_cache_desc_compar): Comparison function for bsearch over
 	cpuid2_cache_descriptor.
 	(get_cpu_cache_intel_cpuid2): New function to fetch cache info from
 	Intel CPUID 2.
@@ -862,7 +862,7 @@
 	(get_msb): New inline function.
 	(mask_bits): Ditto.
 	(format_proc_cpuinfo): Drop handling of old CPUs.  Check if we're
-	running on a OS version supporting porcessor groups.  If so, use
+	running on a OS version supporting processor groups.  If so, use
 	SetThreadGroupAffinity to set thread affinity.  Improve cache info
 	to include 3rd level cache on Intel CPUs.  Improve multi core info.
 	* wincap.h (wincaps::has_processor_groups): New element.
@@ -870,7 +870,7 @@
 
 2015-08-10  Corinna Vinschen  <corinna@vinschen.de>
 
-	*  miscfuncs.cc: Fix comment preceeding x86_64 memset and friends.
+	*  miscfuncs.cc: Fix comment preceding x86_64 memset and friends.
 
 2015-08-10  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -982,14 +982,14 @@
 	* exceptions.cc (getcontext/x86_64): Drop comment on RtlCaptureContext.
 	(swapcontext/x86_64): Fix comment yet again.
 	(getcontext/i686): Move comment from x86_64 getcontext, slightly
-	rearranged, to preceeding comment.
+	rearranged, to preceding comment.
 
 2015-07-17  Corinna Vinschen  <corinna@vinschen.de>
 
 	* exceptions.cc (__unwind_single_frame): Move up in file to be
 	accessible from other places.  Move comment to getcontext.
 	(stack_info::walk): Call __unwind_single_frame in 64 bit case.  Fix
-	preceeding comment.
+	preceding comment.
 	(myfault_altstack_handler): Call __unwind_single_frame.
 	(getcontext): Give comment from __unwind_single_frame a new home.
 	(swapcontext): Fix comment.
@@ -1022,7 +1022,7 @@
 
 2015-07-13  Corinna Vinschen  <corinna@vinschen.de>
 
-	* exceptions.cc (exception::handle): Reenable code only disabled for
+	* exceptions.cc (exception::handle): Re-enable code only disabled for
 	debug purposes.
 
 2015-07-07  Corinna Vinschen  <corinna@vinschen.de>
@@ -1076,8 +1076,8 @@
 	(CygwinCreateThread): Fix deadzone handling.  Drop setting a "POSIX"
 	guardpage (aka page w/ PAGE_NOACCESS).  Always use Windows guard
 	pages instead.  On post-XP systems (providing SetThreadStackGuarantee)
-	always set up stack Windows like with reserved/commited areas and
-	movable guard pages.  Only on XP set up stack fully commited if the
+	always set up stack Windows like with reserved/committed areas and
+	movable guard pages.  Only on XP set up stack fully committed if the
 	guardpage size is not the default system guardpage size.
 	Fill out pthread_wrapper_arg::guardsize.  Improve comments.
 	* resource.cc: Implement RSTACK_LIMIT Linux-like.
@@ -1180,7 +1180,7 @@
 
 	* exceptions.cc (_cygtls::call_signal_handler): Drop subtracting 16
 	bytes from the alternate stack, it's not necessary.  Safe all clobbered
-	registers.  Safe one on the orignal stack, the others on the alternate
+	registers.  Safe one on the original stack, the others on the alternate
 	stack on both platforms.
 
 2015-06-20  Corinna Vinschen  <corinna@vinschen.de>
@@ -1252,7 +1252,7 @@
 
 2015-06-08  Corinna Vinschen  <corinna@vinschen.de>
 
-	* pinfo.cc (_pinfo::cwd): Initialize s to avoid comiler warning.
+	* pinfo.cc (_pinfo::cwd): Initialize s to avoid compiler warning.
 	(_pinfo::cmdline): Ditto.
 
 2015-06-08  Corinna Vinschen  <corinna@vinschen.de>
@@ -1294,7 +1294,7 @@
 
 2015-05-27  Takashi Yano  <takashi.yano@nifty.ne.jp>
 
-	* net.cc: Define _NETIOAPI_H_ to accomodate newer w32api.
+	* net.cc: Define _NETIOAPI_H_ to accommodate newer w32api.
 
 2015-05-03  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -1532,7 +1532,7 @@
 
 	* cygheap.h (cygheap_domain_info::add_domain): Add prototype.
 	* uinfo.cc (cygheap_domain_info::add_domain): New method.
-	(pwdgrp::fetch_account_from_windows): Try to add domain explicitely
+	(pwdgrp::fetch_account_from_windows): Try to add domain explicitly
 	if it was not in the original list of trusted domains and go ahead
 	rather than bailing out.  Add comment to explain why.
 
@@ -1938,7 +1938,7 @@
 	timeout_ns 100ns-intervals.  Add preceding comment to explain why.
 	* pwdgrp.h (internal_getgroups): Align prototype.
 	* times.cc (GetTickCount_ns): New function.
-	* uinfo.cc (internal_getlogin): Call internal_getgroups wih 300ms
+	* uinfo.cc (internal_getlogin): Call internal_getgroups with 300ms
 	timeout.
 	* winsup.h (GetTickCount_ns): Declare.
 
@@ -2001,7 +2001,7 @@
 
 2015-02-16  Corinna Vinschen  <corinna@vinschen.de>
 
-	* spawn.cc (find_exec): Extend preceeding comment to explain more
+	* spawn.cc (find_exec): Extend preceding comment to explain more
 	detailed what's going on in this function.  Overwrite potential symlink
 	target with original path.
 
@@ -2053,7 +2053,7 @@
 	cyg_ldap::fetch_ad_account if required.
 	(fetch_from_path): Add parameter dnsdomain.  Call fetch_windows_home
 	accordingly.
-	(cygheap_pwdgrp::get_home): Accomodate call to fetch_windows_home.
+	(cygheap_pwdgrp::get_home): Accommodate call to fetch_windows_home.
 	Add dnsdomain parameter in ldap-related method.  Call
 	cyg_ldap::fetch_ad_account if required.
 	(cygheap_pwdgrp::get_shell): Ditto.
@@ -2078,7 +2078,7 @@
 	(execvp): Ditto.
 	(execvpe): Ditto.
 	* path.h (enum fe_types): Drop FE_NATIVE.
-	(find_exec): Rename third paramter in declaration from search.  Drop
+	(find_exec): Rename third parameter in declaration from search.  Drop
 	equality sign from default value.
 	* spawn.cc (perhaps_suffix): Add PC_POSIX to path_conv::check call.
 	(find_exec): Simplify function.  Iterate over POSIX pathlist rather
@@ -2152,7 +2152,7 @@
 	this->fd_type member.
 	(format_process_fd): Fix path evaluation to allow recognizing trailing
 	path components.  Fix check for file descriptor path component.  Return
-	virt_symlink in fd_type if no trailing path compenents exist, return
+	virt_symlink in fd_type if no trailing path components exist, return
 	virt_fsdir otherwise and copy full resulting path into destbuf.
 	* path.cc (path_conv::check): If /proc/$PID/fd symlink has trailing
 	path components, reparse resulting path as if it's the incoming path.
@@ -2210,7 +2210,7 @@
 2015-01-14  Corinna Vinschen  <corinna@vinschen.de>
 
 	* environ.cc (build_env): When merging the user's Windows environment,
-	explicitely skip the variables needing conversion to avoid collisions.
+	explicitly skip the variables needing conversion to avoid collisions.
 	Extend comment to explain.
 
 2015-01-13  Corinna Vinschen  <corinna@vinschen.de>

@@ -178,7 +178,7 @@ struct wlog_file	*wfile;
  * Write a wlog_rec structure to a write logfile.  Offset is used to
  * control where the record will be written.  If offset is < 0, the
  * record will be appended to the end of the logfile.  Otherwise, the
- * record which exists at the indicated offset will be overlayed.  This
+ * record which exists at the indicated offset will be overlaid.  This
  * is so that we can record writes which are outstanding (with the w_done
  * bit in wrec cleared), but not completed, and then later update the
  * logfile when the write request completes (as with async io).  When
@@ -191,8 +191,8 @@ struct wlog_file	*wfile;
  *
  * Note:  It is the callers responsibility to make sure that the offset
  * parameter 'points' to a valid record location when a record is to be
- * overlayed.  This is guarenteed by saving the return value of a previous
- * call to wlog_record_write() which wrote the record to be overlayed.
+ * overlaid.  This is guaranteed by saving the return value of a previous
+ * call to wlog_record_write() which wrote the record to be overlaid.
  *
  * Note2:  The on-disk version of the wlog_rec is MUCH different than
  * the user version.  Don't expect to od the logfile and see data formatted
@@ -223,7 +223,7 @@ long			offset;
 	/*
 	 * Since we're writing a complete new record, we must also tack
 	 * its length onto the end so that wlog_scan_backward() will work.
-	 * Length is asumed to fit into 2 bytes.
+	 * Length is assumed to fit into 2 bytes.
 	 */
 	    
 	    wbuf[reclen] = reclen / 256;

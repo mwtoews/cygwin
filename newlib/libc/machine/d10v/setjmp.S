@@ -43,7 +43,7 @@ longjmp:
 	ld	r13, @r0+
 	ld	r15, @r0+
 
-; Value to return to caller is in R1.  If caller attemped to return 0,
+; Value to return to caller is in R1.  If caller attempted to return 0,
 ; return 1 instead.
 
 	mv	r0, r1

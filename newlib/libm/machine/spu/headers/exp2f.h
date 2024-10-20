@@ -47,7 +47,7 @@
  *	We decompose x into a and b (above) by letting.
  *	a = ceil(x), b = x - a;
  *
- *	2^a is easilty computed by placing a into the exponent
+ *	2^a is easily computed by placing a into the exponent
  *	or a floating point number whose mantissa is all zeros.
  *
  *	2^b is computed using the following polynomial approximation.

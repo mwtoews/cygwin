@@ -194,7 +194,7 @@ struct tblock {
 };
 
 /***********************************************************************
- * The following globals are externed here so that they are accessable
+ * The following globals are externed here so that they are accessible
  * in the macros that follow.
  ***********************************************************************/
 extern struct tblock tblock;

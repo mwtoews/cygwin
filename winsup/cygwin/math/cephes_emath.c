@@ -290,7 +290,7 @@ int __emulm(const short unsigned int * __restrict__ a,
  *
  * Input "rcntrl" is the rounding control.
  *
- * Input "rnprc" is precison control (64 or NBITS).
+ * Input "rnprc" is precision control (64 or NBITS).
  */
 
 void __emdnorm(short unsigned int *s, int lost, int subflg, int expo, int rcntrl, int rndprc)

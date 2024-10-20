@@ -20,7 +20,7 @@ RETURNS
 A nonnegative long long integer.
 
 PORTABILITY
-<<llabs>> is ISO 9899 (C99) compatable.
+<<llabs>> is ISO 9899 (C99) compatible.
 
 No supporting OS subroutines are required.
 */

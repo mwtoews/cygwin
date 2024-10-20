@@ -135,7 +135,7 @@
 
 2015-06-20  Corinna Vinschen  <corinna@vinschen.de>
 
-	* new-features.xml (ov-new2.1): Add alterante signal stack info.
+	* new-features.xml (ov-new2.1): Add alternate signal stack info.
 	* posix.xml (std-susv4): Move sigaltstack here.
 
 2015-06-19  Jon Turney  <jon.turney@dronecode.org.uk>
@@ -660,7 +660,7 @@
 
 2014-07-30  Corinna Vinschen  <corinna@vinschen.de>
 
-	* ntsec.xml: Small improvments.
+	* ntsec.xml: Small improvements.
 
 2014-07-30  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -1615,7 +1615,7 @@
 2010-04-22  Corinna Vinschen  <corinna@vinschen.de>
 
 	* cygserver.sgml: Note the fact that slave tty/pty handle dispersal is
-	unsed as of Cygwin 1.7.6.
+	unused as of Cygwin 1.7.6.
 	* new-features.sgml (ov-new1.7.6): New section.  Add tty/pty and
 	setrlimit changes.
 
@@ -1982,7 +1982,7 @@
 
 	* new-features.sgml (ov-new1.7-file): Add new hardlink behaviour on
 	filesystems not supporting hardlinks.
-	* overview2.sgml (ov-hi-files): Change descripton accordingly.
+	* overview2.sgml (ov-hi-files): Change description accordingly.
 
 2009-08-26  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -2079,7 +2079,7 @@
 
 2009-05-26  Christopher Faylor  <me+cygwin@cgf.cx>
 
-	Change explicitely to explicitly throughout.
+	Change explicitly to explicitly throughout.
 
 2009-05-15  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -2116,7 +2116,7 @@
 
 2009-05-06  Corinna Vinschen  <corinna@vinschen.de>
 
-	* faq-setup.xml: Fix entry explaing how the homedir is evaluated
+	* faq-setup.xml: Fix entry explaining how the homedir is evaluated
 	according to recent change.
 
 2009-04-07  Corinna Vinschen  <corinna@vinschen.de>
@@ -2196,7 +2196,7 @@
 
 2009-03-24  Corinna Vinschen  <corinna@vinschen.de>
 
-	* new-features.sgml: Add section about chaged (no)winsymlink default.
+	* new-features.sgml: Add section about changed (no)winsymlink default.
 
 2009-03-24  Corinna Vinschen  <corinna@vinschen.de>
 
@@ -2485,7 +2485,7 @@
 
 2006-05-30  Dave Korn  <dave.korn@artimi.com>
 
-	* faq-api.xml (faq.api.winsock):  Replace references to depracated
+	* faq-api.xml (faq.api.winsock):  Replace references to deprecated
 	Win32_Winsock macro with __USE_W32_WINSOCK, and enlarge on details.
 
 2006-05-24  Christopher Faylor  <cgf@timesys.com>
@@ -2938,7 +2938,7 @@
 2003-09-01  Corinna Vinschen  <corinna@vinschen.de>
 
 	* pathnames.sgml: Remove description how to mount raw devices and
-	dicourage it.  Desparately try to make usage of raw devices a bit
+	dicourage it.  Desperately try to make usage of raw devices a bit
 	clearer.
 
 2003-07-31  Joshua Daniel Franklin <joshuadfranklin@yahoo.com>
@@ -3095,11 +3095,11 @@ Wed Jun 13 13:45:44 2001  Christopher Faylor <cgf@cygnus.com>
 
 Tue May 29 21:30:07 2001  Christopher Faylor <cgf@cygnus.com>
 
-	* Makefile.in: Tweak to attempt to accomodate older texi2html.
+	* Makefile.in: Tweak to attempt to accommodate older texi2html.
 
 Tue May 29 16:24:46 2001  Christopher Faylor <cgf@cygnus.com>
 
-	* Makefile.in: Accomodate newer versions of docbook and openjade.
+	* Makefile.in: Accommodate newer versions of docbook and openjade.
 
 Thu Apr 12 23:52:00 2001  Corinna Vinschen <corinna@vinschen.de>
 

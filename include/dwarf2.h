@@ -116,7 +116,7 @@ enum dwarf_decimal_sign_encoding
     DW_DS_trailing_separate = 0x05
   };
 
-/* Endianity encodings.  */
+/* Endianness encodings.  */
 enum dwarf_endianity_encoding
   {
     /* DWARF 3.  */

@@ -37,7 +37,7 @@ extern "C" {
 #include <sys/config.h>
 
 /*
-  In newlib, all the publically visible routines take a reentrancy
+  In newlib, all the publicly visible routines take a reentrancy
   pointer.  We don't currently do anything much with it, but we do
   pass it to the lock routine.
  */

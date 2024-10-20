@@ -58,7 +58,7 @@ enum
   IPPROTO_MAX
 };
 
-/* Define IPPROTO_xxx values to accomodate SUSv3 */
+/* Define IPPROTO_xxx values to accommodate SUSv3 */
 #define IPPROTO_IP IPPROTO_IP
 #define IPPROTO_HOPOPTS IPPROTO_HOPOPTS
 #define IPPROTO_ICMP IPPROTO_ICMP

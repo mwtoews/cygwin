@@ -207,7 +207,7 @@ dll::init ()
   /* Don't run constructors or the "main" if we've forked. */
   if (__in_forkee != FORKING)
     {
-      /* global contructors */
+      /* global constructors */
       p.run_ctors ();
 
       /* entry point of dll (use main of per_process with null args...) */
@@ -227,7 +227,7 @@ dll::init ()
 
    On 2012-02-08 I interpreted "module name" as "basename".  So the assumption
    was that the Windows Loader does not load another DLL with the same basename,
-   if one such DLL is already loaded.  Consequentially I changed the code so
+   if one such DLL is already loaded.  Consequently I changed the code so
    that DLLs are only compared by basename.
 
    This assumption was obviously wrong, as the perl dynaloader proves.  It
@@ -238,10 +238,10 @@ dll::init ()
    However, the original problem reported on 2012-02-07 was a result of
    a subtil difference between the paths returned by different calls to
    GetModuleFileNameW: Sometimes the path is a plain DOS path, sometimes
-   it's preceeded by the long pathname prefix "\\?\".
+   it's preceded by the long pathname prefix "\\?\".
 
    So I reverted the original change from 2012-02-08 and only applied the
-   following fix: Check if the path is preceeded by a long pathname prefix,
+   following fix: Check if the path is preceded by a long pathname prefix,
    and, if so, drop it forthwith so that subsequent full path comparisons
    work as expected.
 
@@ -257,7 +257,7 @@ dll::init ()
 
    In effect, we have to be careful not to mix linked and loaded DLLs.
    For more info how this gets accomplished, see the comments at the start
-   of dll_list::alloc, as well as the comment preceeding the definition of
+   of dll_list::alloc, as well as the comment preceding the definition of
    the in_load_after_fork bool later in the file. */
 dll *
 dll_list::operator[] (PCWCHAR ntname)

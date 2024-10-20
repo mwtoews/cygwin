@@ -11,7 +11,7 @@ details. */
 
 #include "_ansi.h"
 #if 0
-/* Per man pages you have to include <sys/types.h> explicitely before
+/* Per man pages you have to include <sys/types.h> explicitly before
    including <attr/xattr.h>.  That's how it works on Linux, too. */
 #include <sys/types.h>
 #endif

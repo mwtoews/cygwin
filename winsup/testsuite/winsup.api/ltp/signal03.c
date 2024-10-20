@@ -628,7 +628,7 @@ p_timeout_handler()
 
 /***********************************************************************
  * Signal handler routine that used by the child to handle
- * a time out situation.  It will set a global varaible and return
+ * a time out situation.  It will set a global variable and return
  * if called.
  ***********************************************************************/
 void

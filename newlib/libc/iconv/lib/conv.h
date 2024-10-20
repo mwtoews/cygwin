@@ -70,7 +70,7 @@ typedef struct
   /*
    * close - close conversion.
    *
-   * PARAMETRS:
+   * PARAMETERS:
    *   struct _reent *rptr - reent structure of current thread/process;
    *   void *data      - conversion-specific data.
    *
@@ -106,7 +106,7 @@ typedef struct
    *   When flags & 2 isn't 0, function changes it's behavior in situations,
    *   when there is no character in "to" encoding that corresponds to valid
    *   character from "from" encoding. iconv() specification stands to perform
-   *   implimentation-spacific default conversion. If flag & 2 isn't 0,
+   *   implementation-specific default conversion. If flag & 2 isn't 0,
    *   function generates error.
    *
    * RETURN:

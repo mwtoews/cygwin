@@ -411,7 +411,7 @@
 	http://www.kernel.org/pub/linux/docs/device-list/devices.txt
 	up to 128 devices.
 	* devices.in: Ditto.
-	(device::parsedisk): Add additonal else-if cases for decoding base
+	(device::parsedisk): Add additional else-if cases for decoding base
 	and drive indices.
 	* devices.cc: Regenerate.
 	* dtable.cc (build_fh_pc): Add additional DEV_SD{2..7}_MAJOR cases.
@@ -666,9 +666,9 @@
 	* fhandler_disk_file.cc (fhandler_disk_file::opendir): Always try
 	opening with backup intent.
 	(fhandler_disk_file::readdir): Ditto when trying to retrieve file id
-	explicitely.
+	explicitly.
 	* security.cc (check_file_access): Replace pbuf with correctly
-	PPRIVILEGE_SET typed pset.  Check explicitely for backup and/or restore
+	PPRIVILEGE_SET typed pset.  Check explicitly for backup and/or restore
 	privileges when AccessCheck fails, to circumvent AccessCheck
 	shortcoming.  Add comment to explain.
 
@@ -908,7 +908,7 @@
 	argument.  All callers changed.
 	(fhandler_socket::sendmsg): Likewise.
 	* net.cc (cygwin_recvmsg): Likewise.
-	(cygwin_sendmsg): Likewise, and prevent calling sendmsg whith an
+	(cygwin_sendmsg): Likewise, and prevent calling sendmsg with an
 	invalid iovec.
 	* fhandler.h (fhandler_socket::recvmsg): Adjust prototype.
 	(fhandler_socket::sendmsg): Likewise.
@@ -1033,7 +1033,7 @@
 	(UNLOCK_EVENTS): Ditto.
 	(fhandler_socket::init_events): rename from prepare.
 	(fhandler_socket::evaluate_events): First half of former wait method.
-	Do everything but wait.  Allow specifiying whether or not events from
+	Do everything but wait.  Allow specifying whether or not events from
 	event_mask should be erased from wsock_events->events.  Simplify
 	OOB handling.  Allow sending SIGURG to any process (group).
 	(fhandler_socket::wait_for_events): Second half of former wait method.
@@ -1395,7 +1395,7 @@
 	freeaddrinfo, gai_strerror, getaddrinfo and getnameinfo.
 	* include/cygwin/in.h: Add IPv6 related IPPROTOs. Remove definition
 	of struct sockaddr_in6.  Include cygwin/in6.h instead.
-	* include/cygwin/in6.h: New header file defining IPv6 releated
+	* include/cygwin/in6.h: New header file defining IPv6 related
 	data types and macros.
 	* include/cygwin/socket.h: Enable AF_INET6 and PF_INET6.  Add
 	IPv6 related socket options.
@@ -1415,7 +1415,7 @@
 	try again.
 	(get_reg_security): Use correct error code macro when testing
 	RegGetKeySecurity return value.
-	* security.h (get_logon_server): Remove default vaue from wserver
+	* security.h (get_logon_server): Remove default value from wserver
 	parameter.  Add rediscovery parameter.
 	* uinfo.cc (cygheap_user::env_logsrv): Accommodate rediscovery parameter
 	in call to get_logon_server.
@@ -2104,7 +2104,7 @@
 	(tty::gethwnd): Ditto.
 	(tty::sethwnd): Ditto.
 	(tty_min::hwnd): Receive variable from tty class.
-	(tty_min::gethwnd): Receive function from tty classs.
+	(tty_min::gethwnd): Receive function from tty class.
 	(tty_min::sethwnd): Ditto.
 	* dtable.cc (dtable::stdio_init): Only call init_console_handler when
 	we actually own the console.
@@ -2596,7 +2596,7 @@
 
 2006-03-09  Corinna Vinschen  <corinna@vinschen.de>
 
-	* syscalls.cc (rename): Move existance check for oldpath further up
+	* syscalls.cc (rename): Move existence check for oldpath further up
 	to the start of the function.  Avoid another case of a name collision
 	if oldpath is a shortcut and a file or directory newpath already exists.
 
@@ -3076,7 +3076,7 @@
 	* autoload.cc  (GetTcpTable): Define.
 	* fhandler_socket.cc (address_in_use): New function to check if
 	sockaddr_in address is already in use.
-	(fhandler_socket::bind): Check if address is alreay in use in case of
+	(fhandler_socket::bind): Check if address is already in use in case of
 	SO_REUSEADDR, to circumvent WinSock non-standard behaviour.
 
 2006-02-01  Corinna Vinschen  <corinna@vinschen.de>
@@ -3144,17 +3144,17 @@
 
 	* fhandler.h (class fhandler_socket): Add saw_reuseaddr status flag.
 	* fhandler_socket.cc (fhandler_socket::bind): Set socket to
-	SO_EXCLUSIVEADDRUSE if application didn't explicitely set SO_REUSEADDR
+	SO_EXCLUSIVEADDRUSE if application didn't explicitly set SO_REUSEADDR
 	socket option, on systems supporting SO_EXCLUSIVEADDRUSE.
 	* net.cc (cygwin_setsockopt): Set fhandler's saw_reuseaddr status flag
-	if SO_REUSEADDR socket option has been successsfully set.
+	if SO_REUSEADDR socket option has been successfully set.
 	* wincap.h (wincaps::has_exclusiveaddruse): New element.
 	* wincap.cc: Implement above element throughout.
 
 2006-01-28  Corinna Vinschen  <corinna@vinschen.de>
 
 	* fhandler_disk_file.cc (fhandler_disk_file::mkdir): In case or error,
-	check for existance explicitely and set errno to EEXIST.
+	check for existence explicitly and set errno to EEXIST.
 
 2006-01-28  Corinna Vinschen  <corinna@vinschen.de>
 

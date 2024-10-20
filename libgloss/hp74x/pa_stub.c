@@ -503,7 +503,7 @@ flush_i_cache()
 }
 
 /*
- * This function does all command procesing for interfacing to gdb.
+ * This function does all command processing for interfacing to gdb.
    return of 0 will execute DEBUG_GO (continue)
    return of 1 will execute DEBUG_SS (single step)
  */

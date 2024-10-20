@@ -420,7 +420,7 @@ __END_DECLS
  */
 #define	IP_OPTIONS		1    /* buf/ip_opts; set/get IP options */
 #define	IP_HDRINCL		2    /* int; header is included with data */
-#define	IP_TOS			3    /* int; IP type of service and preced. */
+#define	IP_TOS			3    /* int; IP type of service and precede. */
 #define	IP_TTL			4    /* int; IP time to live */
 #define	IP_RECVOPTS		5    /* bool; receive all IP opts w/dgram */
 #define	IP_RECVRETOPTS		6    /* bool; receive IP opts for response */

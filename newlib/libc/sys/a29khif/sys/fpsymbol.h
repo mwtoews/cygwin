@@ -1813,7 +1813,7 @@
 ;       1) This macro stores all 64-bit quantities in "big-endian" order,
 ;          i.e. MSBs first.  For example, the 32 MSBs of register R are
 ;          stored in reg+2, and the 32 LSBs are stored in reg+3.  The Am29027
-;          transfers these quantites in "little-endian" order; the macro
+;          transfers these quantities in "little-endian" order; the macro
 ;          is responsible for swapping MS and LS words.
 ;
 ;============================================================================
@@ -2112,7 +2112,7 @@
 ;                                            RF7 <- smaller of(R,S)
 ;                                         where R and S are double-precision
 ;                                         f.p. operands, and RF7 is a single-
-;                                         precison f.p. operand.  The
+;                                         precision f.p. operand.  The
 ;                                         instruction word is written to
 ;                                         lr3.
 ;

@@ -1,4 +1,4 @@
-/* op50nled.c -- fucntions that manipulate the LEDs.
+/* op50nled.c -- functions that manipulate the LEDs.
  * 
  * Copyright (c) 1995 Cygnus Support
  *

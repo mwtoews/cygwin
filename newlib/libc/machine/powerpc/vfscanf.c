@@ -1002,7 +1002,7 @@ __svfscanf_r (rptr, fp, fmt0, ap)
 	    {
 	      c = *fp->_p;
 	      /*
-	       * This code mimicks the integer conversion
+	       * This code mimics the integer conversion
 	       * code, but is much simpler.
 	       */
 	      switch (c)

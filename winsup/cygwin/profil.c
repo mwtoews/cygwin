@@ -208,7 +208,7 @@ profile_child (void)
  * Each bin represents a range of pc addresses from OFFSET.  The number
  * of pc addresses in a bin depends on SCALE.  (A scale of 65536 maps
  * each bin to two addresses, A scale of 32768 maps each bin to 4 addresses,
- * a scale of 1 maps each bin to 128k addreses).  Scale may be 1 - 65536,
+ * a scale of 1 maps each bin to 128k addresses).  Scale may be 1 - 65536,
  * or zero to turn off profiling.
  */
 int

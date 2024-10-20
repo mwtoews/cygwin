@@ -159,10 +159,10 @@ $1:	; }
 ; is the same as when the process was interrupted.
 ;
 ; We must make the stack and window consistent before calling the handler
-; The orignal rab value is on the stack. The interrupt handler placed
+; The original rab value is on the stack. The interrupt handler placed
 ; rfb-Windowsize in rab. This is required to support nested interrupts.
 ;
-; Note that the window becomes incosistent only during certain
+; Note that the window becomes inconsistent only during certain
 ; critical sections in spill, fill, longjmp and sigcode.
 ;	rfb - rab > windowsize => we are in spill
 ;	rfb - rab < windowsize => we are in fill
@@ -423,7 +423,7 @@ __sendsig:
 ;	lr3 = handler address
 	.global	_signal
 _signal:
-; the memory variable WindowSize must be initalised at the
+; the memory variable WindowSize must be initialised at the
 ; start when rfb and rab are a window size apart.
 	const	v0, WindowSize		; get register cache size
 	consth	v0, WindowSize

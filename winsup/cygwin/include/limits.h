@@ -331,25 +331,25 @@ details. */
 /* Minimum number of bytes of storage actually allocated for any portion
    of a file.  Not implemented. */
 #undef POSIX_ALLOC_SIZE_MIN
-/* #define POSIX_ALLOC_SIZE_MIN unspecifed */
+/* #define POSIX_ALLOC_SIZE_MIN unspecified */
 
 /* Recommended increment for file transfer sizes between the
    {POSIX_REC_MIN_XFER_SIZE} and {POSIX_REC_MAX_XFER_SIZE} values.
    Not implemented. */
 #undef POSIX_REC_INCR_XFER_SIZE
-/* #define POSIX_REC_INCR_XFER_SIZE unspecifed */
+/* #define POSIX_REC_INCR_XFER_SIZE unspecified */
 
 /* Maximum recommended file transfer size.  Not implemented. */
 #undef POSIX_REC_MAX_XFER_SIZE
-/* #define POSIX_REC_MAX_XFER_SIZE unspecifed */
+/* #define POSIX_REC_MAX_XFER_SIZE unspecified */
 
 /* Minimum recommended file transfer size.  Not implemented. */
 #undef POSIX_REC_MIN_XFER_SIZE
-/* #define POSIX_REC_MIN_XFER_SIZE unspecifed */
+/* #define POSIX_REC_MIN_XFER_SIZE unspecified */
 
 /* Recommended file transfer buffer alignment.  Not implemented. */
 #undef POSIX_REC_XFER_ALIGN
-/* #define POSIX_REC_XFER_ALIGN unspecifed */
+/* #define POSIX_REC_XFER_ALIGN unspecified */
 
 /* Maximum number of bytes in a symbolic link. */
 #undef SYMLINK_MAX

@@ -273,7 +273,7 @@ fhandler_dev_clipboard::read (void *ptr, size_t& len)
 	    }
 
 	  /* Comparing apples and oranges here, but the below loop could become
-	     extremly slow otherwise.  We rather return a few bytes less than
+	     extremely slow otherwise.  We rather return a few bytes less than
 	     possible instead of being even more slow than usual... */
 	  if (glen > pos + conv_len)
 	    glen = pos + conv_len;

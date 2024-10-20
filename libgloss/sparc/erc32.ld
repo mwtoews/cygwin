@@ -46,7 +46,7 @@ GROUP(-lc -lsim -lgcc)
  *                               1MB, 2Mb, 4Mb, 8Mb, 16Mb, and 32Mb)
  *
  * These symbols are only used in assembler code, so they only need to
- * be listed once. They should always be refered to without SYM().
+ * be listed once. They should always be referred to without SYM().
  */
 
 _CLOCK_SPEED = 10;

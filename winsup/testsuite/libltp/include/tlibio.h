@@ -136,7 +136,7 @@ int  lio_check_asyncio(char *io_type, int size, aiocb_t *aiocbp, int method);
 #endif /* sgi */
 
 /*
- * Define the structure that contains the infomation that is used
+ * Define the structure that contains the information that is used
  * by the parsing and help functions.
  */
 struct lio_info_type {

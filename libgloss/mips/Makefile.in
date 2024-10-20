@@ -149,7 +149,7 @@ libnullmon.a: $(NULLMONOBJS)
 
 # compile a fully linked binary. The -Wl,-T*.ld is for the linker
 # script. By using -Wl, the linker script is put on the proper place
-# in the comand line for ld, and all the symbols will get fully
+# in the command line for ld, and all the symbols will get fully
 # resolved.
 
 test: $(OBJS) ${BSP} pmon-test idt-test cfe-test

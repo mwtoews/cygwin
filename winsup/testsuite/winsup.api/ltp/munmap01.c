@@ -221,7 +221,7 @@ setup()
 	
 	/*
 	 * map the open file 'TEMPFILE' from its beginning up to the maplength
-	 * into the calling process's address space at the system choosen
+	 * into the calling process's address space at the system chosen
 	 * with read/write permissions to the the mapped region.
 	 */
 	addr = mmap(0, map_len, PROT_READ | PROT_WRITE, \

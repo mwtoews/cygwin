@@ -111,7 +111,7 @@ get_inet_addr_local (const struct sockaddr *in, int inlen,
      again, until we can either open the file successfully, or some error
      other than STATUS_SHARING_VIOLATION occurs.
      Since we now don't know if the file is actually a socket file, we
-     perform this check here explicitely. */
+     perform this check here explicitly. */
   NTSTATUS status;
   HANDLE fh;
   OBJECT_ATTRIBUTES attr;
@@ -872,7 +872,7 @@ fhandler_socket_local::bind (const struct sockaddr *name, int namelen)
 	  status = NtSetInformationFile (fh, &io, &fdi, sizeof fdi,
 					 FileDispositionInformation);
 	  if (!NT_SUCCESS (status))
-	    debug_printf ("Setting delete dispostion failed, status = %y",
+	    debug_printf ("Setting delete disposition failed, status = %y",
 			  status);
 	}
       else
@@ -968,7 +968,7 @@ fhandler_socket_local::connect (const struct sockaddr *name, int namelen)
       if (err == WSAEISCONN)
 	connect_state (connected);
       /* Winsock returns WSAEWOULDBLOCK if the non-blocking socket cannot be
-         conected immediately.  Convert to POSIX/Linux compliant EINPROGRESS. */
+         connected immediately.  Convert to POSIX/Linux compliant EINPROGRESS. */
       else if (is_nonblocking () && err == WSAEWOULDBLOCK)
 	WSASetLastError (WSAEINPROGRESS);
       /* Winsock returns WSAEINVAL if the socket is already a listener.

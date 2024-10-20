@@ -50,7 +50,7 @@ Contents
 * `arc-timer.*` - Provides API to access ARC timers. Used by `hl/hl_clock.c`
   in `_clock()` implementation.
 * `arc-main-helper.c` - Provides `__setup_argv_and_call_main()`. The function
-  is called from `__start()` in `crt0.S`. It allows to setup `argc` and `arvg`
+  is called from `__start()` in `crt0.S`. It allows to setup `argc` and `argv`
   as well as some custom things through `_setup_low_level()`.
 * `hl-setup.c` - Provides `_setup_low_level()` for hostlink case. It just
   configures default timer if it exists. Default timer is used in the hostlink

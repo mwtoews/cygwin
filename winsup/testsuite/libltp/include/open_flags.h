@@ -41,7 +41,7 @@
  * symbols, the "UNKNOWN" symbol will be added to return string.
  * 
  * Return Value
- * openflags2symbols will return the indentified symbols.
+ * openflags2symbols will return the identified symbols.
  * If no symbols are recognized the return value will be a empty
  * string or the "UNKNOWN" symbol.
  *

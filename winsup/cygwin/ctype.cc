@@ -50,7 +50,7 @@ __set_ctype (struct __locale_t *loc, const char *charset)
       ctype_ptr = (char *) _ctype_b;
     }
   loc->ctype_ptr = ctype_ptr + 127;
-  /* For backward compatibilty */
+  /* For backward compatibility */
   if (loc == __get_global_locale ())
     __ctype_ptr__ = loc->ctype_ptr;
 }

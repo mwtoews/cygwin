@@ -1,4 +1,4 @@
-/* isatty.c -- chek the terminal device.
+/* isatty.c -- check the terminal device.
  * 
  * Copyright (c) 1995 Cygnus Support
  *

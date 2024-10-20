@@ -185,7 +185,7 @@ fhandler_dev_floppy::lock_partition (DWORD to_write)
      partition on an MBR drive, 3 filler entries with partition number set
      to 0 are added into the partition table returned by
      IOCTL_DISK_GET_DRIVE_LAYOUT_EX.  The first of them reproduces the data
-     of the next partition entry, if any, except for the partiton number.
+     of the next partition entry, if any, except for the partition number.
      Then two entries with everything set to 0 follow.  Well, the
      documentation states that for MBR drives the number of partition entries
      in the PARTITION_INFORMATION_EX array is always a multiple of 4, but,

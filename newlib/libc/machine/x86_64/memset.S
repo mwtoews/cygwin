@@ -36,7 +36,7 @@ quadword_aligned:
   cmpq    $256, rdx
   jb      quadword_set
 
-  shrq    $7, rcx                 /* Store 128 bytes at a time with minimum cache polution */
+  shrq    $7, rcx                 /* Store 128 bytes at a time with minimum cache pollution */
 
   .p2align 4
 loop:

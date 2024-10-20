@@ -30,7 +30,7 @@ an <<unsigned long>>. First, it breaks down the string into three parts:
 leading whitespace, which is ignored; a subject string consisting
 of the digits meaningful in the radix specified by <[base]>
 (for example, <<0>> through <<7>> if the value of <[base]> is 8);
-and a trailing portion consisting of one or more unparseable characters,
+and a trailing portion consisting of one or more unparsable characters,
 which always includes the terminating null character. Then, it attempts
 to convert the subject string into an unsigned long integer, and returns the
 result.

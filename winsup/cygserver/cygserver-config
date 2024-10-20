@@ -101,7 +101,7 @@ fi
 if [ -e "${SYSCONFDIR}" -a ! -d "${SYSCONFDIR}" ]
 then
   echo
-  echo "${SYSCONFDIR} is existant but not a directory."
+  echo "${SYSCONFDIR} is existent but not a directory."
   echo "Cannot create global configuration file."
   echo
   exit 1

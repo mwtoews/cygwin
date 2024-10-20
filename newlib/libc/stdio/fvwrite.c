@@ -156,7 +156,7 @@ __sfvwrite_r (struct _reent *ptr,
 		  int curpos = (fp->_p - fp->_bf._base);
 		  /* Choose a geometric growth factor to avoid
 		     quadratic realloc behavior, but use a rate less
-		     than (1+sqrt(5))/2 to accomodate malloc
+		     than (1+sqrt(5))/2 to accommodate malloc
 		     overhead. asprintf EXPECTS us to overallocate, so
 		     that it can add a trailing \0 without
 		     reallocating.  The new allocation should thus be

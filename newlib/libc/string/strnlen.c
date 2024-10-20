@@ -11,7 +11,7 @@ SYNOPSIS
 
 DESCRIPTION
 	The <<strnlen>> function works out the length of the string
-	starting at <<*<[str]>>> by counting chararacters until it
+	starting at <<*<[str]>>> by counting characters until it
 	reaches a NUL character or the maximum: <[n]> number of
         characters have been inspected.
 

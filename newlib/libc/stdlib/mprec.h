@@ -85,7 +85,7 @@ union double_union
 typedef __int32_t Long;
 
 /* Unfortunately, because __ULong might be a different type than
-   __uint32_t, we can't re-use union double_union as-is without
+   __uint32_t, we can't reuse union double_union as-is without
    further edits in strtod.c.  */
 typedef union { double d; __ULong i[2]; } U;
 

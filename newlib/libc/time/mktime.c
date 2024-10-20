@@ -229,7 +229,7 @@ mktime (struct tm *tim_p)
 		     time zone offsets, depending on which way the user got it
 		     wrong. The diff is typically one hour, or 3600 seconds,
 		     and should fit in a 16-bit int, even though offset
-		     is a long to accomodate 12 hours. */
+		     is a long to accommodate 12 hours. */
 		  int diff = (int) (tz->__tzrule[0].offset
 				    - tz->__tzrule[1].offset);
 		  if (!isdst)

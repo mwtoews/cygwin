@@ -98,7 +98,7 @@ main(int ac, char **av)
 		/* reset Tst_count in case we are looping */
 		Tst_count = 0;
 
-		/* get the name of the test dirctory */
+		/* get the name of the test directory */
 		if ((temp_dir = (getcwd(temp_dir_buf, sizeof (temp_dir_buf)))) == NULL) {
 			tst_brkm(TBROK, cleanup, "%s - getcwd() in main() "
 				 "failed", TCID);

@@ -65,7 +65,7 @@ static __inline vector float _expf4(vector float x)
   vec_float4 ln2_hi = spu_splats(0.693359375f);
   vec_float4 ln2_lo = spu_splats(-2.12194440E-4f);
 
-  // Coefficents for the Taylor series
+  // Coefficients for the Taylor series
   vec_float4 f02 = spu_splats(5.0000000000000000E-1f); // 1/2!
   vec_float4 f03 = spu_splats(1.6666666666666667E-1f); // 1/3!
   vec_float4 f04 = spu_splats(4.1666666666666667E-2f); // 1/4!

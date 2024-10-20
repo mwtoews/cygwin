@@ -34,7 +34,7 @@ static const __int32_t REG_POSITION_MASK = 0xffff;
    restricted rights.  In that case the subkey "Classes" in the VirtualStore
    points to the HKEY_CLASSES_ROOT key again.  If "Classes" is handled as a
    normal subdirectory, applications recursing throught the directory
-   hirarchy will invariably run into an infinite recursion.  What we do here
+   hierarchy will invariably run into an infinite recursion.  What we do here
    is to handle the "Classes" subkey as a symlink to HKEY_CLASSES_ROOT.  This
    avoids the infinite recursion, unless the application blindly follows
    symlinks pointing to directories, in which case it's their own fault. */
@@ -1023,7 +1023,7 @@ value_not_found:
   return false;
 }
 
-/* Auxillary member function to open registry keys.  */
+/* Auxiliary member function to open registry keys.  */
 static HKEY
 open_key (const char *name, REGSAM access, DWORD wow64, bool isValue)
 {

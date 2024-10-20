@@ -673,10 +673,10 @@ char *path1, *path2;
       return(0);
    } 
    else {
-	sprintf(Buf, "symlink(%s, %s) was succesful.\n", path1, path2);
+	sprintf(Buf, "symlink(%s, %s) was successful.\n", path1, path2);
 	strcat(Buffer, Buf);
 #if DEBUG
-	tst_resm(TPASS, "symlink(%s, %s) was succesful.", path1, path2);
+	tst_resm(TPASS, "symlink(%s, %s) was successful.", path1, path2);
 #endif
    }
    return(1);
@@ -702,10 +702,10 @@ char *path1;
       return(0);
    } 
    else {
-	sprintf(Buf, "creat(%s, %#o) was succesful.\n", path1, MODE);
+	sprintf(Buf, "creat(%s, %#o) was successful.\n", path1, MODE);
 	strcat(Buffer, Buf);
 #if DEBUG
-	tst_resm(TPASS, "creat(%s, %#o) was succesful.", path1, MODE);
+	tst_resm(TPASS, "creat(%s, %#o) was successful.", path1, MODE);
 #endif
    }
    if (close(fd) == -1) {

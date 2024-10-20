@@ -127,7 +127,7 @@ __cpu_flush:
 
 	# Note: this version of the code flushes D$ before I$.
 	#   It is difficult to construct a case where that matters, 
-	#   but it cant hurt.
+	#   but it can't hurt.
 
 	mfc0	a0, C0_PRID	# a0 = Processor Revision register
 	nop			# dlindsay: unclear why the nops, but
@@ -183,7 +183,7 @@ __cpu_flush:
 	# t2,t3 scratch
 
 	addi	t3, t1, 0	# t3=t1=start address for any cache
-	add	t2, t3, a3	# t2=end adress+1 of Dcache
+	add	t2, t3, a3	# t2=end address+1 of Dcache
 	sub	t2, t2, a0	# t2=address of last line in Dcache
 3:
 	cache	INDEX_WRITEBACK_INVALIDATE_D,0(t3)
@@ -238,7 +238,7 @@ __cpu_flush:
 	# t1 = a round unmapped cached base address (we are in kernel mode)
 	# t2,t3 scratch
 
-	add	t2, t1, a2	# t2=end adress+1 of Icache
+	add	t2, t1, a2	# t2=end address+1 of Icache
 	sub	t2, t2, a1	# t2=address of last line in Icache
 7:
 	cache	INDEX_INVALIDATE_I,0(t1)
@@ -356,10 +356,10 @@ __exception_code_end:
 __previous:
 	.space	(__exception_code_end - __exception_code)
 	# This subtracting two addresses is working
-	# but is not garenteed to continue working.
+	# but is not guaranteed to continue working.
 	# The assemble reserves the right to put these
 	# two labels into different frags, and then
-	# cant take their difference.
+	# can't take their difference.
 
 	.text
 

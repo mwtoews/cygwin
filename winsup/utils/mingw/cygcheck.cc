@@ -1824,7 +1824,7 @@ dump_sysinfo ()
       name[0] = fsname[0] = 0;
       sprintf (drive, "%c:\\", i + 'a');
       /* Report all errors, except if the Volume is ERROR_NOT_READY.
-	 ERROR_NOT_READY is returned when removeable media drives are empty
+	 ERROR_NOT_READY is returned when removable media drives are empty
 	 (CD, floppy, etc.) */
       if (!GetVolumeInformation (drive, name, sizeof (name), &serno,
 				 &maxnamelen, &flags, fsname,
@@ -2430,7 +2430,7 @@ collect_pkg_info (FILE *fp, ini_package_info *pi, bool search)
 		vinfo->depends2 = strdup (buf + strlen ("depends2: "));
 	      else
 		{
-		  /* For pattern matching we need a standarized format.
+		  /* For pattern matching we need a standardized format.
 		     Make sure all deps are prepended and trailed by a comma.
 		     Note the missing space after the colon, that's deliberate
 		     to keep it in the stored string.  Originally we kept the

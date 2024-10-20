@@ -172,7 +172,7 @@ main(int ac, char **av)
 				exit(1);
 			}
 
-			/* Now, do the actual comparision */
+			/* Now, do the actual comparison */
 			if (memcmp(read_buf, write_buf, strlen(write_buf))) {
 				tst_resm(TFAIL, "Data from reading pipe "
 					 "are different");

@@ -36,7 +36,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /* We implement setjmp/longjmp much like the way gcc implements
    exceptions - we create new stack frames, then switch to them and
-   return.  Thus, the two setjmp's below each push all the relevent
+   return.  Thus, the two setjmp's below each push all the relevant
    registers, then copy the whole frame into the buffer (first $sp is
    moved, then smovf copies the frame itself), and the two longjmps
    restore $sp, copy the frame back into place, and issue the same

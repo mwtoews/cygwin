@@ -305,7 +305,7 @@ is_grp_member (gid_t grp, gid_t *grplist, int listsize)
 
 /*
  * Helper function to get a specific token information from a token.
- * This function mallocs the necessary buffer spcae by itself.  It
+ * This function mallocs the necessary buffer space by itself.  It
  * must be free'd by the calling function.
  */
 void *
@@ -606,7 +606,7 @@ tunable_param_init (const char *config_file, bool force)
     {
       char *c = strrchr (line, '\n');
       if (!c)
-        panic ("Line too long in confg file %s\n", config_file);
+        panic ("Line too long in config file %s\n", config_file);
       /* Overwrite trailing NL. */
       *c = '\0';
       c = line;

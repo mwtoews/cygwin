@@ -37,7 +37,7 @@ To divide <<long>> rather than <<long long>> values, use the similar
 function <<ldiv>>.
 
 PORTABILITY
-<<lldiv>> is ISO 9899 (C99) compatable.
+<<lldiv>> is ISO 9899 (C99) compatible.
 
 No supporting OS subroutines are required.
 */
@@ -76,7 +76,7 @@ No supporting OS subroutines are required.
  * words, we should always truncate the quotient towards
  * 0, never -infinity.
  *
- * Machine division and remainer may work either way when
+ * Machine division and remainder may work either way when
  * one or both of n or d is negative.  If only one is
  * negative and r.quot has been truncated towards -inf,
  * r.rem will have the same sign as denom and the opposite

@@ -609,7 +609,7 @@ owner_listen:
 	      status1 = open_pipe (ph);
 	      WaitForSingleObject (conn_evt, INFINITE);
 	      if (NT_SUCCESS (status1))
-		/* Bogus cilent connected. */
+		/* Bogus client connected. */
 		delete_client_handler (nhandlers - 1);
 	      else
 		/* Did a real client connect? */

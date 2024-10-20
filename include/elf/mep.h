@@ -74,7 +74,7 @@ END_RELOC_NUMBERS(R_MEP_max)
 #define EF_MEP_CPU_C2   	0x01000000	/* MEP c2 */
 #define EF_MEP_CPU_C3   	0x02000000	/* MEP c3 */
 #define EF_MEP_CPU_C4   	0x04000000	/* MEP c4 */
-/* 5..7 are reseved */
+/* 5..7 are reserved */
 #define EF_MEP_CPU_C5   	0x08000000	/* MEP c5 */
 #define EF_MEP_CPU_H1   	0x10000000	/* MEP h1 */
 

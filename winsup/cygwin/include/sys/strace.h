@@ -18,7 +18,7 @@ details. */
 
    Note: __seterrno will also print a trace message.  Have that printed
    *first*.  This will make it easy to always know what __seterrno is
-   refering to.  For the same reason, try not to have __seterrno messages
+   referring to.  For the same reason, try not to have __seterrno messages
    printed alone.
 */
 

@@ -303,7 +303,7 @@ mbrtoc32 (char32_t *pwc, const char *s, size_t n, mbstate_t *ps)
 }
 
 /* Like mbrtowc, but we already defined how to return a surrogate, and
-   the definition of mbrtoc16 differes from that.
+   the definition of mbrtoc16 differs from that.
    Return the high surrogate with a return value representing the length
    of the entire multibyte sequence, and in the next call return the low
    surrogate with a return value of -3. */

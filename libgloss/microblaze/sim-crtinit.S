@@ -30,7 +30,7 @@
 # 
 # sim-crtinit.s 
 #
-# Default second stage of C run-time initialization that does not peform
+# Default second stage of C run-time initialization that does not perform
 # BSS initialization to zero. Typical use is on a simulator.      
 #    
 

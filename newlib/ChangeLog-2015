@@ -617,7 +617,7 @@ summary.
 
 2015-07-06  Corinna Vinschen  <corinna@vinschen.de>
 
-	* libc/include/sys/time.h: Explicitely include sys/cdefs.h.
+	* libc/include/sys/time.h: Explicitly include sys/cdefs.h.
 	* libc/include/sys/types.h: Ditto.  Guard BSD convenience base types
 	with __BSD_VISIBLE rather than !_POSIX_SOURCE.
 
@@ -3627,7 +3627,7 @@ summary.
 	(init_hash): Add missing definition for the __USE_INTERNAL_STAT64 case.
 	* libc/search/hash_bigkey.c (__big_insert): Add parenthesis to avoid
 	compiler warning.
-	* libc/search/hash_page.c (overflow_page): Initalize freep to NULL to
+	* libc/search/hash_page.c (overflow_page): Initialize freep to NULL to
 	avoid compiler warning.
 	* libc/stdio/asiprintf.c (_asiprintf_r): Cast unsigned char * to char *
 	to avoid compiler warning.
@@ -3753,7 +3753,7 @@ summary.
 	(_newlib_sfp_lock_end): Ditto.
 	Use aforementioned macros in place of _flockfile/_funlockfile
 	and __sfp_lock_acquire/__sfp_lock_release throughout the code.
-	* libc/stdio/fclose.c: Explicitely disable and re-enable thread
+	* libc/stdio/fclose.c: Explicitly disable and re-enable thread
 	cancellation.  Explain why.
 	* libc/stdio/freopen.c: Ditto.
 	* libc/stdio64/freopen64.c: Ditto.
@@ -4555,7 +4555,7 @@ summary.
 
 2010-11-18  Andy Koppe <andy.koppe@gmail.com>
 
-	* libc/locale/locale.c (loadlocale): Fix width of CJK ambigous
+	* libc/locale/locale.c (loadlocale): Fix width of CJK ambiguous
 	characters to 1 for singlebyte charsets and 2 for non-Unicode
 	multibyte charsets. Change documentation accordingly.
 
@@ -5360,7 +5360,7 @@ summary.
 	__set_charset_from_codepage.  Take locale as parameter instead of
 	a codepage.
 	(loadlocale): Allow "EUC-JP" for "EUCJP" and "EUC-KR" for "EUCKR".
-	Change documnetation accordingly.  Enable LC_COLLATE, LC_MONETARY,
+	Change documentation accordingly.  Enable LC_COLLATE, LC_MONETARY,
 	LC_NUMERIC, and LC_TIME handling on Cygwin.
 	(_localeconv_r): On Cygwin, copy values from monetary and numeric
 	domain if change has been noted.
@@ -5780,7 +5780,7 @@ summary.
 	_UNIX98_THREAD_MUTEX_ATTRIBUTES.
 	* libc/include/sys/types.h: Treat XMK like rtems, define
 	PTHREAD_MUTEX_NORMAL, PTHREAD_MUTEX_ERRORCHECK, PTHREAD_MUTEX_RECURSIVE,
-	PTHREAD_MUTEX_DEFAULT, PTHREAD_STACK_MIN, define stuct pthread_attr_s.
+	PTHREAD_MUTEX_DEFAULT, PTHREAD_STACK_MIN, define struct pthread_attr_s.
 	* libc/machine/configure.in: Add microblaze.
 	* libc/machine/configure: Add microblaze (not regenerated).
 	* libc/machine/microblaze/configure.in: NEW.
@@ -6564,7 +6564,7 @@ summary.
 	* libc/ctype/ctype_iso.h: Mark non-cased letters in ISO-8859 tables
 	6, 8, and 11 to _U|_L.  Fix a couple of incorrect class mappings.
 	* libc/ctype/isblank.c (isblank): Special case TAB.
-	* libc/ctype/islower.c (islower): Check explicitely for _L flag only
+	* libc/ctype/islower.c (islower): Check explicitly for _L flag only
 	in (_U|_L).
 	* libc/ctype/isupper.c (isupper): Ditto, but check for _U flag.
 	* libc/include/ctype.h (islower): Same in macro.
@@ -6721,7 +6721,7 @@ summary.
 	* libm/common/s_fma.c: Add fma() and fmaf() documentation.
 	* libm/common/sf_remquo.c: Incorrect quotient returns for large values
 	corrected by discarding existing function and replacing with Sun
-	verion, with some enhancements.
+	version, with some enhancements.
 	* libm/common/s_remquo.c: Ditto.  Add remquo() and remquof()
 	documentation.
 	* libm/common/s_fmax.c: Add fmax() and fmaxf() documentation.
@@ -6845,7 +6845,7 @@ summary.
 	(_setlocale_r): Don't set _current_category and _current_locale.
 	(loadlocale): Add Cygwin codepage support.  On _MB_CAPABLE
 	systems, set __mbtowc and __wctomb function pointers to function
-	corresponding with current charset.  Don't allow non-existant
+	corresponding with current charset.  Don't allow non-existent
 	ISO-8859-12 charset.  Add support for Windows singlebyte codepages.
 	On Cygwin, add support for GBK, CP949, and BIG5.  On Cygwin,
 	call __set_ctype() in case the catorgy is LC_CTYPE.  Don't set
@@ -7009,7 +7009,7 @@ summary.
 	* libc/stdio/vwscanf.c: New file.
 	* libc/stdio/wscanf.c: New file.
 
-	* libc/stdio/vfscanf.c (_sungetc_r): Make externaly available.  Only
+	* libc/stdio/vfscanf.c (_sungetc_r): Make externally available.  Only
 	define if INTEGER_ONLY is defined.  Declare otherwise.
 	(__ssrefill_r): Ditto.
 	(_sfread_r): Ditto.
@@ -7071,8 +7071,8 @@ summary.
 	* libc/stdio/vfprintf.c (__SPRINT): New macro to call the right
 	__sprint_r function according to compilation unit.  Use throughout.
 	(__ssprint_r): Rename STRING_ONLY variant from __sprint_r.
-	Make externaly available.  Only define if INTEGER_ONLY is defined.
-	(__sprint_r): Make externaly available.  Only define if INTEGER_ONLY
+	Make externally available.  Only define if INTEGER_ONLY is defined.
+	(__sprint_r): Make externally available.  Only define if INTEGER_ONLY
 	is defined.  Handle stream orientation.
 	(__sbprintf): Copy FILE's _flags2 member as well.
 	(__chclass, __state_table, __action_table): Prepend __ to name and
@@ -7188,17 +7188,17 @@ summary.
 	this case, also initialize the first character of the buffer to be
 	wide char null.
 	(_open_wmemstream_r): Cast buf to be (char **) to avoid warning.
-	* libc/stdlib/mbtowc_r.c (_mbtowc_r): Change all occurences of
+	* libc/stdlib/mbtowc_r.c (_mbtowc_r): Change all occurrences of
 	incrementing the size_t value n to first check that n is not already
 	size_t -1.  Fix some compiler warnings.
 	* libc/stdlib/wcstod.c: Add includes for <wctype.h> and <math.h>.
 
 2009-02-18  Corinna Vinschen  <corinna@vinschen.de>
 
-	* libc/stdio/open_memstream.c: Add open_wmemstream to doumentation.
+	* libc/stdio/open_memstream.c: Add open_wmemstream to documentation.
 	(struct memstream): Add wide element.
 	Change saved to a union to take char and wchar_t values.
-	(memwriter): Accommodate wide-oriented oeprations.
+	(memwriter): Accommodate wide-oriented operations.
 	(memseeker): Ditto.
 	(memseeker64): Ditto.
 	(memcloser): Ditto.
@@ -8252,7 +8252,7 @@ summary.
 2008-07-24  Jeff Johnston  <jjohnstn@redhat.com>
 
 	* libc/include/ctype.h (_ctype_): Restore for C++ backward
-	compatability only.
+	compatibility only.
 
 2008-07-21  Jeff Johnston  <jjohnstn@redhat.com>
 
@@ -8316,7 +8316,7 @@ summary.
 	rv, rv0 from double to type U.  Use accessor macros dval, dword0
 	and dword1 for all accesses except for the ULtod call, where rv.i
 	replaces the pointer cast.
-	* libc/stdlib/mprec.h (U): Rename member L to i for easier re-use
+	* libc/stdlib/mprec.h (U): Rename member L to i for easier reuse
 	of access macros.  Tweak comment.
 	Remove #ifdef'd YES_ALIAS code.
 	(dword0, dword1, dval): Define in terms of uncast union member
@@ -8567,7 +8567,7 @@ summary.
 	* libc/sys/linux/net/ether_ntoa.c: Ditto.
 	* libc/sys/linux/net/ether_ntoa_r.c: Ditto.
 	* libc/sys/linux/net/ether_ntoh.c: Ditto.
-	* libc/sys/linux/net/etherent.h: Ditto.
+	* libc/sys/linux/net/ethernet.h: Ditto.
 	* libc/sys/linux/net/ethers-lookup.c: Ditto.
 	* libc/sys/linux/net/function.def: Ditto.
 	* libc/sys/linux/net/getXXbyYY.c: Ditto.
@@ -12639,7 +12639,7 @@ summary.
 
 2005-08-31  Paul Brook  <paul@codesourcery.com>
 
-	* configure.host: Set have_crt0 to no for Arm targts when not
+	* configure.host: Set have_crt0 to no for Arm targets when not
 	providing syscalls.  Set sys_dir=arm unconditionally.
 	Default have_crt0 based on sys_dir.
 	* configure.in: Use have_crt0.
@@ -15825,7 +15825,7 @@ summary.
 
 2003-05-12  Corinna Vinschen  <corinna@vinschen.de>
 
-	* configure.host: Accomodate removing the libc/sys/cygwin dir.
+	* configure.host: Accommodate removing the libc/sys/cygwin dir.
 	* libc/locale/ldpart.c (__part_load_locale): Use 64 bit stat call
 	if __CYGWIN_USE_BIG_TYPES__ is set.
 	* libc/search/hash.c (__hash_open): Ditto.
@@ -17341,7 +17341,7 @@ Thu Apr  3 14:01:16 2003  J"orn Rennecke <joern.rennecke@superh.com>
 	* libc/argz/Makefile.in: Regenerated.
 	* libc/search/Makefile.in: Ditto.
 	* libc/misc/misc.tex: Add ffs function.
-	* libc/stdio/ftell.c: Fix missing doc delimeter in description.
+	* libc/stdio/ftell.c: Fix missing doc delimiter in description.
 
 2002-07-15  Jeff Johnston  <jjohnstn@redhat.com>
 
@@ -17779,7 +17779,7 @@ Wed Jun 26 16:33:25 2002  J"orn Rennecke <joern.rennecke@superh.com>
 2002-06-19  J"orn Rennecke <joern.rennecke@superh.com>
 
 	* libm/common/sf_lround.c (round): Change name to: (lround).
-	* libm/common/sf_remquo.c (remquo): Pass all arguemnts to
+	* libm/common/sf_remquo.c (remquo): Pass all arguments to
 	remquof.
 
 2002-06-18  Thomas Fitzsimmons  <fitzsim@redhat.com>
@@ -18032,7 +18032,7 @@ Thu Jun 13 19:23:40 2002  J"orn Rennecke <joern.rennecke@superh.com>
 	* libc/string/strsep.c: New file.
 	* libc/string/strtok.c: Change to call __strtok_r service routine.
 	* libc/string/strtok_r.c: Add __strtok_r routine which takes
-	additional flag parameter regarding whether to skip leading delimeters.
+	additional flag parameter regarding whether to skip leading delimiters.
 	Change strtok_r to call __strtok_r.
 
 2002-05-23  Gareth Pearce  <tilps@hotmail.com>
@@ -19087,7 +19087,7 @@ Wed Mar  6 10:24:26 2002  J"orn Rennecke <joern.rennecke@superh.com>
 	* libc/reent/reent.tex: Add blurb about _REENT_SMALL.
 	* libc/include/sys/reent.h (struct _reent): Completely new version
 	for _REENT_SMALL.
-	(_REENT_INIT): New defines, different defintion depending on _REENT_SMALL.
+	(_REENT_INIT): New defines, different definition depending on _REENT_SMALL.
 	(_REENT_CHECK, _REENT_CHECK_TM): Likewise.
 	(_REENT_CHECK_ASCTIME_BUF, _REENT_INIT_RAND48): Likewise.
 	(_REENT_CHECK_RAND48, _REENT_INIT_MP, _REENT_CHECK_MP): Likewise.
@@ -19734,7 +19734,7 @@ Fri Apr 20 23:17:51 2001  Christopher Faylor <cgf@cygnus.com>
 Thu Apr 12 23:11:00 2001  Corinna Vinschen <corinna@vinschen.de>
 
 	* libc/include/sys/errno.h: Add ECASECLASH to indicate case clash
-	on case insensitve file systems.
+	on case insensitive file systems.
 
 2001-04-12  Robert Collins <rbtcollins@hotmail.com>
 
@@ -19973,7 +19973,7 @@ Mon Jan 29 23:03:06 2001  Christopher Faylor <cgf@cygnus.com>
 
 2001-01-23  Jeff Johnston  <jjohnstn@redhat.com>
 
-	* libc/include/math.h (signgam): Changed to a macro refering to
+	* libc/include/math.h (signgam): Changed to a macro referring to
 	its location in the reentrant structure.
 
 2001-01-23  Jeff Johnston  <jjohnstn@redhat.com>
@@ -20490,7 +20490,7 @@ Fri Aug 25 13:37:11 2000  Christopher Faylor <cgf@cygnus.com>
 	* libc/posix/popen.c (popen): added parentheses to clarify && and ||
 	precedence.
 	* libm/math/e_cosh.c (__ieee754_cosh): changed parentheses to
-	clarify && and || precendence (and to remove pascalism).
+	clarify && and || precedence (and to remove pascalism).
 	* libm/math/e_sinh.c (__ieee754_sinh): Ditto.
 	* libm/math/s_infconst.c: added another pair of braces to all
 	initializers for __infinity (need three: for __infinity[1] array,
@@ -21141,7 +21141,7 @@ Tue Sep  7 17:15:00 1999  Joel Sherrill <joel@OARcorp.com>
 
 Tue Sep  7 17:15:00 1999   Jay Kulpinski <jskulpin@eng01.gdds.com>
 
-	* libc/stdlib/mprec.c: Fixed unitialized variable problem.
+	* libc/stdlib/mprec.c: Fixed uninitialized variable problem.
 
 Fri Sep  3 12:35:20 1999  Jeff Johnston <jjohnstn@cygnus.com>
 
@@ -21485,7 +21485,7 @@ Sat Jan 30 02:36:33 1999  Christopher Faylor <cgf@cygnus.com>
 
 1999-01-29  Nick Clifton  <nickc@cygnus.com>
 
-	* libc/sys/arm/syscalls.c: Move C library functions into seperate
+	* libc/sys/arm/syscalls.c: Move C library functions into separate
 	file.
 
 	* libc/sys/arm/libcfunc.c: New file containing C library functions
@@ -22718,7 +22718,7 @@ Thu Jan 22 15:57:14 1998  Fred Fish  <fnf@cygnus.com>
 Wed Jan 21 14:22:23 1998  Bill Moyer <billm@cygnus.com>
 
 	* libc/stdlib/getopt.c (getopt): replaced __progname
-	with nargv[0] to improve portability to imbedded systems.
+	with nargv[0] to improve portability to embedded systems.
 
 Thu Jan 15 12:32:38 1998  Nick Clifton  <nickc@cygnus.com>
 
@@ -23124,7 +23124,7 @@ Tue Jun 24 14:53:40 1997  Doug Evans  <dje@canuck.cygnus.com>
 Fri Jun 20 11:13:16 1997  Geoffrey Noer  <noer@cygnus.com>
 
 	patch from sos@prospect.com.ru (Sergey Okhapkin):
-	* include/sys/wait.h: correct operator precidence bug
+	* include/sys/wait.h: correct operator precedence bug
 	in WIFSIGNALED
 
 Wed Jun 18 22:08:27 1997  Geoffrey Noer  <noer@cygnus.com>
@@ -23973,11 +23973,11 @@ Thu Jun 13 16:44:32 1996  Doug Evans  <dje@canuck.cygnus.com>
 Thu Jun 13 17:45:17 1996  Mike Meissner  <meissner@rtl.cygnus.com>
 
 	* libc/include/machine/ieeefp.h: Add support for AIX and Windows
-	NT in PowerPC endianess cases.
+	NT in PowerPC endianness cases.
 
 Tue Jun 11 12:26:28 1996  Michael Meissner  <meissner@tiktok.cygnus.com>
 
-	* libc/include/machine/ieeefp.h: Clean up PowerPC endianess.
+	* libc/include/machine/ieeefp.h: Clean up PowerPC endianness.
 
 Thu Jun  6 11:34:20 1996  Michael Meissner  <meissner@tiktok.cygnus.com>
 
@@ -24388,7 +24388,7 @@ Tue Oct 17 08:45:33 1995  Doug Evans  <dje@canuck.cygnus.com>
 Sun Oct 15 12:58:10 1995  Michael Meissner  <meissner@wogglebug.tiac.net>
 
 	* configure.in (powerpc*): No longer need to define
-	NO_LONGLONG_POINTERS to supress warnings.
+	NO_LONGLONG_POINTERS to suppress warnings.
 
 Sat Oct 14 12:55:08 1995  Jim Wilson  <wilson@chestnut.cygnus.com>
 
@@ -24477,7 +24477,7 @@ Thu Oct  5 14:25:14 1995  steve chamberlain  <sac@slash.cygnus.com>
 	* libc/sys/win32/exception.c (ehandler3): set strace when a signal
 	without a handler is received.
 	* libc/sys/win32/Makefile.in: Remove --nodelete.
-	* libc/sys/win32/resouce.c (gettimeofday): New.
+	* libc/sys/win32/resource.c (gettimeofday): New.
 	* libc/sys/win32/syscalls.c (path_to_real_path): New.
 	* libc/sys/win32/syscalls.h (include/wincon.h): Don't include.
 
@@ -24617,7 +24617,7 @@ Tue Sep 26 07:21:48 1995  steve chamberlain  <sac@slash.cygnus.com>
 	* libc/sys/win32/pipe.c (_fcntl): F_GETFL returns O_RDWR.
 	* libc/sys/win32/spawn.c (_spawn): Cope with -ve pids.
 	* libc/sys/win32/syscalls.c (__win32_pid_to_posix_pid): New function.
-	(_open): Initialze hmap->execable_p too.
+	(_open): Initialize hmap->execable_p too.
 	* libc/sys/win32/syscalls.c (getuid, getgid, geteuid, getegid): Return from macros.
 	(_fstat): Fill in permissions.
 	* libc/sys/win32/syscalls.h (hinfo): Add execable_p.
@@ -24810,7 +24810,7 @@ Wed Sep  6 17:03:53 1995  Jason Molenda  (crash@phydeaux.cygnus.com)
 	* libc/include/sys/_types.h: _off_t is a 64-bit type under win32.
 	* libc/include/sys/types.h: define off_t and ino_t to be 64 bit
 	types under win32.
-	(mode_t): add a #else to avoid multiple definitons.
+	(mode_t): add a #else to avoid multiple definitions.
 
 	* libc/sys/win32/Makefile.in: add grp.c.
 	* libc/sys/win32/grp.c: include grp.h correctly.
@@ -25091,7 +25091,7 @@ Sat Aug 12 11:08:00 1995  steve chamberlain  <sac@slash.cygnus.com>
 	* libc/sys/win32/strace.c: New file.
 	* libc/sys/win32/smallprint.c: New file.
 	* libc/sys/win32/crt0.c (func): Delete.
-	(mainCRTStartup): Fix alloca usage.  Set handles explictly.
+	(mainCRTStartup): Fix alloca usage.  Set handles explicitly.
 	* libc/sys/win32/dirsearch.c: Clean up handle usage, fix calls to __seterrno.
 	* libc/sys/win32/exceptions.c: Lint.
 	* libc/sys/win32/{ioctl.c, pipe.c, resource.c, spawn.c, cwait.c, syscalls.c}:
@@ -25342,7 +25342,7 @@ Mon Jun 19 11:40:40 1995  Doug Evans  <dje@canuck.cygnus.com>
 
 Thu Jun  8 14:22:28 1995  Steve Chamberlain  <sac@slash.cygnus.com>
 
-	* libc/sys/crt0.S: Initialze sp, and call exit after main.
+	* libc/sys/crt0.S: Initialize sp, and call exit after main.
 	* libc/sys/syscalls.c (abort): New.
 	* configure.in (arm): Define ABORT_PROVIDED.
 
@@ -25413,7 +25413,7 @@ Thu Apr  6 12:21:20 1995  J.T. Conklin  <jtc@rtl.cygnus.com>
 	* libc/include/stdlib.h (mblen, mbtowc, wctomb, mbstowcs,
 	  wcstombs): Define.
 	* libc/stdlib/{mblen.c, mbstowcs.c, wcstombs.c}: New files, null
-	  versions of these functions that I orignally wrote for the
+	  versions of these functions that I originally wrote for the
 	  NetBSD C library.
 	* libc/stdlib/{mbtowc.c, wctomb.c}: Replaced functions with
 	  versions I wrote for NetBSD.
@@ -26072,9 +26072,9 @@ Fri Oct 29 13:59:58 1993  Jeffrey Wheat  (cassidy@cygnus.com)
 Wed Oct 27 15:27:09 1993  Rob Savoye  (rob@darkstar.cygnus.com)
 
 	* stub/ex931: stub library for sparclite board.
-	* stub/idp: Renamed from mc68ec. Added contructor table
+	* stub/idp: Renamed from mc68ec. Added constructor table
 	stuff to linker script.
-	* stub/mvme135: Renamed from m68kmvme. Added contructor table
+	* stub/mvme135: Renamed from m68kmvme. Added constructor table
 	stuff to linker script.
 
 Tue Oct 26 17:01:23 1993  K. Richard Pixley  (rich@sendai.cygnus.com)
@@ -26287,7 +26287,7 @@ Sun Jul 25 17:51:51 MDT 1993  Jeffrey Wheat  (cassidy@cygnus.com)
 		expect code for specific platforms tie it all together.
 
 	* testsuite/libm.sac/test_is.c:
-		changed the output of the test to be consistant with the
+		changed the output of the test to be consistent with the
 		other tests. parsing of pass nad fail messages is now fixed.
 
 Fri Jul 23 19:20:07 1993  Per Bothner  (bothner@kalessin)
@@ -26589,7 +26589,7 @@ Wed May 26 22:06:35 1993  Roland H. Pesch  (pesch@cygnus.com)
 
 Sun May 23 17:29:49 1993  Steve Chamberlain  (sac@thepub.cygnus.com)
 
-	* libm/ieeefp/infinity.c (maxpowtwof): Fix initialzation bug.
+	* libm/ieeefp/infinity.c (maxpowtwof): Fix initialization bug.
 
 	* libc/stdio/cvt.c (_licvt): Print the right value on machines
 	where sizeof(int) != sizeof(long).
@@ -27155,7 +27155,7 @@ Fri Jan 15 12:09:50 1993  Steve Chamberlain  (sac@thepub.cygnus.com)
 	* libc/stdio/fdopen.c, libc/stdio/fgets.c, libc/stdio/fscanf.c,
 	libc/stdio/vfprintf: type lint.
 	* libc/sys/z8ksim/crt0.c (start): Z8001/Z8002 independent
-	initialzation code.
+	initialization code.
 	* libc/sys/z8ksim/glue.c: Z8001/Z8002 clean system calls.
 
 Tue Dec 29 10:15:33 1992  Ian Lance Taylor  (ian@cygnus.com)
@@ -27605,7 +27605,7 @@ Tue Apr 28 19:08:37 1992  Steve Chamberlain  (sac@thepub.cygnus.com)
 	* libc/stdlib/mprec.c, mprec.h: new files for multiprec arithmetic
 	* libc/stdlib/Makefile.in, efgcvt.c, strtod.c: modified to use new
 	routines
-	* libc/libc.texinfo: Modifed to include the copyright info from
+	* libc/libc.texinfo: Modified to include the copyright info from
 	the mprec files
 	* libc/stdlib/efgcvt.c: now xref to ecvtbuf in stdlib.
 	* libc/test/ : many vector which tested for the implementation
@@ -27720,7 +27720,7 @@ Mon Apr 13 09:12:58 1992  Steve Chamberlain  (sac@thepub.cygnus.com)
 	* libc/stdlib/efgcvt.c: rewritten to use new _dcvt routines rather
 	than sprintf.
 	* libc/stdio/dcvt.c: rewritten to make more useful elsewhere.
-	* Method of producting float versions of double functions has
+	* Method of producing float versions of double functions has
 	changed, functions will be modified gradually. So far:
 	libm/math/exp.c, libm/math/pow.c, libm/math/modf.c,
 	libm/math/sincos.c, libm/math/fmod.c, libm/math/tan.c have been

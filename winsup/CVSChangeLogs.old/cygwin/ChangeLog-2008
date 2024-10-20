@@ -171,12 +171,12 @@
 2008-12-15  Corinna Vinschen  <corinna@vinschen.de>
 
 	* setlsapwd.cc (setlsapwd): Simplify code.  Only try to call cygserver
-	if opening local policy fails.  Don't treat removing non-existant
+	if opening local policy fails.  Don't treat removing non-existent
 	private data as error.
 
 2008-12-15  Corinna Vinschen  <corinna@vinschen.de>
 
-	* setlsapwd.cc (setlsapwd): Explicitely erase password buffer content
+	* setlsapwd.cc (setlsapwd): Explicitly erase password buffer content
 	after usage.
 
 2008-12-15  Corinna Vinschen  <corinna@vinschen.de>
@@ -1512,7 +1512,7 @@
 	static struct fai_buf.  Restructure.
 	(fhandler_base::fstat_by_name): Drop fvi_size and pfvi.  Drop fdi_size
 	and pfdi in favor of static struct fdi_buf.  Drop redundant test for
-	existance.  Use FileDirectoryInformation class instead of
+	existence.  Use FileDirectoryInformation class instead of
 	FileBothDirectoryInformation.  Drop call to NtQueryVolumeInformationFile
 	in favor of using pc.fs_serial_number ().  Fix FileId information given
 	to fstat_helper.
@@ -1638,7 +1638,7 @@
 
 	* syscalls.cc (rename): Allocate temporary path buffers using
 	tmp_pathbuf.  Don't try to unset R/O attribute on dstpc if a
-	removepc exists.  dstpc is a non-existant file in that case.
+	removepc exists.  dstpc is a non-existent file in that case.
 
 2008-05-17  Christopher Faylor  <me+cygwin@cgf.cx>
 
@@ -1690,7 +1690,7 @@
 
 	* path.cc (path_conv::set_normalized_path): Drop strip_tail argument.
 	Never strip trailing dots and spaces.
-	* (path_conv::check): Accomodate above change.
+	* (path_conv::check): Accommodate above change.
 	* path.h (path_conv::operator=): Ditto
 	* dtable.cc (build_fh_dev): Ditto.
 	* fhandler.h (fhandler_base::set_name): Ditto.
@@ -2137,7 +2137,7 @@
 	into miscfuncs.cc.  Remove unneeded includes.
 	* miscfuncs.cc: Move some common path functions here.
 	* miscfuncs.h: New file.
-	* winsup.h: Move miscelleneous functions to miscfuncs.h.
+	* winsup.h: Move miscellaneous functions to miscfuncs.h.
 	* dcrt0.cc: Remove unneeded includes.
 	* Makefile.in (DLL_OFILES): Add mount.o.
 
@@ -2161,7 +2161,7 @@
 	(install): Create $(sysconfdir)/postinstall dir.  Install postinstall
 	script into it.
 
-	* path.cc: Add temorary comments to note later function removal.
+	* path.cc: Add temporary comments to note later function removal.
 	(conv_fstab_spaces): New inline function to handle \040 to space
 	conversion.
 	(struct opt): Add "system" and "user" mount options.
@@ -2295,7 +2295,7 @@
 	* smallprint.cc (__small_vswprintf): Fix uninitialized usage of `w'.
 
 	Revamp advisory file locking to avoid cross reference pointers as well
-	as to allow BSD flock semantics.  More agressively delete unused nodes
+	as to allow BSD flock semantics.  More aggressively delete unused nodes
 	and sync objects.
 	* fhandler.h (fhandler_base::ino): Rename from namehash.  Fix comment.
 	(fhandler_base::node): Remove.
@@ -2746,7 +2746,7 @@
 	* path.cc (fillout_mntent): Use tmp_pathbuf for path buffer.
 	(symlink_worker): Ditto.
 	(SCAN_JUSTCHECKTHIS): New state for suffix_scan to define
-	that only the actual name gets cheked and a suffix is never attached.
+	that only the actual name gets checked and a suffix is never attached.
 	(suffix_scan::has): If filename + suffix would be > NAME_MAX, start
 	in SCAN_JUSTCHECKTHIS state.
 	(suffix_scan::next): Add case for SCAN_JUSTCHECKTHIS.
@@ -2832,7 +2832,7 @@
 
 	* child_info.h (~child_info_spawn): Check moreinfo->myself_pinfo for
 	NULL before closing.
-	* spawn.cc (spawn_guts): Don't close moreinfo->myself_pinfo explicitely
+	* spawn.cc (spawn_guts): Don't close moreinfo->myself_pinfo explicitly
 	in case of failing CloseProcess.
 
 	* fhandler.cc (fhandler_base::open_): Return EISDIR when trying to

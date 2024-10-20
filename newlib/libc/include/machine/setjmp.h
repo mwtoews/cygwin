@@ -70,7 +70,7 @@ _BEGIN_STD_C
 #ifdef __nds32__
 /* 17 words for GPRs,
    1 word for $fpcfg.freg and 30 words for FPUs
-   Reserved 2 words for aligement-adjustment. When storeing double-precision
+   Reserved 2 words for aligement-adjustment. When storing double-precision
    floating-point register into memory, the address has to be
    double-word-aligned.
    Check libc/machine/nds32/setjmp.S for more information.  */

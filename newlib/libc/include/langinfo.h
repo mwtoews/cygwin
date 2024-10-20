@@ -314,7 +314,7 @@ enum
 
 };
 
-/* As an extension, nl_langinfo can retrive the name of a locale
+/* As an extension, nl_langinfo can retrieve the name of a locale
    category, with this mapping from setlocale() category (other than
    LC_ALL) to nl_item. */
 #define _NL_LOCALE_NAME_BASE 100000

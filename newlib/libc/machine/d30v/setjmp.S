@@ -96,7 +96,7 @@ longjmp:
 	mvtsys	mod_s, r4
 	mvtsys	mod_e, r5
 
-; Value to return to caller is in R3.  If caller attemped to return 0,
+; Value to return to caller is in R3.  If caller attempted to return 0,
 ; return 1 instead.
 
 	cmpeq	f0, r3, 0	|| 	add	r2, r3, r0

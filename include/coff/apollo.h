@@ -112,7 +112,7 @@ struct external_reloc
 #define STYP_RELOCATED_NOT_LOADED 0x00010000	/* Section is relocated normally during linking, but need
                                             	   not be loaded during program execution */
 #define STYP_DEBUG              0x00020000	/* debug section */
-#define STYP_OVERLAY		0x00040000	/* Section is overlayed */
+#define STYP_OVERLAY		0x00040000	/* Section is overlaid */
 #define STYP_INSTRUCTION    	0x00200000	/* Section contains executable code */
 
 #define STYP_ZERO		0x00800000	/* Section is initialized to zero */

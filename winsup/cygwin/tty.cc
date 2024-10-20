@@ -320,7 +320,7 @@ tty::wait_fwd ()
      If the time without transfer exceeds 32 msec, the
      forwarding is supposed to be finished. fwd_last_time
      is reset to GetTickCount64() in pty master forwarding
-     thread when the last data is transfered. */
+     thread when the last data is transferred. */
   const ULONGLONG sleep_in_nat_pipe = 16;
   const ULONGLONG time_to_wait = sleep_in_nat_pipe * 2 + 1/* margine */;
   ULONGLONG elapsed = 0;

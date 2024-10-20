@@ -36,7 +36,7 @@
 #define ICONV_CES_NOSPACE 0
 /* Invalid input character */
 #define ICONV_CES_INVALID_CHARACTER -1
-/* No corespondent character in destination encoding */
+/* No correspondent character in destination encoding */
 #define ICONV_CES_BAD_SEQUENCE -2
 /* All unknown characters are marked by this code */
 #define DEFAULT_CHARACTER 0x3f /* ASCII '?' */
@@ -79,7 +79,7 @@ typedef struct
    *   void *data      - CES converter-specific data.
    *
    * DESCRIPTION:
-   *     Preforms CES converter closing.   *
+   *     Performs CES converter closing.   *
    * RETURN:
    *   Returns (size_t)0 if success. In case of error returns (size_t)-1 and
    *   sets current thread's/process's errno.

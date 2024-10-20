@@ -280,7 +280,7 @@ they are included in the unified POSIX path tree.</para>
 <sect2 id="cygdrive"><title>The cygdrive path prefix</title>
 
 <para>As already outlined in <xref linkend="ov-hi-files"></xref>, you can
-access arbitary drives on your system by using the cygdrive path prefix.
+access arbitrary drives on your system by using the cygdrive path prefix.
 The default value for this prefix is <filename>/cygdrive</filename>, and
 a path to any drive can be constructed by using the cygdrive prefix and
 appending the drive letter as subdirectory, like this:</para>
@@ -418,7 +418,7 @@ creates real NFS symlinks.</para>
 <listitem>
 <para>Native Windows symlinks are only created on filesystems supporting
 reparse points.  Due to their weird restrictions and behaviour, they are
-only created if the user explicitely requests creating them.  This is done
+only created if the user explicitly requests creating them.  This is done
 by setting the environment variable <literal>CYGWIN</literal> to contain
 the string <literal>winsymlinks:native</literal> or
 <literal>winsymlinks:nativestrict</literal>.  For the difference between

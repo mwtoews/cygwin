@@ -320,7 +320,7 @@ do_codeset:
 		ret = (char*) __get_messages_locale (locale)->noexpr;
 		break;
 	/*
-	 * All items marked with LEGACY are available, but not recomended
+	 * All items marked with LEGACY are available, but not recommended
 	 * by SUSv2 to be used in portable applications since they're subject
 	 * to remove in future specification editions
 	 */

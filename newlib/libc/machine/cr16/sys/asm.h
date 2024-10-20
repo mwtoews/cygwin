@@ -111,7 +111,7 @@
 #define _loadmp_(src, mask) 	__asm__("loadmp %0,%1" : /* No output */ : \
 					"r" ((unsigned int)src) , "i" (mask))
 
-/* Multiply Accumulate Instrutions */
+/* Multiply Accumulate Instructions */
 #define _macsw_(hi, lo, src1, src2)  	__asm__("macsw %1,%0" 				\
 						: =l (lo), =h (hi) 			\
 						: "r" ((short)src1) , "r" (src2))

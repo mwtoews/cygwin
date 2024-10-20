@@ -33,7 +33,7 @@
   .global start
   
   /* Hardware traps */
-	/* svt code asumes that %g6 is never used in the code */
+	/* svt code assumes that %g6 is never used in the code */
 
 start:
 _trap_table:

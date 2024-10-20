@@ -34,7 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
        char *strcpy(char *dest, const char *src);
     Description:
        This function copies the string pointed to by src into the array
-       point to by dest (include the teminating null character).
+       point to by dest (include the terminating null character).
     Return value:
        strcpy returns the dest as given.
 */
@@ -43,7 +43,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	.globl	strcpy
 	.type	strcpy, @function
 strcpy:
-	move	$r3, $r0	/* Keep r0 as reture value.  */
+	move	$r3, $r0	/* Keep r0 as return value.  */
 	/* If SRC or DEST is unaligned, then copy bytes.  */
 	or	$r2, $r1, $r0
 	andi	$r2, $r2, #3

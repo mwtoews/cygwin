@@ -47,7 +47,7 @@
    branch stalls.
    The beq_s to r3z could be made unaligned & long to avoid a stall
    there, but the it is not likely to be taken often, and it
-   would also be likey to cost an unaligned mispredict at the next call.  */
+   would also be likely to cost an unaligned mispredict at the next call.  */
 
 ENTRY (strcpy)
 	or	r2,r0,r1

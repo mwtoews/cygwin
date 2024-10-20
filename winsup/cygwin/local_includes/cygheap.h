@@ -110,7 +110,7 @@ public:
   bool curr_token_is_restricted; /* curr_primary_token is restricted token */
   bool setuid_to_restricted;     /* switch to restricted token by setuid () */
 
-  /* CGF 2002-06-27.  I removed the initializaton from this constructor
+  /* CGF 2002-06-27.  I removed the initialization from this constructor
      since this class is always allocated statically.  That means that everything
      is zero anyway so there is no need to initialize it to zero.  Since the
      token initialization is always handled during process startup as well,

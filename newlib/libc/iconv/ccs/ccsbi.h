@@ -14,7 +14,7 @@
  * Defining ICONV_TO_UCS_CCS_XXX macro or ICONV_FROM_UCS_CCS_XXX
  * macro is needed to enable "XXX encoding -> UCS" or "UCS -> XXX encoding"
  * part of CCS table.
- * CCS tables aren't linked if Newlib was configuted to use external CCS tables.
+ * CCS tables aren't linked if Newlib was configured to use external CCS tables.
  */
 #ifndef _ICONV_ENABLE_EXTERNAL_CCS
 

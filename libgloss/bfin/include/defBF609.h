@@ -3717,7 +3717,7 @@
 #define BITP_UART_IMSK_EAWI                   7                               /* Enable Address Word Interrupt Mask Status */
 #define BITP_UART_IMSK_ERFCI                  6                               /* Enable Receive FIFO Count Interrupt Mask Status */
 #define BITP_UART_IMSK_ETFI                   5                               /* Enable Transmission Finished Interrupt Mask Status */
-#define BITP_UART_IMSK_EDTPTI                 4                               /* Enable DMA TX Peripheral Trigerred Interrupt Mask Status */
+#define BITP_UART_IMSK_EDTPTI                 4                               /* Enable DMA TX Peripheral Triggered Interrupt Mask Status */
 #define BITP_UART_IMSK_EDSSI                  3                               /* Enable Modem Status Interrupt Mask Status */
 #define BITP_UART_IMSK_ELSI                   2                               /* Enable Line Status Interrupt Mask Status */
 #define BITP_UART_IMSK_ETBEI                  1                               /* Enable Transmit Buffer Empty Interrupt Mask Status */
@@ -3743,7 +3743,7 @@
 #define ENUM_UART_ETFI_LO                    (_ADI_MSK(0x00000000,uint32_t))  /* ETFI: Interrupt is masked */
 #define ENUM_UART_ETFI_HI                    (_ADI_MSK(0x00000020,uint32_t))  /* ETFI: Interrupt is unmasked */
 
-#define BITM_UART_IMSK_EDTPTI                (_ADI_MSK(0x00000010,uint32_t))  /* Enable DMA TX Peripheral Trigerred Interrupt Mask Status */
+#define BITM_UART_IMSK_EDTPTI                (_ADI_MSK(0x00000010,uint32_t))  /* Enable DMA TX Peripheral Triggered Interrupt Mask Status */
 #define ENUM_UART_EDTPTI_LO                  (_ADI_MSK(0x00000000,uint32_t))  /* EDTPTI: Interrupt is masked */
 #define ENUM_UART_EDTPTI_HI                  (_ADI_MSK(0x00000010,uint32_t))  /* EDTPTI: Interrupt is unmasked */
 
@@ -6469,8 +6469,8 @@
 #define REG_PVP0_THC1_TH14              0xFFC1A558         /* PVP0 THCn Threshold Value 14 */
 #define REG_PVP0_THC0_TH15              0xFFC1A45C         /* PVP0 THCn Threshold Value 15 */
 #define REG_PVP0_THC1_TH15              0xFFC1A55C         /* PVP0 THCn Threshold Value 15 */
-#define REG_PVP0_THC0_HHPOS             0xFFC1A460         /* PVP0 THCn Histogram Horzontal Position */
-#define REG_PVP0_THC1_HHPOS             0xFFC1A560         /* PVP0 THCn Histogram Horzontal Position */
+#define REG_PVP0_THC0_HHPOS             0xFFC1A460         /* PVP0 THCn Histogram Horizontal Position */
+#define REG_PVP0_THC1_HHPOS             0xFFC1A560         /* PVP0 THCn Histogram Horizontal Position */
 #define REG_PVP0_THC0_HVPOS             0xFFC1A464         /* PVP0 THCn Histogram Vertical Position */
 #define REG_PVP0_THC1_HVPOS             0xFFC1A564         /* PVP0 THCn Histogram Vertical Position */
 #define REG_PVP0_THC0_HHCNT             0xFFC1A468         /* PVP0 THCn Histogram Horizontal Count */
@@ -7053,17 +7053,17 @@
 /* ------------------------------------------------------------------------------------------------------------------------
         PVP_IIM_SOVF_STAT                    Pos/Masks                        Description
    ------------------------------------------------------------------------------------------------------------------------ */
-#define BITP_PVP_IIM_SOVF_STAT_VPOS          16                               /* Veritcal Pixel Coordinate */
+#define BITP_PVP_IIM_SOVF_STAT_VPOS          16                               /* Vertical Pixel Coordinate */
 #define BITP_PVP_IIM_SOVF_STAT_HPOS           0                               /* Horizontal Pixel Coordinate */
-#define BITM_PVP_IIM_SOVF_STAT_VPOS          (_ADI_MSK(0x03FF0000,uint32_t))  /* Veritcal Pixel Coordinate */
+#define BITM_PVP_IIM_SOVF_STAT_VPOS          (_ADI_MSK(0x03FF0000,uint32_t))  /* Vertical Pixel Coordinate */
 #define BITM_PVP_IIM_SOVF_STAT_HPOS          (_ADI_MSK(0x000007FF,uint32_t))  /* Horizontal Pixel Coordinate */
 
 /* ------------------------------------------------------------------------------------------------------------------------
         PVP_IIM_UOVF_STAT                    Pos/Masks                        Description
    ------------------------------------------------------------------------------------------------------------------------ */
-#define BITP_PVP_IIM_UOVF_STAT_VPOS          16                               /* Veritcal Pixel Coordinate */
+#define BITP_PVP_IIM_UOVF_STAT_VPOS          16                               /* Vertical Pixel Coordinate */
 #define BITP_PVP_IIM_UOVF_STAT_HPOS           0                               /* Horizontal Pixel Coordinate */
-#define BITM_PVP_IIM_UOVF_STAT_VPOS          (_ADI_MSK(0x03FF0000,uint32_t))  /* Veritcal Pixel Coordinate */
+#define BITM_PVP_IIM_UOVF_STAT_VPOS          (_ADI_MSK(0x03FF0000,uint32_t))  /* Vertical Pixel Coordinate */
 #define BITM_PVP_IIM_UOVF_STAT_HPOS          (_ADI_MSK(0x000007FF,uint32_t))  /* Horizontal Pixel Coordinate */
 
 /* ------------------------------------------------------------------------------------------------------------------------
@@ -9026,8 +9026,8 @@
 #define REG_EMAC0_TM_HISEC              0xFFC20724         /* EMAC0 Time Stamp High Second Register */
 #define REG_EMAC0_TM_STMPSTAT           0xFFC20728         /* EMAC0 Time Stamp Status Register */
 #define REG_EMAC0_TM_PPSCTL             0xFFC2072C         /* EMAC0 PPS Control Register */
-#define REG_EMAC0_TM_AUXSTMP_NSEC       0xFFC20730         /* EMAC0 Time Stamp Auxilary TS Nano Seconds Register */
-#define REG_EMAC0_TM_AUXSTMP_SEC        0xFFC20734         /* EMAC0 Time Stamp Auxilary TM Seconds Register */
+#define REG_EMAC0_TM_AUXSTMP_NSEC       0xFFC20730         /* EMAC0 Time Stamp Auxiliary TS Nano Seconds Register */
+#define REG_EMAC0_TM_AUXSTMP_SEC        0xFFC20734         /* EMAC0 Time Stamp Auxiliary TM Seconds Register */
 #define REG_EMAC0_TM_PPSINTVL           0xFFC20760         /* EMAC0 Time Stamp PPS Interval Register */
 #define REG_EMAC0_TM_PPSWIDTH           0xFFC20764         /* EMAC0 PPS Width Register */
 #define REG_EMAC0_DMA_BUSMODE           0xFFC21000         /* EMAC0 DMA Bus Mode Register */
@@ -9159,8 +9159,8 @@
 #define REG_EMAC1_TM_HISEC              0xFFC22724         /* EMAC1 Time Stamp High Second Register */
 #define REG_EMAC1_TM_STMPSTAT           0xFFC22728         /* EMAC1 Time Stamp Status Register */
 #define REG_EMAC1_TM_PPSCTL             0xFFC2272C         /* EMAC1 PPS Control Register */
-#define REG_EMAC1_TM_AUXSTMP_NSEC       0xFFC22730         /* EMAC1 Time Stamp Auxilary TS Nano Seconds Register */
-#define REG_EMAC1_TM_AUXSTMP_SEC        0xFFC22734         /* EMAC1 Time Stamp Auxilary TM Seconds Register */
+#define REG_EMAC1_TM_AUXSTMP_NSEC       0xFFC22730         /* EMAC1 Time Stamp Auxiliary TS Nano Seconds Register */
+#define REG_EMAC1_TM_AUXSTMP_SEC        0xFFC22734         /* EMAC1 Time Stamp Auxiliary TM Seconds Register */
 #define REG_EMAC1_TM_PPSINTVL           0xFFC22760         /* EMAC1 Time Stamp PPS Interval Register */
 #define REG_EMAC1_TM_PPSWIDTH           0xFFC22764         /* EMAC1 PPS Width Register */
 #define REG_EMAC1_DMA_BUSMODE           0xFFC23000         /* EMAC1 DMA Bus Mode Register */
@@ -9458,7 +9458,7 @@
 #define BITP_EMAC_MMC_TXINT_CARRERR          19                               /* Tx Carrier Error Count Half/Full */
 #define BITP_EMAC_MMC_TXINT_EXCESSCOL        18                               /* Tx Exess Collision Count Half/Full */
 #define BITP_EMAC_MMC_TXINT_LATECOL          17                               /* Tx Late Collision Count Half/Full */
-#define BITP_EMAC_MMC_TXINT_DEFERRED         16                               /* Tx Deffered Count Half/Full */
+#define BITP_EMAC_MMC_TXINT_DEFERRED         16                               /* Tx Deferred Count Half/Full */
 #define BITP_EMAC_MMC_TXINT_MULTCOLG         15                               /* Tx Multiple collision (Good) Count Half/Full */
 #define BITP_EMAC_MMC_TXINT_SNGCOLG          14                               /* Tx Single Collision (Good) Count Half/Full */
 #define BITP_EMAC_MMC_TXINT_UNDERR           13                               /* Tx Underflow Error Count Half/Full */
@@ -9483,7 +9483,7 @@
 #define BITM_EMAC_MMC_TXINT_CARRERR          (_ADI_MSK(0x00080000,uint32_t))  /* Tx Carrier Error Count Half/Full */
 #define BITM_EMAC_MMC_TXINT_EXCESSCOL        (_ADI_MSK(0x00040000,uint32_t))  /* Tx Exess Collision Count Half/Full */
 #define BITM_EMAC_MMC_TXINT_LATECOL          (_ADI_MSK(0x00020000,uint32_t))  /* Tx Late Collision Count Half/Full */
-#define BITM_EMAC_MMC_TXINT_DEFERRED         (_ADI_MSK(0x00010000,uint32_t))  /* Tx Deffered Count Half/Full */
+#define BITM_EMAC_MMC_TXINT_DEFERRED         (_ADI_MSK(0x00010000,uint32_t))  /* Tx Deferred Count Half/Full */
 #define BITM_EMAC_MMC_TXINT_MULTCOLG         (_ADI_MSK(0x00008000,uint32_t))  /* Tx Multiple collision (Good) Count Half/Full */
 #define BITM_EMAC_MMC_TXINT_SNGCOLG          (_ADI_MSK(0x00004000,uint32_t))  /* Tx Single Collision (Good) Count Half/Full */
 #define BITM_EMAC_MMC_TXINT_UNDERR           (_ADI_MSK(0x00002000,uint32_t))  /* Tx Underflow Error Count Half/Full */
@@ -9730,7 +9730,7 @@
 /* ------------------------------------------------------------------------------------------------------------------------
         EMAC_TM_CTL                          Pos/Masks                        Description
    ------------------------------------------------------------------------------------------------------------------------ */
-#define BITP_EMAC_TM_CTL_ATSFC               24                               /* Auxilary Time Stamp FIFO Clear */
+#define BITP_EMAC_TM_CTL_ATSFC               24                               /* Auxiliary Time Stamp FIFO Clear */
 #define BITP_EMAC_TM_CTL_TSENMACADDR         18                               /* Time Stamp Enable MAC Address */
 #define BITP_EMAC_TM_CTL_SNAPTYPSEL          16                               /* Snapshot Type Select */
 #define BITP_EMAC_TM_CTL_TSMSTRENA           15                               /* Time Stamp Master (Frames) Enable */
@@ -9747,7 +9747,7 @@
 #define BITP_EMAC_TM_CTL_TSINIT               2                               /* Time Stamp (System Time) Initialize */
 #define BITP_EMAC_TM_CTL_TSCFUPDT             1                               /* Time Stamp (System Time) Fine/Coarse Update */
 #define BITP_EMAC_TM_CTL_TSENA                0                               /* Time Stamp (PTP) Enable */
-#define BITM_EMAC_TM_CTL_ATSFC               (_ADI_MSK(0x01000000,uint32_t))  /* Auxilary Time Stamp FIFO Clear */
+#define BITM_EMAC_TM_CTL_ATSFC               (_ADI_MSK(0x01000000,uint32_t))  /* Auxiliary Time Stamp FIFO Clear */
 
 #define BITM_EMAC_TM_CTL_TSENMACADDR         (_ADI_MSK(0x00040000,uint32_t))  /* Time Stamp Enable MAC Address */
 #define ENUM_EMAC_TM_CTL_D_PTP_ADDRFILT      (_ADI_MSK(0x00000000,uint32_t))  /* TSENMACADDR: Disable PTP MAC address filter */
@@ -9841,16 +9841,16 @@
 /* ------------------------------------------------------------------------------------------------------------------------
         EMAC_TM_STMPSTAT                     Pos/Masks                        Description
    ------------------------------------------------------------------------------------------------------------------------ */
-#define BITP_EMAC_TM_STMPSTAT_ATSNS          25                               /* Auxilary Time Stamp Number of Snapshots */
-#define BITP_EMAC_TM_STMPSTAT_ATSSTM         24                               /* Auxilary Time Stamp Snapshot Trigger Missed */
+#define BITP_EMAC_TM_STMPSTAT_ATSNS          25                               /* Auxiliary Time Stamp Number of Snapshots */
+#define BITP_EMAC_TM_STMPSTAT_ATSSTM         24                               /* Auxiliary Time Stamp Snapshot Trigger Missed */
 #define BITP_EMAC_TM_STMPSTAT_TSTRGTERR       3                               /* Time Stamp Target Time Programming Error */
-#define BITP_EMAC_TM_STMPSTAT_ATSTS           2                               /* Auxilary Time Stamp Trigger Snapshot */
+#define BITP_EMAC_TM_STMPSTAT_ATSTS           2                               /* Auxiliary Time Stamp Trigger Snapshot */
 #define BITP_EMAC_TM_STMPSTAT_TSTARGT         1                               /* Time Stamp Target Time Reached */
 #define BITP_EMAC_TM_STMPSTAT_TSSOVF          0                               /* Time Stamp Seconds Overflow */
-#define BITM_EMAC_TM_STMPSTAT_ATSNS          (_ADI_MSK(0x0E000000,uint32_t))  /* Auxilary Time Stamp Number of Snapshots */
-#define BITM_EMAC_TM_STMPSTAT_ATSSTM         (_ADI_MSK(0x01000000,uint32_t))  /* Auxilary Time Stamp Snapshot Trigger Missed */
+#define BITM_EMAC_TM_STMPSTAT_ATSNS          (_ADI_MSK(0x0E000000,uint32_t))  /* Auxiliary Time Stamp Number of Snapshots */
+#define BITM_EMAC_TM_STMPSTAT_ATSSTM         (_ADI_MSK(0x01000000,uint32_t))  /* Auxiliary Time Stamp Snapshot Trigger Missed */
 #define BITM_EMAC_TM_STMPSTAT_TSTRGTERR      (_ADI_MSK(0x00000008,uint32_t))  /* Time Stamp Target Time Programming Error */
-#define BITM_EMAC_TM_STMPSTAT_ATSTS          (_ADI_MSK(0x00000004,uint32_t))  /* Auxilary Time Stamp Trigger Snapshot */
+#define BITM_EMAC_TM_STMPSTAT_ATSTS          (_ADI_MSK(0x00000004,uint32_t))  /* Auxiliary Time Stamp Trigger Snapshot */
 #define BITM_EMAC_TM_STMPSTAT_TSTARGT        (_ADI_MSK(0x00000002,uint32_t))  /* Time Stamp Target Time Reached */
 #define BITM_EMAC_TM_STMPSTAT_TSSOVF         (_ADI_MSK(0x00000001,uint32_t))  /* Time Stamp Seconds Overflow */
 
@@ -13753,7 +13753,7 @@
 #define BITP_SEC_CSTAT_ERR                    1                               /* Error */
 
 #define BITM_SEC_CSTAT_NMI                   (_ADI_MSK(0x00010000,uint32_t))  /* NMI */
-#define ENUM_SEC_CSTAT_NO_NMI                (_ADI_MSK(0x00000000,uint32_t))  /* NMI: No NMI Occured */
+#define ENUM_SEC_CSTAT_NO_NMI                (_ADI_MSK(0x00000000,uint32_t))  /* NMI: No NMI Occurred */
 #define ENUM_SEC_CSTAT_NMI                   (_ADI_MSK(0x00010000,uint32_t))  /* NMI: NMI Occurred */
 
 #define BITM_SEC_CSTAT_WFI                   (_ADI_MSK(0x00001000,uint32_t))  /* Wait For Idle */
@@ -17724,7 +17724,7 @@
 #define BITP_WPDACTL_ENCNT0                   4                               /* Enable WPDA0 Counter */
 #define BITP_WPDACTL_ENDA1                    3                               /* Enable WPDA1 */
 #define BITP_WPDACTL_ENDA0                    2                               /* Enable WPDA0 */
-#define BITP_WPDACTL_INVR                     1                               /* Invert Range Comparision */
+#define BITP_WPDACTL_INVR                     1                               /* Invert Range Comparison */
 #define BITP_WPDACTL_ENR                      0                               /* Enable Range Comparison */
 #define BITM_WPDACTL_ACC1                    (_ADI_MSK(0x00003000,uint32_t))  /* Access type for WPDA1 */
 #define BITM_WPDACTL_SRC1                    (_ADI_MSK(0x00000C00,uint32_t))  /* DAG Source for WPDA1 */
@@ -17734,7 +17734,7 @@
 #define BITM_WPDACTL_ENCNT0                  (_ADI_MSK(0x00000010,uint32_t))  /* Enable WPDA0 Counter */
 #define BITM_WPDACTL_ENDA1                   (_ADI_MSK(0x00000008,uint32_t))  /* Enable WPDA1 */
 #define BITM_WPDACTL_ENDA0                   (_ADI_MSK(0x00000004,uint32_t))  /* Enable WPDA0 */
-#define BITM_WPDACTL_INVR                    (_ADI_MSK(0x00000002,uint32_t))  /* Invert Range Comparision */
+#define BITM_WPDACTL_INVR                    (_ADI_MSK(0x00000002,uint32_t))  /* Invert Range Comparison */
 #define BITM_WPDACTL_ENR                     (_ADI_MSK(0x00000001,uint32_t))  /* Enable Range Comparison */
 
 /* ------------------------------------------------------------------------------------------------------------------------

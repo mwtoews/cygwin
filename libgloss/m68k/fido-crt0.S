@@ -332,7 +332,7 @@ SYM (_vector_table):
         dc.l    _HwBreakpointHandler             /* 012 Hardware Breakpoint        */
         dc.l    _Reserved0Handler                /* 013 Reserved                   */
         dc.l    _FormatErrorHandler              /* 014 Format Error               */
-        dc.l    _UnitializedIntHandler           /* 015 Unitialized Interrupt      */
+        dc.l    _UnitializedIntHandler           /* 015 Uninitialized Interrupt    */
         dc.l    _SoftwareIntHandler              /* 016 Software Interrupt         */
         dc.l    _Unassigned0Handler              /* 017 Unassigned                 */
         dc.l    _Unassigned1Handler              /* 018 Unassigned                 */

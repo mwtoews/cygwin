@@ -278,7 +278,7 @@ Notes:
       list one or more programs on the command line and specify
       <literal>-s</literal>, <command>cygcheck</command> will report on
       both.</para>
-    <para> The <literal>-e</literal> option allows to seach for available
+    <para> The <literal>-e</literal> option allows to search for available
       packages in the Cygwin distribution.  <literal>PATTERN</literal> is
       a glob pattern, using * and ? as wildcard characters, just as in
       filename patterns.  <literal>PATTERN</literal> is searched for in
@@ -424,7 +424,7 @@ coreutils-5.3.0-6         GNU core utilities (includes fileutils, sh-utils and t
       the example above.</para>
 
     <para>The third example above illustrates that if you want to match a whole
-      filename, you should include the <literal>/</literal> path seperator. In
+      filename, you should include the <literal>/</literal> path separator. In
       the given example this ensures that filenames that happen to end in
       <literal>ls.exe</literal> such as <literal>ncftpls.exe</literal> are not
       shown. Note that this use does not mean "look for packages with
@@ -637,7 +637,7 @@ Other options:
       instructing <command>cygpath</command> to convert between these
       formats.</para>
 
-    <para>The <literal>-i</literal> option supresses the print out of the usage
+    <para>The <literal>-i</literal> option suppresses the print out of the usage
       message if no filename argument was given. It can be used in make file
       rules converting variables that may be omitted to a proper format. Note
       that <command>cygpath</command> output may contain spaces (C:\Program
@@ -1965,7 +1965,7 @@ D: on /d type fat (binary,user,noumount)
       <para>If you added mount points to <filename>/etc/fstab</filename> or
         your <filename>/etc/fstab.d/&lt;username&gt;</filename> file, you can
         add these mount points to your current user session using the
-        <literal>-a/--all</literal> option, or by specifing the posix path
+        <literal>-a/--all</literal> option, or by specifying the posix path
         alone on the command line. As an example, consider you added a mount
         point with the POSIX path <filename>/my/mount</filename>. You can add
         this mount point with either one of the following two commands to your
@@ -1994,7 +1994,7 @@ D: on /d type fat (binary,user,noumount)
 <prompt>$</prompt> <userinput>mount -o bind /var /usr/var</userinput>
 </screen>
 
-      <para>This command makes the file hirarchy under
+      <para>This command makes the file hierarchy under
         <filename>/var</filename> additionally available under
         <filename>/usr/var</filename>.</para>
 
@@ -2532,7 +2532,7 @@ With no options, ps outputs the long format by default
     <para> By default, <command>ps</command> will only show processes owned by
       the current user. With either the <literal>-a</literal> or
       <literal>-e</literal> option, all user's processes (and system processes)
-      are listed. There are historical UNIX reasons for the synonomous options,
+      are listed. There are historical UNIX reasons for the synonymous options,
       which are functionally identical. The <literal>-f</literal> option
       outputs a "full" listing with usernames for UIDs and the command line
       of the process, rather than just the full path to the executable. The
@@ -2729,7 +2729,7 @@ Example:
 
     <para>The <literal>-v</literal> option means "verbose". For most commands,
       this causes additional or lengthier messages to be printed. Conversely,
-      the <literal>-q</literal> option supresses error messages, so you can use
+      the <literal>-q</literal> option suppresses error messages, so you can use
       the exit status of the program to detect if a key exists or not (for
       example).</para>
 
@@ -3291,7 +3291,7 @@ $ ssp <literal>-v</literal> <literal>-s</literal> <literal>-l</literal> <literal
   -q, --quiet                  toggle "quiet" flag.  Defaults to on if "-p",
                                off otherwise.
   -S, --flush-period=PERIOD    flush buffered strace output every PERIOD secs
-  -t, --timestamp              use an absolute hh:mm:ss timestamp insted of
+  -t, --timestamp              use an absolute hh:mm:ss timestamp instead of
                                the default microsecond timestamp.  Implies -d
   -T, --toggle                 toggle tracing in a process already being
                                traced. Requires -p &lt;pid&gt;

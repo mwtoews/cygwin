@@ -56,7 +56,7 @@
  *	each of the element of the double word vector.
  *
  * Calculation is performed by reducing the input argument
- * to within a managable range, and then computing the power
+ * to within a manageable range, and then computing the power
  * series to the 11th degree.
  *
  * Range reduction is performed using the property:

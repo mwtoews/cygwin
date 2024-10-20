@@ -16,7 +16,7 @@ __attribute__((interrupt_handler)) void
 HANDLER()
 {
   /* Load the status register into %d0 and the program counter at
-     which the interrupt occured into %d1 for ease of inspection in
+     which the interrupt occurred into %d1 for ease of inspection in
      the debugger.  */
   asm("move.l %sp @(0),%d0\n\t"
       "move.l %sp @(-4),%d1\n\t"

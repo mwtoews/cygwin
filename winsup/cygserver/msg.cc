@@ -81,7 +81,7 @@ client_request_msg::serve (transport_layer_base *const conn,
   client->release ();
   thread td (client, &_parameters.in.ipcblk, true);
   int res;
-  msgop_t msgop = _parameters.in.msgop; /* Get's overwritten otherwise. */
+  msgop_t msgop = _parameters.in.msgop; /* Gets overwritten otherwise. */
   switch (msgop)
     {
       case MSGOP_msgctl:

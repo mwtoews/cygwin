@@ -114,7 +114,7 @@ fhandler_cygdrive::readdir (DIR *dir, dirent *de)
 	     current state of the drive without trying to open a file
 	     descriptor on the share (GetFileAttributes).  This avoids
 	     waiting for SMB timeouts.  Of course, there's a downside:
-	     If a drive becomes availabe again, it can take a couple of
+	     If a drive becomes available again, it can take a couple of
 	     minutes to recognize it. As long as this didn't happen,
 	     the drive will not show up in the cygdrive dir. */
 	  PUSE_INFO_1 pui1;

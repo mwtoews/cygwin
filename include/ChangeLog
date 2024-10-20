@@ -648,7 +648,7 @@
 
 2012-04-10  Tristan Gingold  <gingold@adacore.com>
 
-	* splay-tree.h: Conditionnaly includes stdint.h and inttypes.h
+	* splay-tree.h: Conditionally includes stdint.h and inttypes.h
 	(libi_uhostptr_t, libi_shostptr_t): Remove, replaced by uintptr_t.
 
 2012-04-09  Roland McGrath  <mcgrathr@google.com>

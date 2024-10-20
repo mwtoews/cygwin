@@ -42,7 +42,7 @@ static void * TestThread ( void *not_used )
 The forked child will not get the same thread handle as its parent, it
 will get the thread handle from the main thread instead. The child will
 not terminate because the threadcount is still 2 after the fork (it is
-set to 1 in MTinterface::Init and then set back to 2 after the childs
+set to 1 in MTinterface::Init and then set back to 2 after the children
 memory gets overwritten by the parent).
 
 concept test by Thomas Pfaff <tpfaff@gmx.net>
